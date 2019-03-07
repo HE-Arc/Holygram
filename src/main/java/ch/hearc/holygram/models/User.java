@@ -10,6 +10,7 @@ import javax.validation.constraints.Size;
 @Entity
 /**
  * Class representing a user
+ * 
  * @author Seg
  *
  */
@@ -31,10 +32,17 @@ public class User {
 	@Size(min = 5, max = 45)
 	private String email;
 
-	private String avatarPath;
+	@NotNull
+	private String avatar;
 
 	public User() {
-		// TODO Auto-generated constructor stub
+	}
+
+	public User(String name, String password, String email, String avatar) {
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.avatar = avatar;
 	}
 
 	@Override

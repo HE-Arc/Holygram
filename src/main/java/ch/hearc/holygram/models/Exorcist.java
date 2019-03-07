@@ -16,22 +16,20 @@ import javax.validation.constraints.NotNull;
  */
 public class Exorcist extends User {
 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Id
-	private Long id;
-
 	@NotNull
 	private String description;
 
 	@NotNull
 	private String phoneNumber;
 
-	@NotNull
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Canton canton;
 
-	public Exorcist() {
-		// TODO Auto-generated constructor stub
+	public Exorcist(String name, String password, String email, String avatar, String description, String phoneNumber, Canton canton) {
+		super(name, password, email, avatar);
+		this.description = description;
+		this.phoneNumber = phoneNumber;
+		this.canton = canton;
 	}
 
 	@Override
