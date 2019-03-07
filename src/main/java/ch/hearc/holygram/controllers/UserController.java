@@ -52,6 +52,12 @@ public class UserController {
 		return "registration/exorcist";
 	}
 	
+	@PostMapping(value = "/users/registerUser")
+	public String registerUser(Map<String, Object> model) {
+
+		return "index";
+	}
+	
 	@GetMapping(value = "/users/registration")
 	public String registrationUser(Map<String, Object> model) {
 

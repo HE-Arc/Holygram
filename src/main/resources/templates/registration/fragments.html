@@ -9,7 +9,7 @@
   	</div>
   	<div class="form-group">
 		<label for="email" th:text="Email" /></label>
-	   	<input type="text" class="form-control" id="email" required>
+	   	<input type="text" class="form-control" id="email" pattern="[\w-]+@([\w-]+\.)+[\w-]+" required>
   	</div>
   	<div class="form-group">
 		<label for="avatarPath" th:text="Avatar" /></label>
