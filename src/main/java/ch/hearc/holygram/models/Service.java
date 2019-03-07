@@ -19,7 +19,13 @@ public class Service {
 	private String name;
 	
 	@NotNull
-	private Religion affiliatedReligion;
+	private float price;
+	
+	@NotNull
+	private User principal;
+	
+	@NotNull
+	private Exorcist exorcist;
 
 	public Service() {
 		// TODO Auto-generated constructor stub

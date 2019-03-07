@@ -13,20 +13,21 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.holygram.accessors.UserDAO;
+import ch.hearc.holygram.accessors.UserRepository;
 import ch.hearc.holygram.models.User;
 
 @Controller
 public class UserController {
 
 	@Autowired
-	private UserDAO uDAO;
+	private UserRepository uRepository;
 
 	// private ProduitRepository prepo;
 
 	@GetMapping(value = "/users")
 	public String findAllProduits(Map<String, Object> model) {
 		System.out.println("/users GET");
-		model.put("users", uDAO.findAll());
+		model.put("users", uRepository.findAll());
 		model.put("user", new User());
 
 		return "produits";
@@ -44,7 +45,7 @@ public class UserController {
 	public String saveUsers(@Valid @ModelAttribute User user, BindingResult errors, Model model) {
 
 		if (!errors.hasErrors()) {
-			uDAO.save(user);
+			uRepository.save(user);
 		}
 		return ((errors.hasErrors()) ? "saisie_users" : "redirect:users");
 	}

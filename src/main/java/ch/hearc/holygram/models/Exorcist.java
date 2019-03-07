@@ -8,8 +8,12 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-public class Exorciste extends User {
+public class Exorcist extends User {
 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	private Long id;
+	
 	@NotNull
 	private String description;
 	
@@ -19,7 +23,7 @@ public class Exorciste extends User {
 	@NotNull
 	private Canton canton;
 
-	public Exorciste() {
+	public Exorcist() {
 		// TODO Auto-generated constructor stub
 	}
 

@@ -15,10 +15,10 @@ public class Demon {
 	private Long id;
 
 	@NotNull
-	private Exorciste exorciste;
+	private Religion religion;
 	
 	@NotNull
-	private Demon demon;
+	private String name;
 
 	public Demon() {
 		// TODO Auto-generated constructor stub
