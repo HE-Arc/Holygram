@@ -39,6 +39,24 @@ public class UserController {
 
 		return "saisie_users";
 	}
+	
+	@PostMapping(value = "/users/registrationUser")
+	public String registrationClient(Map<String, Object> model) {
+
+		return "registration/user";
+	}
+	
+	@PostMapping(value = "/users/registrationExorcist")
+	public String registrationExorcist(Map<String, Object> model) {
+
+		return "registration/exorcist";
+	}
+	
+	@GetMapping(value = "/users/registration")
+	public String registrationUser(Map<String, Object> model) {
+
+		return "registration/index";
+	}
 
 	@PostMapping("/users")
 	public String saveUsers(@Valid @ModelAttribute User user, BindingResult errors, Model model) {
