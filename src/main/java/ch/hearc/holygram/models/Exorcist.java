@@ -9,6 +9,11 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 @Entity
+/**
+ * Class representing an exorcist
+ * @author Seg
+ *
+ */
 public class Exorcist extends User {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

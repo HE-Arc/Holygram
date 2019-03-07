@@ -10,6 +10,11 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
+/**
+ * Class representing a service provided by an exorcist
+ * @author Seg
+ *
+ */
 public class Service {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

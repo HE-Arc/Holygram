@@ -8,6 +8,11 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
+/**
+ * Class representing a user
+ * @author Seg
+ *
+ */
 public class User {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
