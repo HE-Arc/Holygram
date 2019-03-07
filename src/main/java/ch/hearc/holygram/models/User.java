@@ -17,7 +17,7 @@ public class User {
 	@NotNull
 	@Size(min = 2, max = 30)
 	private String name;
-	
+
 	@NotNull
 	@Size(min = 2, max = 30)
 	private String password;
@@ -25,7 +25,7 @@ public class User {
 	@NotNull
 	@Size(min = 5, max = 45)
 	private String email;
-	
+
 	private String avatarPath;
 
 	public User() {

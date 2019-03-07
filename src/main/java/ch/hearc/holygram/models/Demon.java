@@ -1,11 +1,12 @@
 package ch.hearc.holygram.models;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Entity
 public class Demon {
@@ -15,8 +16,9 @@ public class Demon {
 	private Long id;
 
 	@NotNull
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Religion religion;
-	
+
 	@NotNull
 	private String name;
 
