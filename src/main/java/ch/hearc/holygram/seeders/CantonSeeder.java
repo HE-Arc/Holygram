@@ -11,6 +11,7 @@ import ch.hearc.holygram.models.Canton;
 @Component
 /**
  * Seeder for cantons
+ * 
  * @author Seg
  *
  */
@@ -25,7 +26,7 @@ public class CantonSeeder {
 	private CantonRepository cantonRepository;
 
 	public void run() {
-		
+
 		// Drop data
 		cantonRepository.deleteAll();
 

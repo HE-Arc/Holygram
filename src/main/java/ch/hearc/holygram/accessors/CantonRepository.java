@@ -5,7 +5,9 @@ import org.springframework.data.repository.CrudRepository;
 import ch.hearc.holygram.models.Canton;
 
 /**
- * Documentation : https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
+ * Documentation :
+ * https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
+ * 
  * @author Seg
  *
  */

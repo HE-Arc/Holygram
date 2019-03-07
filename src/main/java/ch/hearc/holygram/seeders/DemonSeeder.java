@@ -6,7 +6,6 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 import ch.hearc.holygram.accessors.DemonRepository;
-import ch.hearc.holygram.models.Demon;
 
 @Component
 /**
