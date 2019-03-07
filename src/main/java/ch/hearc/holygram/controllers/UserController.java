@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import ch.hearc.holygram.accessors.UserDAO;
 import ch.hearc.holygram.accessors.UserRepository;
 import ch.hearc.holygram.models.User;
 
