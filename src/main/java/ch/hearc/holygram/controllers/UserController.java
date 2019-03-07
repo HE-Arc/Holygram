@@ -39,6 +39,12 @@ public class UserController {
 
 		return "saisie_users";
 	}
+	
+
+	@GetMapping(value = "/profile")
+	public String profile(Map<String, Object> model) {
+		return "profile";
+	}
 
 	@PostMapping("/users")
 	public String saveUsers(@Valid @ModelAttribute User user, BindingResult errors, Model model) {
