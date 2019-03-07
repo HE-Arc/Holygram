@@ -36,6 +36,10 @@ public class Canton {
 		this.acronym = acronym;
 		this.name = name;
 	}
+	
+	public Canton() {
+		
+	}
 
 	public String getAcronym()
 	{

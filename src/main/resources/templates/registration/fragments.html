@@ -30,10 +30,7 @@
   	<div class="form-group">
 		<label for="canton" th:text="Canton" /></label>
 	   	<select id="canton" name="canton" required>
-		  <option value="volvo">Volvo</option>
-		  <option value="saab">Saab</option>
-		  <option value="mercedes">Mercedes</option>
-		  <option value="audi">Audi</option>
+		  <option th:each="canton: ${cantons}" th:value="${canton.acronym}" th:text="${canton.name}" />
 		</select>
   	</div>
 </div>

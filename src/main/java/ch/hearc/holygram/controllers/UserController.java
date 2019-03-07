@@ -11,20 +11,23 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import ch.hearc.holygram.accessors.UserRepository;
+import ch.hearc.holygram.accessors.CantonRepository;
 import ch.hearc.holygram.models.User;
+import ch.hearc.holygram.models.Canton;
 
 @Controller
 public class UserController {
 
 	@Autowired
 	private UserRepository uRepository;
+	@Autowired
+	private CantonRepository cRepository;
 
 	// private ProduitRepository prepo;
 
 	@GetMapping(value = "/users")
-	public String findAllProduits(Map<String, Object> model) {
+	public String findAllUsers(Map<String, Object> model) {
 		System.out.println("/users GET");
 		model.put("users", uRepository.findAll());
 		model.put("user", new User());
@@ -48,7 +51,17 @@ public class UserController {
 	
 	@PostMapping(value = "/users/registrationExorcist")
 	public String registrationExorcist(Map<String, Object> model) {
-
+		System.out.println("");
+		System.out.println("pika");
+		System.out.println("");
+		Iterable<Canton> cantons = cRepository.findAll();
+		System.out.println("");
+		System.out.println("pika");
+		System.out.println("");
+		System.out.println("");
+		System.out.println(cantons);
+		System.out.println("");
+		model.put("cantons", cantons);
 		return "registration/exorcist";
 	}
 	
@@ -56,6 +69,10 @@ public class UserController {
 	public String registerUser(Map<String, Object> model) {
 
 		return "index";
+	}
+	
+	private boolean checkRegisterUser() {
+		return true;
 	}
 	
 	@GetMapping(value = "/users/registration")
