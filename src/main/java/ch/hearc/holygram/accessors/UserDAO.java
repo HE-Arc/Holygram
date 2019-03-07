@@ -10,6 +10,6 @@ public interface UserDAO {
 
 	List<User> findAll();
 
-	void save(@Valid User produit);
+	void save(@Valid User utilisateur);
 
 }
