@@ -42,7 +42,7 @@ public class UserController {
 
 		return "saisie_users";
 	}
-	
+
 	@PostMapping(value = "/users/registrationUser")
 	public String registrationClient(Map<String, Object> model) {
 
@@ -79,6 +79,12 @@ public class UserController {
 	public String registrationUser(Map<String, Object> model) {
 
 		return "registration/index";
+	}
+
+	@GetMapping(value = "/profile")
+	public String profile(Map<String, Object> model) {
+		return "profile";
+
 	}
 
 	@PostMapping("/users")
