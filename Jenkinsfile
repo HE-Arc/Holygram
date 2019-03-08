@@ -3,12 +3,14 @@ pipeline {
     stages {
         stage('build') {
             steps {
+				sh 'cd HolygramSpring'
                 sh 'mvn --version'
 				sh 'mvn clean test'
             }
         }
 		stage('QualityTest') {
 			steps {
+				sh 'cd HolygramSpring'
 				sh 'mvn clean test'
 				sh 'mvn sonar:sonar \
 					-Dsonar.projectKey=HolyGram \
