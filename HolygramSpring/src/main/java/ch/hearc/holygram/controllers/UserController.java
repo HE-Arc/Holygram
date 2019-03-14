@@ -51,16 +51,9 @@ public class UserController {
 	
 	@PostMapping(value = "/users/registrationExorcist")
 	public String registrationExorcist(Map<String, Object> model) {
-		System.out.println("");
-		System.out.println("pika");
-		System.out.println("");
+
 		Iterable<Canton> cantons = cRepository.findAll();
-		System.out.println("");
-		System.out.println("pika");
-		System.out.println("");
-		System.out.println("");
-		System.out.println(cantons);
-		System.out.println("");
+
 		model.put("cantons", cantons);
 		return "registration/exorcist";
 	}
