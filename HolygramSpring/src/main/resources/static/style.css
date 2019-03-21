@@ -1,0 +1,12 @@
+.center {
+	text-align: center;
+}
+
+#logo {
+	font-variant: small-caps;
+	font-family: "Times New Roman";
+	user-select:none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
