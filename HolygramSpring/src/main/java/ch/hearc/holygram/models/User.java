@@ -18,22 +18,22 @@ public class User {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private Long id;
+	protected Long id;
 
 	@NotNull
 	@Size(min = 2, max = 30)
-	private String name;
+	protected String name;
 
 	@NotNull
 	@Size(min = 2, max = 30)
-	private String password;
+	protected String password;
 
 	@NotNull
 	@Size(min = 5, max = 45)
-	private String email;
+	protected String email;
 
 	@NotNull
-	private String avatar;
+	protected String avatar;
 
 	public User() {
 	}

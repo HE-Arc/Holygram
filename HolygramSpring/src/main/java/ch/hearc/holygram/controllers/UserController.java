@@ -1,6 +1,7 @@
 package ch.hearc.holygram.controllers;
 
 import java.util.Map;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -11,16 +12,24 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import ch.hearc.holygram.accessors.UserRepository;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import ch.hearc.holygram.accessors.CantonRepository;
-import ch.hearc.holygram.models.User;
+import ch.hearc.holygram.accessors.ExorcistRepository;
+import ch.hearc.holygram.accessors.UserRepository;
 import ch.hearc.holygram.models.Canton;
+import ch.hearc.holygram.models.Exorcist;
+import ch.hearc.holygram.models.User;
 
 @Controller
 public class UserController {
 
 	@Autowired
 	private UserRepository uRepository;
+	
+	@Autowired
+	private ExorcistRepository exorcistRepository;
+	
 	@Autowired
 	private CantonRepository cRepository;
 
@@ -82,7 +91,13 @@ public class UserController {
 	}
 
 	@GetMapping(value = "/profile")
-	public String profile(Map<String, Object> model) {
+	public String profile(Map<String, Object> model, @RequestParam(required = false) String id) {
+		if(id == null)
+			return "redirect:/";
+		
+		Long lid = Long.valueOf(id);
+		Optional<Exorcist> exorcist = exorcistRepository.findById(lid);
+		
 		return "profile";
 
 	}

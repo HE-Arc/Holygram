@@ -25,6 +25,11 @@ public class Exorcist extends User {
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Canton canton;
 
+	public Exorcist()
+	{
+		
+	}
+	
 	public Exorcist(String name, String password, String email, String avatar, String description, String phoneNumber, Canton canton) {
 		super(name, password, email, avatar);
 		this.description = description;
@@ -34,7 +39,7 @@ public class Exorcist extends User {
 
 	@Override
 	public String toString() {
-		return "TODO";
+		return id + " " + name + " " + email;
 	}
 
 }
