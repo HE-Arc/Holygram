@@ -1,8 +1,6 @@
 package ch.hearc.holygram.seeders;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 import ch.hearc.holygram.accessors.ReligionRepository;
@@ -11,15 +9,8 @@ import ch.hearc.holygram.models.Religion;
 @Component
 /**
  * Seeder for religions
- * @author Seg
- *
  */
 public class ReligionSeeder {
-
-	@EventListener
-	public void handleContextRefresh(ContextRefreshedEvent event) {
-		this.run();
-	}
 
 	@Autowired
 	private ReligionRepository religionRepository;

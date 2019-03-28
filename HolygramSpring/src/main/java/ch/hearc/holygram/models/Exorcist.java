@@ -2,9 +2,6 @@ package ch.hearc.holygram.models;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
@@ -35,6 +32,11 @@ public class Exorcist extends User {
 		this.description = description;
 		this.phoneNumber = phoneNumber;
 		this.canton = canton;
+	}
+	
+	public Exorcist()
+	{
+		
 	}
 
 	@Override
