@@ -5,9 +5,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import ch.hearc.holygram.accessors.CantonRepository;
 import ch.hearc.holygram.accessors.ExorcistRepository;
-import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Exorcist;
 
 @Component

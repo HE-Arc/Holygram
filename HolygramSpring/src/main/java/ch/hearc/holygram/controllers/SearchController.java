@@ -1,10 +1,11 @@
 package ch.hearc.holygram.controllers;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import ch.hearc.holygram.services.SearchService;
@@ -24,15 +25,11 @@ public class SearchController {
 	@RequestMapping(value="/search", method={RequestMethod.POST, RequestMethod.GET})
 	
 	// FIXME : Add @RequestParam
-	public ModelAndView search(ModelAndView modelAndView) {
+	public String search(Map<String, Object> model) {
 		
 		//FIXME results = searchService.search(text, pageNumber);
 		
-		//TODO modelAndView
-		//modelAndView.getModel().put("s", text);
-		//modelAndView.getModel().put("page", results);
-		modelAndView.setViewName("app.search");
-		
-		return modelAndView;
+		//TODO model
+		return "search";
 	}
 }
