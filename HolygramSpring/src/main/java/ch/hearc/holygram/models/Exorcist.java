@@ -8,7 +8,6 @@ import javax.validation.constraints.NotNull;
 @Entity
 /**
  * Class representing an exorcist
- * @author Seg
  *
  */
 public class Exorcist extends User {
@@ -22,22 +21,18 @@ public class Exorcist extends User {
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Canton canton;
 
-	public Exorcist()
-	{
-		
+	public Exorcist() {
+
 	}
-	
-	public Exorcist(String name, String password, String email, String avatar, String description, String phoneNumber, Canton canton) {
+
+	public Exorcist(String name, String password, String email, String avatar, String description, String phoneNumber,
+			Canton canton) {
 		super(name, password, email, avatar);
 		this.description = description;
 		this.phoneNumber = phoneNumber;
 		this.canton = canton;
 	}
-	
-	public Exorcist()
-	{
-		
-	}
+
 
 	@Override
 	public String toString() {
