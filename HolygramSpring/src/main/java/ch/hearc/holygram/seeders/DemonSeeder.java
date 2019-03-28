@@ -27,14 +27,10 @@ public class DemonSeeder {
 
 		// Get religions
 		Iterable<Religion> religions = religionRepository.findAll();
-
-		System.out.println(religions);
-
+		
 		// Insert data
 		for (Religion r : religions) {
 			demonRepository.save(new Demon("Ghost", r));
 		}
-
-		System.out.println(demonRepository.findAll());
 	}
 }

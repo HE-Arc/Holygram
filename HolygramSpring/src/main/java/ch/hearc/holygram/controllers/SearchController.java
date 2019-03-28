@@ -27,9 +27,17 @@ public class SearchController {
 	private DemonRepository dr;
 
 	@RequestMapping(value="/search", method={RequestMethod.POST, RequestMethod.GET})
-	
-	// FIXME : Add @RequestParam
 	public String search(Map<String, Object> model) {
+		
+		//FIXME results = searchService.search(text, pageNumber);
+		model.put("demons", dr.findAll());
+		
+		//TODO model
+		return "search";
+	}
+	
+	@RequestMapping(value="/search/process", method={RequestMethod.POST, RequestMethod.GET})
+	public String process(Map<String, Object> model) {
 		
 		//FIXME results = searchService.search(text, pageNumber);
 		model.put("demons", dr.findAll());
