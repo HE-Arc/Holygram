@@ -1,0 +1,74 @@
+<div th:replace="fragments/beforeBody.html"></div>
+<div style="padding: 30px">
+	<div class="card">
+		<div class="card-header">
+			<h2>Search by demon</h2>
+		</div>
+		<div class="card-body">
+			<div class="card-text">
+				<form method="POST" action="#">
+
+					<div class="form-group row">
+						<label for="input_demon"
+							class="col-md-2 col-form-label col-form-label-lg">Demon</label>
+						<div class="col-md-10">
+							<select id="input_demon" name="input_demon"
+								class="form-control form-control-lg" required>
+								<option th:each="demon: ${demons}" th:value="${demon.id}"
+									th:text="${demon.name}" />
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label for="input_advanced"
+							class="col-md-2 col-form-label col-form-label-lg">Advanced
+							search</label>
+						<div class="col-md-10">
+							<input type="checkbox" class="form-control form-control-lg"
+								id="input_advanced" name="input_advanced" onclick="toggle('advanced_search')">
+						</div>
+					</div>
+
+					<!-- Advanced search -->
+					<div id="advanced_search" style="display: none;">
+						<div class="form-group row">
+							<label for="input_renown"
+								class="col-md-2 col-form-label col-form-label-lg">Minimal
+								renown</label>
+							<div class="col-md-10">
+								<input type="range" class="form-control form-control-lg"
+									id="input_renown" name="input_renown" min="0" max="5" required>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="input_date"
+								class="col-md-2 col-form-label col-form-label-lg">Date</label>
+							<div class="col-md-10">
+								<input type="date" class="form-control form-control-lg"
+									id="input_date" name="input_date" min="2019-01-01" required>
+							</div>
+						</div>
+					</div>
+
+					<blockquote class="blockquote mb-0">
+						<button class="btn btn-primary btn-lg" type="submit">Search
+							!</button>
+					</blockquote>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div th:replace="fragments/afterBody.html"></div>
+<script>
+	function toggle(name) {
+		var advanced_search = document.getElementById(name);
+		if (advanced_search.style.display === "none") {
+			advanced_search.style.display = "block";
+		} else {
+			advanced_search.style.display = "none";
+		}
+	}
+</script>

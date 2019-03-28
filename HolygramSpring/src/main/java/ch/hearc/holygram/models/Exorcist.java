@@ -28,6 +28,11 @@ public class Exorcist extends User {
 		this.phoneNumber = phoneNumber;
 		this.canton = canton;
 	}
+	
+	public Exorcist()
+	{
+		
+	}
 
 	@Override
 	public String toString() {

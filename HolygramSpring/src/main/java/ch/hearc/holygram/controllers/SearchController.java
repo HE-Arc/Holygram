@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import ch.hearc.holygram.accessors.DemonRepository;
 import ch.hearc.holygram.services.SearchService;
 
 @Controller
@@ -21,6 +22,9 @@ public class SearchController {
 	
 	@Autowired
 	SearchService searchService;
+	
+	@Autowired
+	private DemonRepository dr;
 
 	@RequestMapping(value="/search", method={RequestMethod.POST, RequestMethod.GET})
 	
@@ -28,6 +32,7 @@ public class SearchController {
 	public String search(Map<String, Object> model) {
 		
 		//FIXME results = searchService.search(text, pageNumber);
+		model.put("demons", dr.findAll());
 		
 		//TODO model
 		return "search";

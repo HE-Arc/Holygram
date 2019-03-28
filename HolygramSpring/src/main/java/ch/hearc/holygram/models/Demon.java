@@ -12,10 +12,20 @@ import javax.validation.constraints.NotNull;
 @Entity
 /**
  * Class representing a demon
- * @author Seg
- *
  */
 public class Demon {
+
+	public Long getId() {
+		return id;
+	}
+
+	public Religion getReligion() {
+		return religion;
+	}
+
+	public String getName() {
+		return name;
+	}
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
@@ -32,6 +42,11 @@ public class Demon {
 	public Demon(String name, Religion religion) {
 		this.name = name;
 		this.religion = religion;
+	}
+	
+	public Demon()
+	{
+		
 	}
 
 	@Override
