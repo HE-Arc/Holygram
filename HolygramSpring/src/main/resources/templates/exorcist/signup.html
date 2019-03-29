@@ -5,7 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/profil" method="post" id="form">
+	<form th:action="@{/exorcists/create}" method="post" id="form">
 		<div th:replace="fragments/register.html :: customer"></div>
 		<div th:replace="fragments/register.html :: exorcist"></div>
 		<input type="submit" class="btn btn-primary" value="Register" /> <input

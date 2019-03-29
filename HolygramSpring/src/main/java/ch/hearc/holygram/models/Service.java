@@ -30,7 +30,7 @@ public class Service {
 
 	@NotNull
 	@ManyToOne(fetch = FetchType.LAZY)
-	private User principal;
+	private Customer principal;
 
 	@NotNull
 	@ManyToOne(fetch = FetchType.LAZY)

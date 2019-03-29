@@ -5,7 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/profil" method="post" id="form">
+	<form action="/profile" th:action="@{/profile}" method="post" id="form">
 	  	<div class="form-group">
 			<label for="email" th:text="Email" /></label>
 		   	<input type="text" class="form-control" id="email" pattern="[\w-]+@([\w-]+\.)+[\w-]+" required>
@@ -17,6 +17,6 @@
 		<input type="submit" class="btn btn-primary" value="Login" /> <input
 			type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	</form>
-	<a href="/register">Register</a>
+	<a href="signup">Register</a>
 </body>
 </html>

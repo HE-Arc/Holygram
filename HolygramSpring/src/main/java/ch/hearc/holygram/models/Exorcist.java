@@ -1,5 +1,7 @@
 package ch.hearc.holygram.models;
 
+import java.util.Map;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,8 +16,12 @@ import javax.validation.constraints.NotNull;
  * @author Seg
  *
  */
-public class Exorcist extends User {
+public class Exorcist extends Customer {
 
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+	
 	@NotNull
 	private String description;
 
@@ -35,6 +41,14 @@ public class Exorcist extends User {
 	@Override
 	public String toString() {
 		return "TODO";
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 }
