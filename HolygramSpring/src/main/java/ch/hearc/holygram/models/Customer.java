@@ -25,7 +25,8 @@ public class Customer {
 	@OneToMany(mappedBy = "fk_customer", cascade = CascadeType.ALL)
 	private Set<Evaluation> evaluations;
 
-	public Customer() {
+	public Customer(User user) {
+		this.fk_user = user;
 		this.evaluations = new HashSet<Evaluation>();
 	}
 

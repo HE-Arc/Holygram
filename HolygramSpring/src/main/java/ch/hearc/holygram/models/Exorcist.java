@@ -43,7 +43,8 @@ public class Exorcist {
 	@OneToMany(mappedBy = "fk_exorcist", cascade = CascadeType.ALL)
 	private Set<Service> services;
 
-	public Exorcist(String description, String phoneNumber) {
+	public Exorcist(User user, String description, String phoneNumber) {
+		this.fk_user = user;
 		this.description = description;
 		this.phoneNumber = phoneNumber;
 		this.evaluations = new HashSet<Evaluation>();
