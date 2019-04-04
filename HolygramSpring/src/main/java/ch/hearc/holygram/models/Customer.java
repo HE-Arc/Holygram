@@ -1,9 +1,12 @@
 package ch.hearc.holygram.models;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -32,8 +35,18 @@ public class Customer {
 	@Size(min = 5, max = 45)
 	private String email;
 
-	@NotNull
 	private String avatar;
+
+	@ManyToMany
+	private Set<Role> roles;
+	
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
 
 	public Customer() {
 	}
@@ -44,6 +57,14 @@ public class Customer {
 		this.email = email;
 		this.avatar = avatar;
 	}
+	
+	public Customer(String name, String password, String email) {
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.avatar = "";
+	}
+
 
 	@Override
 	public String toString() {

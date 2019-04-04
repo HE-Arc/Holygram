@@ -10,5 +10,5 @@ import ch.hearc.holygram.models.Exorcist;
  *
  */
 public interface ExorcistRepository extends CrudRepository<Exorcist, Long> {
-
+	Exorcist findByNameExorcist(String nameExorcist);
 }

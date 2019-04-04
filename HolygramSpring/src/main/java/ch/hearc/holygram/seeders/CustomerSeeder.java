@@ -8,9 +8,9 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import ch.hearc.holygram.accessors.ExorcistRepository;
+import ch.hearc.holygram.accessors.CustomerRepository;
 import ch.hearc.holygram.accessors.RoleRepository;
-import ch.hearc.holygram.models.Exorcist;
+import ch.hearc.holygram.models.Customer;
 import ch.hearc.holygram.models.Role;
 
 @Component
@@ -19,7 +19,7 @@ import ch.hearc.holygram.models.Role;
  * @author Seg
  *
  */
-public class ExorcistSeeder {
+public class CustomerSeeder {
 
 	@EventListener
 	public void handleContextRefresh(ContextRefreshedEvent event) {
@@ -27,24 +27,24 @@ public class ExorcistSeeder {
 	}
 
 	@Autowired
-	private ExorcistRepository exorcistRepository;
+	private CustomerRepository customerRepository;
 	@Autowired
 	private RoleRepository roleRepository;
 
 	public void run() {
 		
 		//Prepare role
-		Role role = roleRepository.findByNameRole("EXORCIST");
+		Role role = roleRepository.findByNameRole("CUSTOMER");
 		Set<Role> roles = new HashSet<Role>();
 		roles.add(role);
 
 		// Drop data
-		exorcistRepository.deleteAll();
+		customerRepository.deleteAll();
 
 		// Insert data
-		Exorcist exorcist = new Exorcist("exorcist", "1234", "exorcist@holygram.com", "", "", "", null);
-		exorcist.setRoles(roles);
-		exorcistRepository.save(exorcist);
+		Customer customer = new Customer("customer", "1234", "customer@holygram.com", null);
+		customer.setRoles(roles);
+		customerRepository.save(customer);
 
 	}
 }

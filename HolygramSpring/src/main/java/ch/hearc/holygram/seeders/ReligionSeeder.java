@@ -23,7 +23,7 @@ public class ReligionSeeder {
 
 	@Autowired
 	private ReligionRepository religionRepository;
-
+	
 	public void run() {
 
 		// Drop data

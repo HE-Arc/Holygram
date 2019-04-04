@@ -10,5 +10,5 @@ import ch.hearc.holygram.models.Customer;
  *
  */
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
-
+	Customer findByNameCustomer(String nameCustomer);
 }

@@ -1,7 +1,5 @@
 package ch.hearc.holygram.models;
 
-import java.util.Map;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -35,6 +33,42 @@ public class Exorcist extends Customer {
 		super(name, password, email, avatar);
 		this.description = description;
 		this.phoneNumber = phoneNumber;
+		this.canton = canton;
+	}
+
+	
+	public Exorcist(String name, String password, String email, String description, String phoneNumber, Canton canton) {
+		super(name, password, email);
+		this.description = description;
+		this.phoneNumber = phoneNumber;
+		this.canton = canton;
+	}
+
+	public Exorcist() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public Canton getCanton() {
+		return canton;
+	}
+
+	public void setCanton(Canton canton) {
 		this.canton = canton;
 	}
 
