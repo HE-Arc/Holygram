@@ -6,8 +6,6 @@ import ch.hearc.holygram.models.Customer;
 
 /**
  * Documentation : https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
- * @author Seg
- *
  */
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
 	Customer findByNameCustomer(String nameCustomer);

@@ -11,7 +11,6 @@ import javax.validation.constraints.NotNull;
 @Entity
 /**
  * Class representing an exorcist
- * @author Seg
  *
  */
 public class Exorcist extends Customer {
@@ -29,23 +28,23 @@ public class Exorcist extends Customer {
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Canton canton;
 
-	public Exorcist(String name, String password, String email, String avatar, String description, String phoneNumber, Canton canton) {
+	public Exorcist() {
+
+	}
+
+	public Exorcist(String name, String password, String email, String avatar, String description, String phoneNumber,
+			Canton canton) {
 		super(name, password, email, avatar);
 		this.description = description;
 		this.phoneNumber = phoneNumber;
 		this.canton = canton;
 	}
-
 	
 	public Exorcist(String name, String password, String email, String description, String phoneNumber, Canton canton) {
 		super(name, password, email);
 		this.description = description;
 		this.phoneNumber = phoneNumber;
 		this.canton = canton;
-	}
-
-	public Exorcist() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getDescription() {
@@ -74,7 +73,7 @@ public class Exorcist extends Customer {
 
 	@Override
 	public String toString() {
-		return "TODO";
+		return id + " " + this.getName() + " " + this.getEmail();
 	}
 
 	public Long getId() {

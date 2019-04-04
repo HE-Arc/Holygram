@@ -12,6 +12,19 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-WS.sendRequest(findTestObject(null))
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('http://localhost:8080/')
+
+WebUI.click(findTestObject('Page_Holygram/a_USERNAME'))
+
+WebUI.click(findTestObject('Page_Holygram/a_Profil'))
+
+WebUI.click(findTestObject('Page_Holygram/a_Account'))
+
+WebUI.click(findTestObject('Page_Holygram/a_Create'))
+
+WebUI.closeBrowser()
 

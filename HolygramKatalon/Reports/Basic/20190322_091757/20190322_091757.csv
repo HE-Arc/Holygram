@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Basic,,,2019-03-22 09:18:00,2019-03-22 09:18:01,1.201s,FAILED
+,,,,,,
+Test Cases/TestIndex,,,2019-03-22 09:18:01,2019-03-22 09:18:01,0.636s,FAILED
+"openBrowser("""")",,,2019-03-22 09:18:01,2019-03-22 09:18:01,0.310s,FAILED

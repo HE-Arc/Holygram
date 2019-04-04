@@ -35,6 +35,11 @@ public class Religion {
 		this.name = name;
 		this.demons = Stream.of(demons).collect(Collectors.toSet());
 	}
+	
+	public Religion()
+	{
+		
+	}
 
 	@Override
 	public String toString() {

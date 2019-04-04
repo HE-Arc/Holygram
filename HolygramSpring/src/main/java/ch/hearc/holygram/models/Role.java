@@ -21,10 +21,10 @@ public class Role {
 	
 	private String name;
 	
-	@ManyToMany(mappedBy = "customerRoles")
+	@ManyToMany(mappedBy = "customers")
 	private Set<Customer> customers;
 	
-	@ManyToMany(mappedBy = "exorcistRoles")
+	@ManyToMany(mappedBy = "exorcists")
 	private Set<Exorcist> exorcists;
 
 	@ManyToMany

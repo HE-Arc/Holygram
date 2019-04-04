@@ -18,7 +18,7 @@ import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.Role;
 
 @Service
-public class ExorcistDetailServiceImpl implements UserDetailsService {
+public class ExorcistDetailService implements UserDetailsService {
 
 	@Autowired
 	private ExorcistRepository exorcistRepository;

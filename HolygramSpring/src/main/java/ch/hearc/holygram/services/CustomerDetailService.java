@@ -18,7 +18,7 @@ import ch.hearc.holygram.models.Customer;
 import ch.hearc.holygram.models.Role;
 
 @Service
-public class CustomerDetailServiceImpl implements UserDetailsService {
+public class CustomerDetailService implements UserDetailsService {
 
 	@Autowired
 	private CustomerRepository customerRepository;
