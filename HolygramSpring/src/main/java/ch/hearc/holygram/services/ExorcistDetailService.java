@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ch.hearc.holygram.accessors.ExorcistRepository;
 import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.Role;
-
+/*
 @Service
 public class ExorcistDetailService implements UserDetailsService {
 
@@ -25,7 +25,6 @@ public class ExorcistDetailService implements UserDetailsService {
 
 	@Override
 	@Transactional(readOnly = true)
-
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Exorcist exorcist = exorcistRepository.findByNameExorcist(username);
 		if (exorcist == null)
@@ -36,4 +35,4 @@ public class ExorcistDetailService implements UserDetailsService {
 		}
 		return new User(exorcist.getName(), exorcist.getPassword(), grantedAuthorities);
 	}
-}
+}*/

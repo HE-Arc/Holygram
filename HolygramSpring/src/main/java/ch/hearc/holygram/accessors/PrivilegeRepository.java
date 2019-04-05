@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import ch.hearc.holygram.models.Privilege;
 
 public interface PrivilegeRepository extends CrudRepository<Privilege, Long>{
-	Privilege findByNamePrivilege(String namePrivilege);
+	Privilege findByName(String name);
 }

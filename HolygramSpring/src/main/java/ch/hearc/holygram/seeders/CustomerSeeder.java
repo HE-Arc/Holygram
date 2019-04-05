@@ -28,23 +28,13 @@ public class CustomerSeeder {
 
 	@Autowired
 	private CustomerRepository customerRepository;
-	@Autowired
-	private RoleRepository roleRepository;
 
 	public void run() {
-		
-		//Prepare role
-		Role role = roleRepository.findByNameRole("CUSTOMER");
-		Set<Role> roles = new HashSet<Role>();
-		roles.add(role);
-
 		// Drop data
 		customerRepository.deleteAll();
 
 		// Insert data
-		Customer customer = new Customer("customer", "1234", "customer@holygram.com", null);
-		customer.setRoles(roles);
-		customerRepository.save(customer);
+		//customerRepository.save(new Customer("customer", "1234", "customer@holygram.com", null));
 
 	}
 }

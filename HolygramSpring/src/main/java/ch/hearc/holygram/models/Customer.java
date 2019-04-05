@@ -1,115 +1,49 @@
 package ch.hearc.holygram.models;
 
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
+
+import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
-/**
- * Class representing a user
- * 
- * @author Seg
- *
- */
 public class Customer {
-
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull
-	@Size(min = 2, max = 30)
-	private String name;
+	@OneToOne(mappedBy = "customer")
+	private User fk_user;
 
-	@NotNull
-	@Size(min = 2, max = 30)
-	private String password;
-
-	@NotNull
-	@Size(min = 5, max = 45)
-	private String email;
-
-	private String avatar;
-
-	@ManyToMany
-	private Set<Role> roles;
+	@OneToMany(mappedBy = "fk_customer", cascade = CascadeType.ALL)
+	private Set<Evaluation> evaluations;
 	
-	public Set<Role> getRoles() {
-		return roles;
+	public Customer(User user) {
+		this.fk_user = user;
+		this.evaluations = new HashSet<Evaluation>();
 	}
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
-	}
+	/*
+	 * Dirty method to get attributes of a user 3 Classes (Template, Business,
+	 * Entity) for each Model should be used
+	 */
+	public Map<String, String> getAttributes() {
+		Map<String, String> attributes = new HashMap<String, String>();
 
-	public Customer() {
-	}
+		attributes.put("id", id.toString());
+		attributes.put("fk_user", fk_user.toString());
+		attributes.put("evaluations", evaluations.toString());
 
-	public Customer(String name, String password, String email, String avatar) {
-		this.name = name;
-		this.password = password;
-		this.email = email;
-		this.avatar = avatar;
+		return attributes;
 	}
-	
-	public Customer(String name, String password, String email) {
-		this.name = name;
-		this.password = password;
-		this.email = email;
-		this.avatar = "";
-	}
-
-
-	@Override
-	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", password=" + password + ", email=" + email + ", avatar="
-				+ avatar + "]";
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getAvatar() {
-		return avatar;
-	}
-
-	public void setAvatar(String avatar) {
-		this.avatar = avatar;
-	}
-
 }

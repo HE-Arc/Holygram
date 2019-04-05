@@ -13,5 +13,5 @@ import ch.hearc.holygram.models.Religion;
  */
 public interface DemonRepository extends CrudRepository<Demon, Long> {
 	List<Demon> findByNameIgnoreCase(String demonName);
-	List<Demon> findByReligion(Religion religion);
+	//List<Demon> findByReligion(Religion religion);
 }

@@ -34,12 +34,12 @@ public class RoleSeeder {
 
 	public void run() {
 		// Prepare Privileges
-		Privilege profil_edit = privilegeRepository.findByNamePrivilege("PROFIL_EDIT");
-		Privilege comment = privilegeRepository.findByNamePrivilege("COMMENT");
-		Privilege show_details = privilegeRepository.findByNamePrivilege("SHOW_DETAILS");
-		Privilege note = privilegeRepository.findByNamePrivilege("NOTE");
-		Privilege account_delete = privilegeRepository.findByNamePrivilege("ACCOUNT_DELETE");
-		Privilege account_edit = privilegeRepository.findByNamePrivilege("ACCOUNT_EDIT");
+		Privilege profil_edit = privilegeRepository.findByName("PROFIL_EDIT");
+		Privilege comment = privilegeRepository.findByName("COMMENT");
+		Privilege show_details = privilegeRepository.findByName("SHOW_DETAILS");
+		Privilege note = privilegeRepository.findByName("NOTE");
+		Privilege account_delete = privilegeRepository.findByName("ACCOUNT_DELETE");
+		Privilege account_edit = privilegeRepository.findByName("ACCOUNT_EDIT");
 		
 		Set<Privilege> customerPrivileges = new HashSet<Privilege>();
 		customerPrivileges.add(comment);

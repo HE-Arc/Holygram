@@ -21,11 +21,8 @@ public class Role {
 	
 	private String name;
 	
-	@ManyToMany(mappedBy = "customers")
-	private Set<Customer> customers;
-	
-	@ManyToMany(mappedBy = "exorcists")
-	private Set<Exorcist> exorcists;
+	@ManyToMany(mappedBy = "roles")
+	private Set<User> users;
 
 	@ManyToMany
 	private Set<Privilege> privileges;
@@ -40,14 +37,6 @@ public class Role {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public Set<Customer> getCustomers() {
-		return customers;
-	}
-
-	public void setCustomers(Set<Customer> customers) {
-		this.customers = customers;
 	}
 
 	public Set<Privilege> getPrivileges() {
@@ -66,11 +55,11 @@ public class Role {
 		this.name = name;
 	}
 
-	public Set<Exorcist> getExorcists() {
-		return exorcists;
+	public Set<User> getUsers() {
+		return users;
 	}
 
-	public void setExorcists(Set<Exorcist> exorcists) {
-		this.exorcists = exorcists;
+	public void setUsers(Set<User> users) {
+		this.users = users;
 	}
 }

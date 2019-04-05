@@ -1,7 +1,6 @@
 package ch.hearc.holygram.models;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,43 +14,19 @@ import javax.validation.constraints.NotNull;
  */
 public class Demon {
 
-	public Long getId() {
-		return id;
-	}
-
-	public Religion getReligion() {
-		return religion;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn
-	private Religion religion;
+	private Religion fk_religion;
 
 	@NotNull
 	private String name;
 
 	public Demon(String name, Religion religion) {
 		this.name = name;
-		this.religion = religion;
+		this.fk_religion = religion;
 	}
-	
-	public Demon()
-	{
-		
-	}
-
-	@Override
-	public String toString() {
-		return "TODO";
-	}
-
 }

@@ -45,4 +45,8 @@ public class Privilege {
 	{
 		this.name = name;
 	}
+	
+	public Privilege()
+	{
+	}
 }

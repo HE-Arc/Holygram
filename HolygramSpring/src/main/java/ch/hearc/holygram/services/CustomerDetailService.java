@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ch.hearc.holygram.accessors.CustomerRepository;
 import ch.hearc.holygram.models.Customer;
 import ch.hearc.holygram.models.Role;
-
+/*
 @Service
 public class CustomerDetailService implements UserDetailsService {
 
@@ -35,4 +35,4 @@ public class CustomerDetailService implements UserDetailsService {
 		}
 		return new User(customer.getName(), customer.getPassword(), grantedAuthorities);
 	}
-}
+}*/

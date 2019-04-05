@@ -20,8 +20,8 @@ public class SearchController {
 	
 	// https://spring.io/guides/tutorials/bookmarks/
 	
-	@Autowired
-	SearchService searchService;
+	//@Autowired
+	//SearchService searchService;
 	
 	@Autowired
 	private DemonRepository dr;

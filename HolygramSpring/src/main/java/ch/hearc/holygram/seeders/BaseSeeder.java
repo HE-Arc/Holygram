@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  */
 public class BaseSeeder {
 
-	@Autowired
+	/*@Autowired
 	private CantonSeeder cs;
 	
 	@Autowired
@@ -27,12 +27,12 @@ public class BaseSeeder {
 	private RoleSeeder roleSeeder;
 
 	@Autowired
-	private PrivilegeSeeder privilegeSeeder;
+	private PrivilegeSeeder privilegeSeeder;*/
 	
 	@EventListener
 	public void seed(ContextRefreshedEvent event) {
 		// Seed canton
-		cs.run();
+		/*cs.run();
 
 		// Seed religion
 		rs.run();
@@ -47,6 +47,6 @@ public class BaseSeeder {
 		es.run();
 
 		// Seed demon
-		ds.run();
+		ds.run();*/
 	}
 }
