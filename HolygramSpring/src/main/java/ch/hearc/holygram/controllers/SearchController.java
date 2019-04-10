@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import ch.hearc.holygram.accessors.DemonRepository;
+import ch.hearc.holygram.repositories.DemonRepository;
 import ch.hearc.holygram.services.SearchService;
 
 @Controller
@@ -19,7 +19,7 @@ public class SearchController {
 	// https://github.com/caveofprogramming/springboot/blob/master/spring-boot-tutorial-search/src/main/java/com/caveofprogramming/service/SearchService.java
 	
 	// https://spring.io/guides/tutorials/bookmarks/
-	
+	/*
 	@Autowired
 	SearchService searchService;
 	
@@ -36,5 +36,5 @@ public class SearchController {
 		
 		//TODO model
 		return "search";
-	}
+	}*/
 }

@@ -50,6 +50,8 @@ public class Exorcist {
 		this.evaluations = new HashSet<Evaluation>();
 		this.services = new HashSet<Service>();
 	}
+	
+	public Exorcist() {}
 
 	/*
 	 * Dirty method to get attributes of a user 3 Classes (Template, Business,
@@ -67,5 +69,61 @@ public class Exorcist {
 		attributes.put("services", services.toString());
 
 		return attributes;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public User getFk_user() {
+		return fk_user;
+	}
+
+	public void setFk_user(User fk_user) {
+		this.fk_user = fk_user;
+	}
+
+	public Canton getCanton() {
+		return canton;
+	}
+
+	public void setCanton(Canton canton) {
+		this.canton = canton;
+	}
+
+	public Set<Evaluation> getEvaluations() {
+		return evaluations;
+	}
+
+	public void setEvaluations(Set<Evaluation> evaluations) {
+		this.evaluations = evaluations;
+	}
+
+	public Set<Service> getServices() {
+		return services;
+	}
+
+	public void setServices(Set<Service> services) {
+		this.services = services;
 	}
 }

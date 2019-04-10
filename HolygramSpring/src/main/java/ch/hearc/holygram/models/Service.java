@@ -34,4 +34,38 @@ public class Service {
 		this.fk_demon = demon;
 		this.price = price;
 	}
+	
+	public Service() {}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Exorcist getFk_exorcist() {
+		return fk_exorcist;
+	}
+
+	public void setFk_exorcist(Exorcist fk_exorcist) {
+		this.fk_exorcist = fk_exorcist;
+	}
+
+	public Demon getFk_demon() {
+		return fk_demon;
+	}
+
+	public void setFk_demon(Demon fk_demon) {
+		this.fk_demon = fk_demon;
+	}
+
+	public float getPrice() {
+		return price;
+	}
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
 }

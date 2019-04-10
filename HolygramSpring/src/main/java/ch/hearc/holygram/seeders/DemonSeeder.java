@@ -1,12 +1,15 @@
 package ch.hearc.holygram.seeders;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import ch.hearc.holygram.accessors.DemonRepository;
-import ch.hearc.holygram.accessors.ReligionRepository;
 import ch.hearc.holygram.models.Demon;
 import ch.hearc.holygram.models.Religion;
+import ch.hearc.holygram.repositories.DemonRepository;
+import ch.hearc.holygram.repositories.ReligionRepository;
 
 @Component
 /**
@@ -26,13 +29,23 @@ public class DemonSeeder {
 		demonRepository.deleteAll();
 
 		// Get religions
-		Iterable<Religion> religions = religionRepository.findAll();
+		List<Religion> religions = (List<Religion>) religionRepository.findAll();
 
 		System.out.println(religions);
 
+		List<String> demons = new ArrayList<String>();
+		demons.add("Ghost");
+		demons.add("Djinn");
+		demons.add("Vampir");
+		demons.add("Troll");
+		demons.add("Goul");
+		demons.add("Spirit");
+		demons.add("Gnom");
+		demons.add("Lepprechaun");
+		
 		// Insert data
-		for (Religion r : religions) {
-			demonRepository.save(new Demon("Ghost", r));
+		for (int i = 0; i < 8; ++i) {
+			demonRepository.save(new Demon(demons.get(i), religions.get(i)));
 		}
 
 		System.out.println(demonRepository.findAll());
