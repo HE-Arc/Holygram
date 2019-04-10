@@ -41,4 +41,41 @@ public class Canton {
 		this.acronym = acronym;
 		this.name = name;
 	}
+	
+	/**
+	 * Constructor of class "Canton"
+	 */
+	public Canton() {}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAcronym() {
+		return acronym;
+	}
+
+	public void setAcronym(String acronym) {
+		this.acronym = acronym;
+	}
+
+	public Set<Exorcist> getExorcists() {
+		return exorcists;
+	}
+
+	public void setExorcists(Set<Exorcist> exorcists) {
+		this.exorcists = exorcists;
+	}
 }

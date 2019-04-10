@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ch.hearc.holygram.accessors.ExorcistRepository;
+import ch.hearc.holygram.repositories.ExorcistRepository;
 import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.Role;
 /*

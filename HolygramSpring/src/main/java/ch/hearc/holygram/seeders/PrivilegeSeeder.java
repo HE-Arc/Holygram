@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
-
-import ch.hearc.holygram.accessors.PrivilegeRepository;
+import ch.hearc.holygram.repositories.PrivilegeRepository;
 import ch.hearc.holygram.models.Privilege;
 
 @Component

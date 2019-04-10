@@ -1,12 +1,11 @@
-package ch.hearc.holygram.accessors;
+package ch.hearc.holygram.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import ch.hearc.holygram.models.Service;
+import ch.hearc.holygram.models.Customer;
 
 /**
  * Documentation : https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
  */
-public interface ServiceRepository extends CrudRepository<Service, Long> {
-
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
 }

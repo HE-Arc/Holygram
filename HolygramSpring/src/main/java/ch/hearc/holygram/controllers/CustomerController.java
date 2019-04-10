@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import ch.hearc.holygram.accessors.CantonRepository;
-import ch.hearc.holygram.accessors.CustomerRepository;
+import ch.hearc.holygram.repositories.CantonRepository;
+import ch.hearc.holygram.repositories.CustomerRepository;
 import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Customer;
 

@@ -1,4 +1,4 @@
-package ch.hearc.holygram.accessors;
+package ch.hearc.holygram.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 

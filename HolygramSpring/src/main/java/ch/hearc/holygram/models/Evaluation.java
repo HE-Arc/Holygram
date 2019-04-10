@@ -42,5 +42,54 @@ public class Evaluation {
 		this.isPositive = isPositive;
 		this.text = text;
 	}
+	
+	public Evaluation() {}
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Customer getFk_customer() {
+		return fk_customer;
+	}
+
+	public void setFk_customer(Customer fk_customer) {
+		this.fk_customer = fk_customer;
+	}
+
+	public Exorcist getFk_exorcist() {
+		return fk_exorcist;
+	}
+
+	public void setFk_exorcist(Exorcist fk_exorcist) {
+		this.fk_exorcist = fk_exorcist;
+	}
+
+	public boolean isPositive() {
+		return isPositive;
+	}
+
+	public void setPositive(boolean isPositive) {
+		this.isPositive = isPositive;
+	}
+
+	public Date getDatetime() {
+		return datetime;
+	}
+
+	public void setDatetime(Date datetime) {
+		this.datetime = datetime;
+	}
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
 }
