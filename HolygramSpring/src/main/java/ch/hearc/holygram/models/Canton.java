@@ -1,22 +1,24 @@
 package ch.hearc.holygram.models;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
 /**
  * Class representing a swiss canton
- * @author Seg
- *
  */
 public class Canton {
 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@NotNull
@@ -26,6 +28,9 @@ public class Canton {
 	@NotNull
 	@Size(min = 2, max = 2)
 	private String acronym;
+	
+	@OneToMany(mappedBy = "canton", cascade = CascadeType.ALL)
+	private Set<Evaluation> exorcists;
 
 	/**
 	 * Constructor of class "Canton"
@@ -36,24 +41,4 @@ public class Canton {
 		this.acronym = acronym;
 		this.name = name;
 	}
-	
-	public Canton() {
-		
-	}
-
-	public String getAcronym()
-	{
-		return this.acronym;
-	}
-	
-	public String getName()
-	{
-		return this.name;
-	}
-	
-	@Override
-	public String toString() {
-		return "TODO";
-	}
-
 }

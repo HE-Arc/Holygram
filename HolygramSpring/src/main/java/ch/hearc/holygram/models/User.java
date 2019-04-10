@@ -1,93 +1,77 @@
 package ch.hearc.holygram.models;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-/**
- * Class representing a user
- * 
- * @author Seg
- *
- */
 public class User {
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getAvatar() {
-		return avatar;
-	}
-
-	public void setAvatar(String avatar) {
-		this.avatar = avatar;
-	}
-
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	protected Long id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
 	@NotNull
 	@Size(min = 2, max = 30)
-	protected String name;
+	private String username;
 
 	@NotNull
 	@Size(min = 2, max = 30)
-	protected String password;
+	private String email;
 
 	@NotNull
-	@Size(min = 5, max = 45)
-	protected String email;
+	@Size(min = 2, max = 30)
+	private String password;
 
-	@NotNull
-	protected String avatar;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(unique = true)
+	private Customer customer;
 
-	public User() {
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(unique = true)
+	private Exorcist exorcist;
+
+	public User(String username, String password, String email) throws Exception {
+		if (validateUsername(username) && validatePassword(password) && validateEmail(email)) {
+			this.username = username;
+			this.password = password;
+			this.email = email;
+		} else
+			throw new Exception("Invalid arguments provided !");
 	}
 
-	public User(String name, String password, String email, String avatar) {
-		this.name = name;
-		this.password = password;
-		this.email = email;
-		this.avatar = avatar;
+	/*
+	 * Dirty method to get attributes of a user 3 Classes (Template, Business,
+	 * Entity) for each Model should be used
+	 */
+	public Map<String, String> getAttributes() {
+		Map<String, String> attributes = new HashMap<String, String>();
+
+		attributes.put("id", id.toString());
+		attributes.put("username", username.toString());
+		attributes.put("email", email.toString());
+
+		return attributes;
 	}
 
-	@Override
-	public String toString() {
-		return "TODO";
+	private boolean validateUsername(String username) {
+		return false; // TODO
 	}
 
+	private boolean validatePassword(String password) {
+		return false; // TODO
+	}
+
+	private boolean validateEmail(String email) {
+		return false; // TODO
+	}
 }

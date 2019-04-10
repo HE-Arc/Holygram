@@ -1,48 +1,37 @@
 package ch.hearc.holygram.models;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Entity
 /**
  * Class representing a service provided by an exorcist
- * @author Seg
- *
  */
 public class Service {
 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull
-	@Size(min = 3, max = 45)
-	private String name;
+	@ManyToOne
+	@JoinColumn
+	private Exorcist fk_exorcist;
+
+	@ManyToOne
+	@JoinColumn
+	private Demon fk_demon;
 
 	@NotNull
 	private float price;
 
-	@NotNull
-	@ManyToOne(fetch = FetchType.LAZY)
-	private User principal;
-
-	@NotNull
-	@ManyToOne(fetch = FetchType.LAZY)
-	private Exorcist exorcist;
-
-	public Service() {
-		// TODO Auto-generated constructor stub
+	public Service(Exorcist exorcist, Demon demon, float price) {
+		this.fk_exorcist = exorcist;
+		this.fk_demon = demon;
+		this.price = price;
 	}
-
-	@Override
-	public String toString() {
-		return "TODO";
-	}
-
 }
