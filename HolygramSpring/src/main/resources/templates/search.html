@@ -88,10 +88,7 @@
 		
 		var promise = new Promise(
 			    function(resolve, reject) {       
-			      window.setTimeout(
-			        function() {
 			          resolve(document.getElementById('form-search').submit());
-			        }, Math.random() * 2000 + 1000);
 			    }
 			);
 		
