@@ -36,7 +36,7 @@ public class User {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(unique = true)
 	private Customer customer;
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(unique = true)
 	private Exorcist exorcist;
