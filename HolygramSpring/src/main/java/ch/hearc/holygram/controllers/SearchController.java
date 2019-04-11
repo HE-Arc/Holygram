@@ -49,17 +49,11 @@ public class SearchController {
 	public @ResponseBody ArrayList<Exorcist> process(HttpServletRequest request) {
 
 		ArrayList<Exorcist> exorcists = new ArrayList<Exorcist>();
-		int demon_id = Integer.parseInt(request.getParameter("input_demon"));
+		Long demon_id = Long.parseLong(request.getParameter("input_demon"));
 
-		// Debug
-		// Optional<Exorcist> e = er.findById((long) 1);
-		// if (e.isPresent())
-
-		exorcists.addAll((Collection<? extends Exorcist>) er.findAll());
-		Exorcist foo = exorcists.get(0);
+		exorcists.addAll((Collection<? extends Exorcist>)er.findByDemonID(demon_id));
 
 		System.out.println("[search] exo count: " + exorcists.size());
-		System.out.println(foo.toString());
 
 		// return list of exorcists
 		return exorcists;
