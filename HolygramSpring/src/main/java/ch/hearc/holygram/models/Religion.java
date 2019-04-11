@@ -30,8 +30,33 @@ public class Religion {
 	@OneToMany(mappedBy = "fk_religion", cascade = CascadeType.ALL)
 	private Set<Demon> demons;
 
-	public Religion(String name, Demon... demons) {
+	public Religion(String name) {
 		this.name = name;
-		this.demons = Stream.of(demons).collect(Collectors.toSet());
+	}
+	
+	public Religion() {}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Set<Demon> getDemons() {
+		return demons;
+	}
+
+	public void setDemons(Set<Demon> demons) {
+		this.demons = demons;
 	}
 }

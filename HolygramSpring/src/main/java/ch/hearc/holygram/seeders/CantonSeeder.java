@@ -3,8 +3,8 @@ package ch.hearc.holygram.seeders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import ch.hearc.holygram.accessors.CantonRepository;
 import ch.hearc.holygram.models.Canton;
+import ch.hearc.holygram.repositories.CantonRepository;
 
 @Component
 /**

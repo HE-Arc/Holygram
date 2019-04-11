@@ -18,13 +18,25 @@ public class BaseSeeder {
 	private ReligionSeeder rs;
 	
 	@Autowired
-	private ExorcistSeeder es;
+	private UserSeeder es;
 	
 	@Autowired
 	private DemonSeeder ds;
+	
+	@Autowired
+	private RoleSeeder roleSeeder;
+	
+	@Autowired
+	private PrivilegeSeeder privilegeSeeder;
 
 	@EventListener
 	public void seed(ContextRefreshedEvent event) {
+		// Seed privilege
+		privilegeSeeder.run();
+		
+		// Seed role
+		roleSeeder.run();
+		
 		// Seed canton
 		cs.run();
 

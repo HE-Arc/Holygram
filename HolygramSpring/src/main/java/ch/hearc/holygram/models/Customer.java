@@ -29,6 +29,8 @@ public class Customer {
 		this.fk_user = user;
 		this.evaluations = new HashSet<Evaluation>();
 	}
+	
+	public Customer() {}
 
 	/*
 	 * Dirty method to get attributes of a user 3 Classes (Template, Business,
@@ -42,5 +44,29 @@ public class Customer {
 		attributes.put("evaluations", evaluations.toString());
 
 		return attributes;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public User getFk_user() {
+		return fk_user;
+	}
+
+	public void setFk_user(User fk_user) {
+		this.fk_user = fk_user;
+	}
+
+	public Set<Evaluation> getEvaluations() {
+		return evaluations;
+	}
+
+	public void setEvaluations(Set<Evaluation> evaluations) {
+		this.evaluations = evaluations;
 	}
 }

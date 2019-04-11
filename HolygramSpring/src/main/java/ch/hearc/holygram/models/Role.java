@@ -7,16 +7,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
 /**
- * Class representing a swiss canton
+ * Class user's role
  */
-public class Canton {
-
+public class Role {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -25,27 +25,17 @@ public class Canton {
 	@Size(min = 3, max = 45)
 	private String name;
 	
-	@NotNull
-	@Size(min = 2, max = 2)
-	private String acronym;
+	@OneToMany(mappedBy = "fk_role", cascade = CascadeType.ALL)
+	private Set<User> users;
 	
-	@OneToMany(mappedBy = "canton", cascade = CascadeType.ALL)
-	private Set<Exorcist> exorcists;
-
-	/**
-	 * Constructor of class "Canton"
-	 * @param acronym
-	 * @param name
-	 */
-	public Canton(String acronym, String name) {
-		this.acronym = acronym;
+	@ManyToMany
+	private Set<Privilege> privileges;
+	
+	public Role() {}
+	
+	public Role(String name) {
 		this.name = name;
 	}
-	
-	/**
-	 * Constructor of class "Canton"
-	 */
-	public Canton() {}
 
 	public Long getId() {
 		return id;
@@ -63,19 +53,19 @@ public class Canton {
 		this.name = name;
 	}
 
-	public String getAcronym() {
-		return acronym;
+	public Set<User> getUsers() {
+		return users;
 	}
 
-	public void setAcronym(String acronym) {
-		this.acronym = acronym;
+	public void setUsers(Set<User> users) {
+		this.users = users;
 	}
 
-	public Set<Exorcist> getExorcists() {
-		return exorcists;
+	public Set<Privilege> getPrivileges() {
+		return privileges;
 	}
 
-	public void setExorcists(Set<Exorcist> exorcists) {
-		this.exorcists = exorcists;
+	public void setPrivileges(Set<Privilege> privileges) {
+		this.privileges = privileges;
 	}
 }

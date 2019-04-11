@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -39,15 +40,22 @@ public class User {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(unique = true)
 	private Exorcist exorcist;
+	
+	@ManyToOne
+	@JoinColumn
+	private Role fk_role;
 
-	public User(String username, String password, String email) throws Exception {
+	public User(String username, String password, String email, Role fk_role) throws Exception {
 		if (validateUsername(username) && validatePassword(password) && validateEmail(email)) {
 			this.username = username;
 			this.password = password;
 			this.email = email;
+			this.fk_role = fk_role;
 		} else
 			throw new Exception("Invalid arguments provided !");
 	}
+	
+	public User() {}
 
 	/*
 	 * Dirty method to get attributes of a user 3 Classes (Template, Business,
@@ -64,14 +72,70 @@ public class User {
 	}
 
 	private boolean validateUsername(String username) {
-		return false; // TODO
+		return true; // TODO
 	}
 
 	private boolean validatePassword(String password) {
-		return false; // TODO
+		return true; // TODO
 	}
 
 	private boolean validateEmail(String email) {
-		return false; // TODO
+		return true; // TODO
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public Exorcist getExorcist() {
+		return exorcist;
+	}
+
+	public void setExorcist(Exorcist exorcist) {
+		this.exorcist = exorcist;
+	}
+
+	public Role getRole() {
+		return fk_role;
+	}
+
+	public void setRole(Role fk_role) {
+		this.fk_role = fk_role;
 	}
 }

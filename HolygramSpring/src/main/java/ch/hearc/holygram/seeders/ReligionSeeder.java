@@ -3,8 +3,8 @@ package ch.hearc.holygram.seeders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import ch.hearc.holygram.accessors.ReligionRepository;
 import ch.hearc.holygram.models.Religion;
+import ch.hearc.holygram.repositories.ReligionRepository;
 
 @Component
 /**
