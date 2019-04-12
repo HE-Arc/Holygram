@@ -26,14 +26,11 @@ public class Exorcist {
 	private Long id;
 
 	@NotNull
-	@Size(min = 50, max = 255)
+	@Size(min = 1, max = 1000)
 	private String description;
 
 	@NotNull
 	private String phoneNumber;
-
-	@OneToOne(mappedBy = "exorcist", cascade = CascadeType.ALL, fetch = FetchType.EAGER, optional = false)
-	private User user;
 
 	@ManyToOne
 	@JoinColumn
@@ -45,8 +42,7 @@ public class Exorcist {
 	@OneToMany(mappedBy = "fk_exorcist", cascade = CascadeType.ALL)
 	private Set<Service> services;
 
-	public Exorcist(User user, String description, String phoneNumber) {
-		this.user = user;
+	public Exorcist(String description, String phoneNumber) {
 		this.description = description;
 		this.phoneNumber = phoneNumber;
 		this.evaluations = new HashSet<Evaluation>();
@@ -63,7 +59,6 @@ public class Exorcist {
 		Map<String, String> attributes = new HashMap<String, String>();
 
 		attributes.put("id", id.toString());
-		attributes.put("fk_user", user.toString());
 		attributes.put("description", description.toString());
 		attributes.put("phoneNumber", phoneNumber.toString());
 		attributes.put("canton", canton.toString());
@@ -95,14 +90,6 @@ public class Exorcist {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
 	}
 
 	public Canton getCanton() {

@@ -102,10 +102,9 @@ public class UserController {
 			return "redirect:/";
 
 		Exorcist e = exorcist.get();
-		System.out.println(e);
-		User u = e.getUser();
-		System.out.println(u);
-		System.out.println(u.getEmail());
+//		System.out.println(e);
+//		System.out.println(u);
+//		System.out.println(u.getEmail());
 
 //		model.put("name", e.getFk_user().getUsername());
 //		model.put("email", e.getFk_user().getEmail());
