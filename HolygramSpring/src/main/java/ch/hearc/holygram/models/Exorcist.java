@@ -50,7 +50,7 @@ public class Exorcist {
 		this.evaluations = new HashSet<Evaluation>();
 		this.services = new HashSet<Service>();
 	}
-	
+
 	public Exorcist() {}
 
 	/*

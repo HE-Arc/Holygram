@@ -5,7 +5,33 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="customers/signup">Customer</a>
-	<a href="exorcists/signup">Exorcist</a>
+	<form autocomplete="off" method="POST" th:action="@{/signup}" th:object="${userForm}">
+		<h2 class="form-signin-heading">Create your account</h2>
+
+		<div class="form-group">
+			<label for="type" text="Type Account" /></label>
+			<input type="radio" name="type" value="customer" class="form-control" id="typeCustomer" checked>Customer</input>
+			<input type="radio" name="type" value="exorcist" class="form-control" id="typeExorcist">Exorcist</input>
+		</div>
+
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<input type="text" name="username" class="form-control" placeholder="Username" autofocus="true"></input>
+		</div>
+
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<input type="password" name="password" class="form-control" placeholder="Password"></input>
+		</div>
+
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<input type="password" name="passwordConfirm" class="form-control" placeholder="Confirm your password"></input>
+		</div>
+
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<input type="email" name="email" class="form-control"	placeholder="Email"></input>
+		</div>
+
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+	</form>
 </body>
 </html>

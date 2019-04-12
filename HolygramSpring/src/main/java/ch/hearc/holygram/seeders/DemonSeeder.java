@@ -42,12 +42,10 @@ public class DemonSeeder {
 		demons.add("Spirit");
 		demons.add("Gnom");
 		demons.add("Lepprechaun");
-		
+
 		// Insert data
 		for (int i = 0; i < 8; ++i) {
 			demonRepository.save(new Demon(demons.get(i), religions.get(i)));
 		}
-
-		System.out.println(demonRepository.findAll());
 	}
 }

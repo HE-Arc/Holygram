@@ -1,8 +1,8 @@
 package ch.hearc.holygram.seeders;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,46 +13,52 @@ public class BaseSeeder {
 
 	@Autowired
 	private CantonSeeder cs;
-	
+
 	@Autowired
 	private ReligionSeeder rs;
-	
+
 	@Autowired
-	private UserSeeder es;
-	
+	private UserSeeder userSeeder;
+
 	@Autowired
 	private DemonSeeder ds;
-	
+
 	@Autowired
 	private RoleSeeder roleSeeder;
 
 	@Autowired
 	private PrivilegeSeeder privilegeSeeder;
 
-	@EventListener
-	public void seed(ContextRefreshedEvent event) {
-		// Seed privilege
-		privilegeSeeder.run();
-		
-		// Seed role
-		roleSeeder.run();
-		
-		// Seed canton
-		/*cs.run();
+	@Autowired
+	private CustomerSeeder customerSeeder;
 
-		// Seed religion
+	@Autowired
+	private ExorcistSeeder exorcistSeeder;
+
+	@PostConstruct
+	public void seed() {
+		// Seed privileges
+		privilegeSeeder.run();
+
+		// Seed roles
+		roleSeeder.run();
+
+		// Seed cantons
+		cs.run();
+
+		// Seed religions
 		rs.run();
 
-		// Seed privilege
-		privilegeSeeder.run();
-		
-		// Seed role
-		roleSeeder.run();
-		
-		// Seed exorcist
-		es.run();
+		// Seed users
+		userSeeder.run();
 
-		// Seed demon
-		ds.run();*/
+		// Seed demons
+		ds.run();
+
+		// Seed customers
+		customerSeeder.run();
+
+		// Seed customers
+		exorcistSeeder.run();
 	}
 }

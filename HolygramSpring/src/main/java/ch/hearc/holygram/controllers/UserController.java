@@ -1,37 +1,57 @@
 package ch.hearc.holygram.controllers;
 
-import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
 
+import org.apache.catalina.connector.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
-import ch.hearc.holygram.models.Canton;
-import ch.hearc.holygram.repositories.CantonRepository;
+import ch.hearc.holygram.models.User;
+import ch.hearc.holygram.security.UserValidator;
+import ch.hearc.holygram.services.SecurityService;
+import ch.hearc.holygram.services.UserService;
 
 @Controller
-public class UserController {	
-	@Autowired
-	private CantonRepository cRepository;
+public class UserController {
+    @Autowired
+    private UserService userService;
 
-	@GetMapping(value = "/signup/customer")
-	public String signupCustomer(Map<String, Object> model) {
+    @Autowired
+    private SecurityService securityService;
 
-		return "signup/customer";
-	}
-	
-	@GetMapping(value = "/signup/exorcist")
-	public String signupExorcist(Map<String, Object> model) {
+    @Autowired
+    private UserValidator userValidator;
 
-		Iterable<Canton> cantons = cRepository.findAll();
-		model.put("cantons", cantons);
-		
-		return "signup/exorcist";
-	}
-	
-	@GetMapping(value = "/signup/")
-	public String signupUser(Map<String, Object> model) {
+    @GetMapping("/signup")
+    public String signup(Model model) {
+        model.addAttribute("userForm", new User());
 
-		return "signup/index";
-	}
+        return "signup";
+    }
+
+    @PostMapping("/signup")
+    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, HttpServletRequest request) {
+    	userValidator.validate(userForm, bindingResult);
+
+        if (bindingResult.hasErrors()) {
+            return "signup";
+        }
+        
+        System.out.println(bindingResult);
+
+        userService.save(userForm);
+
+        String typeAccount = request.getParameter("type");
+        
+        if (typeAccount == "customer")
+        
+        
+        //securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
+
+        return "signup";
+        //return "redirect:/";
+    }
 }

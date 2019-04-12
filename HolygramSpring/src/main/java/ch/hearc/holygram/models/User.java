@@ -3,8 +3,6 @@ package ch.hearc.holygram.models;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,14 +12,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 public class User {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -39,12 +37,15 @@ public class User {
 	@Size(min = 2, max = 30)
 	private String password;
 	
+	@Transient
+    private String passwordConfirm;
+	
 	private Date lastLogin;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(unique = true)
 	private Customer customer;
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(unique = true)
 	private Exorcist exorcist;
@@ -53,6 +54,8 @@ public class User {
 	@JoinColumn
 	private Role fk_role;
 
+	public User() {}
+	
 	public User(String username, String password, String email, Role fk_role) throws Exception {
 		if (validateUsername(username) && validatePassword(password) && validateEmail(email)) {
 			this.username = username;
@@ -63,8 +66,6 @@ public class User {
 			throw new Exception("Invalid arguments provided !");
 	}
 	
-	public User() {}
-
 	/*
 	 * Dirty method to get attributes of a user 3 Classes (Template, Business,
 	 * Entity) for each Model should be used
@@ -122,6 +123,14 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public String getPasswordConfirm() {
+        return passwordConfirm;
+    }
+
+    public void setPasswordConfirm(String passwordConfirm) {
+        this.passwordConfirm = passwordConfirm;
+    }
 
 	public Customer getCustomer() {
 		return customer;

@@ -1,19 +1,24 @@
-<div th:fragment="customer">
+<div th:fragment="user">
+	<div class="form-group">
+		<label for="type" th:text="Type Account" /></label>
+	   	<form:input type="radio" name="type" value="customer" class="form-control" id="typeCustomer" checked>
+	   	<form:input type="radio" name="type" value="exorcist" class="form-control" id="typeExorcist" checked>
+	</div>
 	<div class="form-group">
 		<label for="name" th:text="Name" /></label>
-	   	<input type="text" name="name" class="form-control" id="name" required>
+	   	<form:input type="text" name="name" class="form-control" id="name" required>
 	</div>
   	<div class="form-group">
 		<label for="password" th:text="Password" /></label>
-	   	<input type="password" name="password" class="form-control" id="password" required>
+	   	<form:input type="password" name="password" class="form-control" id="password" required>
   	</div>
   	<div class="form-group">
 		<label for="email" th:text="Email" /></label>
-	   	<input type="text" name="email" class="form-control" id="email" pattern="[\w-]+@([\w-]+\.)+[\w-]+" required>
+	   	<form:input type="text" name="email" class="form-control" id="email" pattern="[\w-]+@([\w-]+\.)+[\w-]+" required>
   	</div>
   	<div class="form-group">
 		<label for="avatarPath" th:text="Avatar" /></label>
-	   	<input type="file" name="avatar" class="form-control" id="avatarPath" accept="image/png, image/jpeg" required>
+	   	<form:input type="file" name="avatar" class="form-control" id="avatarPath" accept="image/png, image/jpeg" required>
   	</div>
 </div>
 
