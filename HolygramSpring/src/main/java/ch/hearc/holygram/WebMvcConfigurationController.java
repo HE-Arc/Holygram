@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebMvcConfigurationController implements WebMvcConfigurer {
 	@Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/SignIn").setViewName("SignIn");
+        registry.addViewController("/signin").setViewName("signin");
         registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
     }
 }

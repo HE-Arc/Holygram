@@ -3,17 +3,21 @@ package ch.hearc.holygram.controllers;
 import java.util.Map;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import ch.hearc.holygram.repositories.CantonRepository;
-import ch.hearc.holygram.repositories.CustomerRepository;
-import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Customer;
+import ch.hearc.holygram.repositories.CustomerRepository;
 
 
 
@@ -22,32 +26,10 @@ public class CustomerController {
 
 	@Autowired
 	private CustomerRepository customerRepository;
-	@Autowired
-	private CantonRepository cantonRepository;
 	
-	@GetMapping("/customers/signup")
-	public String signUpCustomer(Map<String, Object> model) {
-
-		Iterable<Canton> cantons = cantonRepository.findAll();
-		model.put("cantons", cantons);
-		
-		return "customer/signup";
-	}
 	
-	@GetMapping("/customers/{id}")
-	public String retrieveCustomer(Map<String, Object> model, @PathVariable long id) {
-		Optional<Customer> customer = customerRepository.findById(id);
-
-		model.put("customer", customer.get());
-		
-		System.out.println("");
-		System.out.println("toto");
-		System.out.println("");
-		
-		return "customer/profile";
-	}
-	
-	/*@PostMapping("/customers/create")
+	@PostMapping("/customers/create")
+	@PostAuthorize("hasRole('CUSTOMER')")
 	public String createCustomer(@Valid @ModelAttribute Customer customer, BindingResult errors, Model model) {
 
 		if (!errors.hasErrors()) {
@@ -55,7 +37,7 @@ public class CustomerController {
         }
 
         return ((errors.hasErrors()) ? "customer/signup" : "redirect:/customers/" + customer.getId());
-	}*/
+	}
 
 	@PostMapping("/customers/{id}/update")
 	public String updateCustomer(Map<String, Object> model, @RequestBody Customer customer) {

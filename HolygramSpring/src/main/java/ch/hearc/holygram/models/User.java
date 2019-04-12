@@ -1,10 +1,12 @@
 package ch.hearc.holygram.models;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,6 +17,8 @@ import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.security.core.GrantedAuthority;
+
 @Entity
 public class User {
 
@@ -24,6 +28,7 @@ public class User {
 
 	@NotNull
 	@Size(min = 2, max = 30)
+	@Column(unique = true)
 	private String username;
 
 	@NotNull
@@ -33,6 +38,8 @@ public class User {
 	@NotNull
 	@Size(min = 2, max = 30)
 	private String password;
+	
+	private Date lastLogin;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(unique = true)
@@ -132,11 +139,19 @@ public class User {
 		this.exorcist = exorcist;
 	}
 
-	public Role getRole() {
+	public Date getLastLogin() {
+		return lastLogin;
+	}
+
+	public void setLastLogin(Date lastLogin) {
+		this.lastLogin = lastLogin;
+	}
+
+	public Role getFk_role() {
 		return fk_role;
 	}
 
-	public void setRole(Role fk_role) {
+	public void setFk_role(Role fk_role) {
 		this.fk_role = fk_role;
 	}
 }

@@ -16,9 +16,4 @@ public class HomePageController {
 	public String signUp(Map<String, Object> model) {
 		return "signup";
 	}
-	
-	@GetMapping("/signin")
-	public String signIn(Map<String, Object> model) {
-		return "signin";
-	}
 }
