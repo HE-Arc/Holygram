@@ -5,8 +5,49 @@
 #logo {
 	font-variant: small-caps;
 	font-family: "Times New Roman";
-	user-select:none;
+	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+}
+
+h1 a:link {
+	color: blacK;
+	text-decoration: none !important;
+}
+
+h1 a:visited {
+	color: blacK;
+	text-decoration: none !important;
+}
+
+h1 a:hover {
+	color: blacK;
+	text-decoration: none !important;
+}
+
+h1 a:active {
+	color: blacK;
+	text-decoration: none ! important;
+}
+
+h1 img:hover {
+	animation: spin 0.5s ease-in-out;
+}
+
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	
+	50% {
+		-webkit-transform: rotate(25deg);
+		transform: rotate(25deg);
+	}
+	
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
 }
