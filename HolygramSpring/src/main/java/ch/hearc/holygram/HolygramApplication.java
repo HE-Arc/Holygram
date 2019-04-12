@@ -9,4 +9,4 @@ public class HolygramApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HolygramApplication.class, args);
 	}
-}
+}	

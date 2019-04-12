@@ -60,14 +60,15 @@ public class UserSeeder {
 	private void addExorcist() throws Exception {
 		User newExorcist = new User("exorcist", "1234", "exorcist@email.com", RoleSeeder.exorcistRole);
 
-		Canton canton = cantonRepository.findById(1l).get();
+		Canton canton = cantonRepository.findById(10l).get();
 		
 		Exorcist e = new Exorcist(lorem, "phone", canton);
 		exorcistRepository.save(e);
 		newExorcist.setExorcist(e);
 		userRepository.save(newExorcist);
-		
+
 		serviceRepository.save(new Service(e, demonRepository.findById(1l).get(), 4.2f));
+		serviceRepository.save(new Service(e, demonRepository.findById(3l).get(), 2.4f));
 	}
 
 	private void addUser() throws Exception {

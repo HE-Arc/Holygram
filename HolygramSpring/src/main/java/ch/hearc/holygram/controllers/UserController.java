@@ -18,8 +18,11 @@ import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.User;
 import ch.hearc.holygram.repositories.CantonRepository;
+import ch.hearc.holygram.repositories.DemonRepository;
 import ch.hearc.holygram.repositories.ExorcistRepository;
+import ch.hearc.holygram.repositories.ReligionRepository;
 import ch.hearc.holygram.repositories.UserRepository;
+import ch.hearc.holygram.seeders.DemonSeeder;
 
 @Controller
 public class UserController {
@@ -31,9 +34,13 @@ public class UserController {
 	private ExorcistRepository exorcistRepository;
 
 	@Autowired
-	private CantonRepository cRepository;
+	private CantonRepository cantonRepository;
 
-	// private ProduitRepository prepo;
+	@Autowired
+	private DemonRepository demonRepository;
+
+	@Autowired
+	private ReligionRepository religionRepository;
 
 	@GetMapping(value = "/users")
 	public String findAllUsers(Map<String, Object> model) {
@@ -63,7 +70,7 @@ public class UserController {
 		System.out.println("");
 		System.out.println("pika");
 		System.out.println("");
-		Iterable<Canton> cantons = cRepository.findAll();
+		Iterable<Canton> cantons = cantonRepository.findAll();
 		System.out.println("");
 		System.out.println("pika");
 		System.out.println("");
@@ -91,7 +98,8 @@ public class UserController {
 	}
 
 	@GetMapping(value = "/profile")
-	public String profile(Map<String, Object> model, @RequestParam(required = false) String id) {
+	public String profile(Map<String, Object> model, @RequestParam(required = false) String id,
+			@RequestParam(required = false) String edit) {
 		if (id == null)
 			return "redirect:/";
 
@@ -103,21 +111,27 @@ public class UserController {
 			return "redirect:/";
 		}
 
-		User user = ouser.get();
+		User u = ouser.get();
 
-		Exorcist e = user.getExorcist();
+		Exorcist e = u.getExorcist();
 		if (e == null) {
 			System.out.println("not an exorcist");
 			return "redirect:/";
 		}
 
-		model.put("name", user.getUsername());
-		model.put("services", e.getServices());
-		model.put("canton", e.getCanton().getName());
-		model.put("description", e.getDescription());
-		model.put("phone", e.getPhoneNumber());
+		boolean isEditing = edit != null;
 
-		return "profile";
+		model.put("edit", isEditing);
+		model.put("e", e);
+		model.put("u", u);
+
+		if (isEditing) {
+			model.put("cantons", cantonRepository.findAll());
+			model.put("demons", demonRepository.findAll());
+			model.put("religions", religionRepository.findAll());
+		}
+
+		return "profile/profile";
 
 	}
 
