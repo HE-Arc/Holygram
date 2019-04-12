@@ -36,15 +36,16 @@ public class Exorcist {
 	@JoinColumn
 	private Canton canton;
 
-	@OneToMany(mappedBy = "fk_exorcist", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "exorcist", cascade = CascadeType.ALL)
 	private Set<Evaluation> evaluations;
 
-	@OneToMany(mappedBy = "fk_exorcist", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "exorcist", cascade = CascadeType.ALL)
 	private Set<Service> services;
 
-	public Exorcist(String description, String phoneNumber) {
+	public Exorcist(String description, String phoneNumber, Canton canton) {
 		this.description = description;
 		this.phoneNumber = phoneNumber;
+		this.canton = canton;
 		this.evaluations = new HashSet<Evaluation>();
 		this.services = new HashSet<Service>();
 	}

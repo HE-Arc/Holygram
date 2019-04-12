@@ -20,14 +20,14 @@ public class Demon {
 
 	@ManyToOne
 	@JoinColumn
-	private Religion fk_religion;
+	private Religion religion;
 
 	@NotNull
 	private String name;
 
-	public Demon(String name, Religion fk_religion) {
+	public Demon(String name, Religion religion) {
 		this.name = name;
-		this.fk_religion = fk_religion;
+		this.religion = religion;
 	}
 	
 	public Demon() {}
@@ -40,12 +40,12 @@ public class Demon {
 		this.id = id;
 	}
 
-	public Religion getFk_religion() {
-		return fk_religion;
+	public Religion getReligion() {
+		return religion;
 	}
 
-	public void setFk_religion(Religion fk_religion) {
-		this.fk_religion = fk_religion;
+	public void setReligion(Religion religion) {
+		this.religion = religion;
 	}
 
 	public String getName() {

@@ -27,7 +27,7 @@ public class Religion {
 	@Size(min = 3, max = 45)
 	private String name;
 
-	@OneToMany(mappedBy = "fk_religion", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "religion", cascade = CascadeType.ALL)
 	private Set<Demon> demons;
 
 	public Religion(String name) {

@@ -25,7 +25,7 @@ import ch.hearc.holygram.repositories.UserRepository;
 public class UserController {
 
 	@Autowired
-	private UserRepository uRepository;
+	private UserRepository userRepository;
 
 	@Autowired
 	private ExorcistRepository exorcistRepository;
@@ -38,7 +38,7 @@ public class UserController {
 	@GetMapping(value = "/users")
 	public String findAllUsers(Map<String, Object> model) {
 		System.out.println("/users GET");
-		model.put("users", uRepository.findAll());
+		model.put("users", userRepository.findAll());
 		model.put("user", new User());
 
 		return "produits";
@@ -96,23 +96,25 @@ public class UserController {
 			return "redirect:/";
 
 		Long lid = Long.valueOf(id);
-		Optional<Exorcist> exorcist = exorcistRepository.findById(lid);
+		Optional<User> ouser = userRepository.findById(lid);
 
-		if (!exorcist.isPresent())
+		if (!ouser.isPresent()) {
+			System.out.println("invalid user");
 			return "redirect:/";
+		}
 
-		Exorcist e = exorcist.get();
-//		System.out.println(e);
-//		System.out.println(u);
-//		System.out.println(u.getEmail());
+		User user = ouser.get();
 
-//		model.put("name", e.getFk_user().getUsername());
-//		model.put("email", e.getFk_user().getEmail());
-//		model.put("mailto", "mailto:" + e.getFk_user().getEmail());
-////		model.put("services", e.getServices());
-//		model.put("canton", e.getCanton().getName());
-////		model.put("avatar", e.getFk_user().get);
-//		model.put("description", e.getDescription());
+		Exorcist e = user.getExorcist();
+		if (e == null) {
+			System.out.println("not an exorcist");
+			return "redirect:/";
+		}
+
+		model.put("name", user.getUsername());
+		model.put("services", e.getServices());
+		model.put("canton", e.getCanton().getName());
+		model.put("description", e.getDescription());
 
 		return "profile";
 
@@ -122,7 +124,7 @@ public class UserController {
 	public String saveUsers(@Valid @ModelAttribute User user, BindingResult errors, Model model) {
 
 		if (!errors.hasErrors()) {
-			uRepository.save(user);
+			userRepository.save(user);
 		}
 		return ((errors.hasErrors()) ? "saisie_users" : "redirect:users");
 	}
