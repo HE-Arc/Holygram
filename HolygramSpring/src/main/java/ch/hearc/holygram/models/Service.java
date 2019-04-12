@@ -20,18 +20,18 @@ public class Service {
 
 	@ManyToOne
 	@JoinColumn
-	private Exorcist fk_exorcist;
+	private Exorcist exorcist;
 
 	@ManyToOne
 	@JoinColumn
-	private Demon fk_demon;
+	private Demon demon;
 
 	@NotNull
 	private float price;
 
 	public Service(Exorcist exorcist, Demon demon, float price) {
-		this.fk_exorcist = exorcist;
-		this.fk_demon = demon;
+		this.exorcist = exorcist;
+		this.demon = demon;
 		this.price = price;
 	}
 	
@@ -45,20 +45,20 @@ public class Service {
 		this.id = id;
 	}
 
-	public Exorcist getFk_exorcist() {
-		return fk_exorcist;
+	public Exorcist getExorcist() {
+		return exorcist;
 	}
 
-	public void setFk_exorcist(Exorcist fk_exorcist) {
-		this.fk_exorcist = fk_exorcist;
+	public void setExorcist(Exorcist exorcist) {
+		this.exorcist = exorcist;
 	}
 
-	public Demon getFk_demon() {
-		return fk_demon;
+	public Demon getDemon() {
+		return demon;
 	}
 
-	public void setFk_demon(Demon fk_demon) {
-		this.fk_demon = fk_demon;
+	public void setDemon(Demon demon) {
+		this.demon = demon;
 	}
 
 	public float getPrice() {

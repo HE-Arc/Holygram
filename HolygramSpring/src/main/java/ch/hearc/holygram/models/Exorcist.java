@@ -7,15 +7,12 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.MapsId;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -36,10 +33,10 @@ public class Exorcist {
 	@JoinColumn
 	private Canton canton;
 
-	@OneToMany(mappedBy = "fk_exorcist", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "exorcist", cascade = CascadeType.ALL)
 	private Set<Evaluation> evaluations;
 
-	@OneToMany(mappedBy = "fk_exorcist", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "exorcist", cascade = CascadeType.ALL)
 	private Set<Service> services;
 
 	public Exorcist(String description, String phoneNumber) {
@@ -49,7 +46,8 @@ public class Exorcist {
 		this.services = new HashSet<Service>();
 	}
 
-	public Exorcist() {}
+	public Exorcist() {
+	}
 
 	/*
 	 * Dirty method to get attributes of a user 3 Classes (Template, Business,

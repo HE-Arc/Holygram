@@ -3,14 +3,12 @@ package ch.hearc.holygram.models;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -39,7 +37,7 @@ public class User {
 
 	@OneToOne(optional = true)
 	private Exorcist exorcist;
-	
+
 	@ManyToOne
 	@JoinColumn
 	private Role fk_role;
@@ -53,8 +51,9 @@ public class User {
 		} else
 			throw new Exception("Invalid arguments provided !");
 	}
-	
-	public User() {}
+
+	public User() {
+	}
 
 	/*
 	 * Dirty method to get attributes of a user 3 Classes (Template, Business,

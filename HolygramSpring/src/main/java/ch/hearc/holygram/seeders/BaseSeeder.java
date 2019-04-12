@@ -29,6 +29,9 @@ public class BaseSeeder {
 	@Autowired
 	private PrivilegeSeeder privilegeSeeder;
 
+	@Autowired
+	private ServiceSeeder serviceSeeder;
+
 	@PostConstruct
 	public void seed() {
 		// Seed privileges
@@ -48,5 +51,8 @@ public class BaseSeeder {
 
 		// Seed demons
 		ds.run();
+
+		// Seed services
+		serviceSeeder.run();
 	}
 }

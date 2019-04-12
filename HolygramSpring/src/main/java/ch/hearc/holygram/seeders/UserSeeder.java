@@ -33,9 +33,7 @@ public class UserSeeder {
 	public void run() {
 
 		try {
-			String lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu nisi quis ante interdum vestibulum. Cras semper lacus non urna ultricies, eu semper dui rutrum. Etiam id odio at dui bibendum varius nec vitae justo. Sed varius luctus tristique. Morbi lobortis, massa vel scelerisque lacinia, lorem mi imperdiet diam, ac posuere nunc ipsum sit amet mi. Nullam in bibendum nunc, vitae aliquet turpis. Etiam in mattis dolor.\n" + 
-					"\n" + 
-					"Nulla commodo dictum orci, eu tempus metus sagittis in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer tincidunt magna id venenatis pretium. Praesent quis fermentum ipsum, a cursus libero. Ut enim ex, mollis sit amet ultrices non, tristique quis ante. Aenean pretium, libero eu faucibus volutpat, arcu magna facilisis tellus, a ultrices odio lacus a sem. Ut efficitur augue nec dui tincidunt lobortis. Nam risus metus, facilisis in accumsan id, rhoncus at justo. Curabitur a ultricies quam. Maecenas venenatis suscipit nunc in tincidunt. Ut vel ante nisi. Ut eget sodales dolor. Maecenas bibendum, mi sed euismod sodales, eros quam pharetra orci, sit amet aliquet eros tellus quis augue. Fusce tincidunt felis fringilla feugiat dictum.";
+			String lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu nisi quis ante interdum vestibulum. Cras semper lacus non urna ultricies, eu semper dui rutrum. Etiam id odio at dui bibendum varius nec vitae justo. Sed varius luctus tristique. Morbi lobortis, massa vel scelerisque lacinia, lorem mi imperdiet diam, ac posuere nunc ipsum sit amet mi. Nullam in bibendum nunc, vitae aliquet turpis. Etiam in mattis dolor.";
 			
 			userRepository.deleteAll();
 			Role customerRole = roleRepository.findByName("CUSTOMER");
