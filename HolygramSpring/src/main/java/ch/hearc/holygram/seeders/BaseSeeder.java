@@ -29,12 +29,6 @@ public class BaseSeeder {
 	@Autowired
 	private PrivilegeSeeder privilegeSeeder;
 
-	@Autowired
-	private CustomerSeeder customerSeeder;
-
-	@Autowired
-	private ExorcistSeeder exorcistSeeder;
-
 	@PostConstruct
 	public void seed() {
 		// Seed privileges
@@ -54,11 +48,5 @@ public class BaseSeeder {
 
 		// Seed demons
 		ds.run();
-
-		// Seed customers
-		customerSeeder.run();
-
-		// Seed customers
-		exorcistSeeder.run();
 	}
 }

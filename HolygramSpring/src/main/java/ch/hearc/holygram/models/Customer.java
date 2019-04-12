@@ -19,18 +19,12 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@OneToOne(mappedBy = "customer")
-	private User fk_user;
-
 	@OneToMany(mappedBy = "fk_customer", cascade = CascadeType.ALL)
 	private Set<Evaluation> evaluations;
 
-	public Customer(User user) {
-		this.fk_user = user;
+	public Customer() {
 		this.evaluations = new HashSet<Evaluation>();
 	}
-	
-	public Customer() {}
 
 	/*
 	 * Dirty method to get attributes of a user 3 Classes (Template, Business,
@@ -40,7 +34,6 @@ public class Customer {
 		Map<String, String> attributes = new HashMap<String, String>();
 
 		attributes.put("id", id.toString());
-		attributes.put("fk_user", fk_user.toString());
 		attributes.put("evaluations", evaluations.toString());
 
 		return attributes;
@@ -52,14 +45,6 @@ public class Customer {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public User getFk_user() {
-		return fk_user;
-	}
-
-	public void setFk_user(User fk_user) {
-		this.fk_user = fk_user;
 	}
 
 	public Set<Evaluation> getEvaluations() {

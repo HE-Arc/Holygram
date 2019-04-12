@@ -26,10 +26,10 @@ public class UserController {
 
 	@Autowired
 	private UserRepository uRepository;
-	
+
 	@Autowired
 	private ExorcistRepository exorcistRepository;
-	
+
 	@Autowired
 	private CantonRepository cRepository;
 
@@ -57,7 +57,7 @@ public class UserController {
 
 		return "registration/user";
 	}
-	
+
 	@PostMapping(value = "/users/registrationExorcist")
 	public String registrationExorcist(Map<String, Object> model) {
 		System.out.println("");
@@ -73,17 +73,17 @@ public class UserController {
 		model.put("cantons", cantons);
 		return "registration/exorcist";
 	}
-	
+
 	@PostMapping(value = "/users/registerUser")
 	public String registerUser(Map<String, Object> model) {
 
 		return "index";
 	}
-	
+
 	private boolean checkRegisterUser() {
 		return true;
 	}
-	
+
 	@GetMapping(value = "/users/registration")
 	public String registrationUser(Map<String, Object> model) {
 
@@ -92,12 +92,28 @@ public class UserController {
 
 	@GetMapping(value = "/profile")
 	public String profile(Map<String, Object> model, @RequestParam(required = false) String id) {
-		if(id == null)
+		if (id == null)
 			return "redirect:/";
-		
+
 		Long lid = Long.valueOf(id);
 		Optional<Exorcist> exorcist = exorcistRepository.findById(lid);
-		
+
+		if (!exorcist.isPresent())
+			return "redirect:/";
+
+		Exorcist e = exorcist.get();
+//		System.out.println(e);
+//		System.out.println(u);
+//		System.out.println(u.getEmail());
+
+//		model.put("name", e.getFk_user().getUsername());
+//		model.put("email", e.getFk_user().getEmail());
+//		model.put("mailto", "mailto:" + e.getFk_user().getEmail());
+////		model.put("services", e.getServices());
+//		model.put("canton", e.getCanton().getName());
+////		model.put("avatar", e.getFk_user().get);
+//		model.put("description", e.getDescription());
+
 		return "profile";
 
 	}

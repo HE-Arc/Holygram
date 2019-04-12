@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -33,12 +34,10 @@ public class User {
 	@Size(min = 2, max = 30)
 	private String password;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(unique = true)
+	@OneToOne(optional = true)
 	private Customer customer;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(unique = true)
+	@OneToOne(optional = true)
 	private Exorcist exorcist;
 	
 	@ManyToOne

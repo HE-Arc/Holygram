@@ -7,11 +7,13 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
@@ -24,14 +26,11 @@ public class Exorcist {
 	private Long id;
 
 	@NotNull
-	@Size(min = 50, max = 255)
+	@Size(min = 1, max = 1000)
 	private String description;
 
 	@NotNull
 	private String phoneNumber;
-
-	@OneToOne(mappedBy = "exorcist")
-	private User fk_user;
 
 	@ManyToOne
 	@JoinColumn
@@ -43,8 +42,7 @@ public class Exorcist {
 	@OneToMany(mappedBy = "fk_exorcist", cascade = CascadeType.ALL)
 	private Set<Service> services;
 
-	public Exorcist(User user, String description, String phoneNumber) {
-		this.fk_user = user;
+	public Exorcist(String description, String phoneNumber) {
 		this.description = description;
 		this.phoneNumber = phoneNumber;
 		this.evaluations = new HashSet<Evaluation>();
@@ -61,7 +59,6 @@ public class Exorcist {
 		Map<String, String> attributes = new HashMap<String, String>();
 
 		attributes.put("id", id.toString());
-		attributes.put("fk_user", fk_user.toString());
 		attributes.put("description", description.toString());
 		attributes.put("phoneNumber", phoneNumber.toString());
 		attributes.put("canton", canton.toString());
@@ -93,14 +90,6 @@ public class Exorcist {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-
-	public User getFk_user() {
-		return fk_user;
-	}
-
-	public void setFk_user(User fk_user) {
-		this.fk_user = fk_user;
 	}
 
 	public Canton getCanton() {
