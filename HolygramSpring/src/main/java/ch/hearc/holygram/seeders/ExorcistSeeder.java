@@ -30,11 +30,11 @@ public class ExorcistSeeder {
 			exorcistRepository.deleteAll();
 
 			// Get user
-			Optional<User> user = userRepository.findById((long) 1);
+			Optional<User> user = userRepository.findByUsername("exorcist");
 
 			// Insert data
 			String description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
-			exorcistRepository.save(new Exorcist(user.get(), description, ""));
+			exorcistRepository.save(new Exorcist(user.get(), description, "+41 XX XXX XX XX"));
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

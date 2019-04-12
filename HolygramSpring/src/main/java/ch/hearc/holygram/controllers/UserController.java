@@ -102,12 +102,15 @@ public class UserController {
 			return "redirect:/";
 
 		Exorcist e = exorcist.get();
+		System.out.println(e);
+		User u = e.getUser();
+		System.out.println(u);
+		System.out.println(u.getEmail());
 
-		System.out.println(e.getFk_user());
 //		model.put("name", e.getFk_user().getUsername());
 //		model.put("email", e.getFk_user().getEmail());
 //		model.put("mailto", "mailto:" + e.getFk_user().getEmail());
-//		model.put("services", e.getServices());
+////		model.put("services", e.getServices());
 //		model.put("canton", e.getCanton().getName());
 ////		model.put("avatar", e.getFk_user().get);
 //		model.put("description", e.getDescription());

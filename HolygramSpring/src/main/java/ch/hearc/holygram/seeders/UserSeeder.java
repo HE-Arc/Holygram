@@ -25,14 +25,9 @@ public class UserSeeder {
 		try {
 			// Get Customer Role
 			Role customerRole = roleRepository.findByName("CUSTOMER");
-
-			System.out.println("FROMAGE");
 			
 			User newCustomer = new User("customer", "1234", "customer@email.com", customerRole);
 			userRepository.save(newCustomer);
-			
-			System.out.println("Luzerner");
-			System.out.println(newCustomer);
 
 			// Get Exorcist Role
 			Role exorcistRole = roleRepository.findByName("EXORCIST");

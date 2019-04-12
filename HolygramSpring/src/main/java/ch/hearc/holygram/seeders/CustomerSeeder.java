@@ -29,7 +29,7 @@ public class CustomerSeeder {
 			customerRepository.deleteAll();
 
 			// Get user
-			Optional<User> user = userRepository.findById(0l);
+			Optional<User> user = userRepository.findByUsername("customer");
 
 			// Insert data
 			customerRepository.save(new Customer(user.get()));
