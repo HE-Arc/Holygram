@@ -1,0 +1,59 @@
+<div th:replace="fragments/beforeBody.html"></div>
+<div class="w-100 text-right">
+	<a th:href="@{/profile?edit&id=} + ${id}"><button
+			class="btn btn-secondary">
+			<i class="fas fa-user-edit"></i>
+		</button></a>
+</div>
+<h2 th:text="${name}" class="border-bottom pb-2"></h2>
+
+<div class="row pt-3">
+	<div class="col">
+		<div class="row pt-3">
+			<div class="col">
+				<h4>Informations</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<table class="table">
+					<tr>
+						<td>Canton</td>
+						<td th:if="!${edit}" th:text="${canton}">No canton available</td>
+						<td th:if="${edit}">
+						<select class="custom-select">
+							<option th:each="canton: ${cantons}" value="${canton.getId()}" th:text="${canton.getName()}"></option>
+						</select></td>
+					</tr>
+					<tr>
+						<td>Phone number</td>
+						<td th:text="${phone}">No phone number available</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="row pt-3">
+			<div class="col">
+				<h4>Service</h4>
+			</div>
+		</div>
+		<div th:if="!${services.isEmpty()}">
+			<table class="table">
+				<tr th:each="service: ${services}">
+					<td th:text="${service.getDemon().getReligion().getName()}">Religion
+						unavailable</td>
+					<td th:text="${service.getDemon().getName()}">Demon
+						unavailable</td>
+					<td th:text="${service.getPrice()}">Price unavailable</td>
+				</tr>
+			</table>
+		</div>
+		<div th:if="${services.isEmpty()}">No service available !</div>
+	</div>
+	<div class="col">
+		<h4>Description</h4>
+		<div th:text="${description}">description not available</div>
+	</div>
+</div>
+
+<div th:replace="fragments/afterBody.html"></div>
