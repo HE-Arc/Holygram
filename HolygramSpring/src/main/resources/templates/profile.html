@@ -1,25 +1,54 @@
 <div th:replace="fragments/beforeBody.html"></div>
-<h2 th:text="${name}">Nom</h2>
+<h2 th:text="${name}" class="border-bottom pb-2">Nom</h2>
 
-<div class="row">
+<!-- <div class="row">
 	<div class="col text-center p-5">
 	</div>
-</div>
-<div class="row">
+</div> -->
+<div class="row pt-3">
 	<div class="col">
-		<div class="row">
-			<div class="col" th:text="${canton}">Canton</div>
-		</div>
-		<div th:each="service: ${services}">
-			<hr>
-			<div class="row">
-				<div class="col" th:text="${service.getDemon().getReligion().getName()}">Religion unavailable</div>
-				<div class="col" th:text="${service.getDemon().getName()}">Demon unavailable</div>
-				<div class="col" th:text="${service.getPrice()}">Price unavailable</div>
+		<div class="row pt-3">
+			<div class="col">
+				<h4>Informations</h4>
 			</div>
-		</div> 
+		</div>
+		<div class="row">
+			<div class="col">
+				<table class="table">
+					<tr>
+						<td>Canton</td>
+						<td th:text="${canton}">No canton avaiable</td>
+					</tr>
+					<tr>
+						<td>Phone number</td>
+						<td th:text="${phone}">No phone number avaialbe</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="row pt-3">
+			<div class="col">
+				<h4>Service</h4>
+			</div>
+		</div>
+		<div th:if="!${services.isEmpty()}">
+
+			<table th:each="service: ${services}" class="table">
+				<tr>
+					<td th:text="${service.getDemon().getReligion().getName()}">Religion
+						unavailable</td>
+					<td th:text="${service.getDemon().getName()}">Demon
+						unavailable</td>
+					<td th:text="${service.getPrice()}">Price unavailable</td>
+				</tr>
+			</table>
+		</div>
+		<div th:if="${services.isEmpty()}">No service available !</div>
 	</div>
-	<div class="col" th:text="${description}">description not avaialable</div>
+	<div class="col">
+		<h4>Description</h4>
+		<div th:text="${description}">description not avaialable</div>
+	</div>
 </div>
 
 <div th:replace="fragments/afterBody.html"></div>

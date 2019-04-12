@@ -115,6 +115,7 @@ public class UserController {
 		model.put("services", e.getServices());
 		model.put("canton", e.getCanton().getName());
 		model.put("description", e.getDescription());
+		model.put("phone", e.getPhoneNumber());
 
 		return "profile";
 

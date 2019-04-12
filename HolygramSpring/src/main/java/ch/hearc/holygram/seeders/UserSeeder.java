@@ -67,7 +67,7 @@ public class UserSeeder {
 		newExorcist.setExorcist(e);
 		userRepository.save(newExorcist);
 		
-//		serviceRepository.save(new Service(e, demonRepository.findById(1l).get(), 4.2f));
+		serviceRepository.save(new Service(e, demonRepository.findById(1l).get(), 4.2f));
 	}
 
 	private void addUser() throws Exception {
