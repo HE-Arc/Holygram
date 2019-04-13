@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Exorcist;
@@ -97,14 +94,11 @@ public class UserController {
 		return "registration/index";
 	}
 
-	@GetMapping(value = "/profile")
-	public String profile(Map<String, Object> model, @RequestParam(required = false) String id,
+	@RequestMapping(value = "/profile/{id}", method = RequestMethod.GET, headers = "Accept=*/*")
+	public String profile(Map<String, Object> model, @PathVariable int id,
 			@RequestParam(required = false) String edit) {
-		if (id == null)
-			return "redirect:/";
 
-		Long lid = Long.valueOf(id);
-		Optional<User> ouser = userRepository.findById(lid);
+		Optional<User> ouser = userRepository.findById((long)id);
 
 		if (!ouser.isPresent()) {
 			System.out.println("invalid user");
@@ -127,7 +121,6 @@ public class UserController {
 
 		if (isEditing) {
 			model.put("cantons", cantonRepository.findAll());
-			model.put("demons", demonRepository.findAll());
 			model.put("religions", religionRepository.findAll());
 		}
 

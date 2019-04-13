@@ -1,141 +1,128 @@
-<div th:replace="fragments/beforeBody.html"></div>
-<div class="w-100 text-right">
-	<a
-		th:if="!${edit}"
-		th:href="@{/profile?edit&id=} + ${u.getId()}"
-	>
-		<button class="btn btn-secondary">
-			<i class="fas fa-user-edit"></i>
-		</button>
-	</a> <a
-		th:if="${edit}"
-		th:href="@{/profile?id=} + ${u.getId()}"
-	>
-		<button class="btn btn-success">
-			<i class="fas fa-save"></i>
-		</button>
-	</a>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <div th:replace="fragments/head.html"></div>
+    <script th:src="@{/js/profile.js}" defer></script>
+
+</head>
+<body>
+<div th:replace="fragments/nav.html"></div>
+<div class="container p-4">
+    <div class="w-100 text-right">
+        <a th:href="@{/profile/} + ${u.getId()} + @{?edit}" th:if="!${edit}">
+            <button class="btn btn-secondary">
+                <i class="fas fa-user-edit"></i>
+            </button>
+        </a>
+        <a th:href="@{/profile/} + ${u.getId()}" th:if="${edit}">
+            <button class="btn btn-success">
+                <i class="fas fa-save"></i>
+            </button>
+        </a>
+    </div>
+    <h2 class="border-bottom pb-2" th:text="${u.getUsername()}"></h2>
+    <div class="row pt-3">
+        <div class="col">
+            <div class="row pt-3">
+                <div class="col">
+                    <h4>Informations</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table">
+                        <tr>
+                            <td>Canton</td>
+                            <td th:if="!${edit}" th:text="${e.getCanton().getName()}">No canton available</td>
+                            <td th:if="${edit}">
+                                <select class="custom-select">
+                                    <option disabled>Please select...</option>
+                                    <option th:each="c: ${cantons}" th:selected="${c.getId()==e.getCanton().getId()}"
+                                            th:text="${c.getName()}" value="${c.getId()}"></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Phone number</td>
+                            <td th:if="!${edit}" th:text="${e.getPhoneNumber()}">No phone number available</td>
+                            <td th:if="${edit}">
+                                <input class="form-control" th:value="${e.getPhoneNumber()}" type="text">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col">
+                    <h4>Service</h4>
+                </div>
+            </div>
+            <div th:if="!${e.getServices().isEmpty()}">
+                <table class="table">
+                    <tr>
+                        <th>Religion</th>
+                        <th>Demon</th>
+                        <th>Price</th>
+                        <th th:if="${edit}">Delete</th>
+                    </tr>
+                    <tr th:each="service: ${e.getServices()}">
+                        <td th:if="!${edit}" th:text="${service.getDemon().getReligion().getName()}">Religion unavailable
+                        </td>
+                        <td th:if="!${edit}" th:text="${service.getDemon().getName()}">Demon unavailable</td>
+                        <td th:if="!${edit}" th:text="${service.getPrice()}">Price unavailable</td>
+                        <td th:if="${edit}">
+                            <select class="form-control religion-select">
+                                <option disabled>Please select...</option>
+                                <option th:each="religion: ${religions}" th:value="${religion.getId()}" th:text="${religion.getName()}" th:selected="${service.getDemon().getReligion().getId() == religion.getId()}"></option>
+                            </select>
+                        </td>
+                        <td th:if="${edit}">
+                            <select class="form-control demon-select" th:attr="data-id=${service.getDemon().getId()}">
+                                <option disabled>Please select...</option>
+                            </select>
+                        </td>
+                        <td th:if="${edit}">
+                            <input class="form-control" th:value="${service.getPrice()}" type="text">
+                        </td>
+                        <td th:if="${edit}">
+                            <button class="btn btn-danger">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr id="original-new-service" th:if=${edit}>
+                        <td>
+                            <select class="form-control religion-select">
+                                <option disabled selected>Please select...</option>
+                                <option th:each="religion: ${religions}" th:value="${religion.getId()}" th:text="${religion.getName()}"></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-control demon-select">
+                                <option disabled>Please select...</option>
+                                </option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text">
+                        </td>
+                        <td th:if="${edit}">
+                            <button class="btn btn-success">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div th:if="${e.getServices().isEmpty()}">No service available !</div>
+        </div>
+        <div class="col">
+            <h4>Description</h4>
+            <div th:if="!${edit}" th:text="${e.getDescription()}">description not available</div>
+            <textarea class="form-control" rows="20" th:if="${edit}" th:text="${e.getDescription()}">description not available</textarea>
+        </div>
+    </div>
+    <div th:replace="fragments/afterBody.html"></div>
 </div>
-<h2
-	th:text="${u.getUsername()}"
-	class="border-bottom pb-2"
-></h2>
-
-<div class="row pt-3">
-	<div class="col">
-		<div class="row pt-3">
-			<div class="col">
-				<h4>Informations</h4>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<table class="table">
-					<tr>
-						<td>Canton</td>
-						<td
-							th:if="!${edit}"
-							th:text="${e.getCanton().getName()}"
-						>No canton available</td>
-						<td th:if="${edit}"><select class="custom-select">
-								<option disabled>Please select...</option>
-								<option
-									th:each="c: ${cantons}"
-									value="${c.getId()}"
-									th:text="${c.getName()}"
-									th:selected="${c.getId()==e.getCanton().getId()}"
-								></option>
-						</select></td>
-					</tr>
-					<tr>
-						<td>Phone number</td>
-						<td
-							th:if="!${edit}"
-							th:text="${e.getPhoneNumber()}"
-						>No phone number available</td>
-						<td th:if="${edit}"><input
-							class="form-control"
-							type="text"
-							th:value="${e.getPhoneNumber()}"
-						></td>
-					</tr>
-				</table>
-			</div>
-		</div>
-		<div class="row pt-3">
-			<div class="col">
-				<h4>Service</h4>
-			</div>
-		</div>
-		<div th:if="!${e.getServices().isEmpty()}">
-			<table class="table">
-				<tr>
-					<th>Religion</th>
-					<th>Demon</th>
-					<th>Price</th>
-				</tr>
-				<tr th:each="service: ${e.getServices()}">
-					<td
-						th:if="!${edit}"
-						th:text="${service.getDemon().getReligion().getName()}"
-					>Religion unavailable</td>
-
-					<td
-						th:if="!${edit}"
-						th:text="${service.getDemon().getName()}"
-					>Demon unavailable</td>
-
-					<td
-						th:if="!${edit}"
-						th:text="${service.getPrice()}"
-					>Price unavailable</td>
-
-					<td th:if="${edit}"><select class="form-control">
-							<option disabled>Please select...</option>
-							<option
-								th:each="religion: ${religions}"
-								th:value="${religion.getId()}"
-								th:text="${religion.getName()}"
-								th:selected="${religion.getId() == service.getDemon().getReligion().getId()}"
-							></option>
-					</select></td>
-
-					<td th:if="${edit}"><select class="form-control">
-							<option disabled>Please select...</option>
-							<option
-								th:each="demon: ${demons}"
-								th:value="${demon.getId()}"
-								th:text="${demon.getName()}"
-								th:selected="${demon.getId() == service.getDemon().getId()}"
-							></option>
-					</select></td>
-
-					<td th:if="${edit}"><input
-						type="text"
-						class="form-control"
-						th:value="${service.getPrice()}"
-					></td>
-				</tr>
-				<tr th:if=${edit}>
-					
-				</tr>
-			</table>
-		</div>
-		<div th:if="${e.getServices().isEmpty()}">No service available !</div>
-	</div>
-	<div class="col">
-		<h4>Description</h4>
-		<div
-			th:if="!${edit}"
-			th:text="${e.getDescription()}"
-		>description not available</div>
-		<textarea
-			th:if="${edit}"
-			th:text="${e.getDescription()}"
-			class="form-control"
-			rows="20"
-		>description not available</textarea>
-	</div>
-</div>
-
-<div th:replace="fragments/afterBody.html"></div>
+</body>
+</html>
