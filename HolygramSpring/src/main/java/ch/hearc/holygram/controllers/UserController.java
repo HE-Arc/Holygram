@@ -94,40 +94,6 @@ public class UserController {
 		return "registration/index";
 	}
 
-	@RequestMapping(value = "/profile/{id}", method = RequestMethod.GET, headers = "Accept=*/*")
-	public String profile(Map<String, Object> model, @PathVariable int id,
-			@RequestParam(required = false) String edit) {
-
-		Optional<User> ouser = userRepository.findById((long)id);
-
-		if (!ouser.isPresent()) {
-			System.out.println("invalid user");
-			return "redirect:/";
-		}
-
-		User u = ouser.get();
-
-		Exorcist e = u.getExorcist();
-		if (e == null) {
-			System.out.println("not an exorcist");
-			return "redirect:/";
-		}
-
-		boolean isEditing = edit != null;
-
-		model.put("edit", isEditing);
-		model.put("e", e);
-		model.put("u", u);
-
-		if (isEditing) {
-			model.put("cantons", cantonRepository.findAll());
-			model.put("religions", religionRepository.findAll());
-		}
-
-		return "profile/profile";
-
-	}
-
 	@PostMapping("/users")
 	public String saveUsers(@Valid @ModelAttribute User user, BindingResult errors, Model model) {
 

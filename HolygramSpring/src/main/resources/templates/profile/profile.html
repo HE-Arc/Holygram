@@ -2,30 +2,28 @@
 <html lang="en" dir="ltr">
 <head>
     <div th:replace="fragments/head.html"></div>
-    <script th:src="@{/js/profile.js}" defer></script>
+    <script th:if="${edit}" th:src="@{/js/profile.js}" defer></script>
 
 </head>
 <body>
 <div th:replace="fragments/nav.html"></div>
 <div class="container p-4">
     <div class="w-100 text-right">
-        <a th:href="@{/profile/} + ${u.getId()} + @{?edit}" th:if="!${edit}">
+        <a th:href="@{/exorcist/} + ${u.getId()} + @{?edit}" th:if="!${edit}">
             <button class="btn btn-secondary">
                 <i class="fas fa-user-edit"></i>
             </button>
         </a>
-        <a th:href="@{/profile/} + ${u.getId()}" th:if="${edit}">
-            <button class="btn btn-success">
-                <i class="fas fa-save"></i>
-            </button>
-        </a>
+        <button th:if="${edit}" class="btn btn-success" id="submitExorcist">
+            <i class="fas fa-save"></i>
+        </button>
     </div>
     <h2 class="border-bottom pb-2" th:text="${u.getUsername()}"></h2>
     <div class="row pt-3">
         <div class="col">
             <div class="row pt-3">
                 <div class="col">
-                    <h4>Informations</h4>
+                    <h4>Information</h4>
                 </div>
             </div>
             <div class="row">
@@ -35,10 +33,10 @@
                             <td>Canton</td>
                             <td th:if="!${edit}" th:text="${e.getCanton().getName()}">No canton available</td>
                             <td th:if="${edit}">
-                                <select class="custom-select">
+                                <select id="canton_select" class="custom-select">
                                     <option disabled>Please select...</option>
                                     <option th:each="c: ${cantons}" th:selected="${c.getId()==e.getCanton().getId()}"
-                                            th:text="${c.getName()}" value="${c.getId()}"></option>
+                                            th:text="${c.getName()}" th:value="${c.getId()}"></option>
                                 </select>
                             </td>
                         </tr>
@@ -46,7 +44,7 @@
                             <td>Phone number</td>
                             <td th:if="!${edit}" th:text="${e.getPhoneNumber()}">No phone number available</td>
                             <td th:if="${edit}">
-                                <input class="form-control" th:value="${e.getPhoneNumber()}" type="text">
+                                <input id="phonenumber_input" class="form-control" th:value="${e.getPhoneNumber()}" type="text">
                             </td>
                         </tr>
                     </table>
@@ -57,40 +55,29 @@
                     <h4>Service</h4>
                 </div>
             </div>
-            <div th:if="!${e.getServices().isEmpty()}">
-                <table class="table">
-                    <tr>
-                        <th>Religion</th>
-                        <th>Demon</th>
-                        <th>Price</th>
-                        <th th:if="${edit}">Delete</th>
-                    </tr>
-                    <tr th:each="service: ${e.getServices()}">
-                        <td th:if="!${edit}" th:text="${service.getDemon().getReligion().getName()}">Religion unavailable
-                        </td>
-                        <td th:if="!${edit}" th:text="${service.getDemon().getName()}">Demon unavailable</td>
-                        <td th:if="!${edit}" th:text="${service.getPrice()}">Price unavailable</td>
-                        <td th:if="${edit}">
-                            <select class="form-control religion-select">
-                                <option disabled>Please select...</option>
-                                <option th:each="religion: ${religions}" th:value="${religion.getId()}" th:text="${religion.getName()}" th:selected="${service.getDemon().getReligion().getId() == religion.getId()}"></option>
-                            </select>
-                        </td>
-                        <td th:if="${edit}">
-                            <select class="form-control demon-select" th:attr="data-id=${service.getDemon().getId()}">
-                                <option disabled>Please select...</option>
-                            </select>
-                        </td>
-                        <td th:if="${edit}">
-                            <input class="form-control" th:value="${service.getPrice()}" type="text">
-                        </td>
-                        <td th:if="${edit}">
-                            <button class="btn btn-danger">
+            <table class="table">
+                <tr>
+                    <th>Religion</th>
+                    <th>Demon</th>
+                    <th>Price</th>
+                    <th th:if="${edit}"></th>
+                </tr>
+                <tr th:each="service: ${e.getServices()}" class="service-row" th:attr="data-id=${service.getId()}">
+                    <td th:text="${service.getDemon().getReligion().getName()}">Religion unavailable
+                    </td>
+                    <td th:text="${service.getDemon().getName()}">Demon unavailable</td>
+                    <td th:text="${service.getPrice()}">Price unavailable</td>
+                    <td th:if="${edit}">
+                        <a th:href="@{/service/delete/} + ${service.getId()}">
+                            <button class="btn btn-sm btn-danger">
                                 <i class="fas fa-times"></i>
                             </button>
-                        </td>
-                    </tr>
-                    <tr id="original-new-service" th:if=${edit}>
+                        </a>
+                        </button>
+                    </td>
+                </tr>
+                <tr id="original-new-service" th:if=${edit}>
+                    <form method="post" th:action="@{/service/add}">
                         <td>
                             <select class="form-control religion-select">
                                 <option disabled selected>Please select...</option>
@@ -98,28 +85,27 @@
                             </select>
                         </td>
                         <td>
-                            <select class="form-control demon-select">
+                            <select class="form-control demon-select" name="demon">
                                 <option disabled>Please select...</option>
                                 </option>
                             </select>
                         </td>
                         <td>
-                            <input class="form-control" type="text">
+                            <input class="form-control" name="price" type="text">
                         </td>
                         <td th:if="${edit}">
-                            <button class="btn btn-success">
+                            <button class="btn btn-sm btn-success">
                                 <i class="fas fa-plus"></i>
                             </button>
                         </td>
-                    </tr>
-                </table>
-            </div>
-            <div th:if="${e.getServices().isEmpty()}">No service available !</div>
+                    </form>
+                </tr>
+            </table>
         </div>
         <div class="col">
             <h4>Description</h4>
             <div th:if="!${edit}" th:text="${e.getDescription()}">description not available</div>
-            <textarea class="form-control" rows="20" th:if="${edit}" th:text="${e.getDescription()}">description not available</textarea>
+            <textarea id="description_textarea" class="form-control" rows="20" th:if="${edit}" th:text="${e.getDescription()}">description not available</textarea>
         </div>
     </div>
     <div th:replace="fragments/afterBody.html"></div>
