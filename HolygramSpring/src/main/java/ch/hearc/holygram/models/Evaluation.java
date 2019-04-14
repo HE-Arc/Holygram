@@ -37,6 +37,7 @@ public class Evaluation {
 	
 	public Evaluation(Customer customer, Exorcist exorcist, boolean isPositive, String text)
 	{
+		this.datetime = new Date();
 		this.customer = customer;
 		this.exorcist = exorcist;
 		this.isPositive = isPositive;

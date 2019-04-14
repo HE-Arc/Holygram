@@ -64,7 +64,7 @@ public class ServiceController {
             method = RequestMethod.GET
     )
     public ResponseEntity<Service> remove(@PathVariable long id) {
-        /* Waiting for authentication to implement the correct gather of the profile id */
+        /* Waiting for authentication to implement the correct gather of the exorcist id */
         long profileId = 2l;
         try {
             serviceRepository.deleteById(id);
@@ -81,7 +81,7 @@ public class ServiceController {
             method = RequestMethod.POST
     )
     public ResponseEntity<Service> add(@RequestBody MultiValueMap<String, String> formData) {
-        /* Waiting for authentication to implement the correct gather of the profile id */
+        /* Waiting for authentication to implement the correct gather of the exorcist id */
         long profileId = 2l;
         try {
             Service s = new Service();

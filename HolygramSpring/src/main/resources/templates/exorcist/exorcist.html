@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <div th:replace="fragments/head.html"></div>
     <script th:if="${edit}" th:src="@{/js/profile.js}" defer></script>
+    <script th:src="@{/js/addEvaluation.js}" defer></script>
 
 </head>
 <body>
 <div th:replace="fragments/nav.html"></div>
 <div class="container p-4">
-    <div class="w-100 text-right">
+    <div class="row pull-right">
         <a th:href="@{/exorcist/} + ${u.getId()} + @{?edit}" th:if="!${edit}">
             <button class="btn btn-secondary">
                 <i class="fas fa-user-edit"></i>
@@ -18,8 +19,8 @@
             <i class="fas fa-save"></i>
         </button>
     </div>
-    <h2 class="border-bottom pb-2" th:text="${u.getUsername()}"></h2>
-    <div class="row pt-3">
+    <h2 class="row border-bottom pb-2" th:text="${u.getUsername()}"></h2>
+    <div class="row">
         <div class="col">
             <div class="row pt-3">
                 <div class="col">
@@ -66,7 +67,7 @@
                     <td th:text="${service.getDemon().getReligion().getName()}">Religion unavailable
                     </td>
                     <td th:text="${service.getDemon().getName()}">Demon unavailable</td>
-                    <td th:text="${service.getPrice()}">Price unavailable</td>
+                    <td th:text="${service.getPrice()} + ' CHF'">Price unavailable</td>
                     <td th:if="${edit}">
                         <a th:href="@{/service/delete/} + ${service.getId()}">
                             <button class="btn btn-sm btn-danger">
@@ -108,7 +109,10 @@
             <textarea id="description_textarea" class="form-control" rows="20" th:if="${edit}" th:text="${e.getDescription()}">description not available</textarea>
         </div>
     </div>
-    <div th:replace="fragments/afterBody.html"></div>
+    <div th:if="${!edit}">
+        <h5 class="row border-bottom pb-2">Evaluate a service</h5>
+        <div th:replace="exorcist/addEvaluation.html" th:with="e=${e}"></div>
+    </div>
 </div>
 </body>
 </html>

@@ -66,7 +66,7 @@ public class ExorcistController {
             model.put("religions", religionRepository.findAll());
         }
 
-        return "profile/profile";
+        return "exorcist/exorcist";
     }
 
     @PostMapping()

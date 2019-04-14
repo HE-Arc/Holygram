@@ -1,9 +1,6 @@
 package ch.hearc.holygram.models;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -40,14 +37,14 @@ public class Exorcist {
 	private Set<Evaluation> evaluations;
 
 	@OneToMany(mappedBy = "exorcist", cascade = CascadeType.ALL)
-	private Set<Service> services;
+	private List<Service> services;
 
 	public Exorcist(String description, String phoneNumber, Canton canton) {
 		this.description = description;
 		this.phoneNumber = phoneNumber;
 		this.canton = canton;
 		this.evaluations = new HashSet<Evaluation>();
-		this.services = new HashSet<Service>();
+		this.services = new ArrayList<Service>();
 	}
 
 	public Exorcist() {}
@@ -109,11 +106,14 @@ public class Exorcist {
 		this.evaluations = evaluations;
 	}
 
-	public Set<Service> getServices() {
+	public List<Service> getServices() {
+		Collections.sort(services, (s1, s2) -> {
+			return Float.compare(s1.getPrice(), s2.getPrice());
+		});
 		return services;
 	}
 
-	public void setServices(Set<Service> services) {
+	public void setServices(List<Service> services) {
 		this.services = services;
 	}
 }
