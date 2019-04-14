@@ -110,8 +110,10 @@
         </div>
     </div>
     <div th:if="${!edit}">
+        <h5 class="row border-bottom pb-2">Evaluations</h5>
+        <div class="row pb-2" th:replace="exorcist/evaluations.html" th:with="e=${e}"></div>
         <h5 class="row border-bottom pb-2">Evaluate a service</h5>
-        <div th:replace="exorcist/addEvaluation.html" th:with="e=${e}"></div>
+        <div th:insert="exorcist/addEvaluation.html" th:with="e=${e}"></div>
     </div>
 </div>
 </body>

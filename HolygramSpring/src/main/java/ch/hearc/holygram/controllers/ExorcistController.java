@@ -65,7 +65,6 @@ public class ExorcistController {
             model.put("cantons", cantonRepository.findAll());
             model.put("religions", religionRepository.findAll());
         }
-
         return "exorcist/exorcist";
     }
 

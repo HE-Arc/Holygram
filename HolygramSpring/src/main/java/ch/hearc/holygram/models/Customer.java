@@ -5,53 +5,55 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
 public class Customer {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-	private Set<Evaluation> evaluations;
+    @OneToOne
+    @PrimaryKeyJoinColumn
+    private User user;
 
-	public Customer() {
-		this.evaluations = new HashSet<Evaluation>();
-	}
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private Set<Evaluation> evaluations;
 
-	/*
-	 * Dirty method to get attributes of a user 3 Classes (Template, Business,
-	 * Entity) for each Model should be used
-	 */
-	public Map<String, String> getAttributes() {
-		Map<String, String> attributes = new HashMap<String, String>();
+    public Customer() {
+        this.evaluations = new HashSet<Evaluation>();
+    }
 
-		attributes.put("id", id.toString());
-		attributes.put("evaluations", evaluations.toString());
+    /*
+     * Dirty method to get attributes of a user 3 Classes (Template, Business,
+     * Entity) for each Model should be used
+     */
+    public Map<String, String> getAttributes() {
+        Map<String, String> attributes = new HashMap<String, String>();
 
-		return attributes;
-	}
+        attributes.put("id", id.toString());
+        attributes.put("evaluations", evaluations.toString());
 
-	public Long getId() {
-		return id;
-	}
+        return attributes;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public Set<Evaluation> getEvaluations() {
-		return evaluations;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setEvaluations(Set<Evaluation> evaluations) {
-		this.evaluations = evaluations;
-	}
+    public User getUser() {
+        return user;
+    }
+
+    public Set<Evaluation> getEvaluations() {
+        return evaluations;
+    }
+
+    public void setEvaluations(Set<Evaluation> evaluations) {
+        this.evaluations = evaluations;
+    }
 }

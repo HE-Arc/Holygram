@@ -32,7 +32,6 @@ public class Evaluation {
 	private Date datetime;
 	
 	@NotNull
-	@Size(min = 50, max = 255)
 	private String text;
 	
 	public Evaluation(Customer customer, Exorcist exorcist, boolean isPositive, String text)
@@ -44,7 +43,9 @@ public class Evaluation {
 		this.text = text;
 	}
 	
-	public Evaluation() {}
+	public Evaluation() {
+		this.datetime = new Date();
+	}
 
 	public Long getId() {
 		return id;
