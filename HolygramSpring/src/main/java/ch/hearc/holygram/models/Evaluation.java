@@ -30,20 +30,22 @@ public class Evaluation {
 
 	@NotNull
 	private Date datetime;
-	
+
 	@NotNull
-	@Size(min = 50, max = 255)
 	private String text;
-	
+
 	public Evaluation(Customer customer, Exorcist exorcist, boolean isPositive, String text)
 	{
+		this.datetime = new Date();
 		this.customer = customer;
 		this.exorcist = exorcist;
 		this.isPositive = isPositive;
 		this.text = text;
 	}
-	
-	public Evaluation() {}
+
+	public Evaluation() {
+		this.datetime = new Date();
+	}
 
 	public Long getId() {
 		return id;

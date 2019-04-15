@@ -2,6 +2,7 @@ package ch.hearc.holygram.seeders;
 
 import javax.annotation.PostConstruct;
 
+import ch.hearc.holygram.repositories.EvaluationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,48 +12,39 @@ import org.springframework.stereotype.Component;
  */
 public class BaseSeeder {
 
-	@Autowired
-	private CantonSeeder cs;
+    @Autowired
+    private CantonSeeder cantonSeeder;
 
-	@Autowired
-	private ReligionSeeder rs;
+    @Autowired
+    private EvaluationSeeder evaluationSeeder;
 
-	@Autowired
-	private UserSeeder userSeeder;
+    @Autowired
+    private ReligionSeeder religionSeeder;
 
-	@Autowired
-	private DemonSeeder ds;
+    @Autowired
+    private UserSeeder userSeeder;
 
-	@Autowired
-	private RoleSeeder roleSeeder;
+    @Autowired
+    private DemonSeeder demonsSeeder;
 
-	@Autowired
-	private PrivilegeSeeder privilegeSeeder;
+    @Autowired
+    private RoleSeeder roleSeeder;
 
-	@Autowired
-	private ServiceSeeder serviceSeeder;
+  	@Autowired
+  	private ServiceSeeder serviceSeeder;
 
-	@PostConstruct
-	public void seed() {
-		// Seed privileges
-		privilegeSeeder.run();
+    @Autowired
+    private PrivilegeSeeder privilegeSeeder;
 
-		// Seed roles
-		roleSeeder.run();
-
-		// Seed cantons
-		cs.run();
-
-		// Seed religions
-		rs.run();
-
-		// Seed users
-		userSeeder.run();
-
-		// Seed demons
-		ds.run();
-
-		// Seed services
-		serviceSeeder.run();
-	}
+    @PostConstruct
+    public void seed() {
+        privilegeSeeder.run();
+        roleSeeder.run();
+        cantonSeeder.run();
+        religionSeeder.run();
+        demonsSeeder.run();
+        userSeeder.run();
+        evaluationSeeder.run();
+        serviceSeeder.run();
+    }
 }

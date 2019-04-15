@@ -1,5 +1,9 @@
 package ch.hearc.holygram.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -27,7 +31,8 @@ public class Religion {
 	@Size(min = 3, max = 45)
 	private String name;
 
-	@OneToMany(mappedBy = "fk_religion", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "religion", cascade = CascadeType.ALL)
+	@JsonManagedReference
 	private Set<Demon> demons;
 
 	public Religion(String name) {

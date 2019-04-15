@@ -9,36 +9,40 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.User;
 import ch.hearc.holygram.repositories.CantonRepository;
+import ch.hearc.holygram.repositories.DemonRepository;
 import ch.hearc.holygram.repositories.ExorcistRepository;
+import ch.hearc.holygram.repositories.ReligionRepository;
 import ch.hearc.holygram.repositories.UserRepository;
+import ch.hearc.holygram.seeders.DemonSeeder;
 
 @Controller
 public class UserController {
 
 	@Autowired
-	private UserRepository uRepository;
+	private UserRepository userRepository;
 
 	@Autowired
 	private ExorcistRepository exorcistRepository;
 
 	@Autowired
-	private CantonRepository cRepository;
+	private CantonRepository cantonRepository;
 
-	// private ProduitRepository prepo;
+	@Autowired
+	private DemonRepository demonRepository;
+
+	@Autowired
+	private ReligionRepository religionRepository;
 
 	@GetMapping(value = "/users")
 	public String findAllUsers(Map<String, Object> model) {
 		System.out.println("/users GET");
-		model.put("users", uRepository.findAll());
+		model.put("users", userRepository.findAll());
 		model.put("user", new User());
 
 		return "produits";
@@ -63,7 +67,7 @@ public class UserController {
 		System.out.println("");
 		System.out.println("pika");
 		System.out.println("");
-		Iterable<Canton> cantons = cRepository.findAll();
+		Iterable<Canton> cantons = cantonRepository.findAll();
 		System.out.println("");
 		System.out.println("pika");
 		System.out.println("");
@@ -90,39 +94,11 @@ public class UserController {
 		return "registration/index";
 	}
 
-	@GetMapping(value = "/profile")
-	public String profile(Map<String, Object> model, @RequestParam(required = false) String id) {
-		if (id == null)
-			return "redirect:/";
-
-		Long lid = Long.valueOf(id);
-		Optional<Exorcist> exorcist = exorcistRepository.findById(lid);
-
-		if (!exorcist.isPresent())
-			return "redirect:/";
-
-		Exorcist e = exorcist.get();
-//		System.out.println(e);
-//		System.out.println(u);
-//		System.out.println(u.getEmail());
-
-//		model.put("name", e.getFk_user().getUsername());
-//		model.put("email", e.getFk_user().getEmail());
-//		model.put("mailto", "mailto:" + e.getFk_user().getEmail());
-////		model.put("services", e.getServices());
-//		model.put("canton", e.getCanton().getName());
-////		model.put("avatar", e.getFk_user().get);
-//		model.put("description", e.getDescription());
-
-		return "profile";
-
-	}
-
 	@PostMapping("/users")
 	public String saveUsers(@Valid @ModelAttribute User user, BindingResult errors, Model model) {
 
 		if (!errors.hasErrors()) {
-			uRepository.save(user);
+			userRepository.save(user);
 		}
 		return ((errors.hasErrors()) ? "saisie_users" : "redirect:users");
 	}

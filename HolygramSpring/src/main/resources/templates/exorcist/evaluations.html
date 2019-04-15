@@ -1,0 +1,17 @@
+<div th:if="${!e.getEvaluations().isEmpty()}" th:each="evaluation: ${e.getEvaluations()}">
+    <div class="row" th:classappend="${evaluation.isPositive()} ? border-success : border-danger" style="border-left:20px solid;">
+        <div class="col-2 p-3">
+            <div th:text="${evaluation.getDatetime()}">
+            </div>
+            <div>Posted by :
+                <span th:text="${evaluation.getCustomer().getUser().getUsername()}">
+                </span>
+            </div>
+        </div>
+        <div class="col-10 p-3" th:text="${evaluation.getText()}">
+        </div>
+    </div>
+</div>
+<div th:if="${e.getEvaluations().isEmpty()}">
+    No evaluations for this Exorcist...
+</div>

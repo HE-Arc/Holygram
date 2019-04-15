@@ -40,14 +40,14 @@ public class User {
 
 	@ManyToOne
 	@JoinColumn
-	private Role fk_role;
+	private Role role;
 
-	public User(String username, String password, String email, Role fk_role) throws Exception {
+	public User(String username, String password, String email, Role role) throws Exception {
 		if (validateUsername(username) && validatePassword(password) && validateEmail(email)) {
 			this.username = username;
 			this.password = password;
 			this.email = email;
-			this.fk_role = fk_role;
+			this.role = role;
 		} else
 			throw new Exception("Invalid arguments provided !");
 	}
@@ -130,10 +130,10 @@ public class User {
 	}
 
 	public Role getRole() {
-		return fk_role;
+		return role;
 	}
 
-	public void setRole(Role fk_role) {
-		this.fk_role = fk_role;
+	public void setRole(Role role) {
+		this.role = role;
 	}
 }

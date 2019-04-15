@@ -37,8 +37,8 @@ public class SearchService {
 		Page<Profile> results = profileDao.findByInterestsNameContainingIgnoreCase(text, request);
 		
 		Converter<Profile, SearchResult> converter = new Converter<Profile, SearchResult>() {
-			public SearchResult convert(Profile profile) {
-				return new SearchResult(profile);
+			public SearchResult convert(Profile exorcist) {
+				return new SearchResult(exorcist);
 			}
 			
 		};
