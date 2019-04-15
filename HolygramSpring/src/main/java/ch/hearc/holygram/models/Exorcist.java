@@ -18,7 +18,7 @@ public class Exorcist {
 	private Long id;
 	
     @OneToOne
-    @PrimaryKeyJoinColumn
+    @JoinColumn
     private User user;
 
     @NotNull
@@ -109,4 +109,10 @@ public class Exorcist {
     public void setServices(List<Service> services) {
         this.services = services;
     }
+    
+    @Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return id.hashCode();
+	}
 }

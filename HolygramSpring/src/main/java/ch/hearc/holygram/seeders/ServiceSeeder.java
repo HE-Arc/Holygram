@@ -31,16 +31,15 @@ public class ServiceSeeder {
 
 		// Drop data
 		serviceRepository.deleteAll();
-		
+
 		// Get demons
 		List<Demon> demons = (List<Demon>) demonRepository.findAll();
-		
+
 		// Get demons
 		List<Exorcist> exorcists = (List<Exorcist>) exorcistRepository.findAll();
-		
+
 		// Debug
-		for(int i = 0; i < exorcists.size(); i++)
-		{
+		for (int i = 0; i < exorcists.size(); i++) {
 			Exorcist e = exorcists.get(i);
 			Demon d = demons.get(i % demons.size());
 			Service s = new Service(e, d, i);

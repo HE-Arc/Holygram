@@ -113,4 +113,10 @@ public class User {
 	public void setRole(Role role) {
 		this.role = role;
 	}
+	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return id.hashCode();
+	}
 }

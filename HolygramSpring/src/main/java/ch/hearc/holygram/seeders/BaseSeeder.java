@@ -43,7 +43,7 @@ public class BaseSeeder {
 		religionSeeder.run();
 		demonsSeeder.run();
 		userSeeder.run();
-		//evaluationSeeder.run();
+		evaluationSeeder.run();
 		serviceSeeder.run();
 	}
 }
