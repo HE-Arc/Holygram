@@ -8,9 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
+import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Customer;
+import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.User;
 import ch.hearc.holygram.repositories.CantonRepository;
 import ch.hearc.holygram.repositories.CustomerRepository;
@@ -45,25 +48,24 @@ public class UserController {
 
     @GetMapping("/signup")
     public String signup(Model model) {
-        model.addAttribute("userForm", new User());
+    	
+    	Iterable<Canton> cantons = cantonRepository.findAll();
+        model.addAttribute("cantons", cantons);
 
+        model.addAttribute("user", new User());
+        
         return "signup";
 	}
 
     @PostMapping("/signup")
-    public String registration(HttpServletRequest request, BindingResult bindingResult) {
-    	User user;
-		try {
-			user = new User(request.getParameter("username"),request.getParameter("password"),request.getParameter("passwordConfirm"), request.getParameter("email"));
+    public String registration(@ModelAttribute("user") User user, HttpServletRequest request, BindingResult bindingResult) {
+		try {			
+			//user = new User(request.getParameter("username"),request.getParameter("password"),request.getParameter("passwordConfirm"), request.getParameter("email"));
 			userValidator.validate(user, bindingResult);
 
 	        if (bindingResult.hasErrors()) {
 	            return "signup";
 	        }
-	        
-	        System.out.println(bindingResult);
-
-	        
 
 	        String typeAccount = request.getParameter("type");
 	        
@@ -71,10 +73,15 @@ public class UserController {
 	        	Customer customer = new Customer(user);
 	        	userService.save(user);
 	        	customerRepository.save(customer);
+	        } else {
+	        	Canton canton = cantonRepository.findByAcronym(request.getParameter("canton"));
+	        	Exorcist exorcist = new Exorcist(user, request.getParameter("description"), request.getParameter("phoneNumber"), canton);
+	        	userService.save(user);
+	        	exorcistRepository.save(exorcist);
 	        }
 	        
 	        
-	        //securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
+	        securityService.autoLogin(user.getUsername(), user.getPasswordConfirm());
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -83,5 +90,16 @@ public class UserController {
     	
         return "signup";
         //return "redirect:/";
+    }
+    
+    @GetMapping("/formExorcist")
+    public String formExorcist(Model model) {
+		Iterable<Canton> cantons = cantonRepository.findAll();
+        model.addAttribute("cantons", cantons);
+        
+        System.out.println("");
+        System.out.println("pika");
+        System.out.println("");
+        return "fragments/signup :: exorcist";
     }
 }

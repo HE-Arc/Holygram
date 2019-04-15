@@ -5,7 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form autocomplete="off" method="POST" th:action="@{/signup}" th:object="${userForm}" id="registerForm">
+	<form autocomplete="off" method="POST" th:object="${user}" th:action="@{/signup}" id="registerForm">
 		<h2 class="form-signin-heading">Create your account</h2>
 
 		<div class="form-group">
@@ -27,21 +27,55 @@
 		</div>
 
 		<div class="form-group ${status.error ? 'has-error' : ''}">
-			<input type="email" name="email" class="form-control"	placeholder="Email"></input>
+			<input type="email" name="email" class="form-control" placeholder="Email"></input>
 		</div>
+		
+		<div class="form-group ${status.error ? 'has-error' : ''}" id="divDescription" hidden>
+		   	<input type="text" class="form-control" id="description" required disabled>
+		</div>
+		
+	  	<div class="form-group ${status.error ? 'has-error' : ''}" id="divPhoneNumber" hidden>
+		   	<input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required disabled>
+	  		<span class="note">Format: 012 345 67 89</span>
+	  	</div>
+	  	
+	  	<div class="form-group ${status.error ? 'has-error' : ''}" id="divCanton" hidden>
+			<label for="canton" th:text="Canton" /></label>
+		   	<select id="canton" name="canton" required  disabled>
+			  <option th:each="canton: ${cantons}" th:value="${canton.acronym}" th:text="${canton.name}" />
+			</select>
+	  	</div>
 
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	</form>
 	<script text="text/javascript">
-	let registerForm = document.getElementById("registerForm");
+	let divDescription = document.getElementById("divDescription");
+	let divPhoneNumber = document.getElementById("divPhoneNumber");
+	let divCanton = document.getElementById("divCanton");
+	
+	let inputDescription = document.getElementById("description");
+	let inputPhoneNumber = document.getElementById("phoneNumber");
+	let inputCanton = document.getElementById("canton");
 
 	function handleCustomer() {
-		alert("Customer");
+		divDescription.style.display = "none";
+		divPhoneNumber.style.display = "none";
+		divCanton.style.display = "none";
+		
+		inputDescription.disabled = true;
+		inputPhoneNumber.disabled = true;
+		inputCanton.disabled = true;
 	}
 
 	function handleExorcist() {
-		alert("Exorcist");
+		divDescription.style.display = "block";
+		divPhoneNumber.style.display = "block";
+		divCanton.style.display = "block";
+		
+		inputDescription.disabled = false;
+		inputPhoneNumber.disabled = false;
+		inputCanton.disabled = false;
 	}
 	</script>
 </body>

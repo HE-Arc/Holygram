@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 /**
  * Class representing a service provided by an exorcist
@@ -20,10 +22,12 @@ public class Service {
 
 	@ManyToOne
 	@JoinColumn
+	@JsonBackReference
 	private Exorcist exorcist;
 
 	@ManyToOne
 	@JoinColumn
+	@JsonBackReference
 	private Demon demon;
 
 	@NotNull
@@ -34,8 +38,9 @@ public class Service {
 		this.demon = demon;
 		this.price = price;
 	}
-	
-	public Service() {}
+
+	public Service() {
+	}
 
 	public Long getId() {
 		return id;

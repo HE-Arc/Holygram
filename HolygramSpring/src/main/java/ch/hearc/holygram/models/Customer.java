@@ -13,6 +13,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Customer {
 	@Id
@@ -21,9 +23,11 @@ public class Customer {
 
 	@OneToOne
 	@JoinColumn
+	@JsonBackReference
 	private User user;
 
 	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+	@JsonBackReference
 	private Set<Evaluation> evaluations;
 	
 	public Customer(User user) {

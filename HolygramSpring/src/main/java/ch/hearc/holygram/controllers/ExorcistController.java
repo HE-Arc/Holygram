@@ -1,7 +1,7 @@
 package ch.hearc.holygram.controllers;
 
 import org.springframework.stereotype.Controller;
-
+import org.springframework.ui.Model;
 
 import java.util.Map;
 import java.util.Optional;
@@ -102,4 +102,5 @@ public class ExorcistController {
 		headers.add("Location", "/exorcist/" + profileId);
 		return new ResponseEntity<Exorcist>(headers, HttpStatus.FOUND);
 	}
+
 }
