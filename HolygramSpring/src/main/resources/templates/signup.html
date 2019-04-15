@@ -5,13 +5,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form autocomplete="off" method="POST" th:action="@{/signup}" th:object="${userForm}">
+	<form autocomplete="off" method="POST" th:action="@{/signup}" th:object="${userForm}" id="registerForm">
 		<h2 class="form-signin-heading">Create your account</h2>
 
 		<div class="form-group">
 			<label for="type" text="Type Account" /></label>
-			<input type="radio" name="type" value="customer" class="form-control" id="typeCustomer" checked>Customer</input>
-			<input type="radio" name="type" value="exorcist" class="form-control" id="typeExorcist">Exorcist</input>
+			<input type="radio" name="type" value="customer" class="form-control" id="typeCustomer" onchange="handleCustomer()" checked>Customer</input>
+			<input type="radio" name="type" value="exorcist" class="form-control" id="typeExorcist" onchange="handleExorcist()">Exorcist</input>
 		</div>
 
 		<div class="form-group ${status.error ? 'has-error' : ''}">
@@ -33,5 +33,16 @@
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	</form>
+	<script text="text/javascript">
+	let registerForm = document.getElementById("registerForm");
+
+	function handleCustomer() {
+		alert("Customer");
+	}
+
+	function handleExorcist() {
+		alert("Exorcist");
+	}
+	</script>
 </body>
 </html>

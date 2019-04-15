@@ -22,6 +22,9 @@ public class RoleSeeder {
 	@Autowired
 	private PrivilegeRepository privilegeRepository;
 
+	public static Role customerRole;
+	public static Role exorcistRole;
+
 	public void run() {
 		// Prepare Privileges
 		Privilege profil_edit = privilegeRepository.findByName("PROFIL_EDIT");
@@ -54,5 +57,8 @@ public class RoleSeeder {
 		Role exorcistRole = new Role("EXORCIST");
 		exorcistRole.setPrivileges(exorcistPrivileges);
 		roleRepository.save(exorcistRole);
+
+		RoleSeeder.customerRole = customerRole;
+		RoleSeeder.exorcistRole = exorcistRole;
 	}
 }

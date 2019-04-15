@@ -3,7 +3,7 @@ package ch.hearc.holygram.models;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -42,30 +41,28 @@ public class User {
 	
 	private Date lastLogin;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(unique = true)
-	private Customer customer;
-
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(unique = true)
-	private Exorcist exorcist;
-	
 	@ManyToOne
 	@JoinColumn
-	private Role fk_role;
+	private Role role;
 
-	public User() {}
-	
-	public User(String username, String password, String email, Role fk_role) throws Exception {
-		if (validateUsername(username) && validatePassword(password) && validateEmail(email)) {
-			this.username = username;
-			this.password = password;
-			this.email = email;
-			this.fk_role = fk_role;
-		} else
-			throw new Exception("Invalid arguments provided !");
+	public User(String username, String password, String passwordConfirm, String email, Role role) throws Exception {
+		this.username = username;
+		this.password = password;
+		this.passwordConfirm = passwordConfirm;
+		this.email = email;
+		this.role = role;
 	}
 	
+	public User(String username, String password, String passwordConfirm, String email) throws Exception {
+		this.username = username;
+		this.password = password;
+		this.passwordConfirm = passwordConfirm;
+		this.email = email;
+	}
+
+	public User() {
+	}
+
 	/*
 	 * Dirty method to get attributes of a user 3 Classes (Template, Business,
 	 * Entity) for each Model should be used
@@ -78,18 +75,6 @@ public class User {
 		attributes.put("email", email.toString());
 
 		return attributes;
-	}
-
-	private boolean validateUsername(String username) {
-		return true; // TODO
-	}
-
-	private boolean validatePassword(String password) {
-		return true; // TODO
-	}
-
-	private boolean validateEmail(String email) {
-		return true; // TODO
 	}
 
 	public Long getId() {
@@ -132,35 +117,17 @@ public class User {
         this.passwordConfirm = passwordConfirm;
     }
 
-	public Customer getCustomer() {
-		return customer;
+	public Role getRole() {
+		return role;
 	}
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
+	public void setRole(Role role) {
+		this.role = role;
 	}
-
-	public Exorcist getExorcist() {
-		return exorcist;
-	}
-
-	public void setExorcist(Exorcist exorcist) {
-		this.exorcist = exorcist;
-	}
-
-	public Date getLastLogin() {
-		return lastLogin;
-	}
-
-	public void setLastLogin(Date lastLogin) {
-		this.lastLogin = lastLogin;
-	}
-
-	public Role getFk_role() {
-		return fk_role;
-	}
-
-	public void setFk_role(Role fk_role) {
-		this.fk_role = fk_role;
+	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return id.hashCode();
 	}
 }

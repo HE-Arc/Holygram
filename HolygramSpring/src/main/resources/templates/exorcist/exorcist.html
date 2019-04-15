@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:replace="fragments/head.html"></div>
+    <script th:if="${edit}" th:src="@{/js/profile.js}" defer></script>
+    <script th:src="@{/js/addEvaluation.js}" defer></script>
+
+</head>
+<body>
+<div th:replace="fragments/nav.html"></div>
+<div class="container p-4">
+    <div class="row pull-right">
+        <a th:href="@{/exorcist/} + ${u.getId()} + @{?edit}" th:if="!${edit}">
+            <button class="btn btn-secondary">
+                <i class="fas fa-user-edit"></i>
+            </button>
+        </a>
+        <button th:if="${edit}" class="btn btn-success" id="submitExorcist">
+            <i class="fas fa-save"></i>
+        </button>
+    </div>
+    <h2 class="row border-bottom pb-2" th:text="${u.getUsername()}"></h2>
+    <div class="row">
+        <div class="col">
+            <div class="row pt-3">
+                <div class="col">
+                    <h4>Information</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table">
+                        <tr>
+                            <td>Canton</td>
+                            <td th:if="!${edit}" th:text="${e.getCanton().getName()}">No canton available</td>
+                            <td th:if="${edit}">
+                                <select id="canton_select" class="custom-select">
+                                    <option disabled>Please select...</option>
+                                    <option th:each="c: ${cantons}" th:selected="${c.getId()==e.getCanton().getId()}"
+                                            th:text="${c.getName()}" th:value="${c.getId()}"></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Phone number</td>
+                            <td th:if="!${edit}" th:text="${e.getPhoneNumber()}">No phone number available</td>
+                            <td th:if="${edit}">
+                                <input id="phonenumber_input" class="form-control" th:value="${e.getPhoneNumber()}" type="text">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col">
+                    <h4>Service</h4>
+                </div>
+            </div>
+            <table class="table">
+                <tr>
+                    <th>Religion</th>
+                    <th>Demon</th>
+                    <th>Price</th>
+                    <th th:if="${edit}"></th>
+                </tr>
+                <tr th:each="service: ${e.getServices()}" class="service-row" th:attr="data-id=${service.getId()}">
+                    <td th:text="${service.getDemon().getReligion().getName()}">Religion unavailable
+                    </td>
+                    <td th:text="${service.getDemon().getName()}">Demon unavailable</td>
+                    <td th:text="${service.getPrice()} + ' CHF'">Price unavailable</td>
+                    <td th:if="${edit}">
+                        <a th:href="@{/service/delete/} + ${service.getId()}">
+                            <button class="btn btn-sm btn-danger">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </a>
+                        </button>
+                    </td>
+                </tr>
+                <tr id="original-new-service" th:if=${edit}>
+                    <form method="post" th:action="@{/service/add}">
+                        <td>
+                            <select class="form-control religion-select">
+                                <option disabled selected>Please select...</option>
+                                <option th:each="religion: ${religions}" th:value="${religion.getId()}" th:text="${religion.getName()}"></option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-control demon-select" name="demon">
+                                <option disabled>Please select...</option>
+                                </option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="form-control" name="price" type="text">
+                        </td>
+                        <td th:if="${edit}">
+                            <button class="btn btn-sm btn-success">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </td>
+                    </form>
+                </tr>
+            </table>
+        </div>
+        <div class="col">
+            <h4>Description</h4>
+            <div th:if="!${edit}" th:text="${e.getDescription()}">description not available</div>
+            <textarea id="description_textarea" class="form-control" rows="20" th:if="${edit}" th:text="${e.getDescription()}">description not available</textarea>
+        </div>
+    </div>
+    <div th:if="${!edit}">
+        <h5 class="row border-bottom pb-2">Evaluations</h5>
+        <div class="row pb-2" th:replace="exorcist/evaluations.html" th:with="e=${e}"></div>
+        <h5 class="row border-bottom pb-2">Evaluate a service</h5>
+        <div th:insert="exorcist/addEvaluation.html" th:with="e=${e}"></div>
+    </div>
+</div>
+</body>
+</html>

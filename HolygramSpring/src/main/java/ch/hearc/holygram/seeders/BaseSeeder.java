@@ -12,53 +12,38 @@ import org.springframework.stereotype.Component;
 public class BaseSeeder {
 
 	@Autowired
-	private CantonSeeder cs;
+	private CantonSeeder cantonSeeder;
 
 	@Autowired
-	private ReligionSeeder rs;
+	private EvaluationSeeder evaluationSeeder;
+
+	@Autowired
+	private ReligionSeeder religionSeeder;
 
 	@Autowired
 	private UserSeeder userSeeder;
 
 	@Autowired
-	private DemonSeeder ds;
+	private DemonSeeder demonsSeeder;
 
 	@Autowired
 	private RoleSeeder roleSeeder;
 
 	@Autowired
+	private ServiceSeeder serviceSeeder;
+
+	@Autowired
 	private PrivilegeSeeder privilegeSeeder;
-
-	@Autowired
-	private CustomerSeeder customerSeeder;
-
-	@Autowired
-	private ExorcistSeeder exorcistSeeder;
 
 	@PostConstruct
 	public void seed() {
-		// Seed privileges
 		privilegeSeeder.run();
-
-		// Seed roles
 		roleSeeder.run();
-
-		// Seed cantons
-		cs.run();
-
-		// Seed religions
-		rs.run();
-
-		// Seed users
+		cantonSeeder.run();
+		religionSeeder.run();
+		demonsSeeder.run();
 		userSeeder.run();
-
-		// Seed demons
-		ds.run();
-
-		// Seed customers
-		customerSeeder.run();
-
-		// Seed customers
-		exorcistSeeder.run();
+		evaluationSeeder.run();
+		serviceSeeder.run();
 	}
 }

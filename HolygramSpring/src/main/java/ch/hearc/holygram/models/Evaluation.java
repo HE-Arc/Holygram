@@ -9,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Entity
 public class Evaluation {
@@ -19,31 +18,32 @@ public class Evaluation {
 
 	@ManyToOne
 	@JoinColumn
-	private Customer fk_customer;
+	private Customer customer;
 
 	@ManyToOne
 	@JoinColumn
-	private Exorcist fk_exorcist;
+	private Exorcist exorcist;
 
 	@NotNull
 	private boolean isPositive;
 
 	@NotNull
 	private Date datetime;
-	
+
 	@NotNull
-	@Size(min = 50, max = 255)
 	private String text;
-	
-	public Evaluation(Customer customer, Exorcist exorcist, boolean isPositive, String text)
-	{
-		this.fk_customer = customer;
-		this.fk_exorcist = exorcist;
+
+	public Evaluation(Customer customer, Exorcist exorcist, boolean isPositive, String text) {
+		this.datetime = new Date();
+		this.customer = customer;
+		this.exorcist = exorcist;
 		this.isPositive = isPositive;
 		this.text = text;
 	}
-	
-	public Evaluation() {}
+
+	public Evaluation() {
+		this.datetime = new Date();
+	}
 
 	public Long getId() {
 		return id;
@@ -53,20 +53,20 @@ public class Evaluation {
 		this.id = id;
 	}
 
-	public Customer getFk_customer() {
-		return fk_customer;
+	public Customer getCustomer() {
+		return customer;
 	}
 
-	public void setFk_customer(Customer fk_customer) {
-		this.fk_customer = fk_customer;
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 
-	public Exorcist getFk_exorcist() {
-		return fk_exorcist;
+	public Exorcist getExorcist() {
+		return exorcist;
 	}
 
-	public void setFk_exorcist(Exorcist fk_exorcist) {
-		this.fk_exorcist = fk_exorcist;
+	public void setExorcist(Exorcist exorcist) {
+		this.exorcist = exorcist;
 	}
 
 	public boolean isPositive() {

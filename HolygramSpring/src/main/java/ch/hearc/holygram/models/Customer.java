@@ -1,9 +1,6 @@
 package ch.hearc.holygram.models;
 
-
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -12,7 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -22,31 +19,20 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@OneToOne(mappedBy = "customer")
-	private User fk_user;
+	@OneToOne
+	@JoinColumn
+	private User user;
 
-	@OneToMany(mappedBy = "fk_customer", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
 	private Set<Evaluation> evaluations;
 	
 	public Customer(User user) {
-		this.fk_user = user;
-		this.evaluations = new HashSet<Evaluation>();
+		this();
+		this.user = user;
 	}
-	
-	public Customer() {}
 
-	/*
-	 * Dirty method to get attributes of a user 3 Classes (Template, Business,
-	 * Entity) for each Model should be used
-	 */
-	public Map<String, String> getAttributes() {
-		Map<String, String> attributes = new HashMap<String, String>();
-
-		attributes.put("id", id.toString());
-		attributes.put("fk_user", fk_user.toString());
-		attributes.put("evaluations", evaluations.toString());
-
-		return attributes;
+	public Customer() {
+		this.evaluations = new HashSet<Evaluation>();
 	}
 
 	public Long getId() {
@@ -57,12 +43,12 @@ public class Customer {
 		this.id = id;
 	}
 
-	public User getFk_user() {
-		return fk_user;
+	public User getUser() {
+		return user;
 	}
 
-	public void setFk_user(User fk_user) {
-		this.fk_user = fk_user;
+	public synchronized void setUser(User user) {
+		this.user = user;
 	}
 
 	public Set<Evaluation> getEvaluations() {
@@ -71,5 +57,11 @@ public class Customer {
 
 	public void setEvaluations(Set<Evaluation> evaluations) {
 		this.evaluations = evaluations;
+	}
+
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return id.hashCode();
 	}
 }

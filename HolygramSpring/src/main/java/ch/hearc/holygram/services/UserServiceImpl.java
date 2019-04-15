@@ -10,7 +10,7 @@ import ch.hearc.holygram.repositories.UserRepository;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserRepository userRepository;
+    private UserServiceImpl userService;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
@@ -18,11 +18,11 @@ public class UserServiceImpl implements UserService {
     public void save(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
-        userRepository.save(user);
+        userService.save(user);
     }
 
     @Override
     public User findByUsername(String username) {
-        return userRepository.findByUsername(username);
+        return userService.findByUsername(username);
     }
 }

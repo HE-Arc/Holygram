@@ -26,7 +26,7 @@ public class Role {
 	@Size(min = 3, max = 45)
 	private String name;
 	
-	@OneToMany(mappedBy = "fk_role", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
 	private Set<User> users;
 	
 	@ManyToMany

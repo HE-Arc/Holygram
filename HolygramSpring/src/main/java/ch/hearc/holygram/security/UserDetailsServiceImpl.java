@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ch.hearc.holygram.models.User;
 import ch.hearc.holygram.repositories.UserRepository;
+import ch.hearc.holygram.services.UserServiceImpl;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,16 +19,16 @@ import java.util.Set;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService{
     @Autowired
-    private UserRepository userRepository;
+    private UserServiceImpl userService;
 
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) {
-        User user = userRepository.findByUsername(username);
+        User user = userService.findByUsername(username);
         if (user == null) throw new UsernameNotFoundException(username);
 
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-        grantedAuthorities.add(new SimpleGrantedAuthority(user.getFk_role().getName()));
+        grantedAuthorities.add(new SimpleGrantedAuthority(user.getRole().getName()));
 
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), grantedAuthorities);
     }

@@ -19,7 +19,7 @@ public class HolygramUserDetails implements UserDetails {
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		final List<GrantedAuthority> authorities = Collections.singletonList((GrantedAuthority) new SimpleGrantedAuthority(user.getFk_role().getName()));
+		final List<GrantedAuthority> authorities = Collections.singletonList((GrantedAuthority) new SimpleGrantedAuthority(user.getRole().getName()));
 		
 		return authorities;
 	}
