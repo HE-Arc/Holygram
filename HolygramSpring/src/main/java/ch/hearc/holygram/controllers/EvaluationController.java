@@ -28,56 +28,55 @@ import ch.hearc.holygram.repositories.UserRepository;
 @RequestMapping("evaluation")
 public class EvaluationController {
 
-	@Autowired
-	ServiceRepository serviceRepository;
+    @Autowired
+    ServiceRepository serviceRepository;
 
-	@Autowired
-	UserRepository userRepository;
+    @Autowired
+    UserRepository userRepository;
 
-	@Autowired
-	ExorcistRepository exorcistRepository;
+    @Autowired
+    ExorcistRepository exorcistRepository;
 
-	@Autowired
-	CustomerRepository customerRepository;
+    @Autowired
+    CustomerRepository customerRepository;
 
-	@Autowired
-	DemonRepository demonRepository;
+    @Autowired
+    DemonRepository demonRepository;
 
-	@Autowired
-	CantonRepository cantonRepository;
+    @Autowired
+    CantonRepository cantonRepository;
 
-	@Autowired
-	ReligionRepository religionRepository;
+    @Autowired
+    ReligionRepository religionRepository;
 
-	@Autowired
-	EvaluationRepository evaluationRepository;
+    @Autowired
+    EvaluationRepository evaluationRepository;
 
-	@PostMapping(value = "add/{exorcistId}")
-	public ResponseEntity<Evaluation> update(@PathVariable long exorcistId,
-			@RequestBody MultiValueMap<String, String> formData) {
-		// TODO : use the real customer id
-		long customerId = 1l;
-		try {
-			User ue = userRepository.findById((long) exorcistId).get();
-			Exorcist e = exorcistRepository.findByUser(ue);
-			Evaluation eval = new Evaluation();
-			eval.setExorcist(e);
+    @PostMapping(value = "add/{exorcistId}")
+    public ResponseEntity<Evaluation> update(@PathVariable long exorcistId,
+                                             @RequestBody MultiValueMap<String, String> formData) {
+        // TODO : use the real customer id
+        long customerId = 1l;
+        try {
+            User ue = userRepository.findById((long) exorcistId).get();
+            Exorcist e = exorcistRepository.findByUser(ue);
+            Evaluation eval = new Evaluation();
+            eval.setExorcist(e);
 
-			User uc = userRepository.findById((long) customerId).get();
-			Customer c = customerRepository.findByUser(uc);
-			eval.setCustomer(c);
+            User uc = userRepository.findById((long) customerId).get();
+            Customer c = customerRepository.findByUser(uc);
+            eval.setCustomer(c);
 
-			eval.setPositive(Integer.valueOf(formData.getFirst("evaluation")) > 0);
-			eval.setText(formData.getFirst("comment"));
-			System.out.println(eval);
+            eval.setPositive(Integer.valueOf(formData.getFirst("evaluation")) > 0);
+            eval.setText(formData.getFirst("comment"));
 
-			evaluationRepository.save(eval);
-		} catch (Exception e) {
-			System.out.println(e);
-			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-		}
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("Location", "/exorcist/" + exorcistId);
-		return new ResponseEntity<>(headers, HttpStatus.FOUND);
-	}
+            evaluationRepository.save(eval);
+        } catch (Exception e) {
+            System.out.println(e);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Location", "/exorcist/" + exorcistId);
+        return new ResponseEntity<>(headers, HttpStatus.FOUND);
+    }
 }
