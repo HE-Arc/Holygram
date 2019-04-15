@@ -1,9 +1,5 @@
 package ch.hearc.holygram.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 /**
@@ -34,8 +32,9 @@ public class Demon {
 		this.name = name;
 		this.religion = religion;
 	}
-	
-	public Demon() {}
+
+	public Demon() {
+	}
 
 	public Long getId() {
 		return id;

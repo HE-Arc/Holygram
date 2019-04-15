@@ -9,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Entity
 public class Evaluation {
@@ -34,8 +33,7 @@ public class Evaluation {
 	@NotNull
 	private String text;
 
-	public Evaluation(Customer customer, Exorcist exorcist, boolean isPositive, String text)
-	{
+	public Evaluation(Customer customer, Exorcist exorcist, boolean isPositive, String text) {
 		this.datetime = new Date();
 		this.customer = customer;
 		this.exorcist = exorcist;

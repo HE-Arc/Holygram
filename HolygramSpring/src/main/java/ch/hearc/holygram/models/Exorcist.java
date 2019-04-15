@@ -6,12 +6,17 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+/*
+ * Dirty method to get attributes of a user 3 Classes (Template, Business,
+ * Entity) for each Model should be used
+ */
 @Entity
 public class Exorcist {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
     @OneToOne
     @PrimaryKeyJoinColumn
     private User user;
@@ -33,7 +38,8 @@ public class Exorcist {
     @OneToMany(mappedBy = "exorcist", cascade = CascadeType.ALL)
     private List<Service> services;
 
-    public Exorcist(String description, String phoneNumber, Canton canton) {
+    public Exorcist(User user, String description, String phoneNumber, Canton canton) {
+    	this.user = user;
         this.description = description;
         this.phoneNumber = phoneNumber;
         this.canton = canton;
@@ -44,22 +50,7 @@ public class Exorcist {
     public Exorcist() {
     }
 
-    /*
-     * Dirty method to get attributes of a user 3 Classes (Template, Business,
-     * Entity) for each Model should be used
-     */
-    public Map<String, String> getAttributes() {
-        Map<String, String> attributes = new HashMap<String, String>();
-
-        attributes.put("id", id.toString());
-        attributes.put("description", description.toString());
-        attributes.put("phoneNumber", phoneNumber.toString());
-        attributes.put("canton", canton.toString());
-        attributes.put("evaluations", evaluations.toString());
-        attributes.put("services", services.toString());
-
-        return attributes;
-    }
+    
 
     public Long getId() {
         return id;
@@ -73,7 +64,11 @@ public class Exorcist {
         return user;
     }
 
-    public String getDescription() {
+	public synchronized void setUser(User user) {
+		this.user = user;
+	}
+
+	public String getDescription() {
         return description;
     }
 

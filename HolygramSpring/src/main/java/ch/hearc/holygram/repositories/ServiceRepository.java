@@ -13,7 +13,7 @@ import ch.hearc.holygram.models.Service;
  * https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
  */
 public interface ServiceRepository extends CrudRepository<Service, Long> {
-	public List<Exorcist> findAllExorcistByDemon(Demon demon);
+	public List<Service> findAllServiceByDemon(Demon demon);
 
-	public List<Demon> findAllDemonByExorcist(Exorcist exorcist);
+	public List<Service> findAllServiceByExorcist(Exorcist exorcist);
 }

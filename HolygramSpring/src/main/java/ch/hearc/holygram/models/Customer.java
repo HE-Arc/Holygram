@@ -1,42 +1,39 @@
 package ch.hearc.holygram.models;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
 public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@OneToOne
+	@PrimaryKeyJoinColumn
+	private User user;
 
-    @OneToOne
-    @PrimaryKeyJoinColumn
-    private User user;
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+	private Set<Evaluation> evaluations;
 
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-    private Set<Evaluation> evaluations;
-
-    public Customer() {
-        this.evaluations = new HashSet<Evaluation>();
-    }
-
-    /*
-     * Dirty method to get attributes of a user 3 Classes (Template, Business,
-     * Entity) for each Model should be used
-     */
-    public Map<String, String> getAttributes() {
-        Map<String, String> attributes = new HashMap<String, String>();
-
-        attributes.put("id", id.toString());
-        attributes.put("evaluations", evaluations.toString());
-
-        return attributes;
-    }
-
+	public Customer(User user) {
+		this();
+		this.user = user;
+	}
+	
+	public Customer() {
+		this.evaluations = new HashSet<Evaluation>();
+	}
+	
     public Long getId() {
         return id;
     }
@@ -45,15 +42,19 @@ public class Customer {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
-    }
+	public User getUser() {
+		return user;
+	}
+	
+	public synchronized void setUser(User user) {
+		this.user = user;
+	}
 
-    public Set<Evaluation> getEvaluations() {
-        return evaluations;
-    }
+	public Set<Evaluation> getEvaluations() {
+		return evaluations;
+	}
 
-    public void setEvaluations(Set<Evaluation> evaluations) {
-        this.evaluations = evaluations;
-    }
+	public void setEvaluations(Set<Evaluation> evaluations) {
+		this.evaluations = evaluations;
+	}
 }

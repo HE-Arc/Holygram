@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -31,12 +30,6 @@ public class User {
 	@NotNull
 	@Size(min = 2, max = 30)
 	private String password;
-
-	@OneToOne(optional = true)
-	private Customer customer;
-
-	@OneToOne(optional = true)
-	private Exorcist exorcist;
 
 	@ManyToOne
 	@JoinColumn
@@ -111,22 +104,6 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public Customer getCustomer() {
-		return customer;
-	}
-
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
-
-	public Exorcist getExorcist() {
-		return exorcist;
-	}
-
-	public void setExorcist(Exorcist exorcist) {
-		this.exorcist = exorcist;
 	}
 
 	public Role getRole() {

@@ -1,7 +1,6 @@
 package ch.hearc.holygram.controllers;
 
 import java.util.Map;
-import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -9,17 +8,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.holygram.models.Canton;
-import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.User;
 import ch.hearc.holygram.repositories.CantonRepository;
 import ch.hearc.holygram.repositories.DemonRepository;
 import ch.hearc.holygram.repositories.ExorcistRepository;
 import ch.hearc.holygram.repositories.ReligionRepository;
 import ch.hearc.holygram.repositories.UserRepository;
-import ch.hearc.holygram.seeders.DemonSeeder;
 
 @Controller
 public class UserController {
@@ -64,16 +63,7 @@ public class UserController {
 
 	@PostMapping(value = "/users/registrationExorcist")
 	public String registrationExorcist(Map<String, Object> model) {
-		System.out.println("");
-		System.out.println("pika");
-		System.out.println("");
 		Iterable<Canton> cantons = cantonRepository.findAll();
-		System.out.println("");
-		System.out.println("pika");
-		System.out.println("");
-		System.out.println("");
-		System.out.println(cantons);
-		System.out.println("");
 		model.put("cantons", cantons);
 		return "registration/exorcist";
 	}

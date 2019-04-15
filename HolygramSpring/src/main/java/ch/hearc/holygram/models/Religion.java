@@ -1,12 +1,6 @@
 package ch.hearc.holygram.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -16,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 /**
@@ -38,8 +34,9 @@ public class Religion {
 	public Religion(String name) {
 		this.name = name;
 	}
-	
-	public Religion() {}
+
+	public Religion() {
+	}
 
 	public Long getId() {
 		return id;

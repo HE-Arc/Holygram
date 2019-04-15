@@ -1,17 +1,12 @@
 package ch.hearc.holygram.seeders;
 
-import ch.hearc.holygram.models.Demon;
-import ch.hearc.holygram.models.Evaluation;
-import ch.hearc.holygram.models.Religion;
-import ch.hearc.holygram.repositories.DemonRepository;
-import ch.hearc.holygram.repositories.EvaluationRepository;
-import ch.hearc.holygram.repositories.ReligionRepository;
-import ch.hearc.holygram.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
+import ch.hearc.holygram.models.Evaluation;
+import ch.hearc.holygram.repositories.CustomerRepository;
+import ch.hearc.holygram.repositories.EvaluationRepository;
+import ch.hearc.holygram.repositories.ExorcistRepository;
 
 @Component
 /**
@@ -22,16 +17,20 @@ public class EvaluationSeeder {
 	private EvaluationRepository evaluationRepository;
 
 	@Autowired
-	private UserRepository userRepository;
+	private CustomerRepository customerRepository;
+
+	@Autowired
+	private ExorcistRepository exorcistRepository;
 
 	public void run() {
 		evaluationRepository.deleteAll();
 
 		Evaluation evaluation = new Evaluation();
-		evaluation.setText("Very godd service, so cheap and so fast, incredible. I still can't believe my eyes how he masters his wand");
+		evaluation.setText(
+				"Very good service, so cheap and so fast, incredible. I still can't believe my eyes how he masters his wand");
 		evaluation.setPositive(true);
-		evaluation.setCustomer(userRepository.findById(1l).get().getCustomer());
-		evaluation.setExorcist(userRepository.findById(2l).get().getExorcist());
+		evaluation.setCustomer(customerRepository.findById(1l).get());
+		evaluation.setExorcist(exorcistRepository.findById(1l).get() );
 
 		evaluationRepository.save(evaluation);
 	}

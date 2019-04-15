@@ -1,5 +1,6 @@
 package ch.hearc.holygram.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import ch.hearc.holygram.models.Demon;
 import ch.hearc.holygram.models.Exorcist;
+import ch.hearc.holygram.models.Service;
 import ch.hearc.holygram.repositories.DemonRepository;
 import ch.hearc.holygram.repositories.ExorcistRepository;
 import ch.hearc.holygram.repositories.ServiceRepository;
@@ -35,7 +37,7 @@ public class SearchController {
 
 	@Autowired
 	private ExorcistRepository er;
-	
+
 	@Autowired
 	private ServiceRepository sr;
 
@@ -55,10 +57,11 @@ public class SearchController {
 		Long demon_id = Long.parseLong(request.getParameter("input_demon"));
 		Demon demon = dr.findById(demon_id).get();
 
-		List<Exorcist> exorcists = sr.findAllExorcistByDemon(demon);
-		for(Exorcist e : exorcists)
-		{
-			System.out.println("[search] exo's id: " + e.getId());
+		List<Exorcist> exorcists = new ArrayList<Exorcist>();
+		List<Service> services = sr.findAllServiceByDemon(demon);
+		for (Service s : services) {
+			exorcists.add(s.getExorcist());
+			System.out.println("[search] service's id: " + s.getId());
 		}
 
 		// return list of exorcists
