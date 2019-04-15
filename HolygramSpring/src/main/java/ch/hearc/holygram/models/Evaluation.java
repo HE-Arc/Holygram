@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Evaluation {
 	@Id
@@ -18,10 +20,12 @@ public class Evaluation {
 
 	@ManyToOne
 	@JoinColumn
+	@JsonBackReference
 	private Customer customer;
 
 	@ManyToOne
 	@JoinColumn
+	@JsonBackReference
 	private Exorcist exorcist;
 
 	@NotNull

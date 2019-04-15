@@ -11,6 +11,8 @@ import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 /**
  * Class role's privilege
@@ -23,12 +25,14 @@ public class Privilege {
 	@NotNull
 	@Size(min = 3, max = 45)
 	private String name;
-	
+
 	@ManyToMany(mappedBy = "privileges", cascade = CascadeType.ALL)
+	@JsonBackReference
 	private Set<Role> roles;
-	
-	public Privilege() {}
-	
+
+	public Privilege() {
+	}
+
 	public Privilege(String name) {
 		this.name = name;
 	}

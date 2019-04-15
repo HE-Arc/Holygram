@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class User {
 
@@ -33,6 +35,7 @@ public class User {
 
 	@ManyToOne
 	@JoinColumn
+	@JsonBackReference
 	private Role role;
 
 	public User(String username, String password, String email, Role role) throws Exception {
@@ -113,7 +116,7 @@ public class User {
 	public void setRole(Role role) {
 		this.role = role;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub

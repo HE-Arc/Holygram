@@ -12,6 +12,8 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 /**
  * Class user's role
@@ -24,15 +26,18 @@ public class Role {
 	@NotNull
 	@Size(min = 3, max = 45)
 	private String name;
-	
+
 	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
+	@JsonBackReference
 	private Set<User> users;
-	
+
 	@ManyToMany
+	@JsonBackReference
 	private Set<Privilege> privileges;
-	
-	public Role() {}
-	
+
+	public Role() {
+	}
+
 	public Role(String name) {
 		this.name = name;
 	}
