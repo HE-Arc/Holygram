@@ -1,4 +1,5 @@
 <div th:replace="fragments/beforeBody.html"></div>
+<script th:src="@{/js/controller.js}" defer></script>
 <div style="padding: 30px">
 	<div class="card">
 		<div class="card-header">
@@ -6,9 +7,8 @@
 		</div>
 		<div class="card-body">
 			<div class="card-text">
-				<form method="POST" action="#" th:action="@{/search/process}"
-					id="form-search">
-
+				<form method="POST" id="form-search">
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 					<div class="form-group row">
 						<label for="input_demon"
 							class="col-md-2 col-form-label col-form-label-lg">Demon</label>
@@ -52,12 +52,11 @@
 							</div>
 						</div>
 					</div> -->
-
-					<blockquote class="blockquote mb-0">
-						<button class="btn btn-primary btn-lg" id="btn_submit">
-							Search!</button>
-					</blockquote>
 				</form>
+				<blockquote class="blockquote mb-0">
+					<button class="btn btn-primary btn-lg" id="btn_submit" onclick="search()">
+						Search!</button>
+				</blockquote>
 			</div>
 		</div>
 	</div>
@@ -86,30 +85,28 @@
 	{
 		console.log("fromage");
 		
-		var promise = new Promise(
-			    function(resolve, reject) {       
-			          resolve(document.getElementById('form-search').submit());
-			    }
-			);
+		var formElement = document.getElementById("form-search");
 		
-		promise.then(
-		    // On affiche un message avec la valeur
-		    function(value) {
-		    	// Use data returned to fulfill array on search page
-				
-				// Toggle array
-				
-				console.log(value);
-		    })
-		    .catch(
-			// Promesse rejetée
-			function() { 
-				console.log("failed");
-			}
-		);
+		var data = []; // create an empty array
+		var index = 0; // workaround
+		var csrftok = []; // workaround
+		
+		for (const pair of new FormData(formElement)) {
+			if (index === 0)
+				csrftok.push({
+				    key:   pair[0],
+				    value: pair[1]
+				});
+			else
+			    data.push({
+				    key:   pair[0],
+				    value: pair[1]
+				});
+			index++;
+		}
+		console.log(data);
+
+		fetchAjax("/search/process", csrftok, data)
 	}
-	
-	var btnSubmit = document.getElementById("btn_submit");
-	btnSubmit.addEventListener("click", search);
 	
 </script>

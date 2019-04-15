@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -52,9 +51,14 @@ public class SearchController {
 	}
 
 	@RequestMapping(value = "/search/process", method = RequestMethod.POST, headers = "Accept=application/json", produces = "application/json")
-	public @ResponseBody List<Exorcist> process(HttpServletRequest request) {
+	public @ResponseBody List<Exorcist> process(@RequestBody Map<String, Object> payload) {
 
-		Long demon_id = Long.parseLong(request.getParameter("input_demon"));
+		if (!payload.containsKey("input_demon"))
+			return null;
+		
+		Long demon_id = Long.parseLong(payload.get("input_demon").toString());
+		System.out.println(demon_id);
+
 		Demon demon = dr.findById(demon_id).get();
 
 		List<Exorcist> exorcists = new ArrayList<Exorcist>();
