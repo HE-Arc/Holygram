@@ -46,10 +46,9 @@ public class User {
 	@JsonBackReference
 	private Role role;
 
-	public User(String username, String password, String passwordConfirm, String email, Role role) throws Exception {
+	public User(String username, String password, String email, Role role) throws Exception {
 		this.username = username;
 		this.password = password;
-		this.passwordConfirm = passwordConfirm;
 		this.email = email;
 		this.role = role;
 	}

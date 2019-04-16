@@ -1,6 +1,7 @@
 package ch.hearc.holygram.seeders;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import ch.hearc.holygram.models.Canton;
@@ -18,6 +19,9 @@ import ch.hearc.holygram.repositories.UserRepository;
  */
 public class UserSeeder {
 
+	@Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
 	@Autowired
 	private UserRepository userRepository;
 
@@ -48,7 +52,7 @@ public class UserSeeder {
 	}
 
 	private void addExorcist() throws Exception {
-		User newExorcist = new User("exorcist", "1234", "1234", "exorcist@email.com", RoleSeeder.exorcistRole);
+		User newExorcist = new User("exorcist", bCryptPasswordEncoder.encode("12345678"), "exorcist@email.com", RoleSeeder.exorcistRole);
 		userRepository.save(newExorcist);
 
 		Canton canton = cantonRepository.findById(10l).get();
@@ -58,7 +62,7 @@ public class UserSeeder {
 	}
 
 	private void addCustomer() throws Exception {
-		User newCustomer = new User("customer", "1234", "1234", "customer@email.com", RoleSeeder.customerRole);
+		User newCustomer = new User("customer", bCryptPasswordEncoder.encode("12345678"), "customer@email.com", RoleSeeder.customerRole);
 		userRepository.save(newCustomer);
 		
 		Customer c = new Customer(newCustomer);
