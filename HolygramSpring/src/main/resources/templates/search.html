@@ -1,4 +1,11 @@
-<div th:replace="fragments/beforeBody.html"></div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<div th:replace="fragments/head.html"></div>
+</head>
+<body>
+<nav class="d-block" th:with="menu=${'search'},isConnected=${true}" th:insert="fragments/nav.html"></nav>
+<div class="container p-4">
 <div style="padding: 30px">
 	<div class="card">
 		<div class="card-header">
@@ -21,7 +28,7 @@
 						</div>
 					</div>
 
-					<!-- ADVANCED 
+					<!-- ADVANCED
 					<div class="form-group row">
 						<label for="input_advanced"
 							class="col-md-2 col-form-label col-form-label-lg">Advanced
@@ -62,9 +69,7 @@
 		</div>
 	</div>
 </div>
-<div th:replace="fragments/afterBody.html"></div>
-
-
+</div>
 <script>
 
 	/*
@@ -76,40 +81,44 @@
 			advanced_search.style.display = "none";
 		}
 	}*/
-	
+
 	function updateReligion(religionName)
 	{
-		
+
 	}
-	
+
 	function search()
 	{
 		console.log("fromage");
-		
+
 		var promise = new Promise(
-			    function(resolve, reject) {       
-			          resolve(document.getElementById('form-search').submit());
-			    }
-			);
-		
-		promise.then(
-		    // On affiche un message avec la valeur
-		    function(value) {
-		    	// Use data returned to fulfill array on search page
-				
-				// Toggle array
-				
-				console.log(value);
-		    })
-		    .catch(
-			// Promesse rejetée
-			function() { 
-				console.log("failed");
-			}
+				function(resolve, reject) {
+					resolve(document.getElementById('form-search').submit());
+				}
 		);
+
+		promise.then(
+				// On affiche un message avec la valeur
+				function(value) {
+					// Use data returned to fulfill array on search page
+
+					// Toggle array
+
+					console.log(value);
+				})
+				.catch(
+						// Promesse rejetï¿½e
+						function() {
+							console.log("failed");
+						}
+				);
 	}
-	
+
 	var btnSubmit = document.getElementById("btn_submit");
 	btnSubmit.addEventListener("click", search);
-	
+
 </script>
+</body>
+</html>
+
+

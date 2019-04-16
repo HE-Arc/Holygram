@@ -17,8 +17,6 @@ let phonenumber_input = document.getElementById("phonenumber_input");
 let description_textarea = document.getElementById("description_textarea");
 
 submitExorcist.addEventListener("click", function () {
-
-
     let data = {"canton": canton_select.value, "phonenumber": phonenumber_input.value, "description": description_textarea.value};
 
     let form = document.createElement("form");
