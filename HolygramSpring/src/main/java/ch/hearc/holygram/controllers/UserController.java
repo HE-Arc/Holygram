@@ -3,24 +3,24 @@ package ch.hearc.holygram.controllers;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.catalina.connector.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Customer;
 import ch.hearc.holygram.models.Exorcist;
+import ch.hearc.holygram.models.Role;
 import ch.hearc.holygram.models.User;
 import ch.hearc.holygram.repositories.CantonRepository;
 import ch.hearc.holygram.repositories.CustomerRepository;
 import ch.hearc.holygram.repositories.ExorcistRepository;
+import ch.hearc.holygram.repositories.RoleRepository;
 import ch.hearc.holygram.repositories.UserRepository;
 import ch.hearc.holygram.security.UserValidator;
-import ch.hearc.holygram.services.SecurityService;
+import ch.hearc.holygram.services.SecurityServiceImpl;
 import ch.hearc.holygram.services.UserService;
 
 @Controller
@@ -29,7 +29,7 @@ public class UserController {
     private UserService userService;
 
     @Autowired
-    private SecurityService securityService;
+    private SecurityServiceImpl securityService;
 
 	@Autowired
 	private UserRepository userRepository;
@@ -42,6 +42,9 @@ public class UserController {
 	
 	@Autowired
 	private CantonRepository cantonRepository;
+	
+	@Autowired
+	private RoleRepository roleRepository;
 
     @Autowired
     private UserValidator userValidator;
@@ -71,11 +74,15 @@ public class UserController {
 	        
 	        if (typeAccount.equals("customer")) {
 	        	Customer customer = new Customer(user);
+	        	Role role = roleRepository.findByName("CUSTOMER");
+	        	user.setRole(role);
 	        	userService.save(user);
 	        	customerRepository.save(customer);
 	        } else {
 	        	Canton canton = cantonRepository.findByAcronym(request.getParameter("canton"));
 	        	Exorcist exorcist = new Exorcist(user, request.getParameter("description"), request.getParameter("phoneNumber"), canton);
+	        	Role role = roleRepository.findByName("EXORCIST");
+	        	user.setRole(role);
 	        	userService.save(user);
 	        	exorcistRepository.save(exorcist);
 	        }
@@ -88,8 +95,7 @@ public class UserController {
 			e.printStackTrace();
 		}
     	
-        return "signup";
-        //return "redirect:/";
+        return "redirect:/";
     }
     
     @GetMapping("/formExorcist")

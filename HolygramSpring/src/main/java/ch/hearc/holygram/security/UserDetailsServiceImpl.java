@@ -22,7 +22,6 @@ public class UserDetailsServiceImpl implements UserDetailsService{
     private UserServiceImpl userService;
 
     @Override
-    @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) {
         User user = userService.findByUsername(username);
         if (user == null) throw new UsernameNotFoundException(username);
