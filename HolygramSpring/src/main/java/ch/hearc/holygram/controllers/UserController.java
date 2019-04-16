@@ -69,7 +69,7 @@ public class UserController {
 
 	        String typeAccount = request.getParameter("type");
 	        
-	        if (typeAccount == "customer") {
+	        if (typeAccount.equals("customer")) {
 	        	Customer customer = new Customer(user);
 	        	userService.save(user);
 	        	customerRepository.save(customer);

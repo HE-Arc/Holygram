@@ -12,8 +12,6 @@ import ch.hearc.holygram.repositories.UserRepository;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserServiceImpl userService;
-    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
     @Autowired
     private UserRepository userRepository;
@@ -22,7 +20,7 @@ public class UserServiceImpl implements UserService {
     public void save(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
-        userService.save(user);
+        userRepository.save(user);
     }
 
     @Override

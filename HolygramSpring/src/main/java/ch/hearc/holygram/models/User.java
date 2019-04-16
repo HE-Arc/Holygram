@@ -34,7 +34,6 @@ public class User {
 	private String email;
 
 	@NotNull
-	@Size(min = 2, max = 30)
 	private String password;
 	
 	@Transient
