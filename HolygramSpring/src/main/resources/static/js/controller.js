@@ -21,10 +21,10 @@ function fetchAjax(url, csrftok, payload)
     // send command
     fetch(url, init)
     .then(function (response) {
-        console.log(response)
+        console.log("[success] : " + response)
         return response;
     }).catch(function (error) {
-        console.log(error)
+        console.log("[error] : " + error)
         return error;
     });
 }

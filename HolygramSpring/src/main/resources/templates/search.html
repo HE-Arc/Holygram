@@ -87,26 +87,33 @@
 		
 		var formElement = document.getElementById("form-search");
 		
-		var data = []; // create an empty array
 		var index = 0; // workaround
 		var csrftok = []; // workaround
+		var uri = '?';
 		
 		for (const pair of new FormData(formElement)) {
 			if (index === 0)
+			{
 				csrftok.push({
 				    key:   pair[0],
 				    value: pair[1]
 				});
+			}
 			else
-			    data.push({
-				    key:   pair[0],
-				    value: pair[1]
-				});
+			{
+				if(index > 1)
+					uri += '&'
+					
+				uri += pair[0]
+				uri += '='
+				uri += pair[1]
+			}
 			index++;
 		}
-		console.log(data);
+		console.log(uri);
 
-		fetchAjax("/search/process", csrftok, data)
+		var output = fetchAjax("/search/process" + uri, csrftok, null);
+		console.log(output);
 	}
 	
 </script>

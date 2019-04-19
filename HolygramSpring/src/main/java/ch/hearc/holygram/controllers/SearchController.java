@@ -6,9 +6,9 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import ch.hearc.holygram.models.Demon;
@@ -51,15 +51,11 @@ public class SearchController {
 	}
 
 	@RequestMapping(value = "/search/process", method = RequestMethod.POST, headers = "Accept=application/json", produces = "application/json")
-	public @ResponseBody List<Exorcist> process(@RequestBody Map<String, Object> payload) {
+	public @ResponseBody List<Exorcist> process(@RequestParam("input_demon") Long demon_id) {
 
-		if (!payload.containsKey("input_demon"))
-			return null;
-		
-		Long demon_id = Long.parseLong(payload.get("input_demon").toString());
 		System.out.println(demon_id);
 
-		Demon demon = dr.findById(demon_id).get();
+		Demon demon = dr.findById((long) 1).get();
 
 		List<Exorcist> exorcists = new ArrayList<Exorcist>();
 		List<Service> services = sr.findAllServiceByDemon(demon);
