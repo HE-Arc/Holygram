@@ -1,5 +1,4 @@
 <div th:replace="fragments/beforeBody.html"></div>
-<script th:src="@{/js/controller.js}" defer></script>
 <div style="padding: 30px">
 	<div class="card">
 		<div class="card-header">
@@ -21,37 +20,15 @@
 						</div>
 					</div>
 
-					<!-- ADVANCED 
 					<div class="form-group row">
-						<label for="input_advanced"
-							class="col-md-2 col-form-label col-form-label-lg">Advanced
-							search</label>
+						<label for="input_renown"
+							class="col-md-2 col-form-label col-form-label-lg">Minimal
+							renown</label>
 						<div class="col-md-10">
-							<input type="checkbox" class="form-control form-control-lg"
-								id="input_advanced" name="input_advanced" onclick="toggle('advanced_search')">
+							<input type="range" class="form-control form-control-lg"
+								id="input_renown" name="input_renown" min="0" max="5" required>
 						</div>
 					</div>
-
-					<div id="advanced_search" style="display: none;">
-						<div class="form-group row">
-							<label for="input_renown"
-								class="col-md-2 col-form-label col-form-label-lg">Minimal
-								renown</label>
-							<div class="col-md-10">
-								<input type="range" class="form-control form-control-lg"
-									id="input_renown" name="input_renown" min="0" max="5" required>
-							</div>
-						</div>
-
-						<div class="form-group row">
-							<label for="input_date"
-								class="col-md-2 col-form-label col-form-label-lg">Date</label>
-							<div class="col-md-10">
-								<input type="date" class="form-control form-control-lg"
-									id="input_date" name="input_date" min="2019-01-01" required>
-							</div>
-						</div>
-					</div> -->
 				</form>
 				<blockquote class="blockquote mb-0">
 					<button class="btn btn-primary btn-lg" id="btn_submit" onclick="search()">
@@ -61,32 +38,62 @@
 		</div>
 	</div>
 </div>
-<div th:replace="fragments/afterBody.html"></div>
 
+<div id="search-result" style="display:None;">
+	<div class="table-responsive">
+		<table class="table table-hover">
+		    <thead>
+				<tr>
+					<th>Username</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>Price</th>
+				</tr>
+		    </thead>
+		    <tbody id="table-data">
+		    </tbody>
+		 </table>
+	</div>
+</div>
+
+<div th:replace="fragments/afterBody.html"></div>
 
 <script>
 
-	/*
-	function toggle(name) {
-		var advanced_search = document.getElementById(name);
-		if (advanced_search.style.display === "none") {
-			advanced_search.style.display = "block";
-		} else {
-			advanced_search.style.display = "none";
-		}
-	}*/
-	
-	function updateReligion(religionName)
-	{
-		
-	}
-	
 	function search()
 	{
-		console.log("fromage");
-		
 		var formElement = document.getElementById("form-search");
+		var results = searchExorcists(formElement);
 		
+		var innerTable = document.getElementById("table-data");
+		for (index = 0; index < results.length; ++index) {
+			var html = [];
+			var data = results[i];
+			html.push(
+			  "<tr>",
+			  "<td>",
+			  data["username"],
+			  "</td>",
+			  "<td>",
+			  data["email"],
+			  "</td>",
+			  "<td>",
+			  data["exorcist"]["phone"],
+			  "</td>",
+			  "<td>",
+			  data["price"],
+			  "</td>",
+			  "</tr>",
+			);
+			innerTable.innerHtml += html.join("");
+		}
+		
+		var table = document.getElementById("search-result");
+		table.style.display = "flex";
+	}
+
+	function searchExorcists(formElement)
+	{
 		var index = 0; // workaround
 		var csrftok = []; // workaround
 		var uri = '?';
@@ -110,10 +117,24 @@
 			}
 			index++;
 		}
-		console.log(uri);
-
-		var output = fetchAjax("/search/process" + uri, csrftok, null);
-		console.log(output);
+		
+		var exorcists = {};
+		
+		fetch("/search/process" + uri)
+	    .then(function (response) {
+	        return response.json();
+	    })
+	    .then(function (json) {
+		    for (let i = 0; i < json.length; i++) {
+		        let r = json[i];
+		        exorcists[r.id] = r;
+		    }
+		});
+		
+		console.log(exorcists);
+		console.log(exorcists.undefined);
+		
+		return exorcists;
 	}
-	
+
 </script>

@@ -45,7 +45,6 @@ public class ServiceController {
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
-
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = {

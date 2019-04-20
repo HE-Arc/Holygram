@@ -124,6 +124,13 @@ public class Exorcist {
 		this.services = services;
 	}
 
+	public int getRenown() {
+		// Get renown
+		List<Evaluation> e_evaluations = this.getEvaluations();
+		long e_evaluations_positives = e_evaluations.parallelStream().filter(x -> x.isPositive()).count();
+		return (int) (e_evaluations_positives / e_evaluations.size() * 1.0f);
+	}
+
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub

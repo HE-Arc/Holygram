@@ -15,9 +15,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.User;
 import ch.hearc.holygram.repositories.CantonRepository;
-import ch.hearc.holygram.repositories.DemonRepository;
-import ch.hearc.holygram.repositories.ExorcistRepository;
-import ch.hearc.holygram.repositories.ReligionRepository;
 import ch.hearc.holygram.repositories.UserRepository;
 
 @Controller
@@ -27,16 +24,7 @@ public class UserController {
 	private UserRepository userRepository;
 
 	@Autowired
-	private ExorcistRepository exorcistRepository;
-
-	@Autowired
 	private CantonRepository cantonRepository;
-
-	@Autowired
-	private DemonRepository demonRepository;
-
-	@Autowired
-	private ReligionRepository religionRepository;
 
 	@GetMapping(value = "/users")
 	public String findAllUsers(Map<String, Object> model) {
@@ -72,10 +60,6 @@ public class UserController {
 	public String registerUser(Map<String, Object> model) {
 
 		return "index";
-	}
-
-	private boolean checkRegisterUser() {
-		return true;
 	}
 
 	@GetMapping(value = "/users/registration")

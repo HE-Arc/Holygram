@@ -5,19 +5,22 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import ch.hearc.holygram.models.Demon;
 import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.Service;
 import ch.hearc.holygram.repositories.DemonRepository;
-import ch.hearc.holygram.repositories.ExorcistRepository;
 import ch.hearc.holygram.repositories.ServiceRepository;
-import ch.hearc.holygram.services.SearchService;
 
 @Controller
 public class SearchController {
@@ -29,13 +32,7 @@ public class SearchController {
 	// https://spring.io/guides/tutorials/bookmarks/
 
 	@Autowired
-	SearchService searchService;
-
-	@Autowired
 	private DemonRepository dr;
-
-	@Autowired
-	private ExorcistRepository er;
 
 	@Autowired
 	private ServiceRepository sr;
@@ -50,21 +47,42 @@ public class SearchController {
 		return "search";
 	}
 
-	@RequestMapping(value = "/search/process", method = RequestMethod.POST, headers = "Accept=application/json", produces = "application/json")
-	public @ResponseBody List<Exorcist> process(@RequestParam("input_demon") Long demon_id) {
+	@RequestMapping(value = "/search/process", method = RequestMethod.GET, headers = "Accept=application/json", produces = "application/json")
+	public ResponseEntity<List<JsonNode>> process(@RequestParam("input_demon") Long demon_id,
+			@RequestParam("input_renown") int renown) {
 
-		System.out.println(demon_id);
+		class Wrapper {
+			public String username;
+			public String phone;
+			public String email;
+			public Exorcist exorcist;
+
+			public Wrapper(Exorcist exorcist, String username, String phone, String email) {
+				this.exorcist = exorcist;
+				this.username = username;
+				this.phone = phone;
+				this.email = email;
+			}
+		}
+
+		ObjectMapper mapper = new ObjectMapper();
+		
+		List<JsonNode> datas = new ArrayList<JsonNode>();
 
 		Demon demon = dr.findById((long) 1).get();
+		for (Service s : sr.findAllServiceByDemon(demon)) {
+			Exorcist e = s.getExorcist();
+			int e_renown = e.getRenown();
 
-		List<Exorcist> exorcists = new ArrayList<Exorcist>();
-		List<Service> services = sr.findAllServiceByDemon(demon);
-		for (Service s : services) {
-			exorcists.add(s.getExorcist());
-			System.out.println("[search] service's id: " + s.getId());
+			// If this exorcist match minimal renown append it to the list
+			if (e_renown >= renown) {
+				JsonNode node = mapper.valueToTree(new Wrapper(e, e.getUser().getUsername(), e.getPhoneNumber(), e.getUser().getEmail()));
+				datas.add(node);
+			}
+
 		}
 
 		// return list of exorcists
-		return exorcists;
+		return new ResponseEntity<List<JsonNode>>(datas, HttpStatus.OK);
 	}
 }
