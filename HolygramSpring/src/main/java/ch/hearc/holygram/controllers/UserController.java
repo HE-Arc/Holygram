@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Customer;
@@ -18,7 +20,6 @@ import ch.hearc.holygram.repositories.CantonRepository;
 import ch.hearc.holygram.repositories.CustomerRepository;
 import ch.hearc.holygram.repositories.ExorcistRepository;
 import ch.hearc.holygram.repositories.RoleRepository;
-import ch.hearc.holygram.repositories.UserRepository;
 import ch.hearc.holygram.security.UserValidator;
 import ch.hearc.holygram.services.SecurityServiceImpl;
 import ch.hearc.holygram.services.UserService;
@@ -30,9 +31,6 @@ public class UserController {
 
     @Autowired
     private SecurityServiceImpl securityService;
-
-	@Autowired
-	private UserRepository userRepository;
 
 	@Autowired
 	private ExorcistRepository exorcistRepository;
