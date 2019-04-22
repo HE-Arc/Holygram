@@ -33,6 +33,11 @@
                 <div class="col">
                     <table class="table">
                         <tr>
+                            <td><b>Email</b></td>
+                            <td th:if="!${edit}" th:text="${u.getEmail()}">Email available</td>
+                            <td th:if="${edit}"><input class="form-control" th:value="${u.getEmail()}" disabled></td>
+                        </tr>
+                        <tr>
                             <td><b>Canton</b></td>
                             <td th:if="!${edit}" th:text="${e.getCanton().getName()}">No canton available</td>
                             <td th:if="${edit}">
