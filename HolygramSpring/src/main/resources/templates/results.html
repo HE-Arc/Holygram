@@ -20,7 +20,7 @@
 		    </thead>
 		    <tbody id="table-data">
 		    	<tr th:each="result: ${results}">
-				    <td><a th:href="@{/exorcist/{id}(id=${result.exorcist.id})}" th:text="${result.user.username}"></a></td>
+				    <td><a th:href="@{/exorcist/{id}(id=${result.user.id})}" th:text="${result.user.username}"></a></td>
 				    <td><a href="mailto:${result.user.email}" th:text="${result.user.email}"></a></td>
 				    <td th:text="${result.exorcist.phoneNumber}" />
 				    <td th:text="${result.price}" />
