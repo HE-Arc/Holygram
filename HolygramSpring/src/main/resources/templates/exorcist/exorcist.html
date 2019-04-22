@@ -7,22 +7,24 @@
 
 </head>
 <body>
-<div th:replace="fragments/nav.html"></div>
+<nav class="d-block" th:with="menu=${''},isConnected=${true}" th:insert="fragments/nav.html"></nav>
 <div class="container p-4">
-    <div class="row pull-right">
-        <a th:href="@{/exorcist/} + ${u.getId()} + @{?edit}" th:if="!${edit}">
-            <button class="btn btn-secondary">
-                <i class="fas fa-user-edit"></i>
+    <h2 class="row border-bottom pb-3">
+        <div class="col" th:text="${u.getUsername()}"></div>
+        <div class="col text-right">
+            <a th:href="@{/exorcist/} + ${u.getId()} + @{?edit}" th:if="!${edit}">
+                <button class="btn btn-secondary">
+                    <i class="fas fa-user-edit"></i>
+                </button>
+            </a>
+            <button th:if="${edit}" class="btn btn-success" id="submitExorcist">
+                <i class="fas fa-save"></i>
             </button>
-        </a>
-        <button th:if="${edit}" class="btn btn-success" id="submitExorcist">
-            <i class="fas fa-save"></i>
-        </button>
-    </div>
-    <h2 class="row border-bottom pb-2" th:text="${u.getUsername()}"></h2>
-    <div class="row">
+        </div>
+    </h2>
+    <div class="row p-3">
         <div class="col">
-            <div class="row pt-3">
+            <div class="row">
                 <div class="col">
                     <h4>Information</h4>
                 </div>
@@ -31,7 +33,7 @@
                 <div class="col">
                     <table class="table">
                         <tr>
-                            <td>Canton</td>
+                            <td><b>Canton</b></td>
                             <td th:if="!${edit}" th:text="${e.getCanton().getName()}">No canton available</td>
                             <td th:if="${edit}">
                                 <select id="canton_select" class="custom-select">
@@ -42,7 +44,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Phone number</td>
+                            <td><b>Phone number</b></td>
                             <td th:if="!${edit}" th:text="${e.getPhoneNumber()}">No phone number available</td>
                             <td th:if="${edit}">
                                 <input id="phonenumber_input" class="form-control" th:value="${e.getPhoneNumber()}" type="text">
@@ -109,12 +111,8 @@
             <textarea id="description_textarea" class="form-control" rows="20" th:if="${edit}" th:text="${e.getDescription()}">description not available</textarea>
         </div>
     </div>
-    <div th:if="${!edit}">
-        <h5 class="row border-bottom pb-2">Evaluations</h5>
-        <div class="row pb-2" th:replace="exorcist/evaluations.html" th:with="e=${e}"></div>
-        <h5 class="row border-bottom pb-2">Evaluate a service</h5>
-        <div th:insert="exorcist/addEvaluation.html" th:with="e=${e}"></div>
-    </div>
+    <div th:if="${!edit}" class="p-3" th:insert="exorcist/evaluations.html" th:with="e=${e}"></div>
+    <div th:if="${!edit}" class="p-3" th:insert="exorcist/addEvaluation.html" th:with="e=${e}"></div>
 </div>
 </body>
 </html>

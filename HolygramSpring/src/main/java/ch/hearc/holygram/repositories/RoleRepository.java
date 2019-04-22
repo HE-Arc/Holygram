@@ -1,4 +1,3 @@
-    
 package ch.hearc.holygram.repositories;
 
 import org.springframework.data.repository.CrudRepository;

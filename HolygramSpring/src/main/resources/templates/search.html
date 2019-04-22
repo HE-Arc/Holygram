@@ -1,4 +1,11 @@
-<div th:replace="fragments/beforeBody.html"></div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<div th:replace="fragments/head.html"></div>
+</head>
+<body>
+<nav class="d-block" th:with="menu=${'search'},isConnected=${true}" th:insert="fragments/nav.html"></nav>
+<div class="container p-4">
 <div style="padding: 30px">
 	<div class="card">
 		<div class="card-header">
@@ -64,7 +71,7 @@
 	{
 		var formElement = document.getElementById("form-search");
 		var results = searchExorcists(formElement);
-		
+
 		var innerTable = document.getElementById("table-data");
 		for (index = 0; index < results.length; ++index) {
 			var html = [];
@@ -87,7 +94,7 @@
 			);
 			innerTable.innerHtml += html.join("");
 		}
-		
+
 		var table = document.getElementById("search-result");
 		table.style.display = "flex";
 	}
@@ -97,7 +104,7 @@
 		var index = 0; // workaround
 		var csrftok = []; // workaround
 		var uri = '?';
-		
+
 		for (const pair of new FormData(formElement)) {
 			if (index === 0)
 			{
@@ -110,16 +117,16 @@
 			{
 				if(index > 1)
 					uri += '&'
-					
+
 				uri += pair[0]
 				uri += '='
 				uri += pair[1]
 			}
 			index++;
 		}
-		
+
 		var exorcists = {};
-		
+
 		fetch("/search/process" + uri)
 	    .then(function (response) {
 	        return response.json();
@@ -130,10 +137,10 @@
 		        exorcists[r.id] = r;
 		    }
 		});
-		
+
 		console.log(exorcists);
 		console.log(exorcists.undefined);
-		
+
 		return exorcists;
 	}
 

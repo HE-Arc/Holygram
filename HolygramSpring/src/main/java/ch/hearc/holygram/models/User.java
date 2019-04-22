@@ -1,14 +1,17 @@
 package ch.hearc.holygram.models;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -16,13 +19,14 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class User {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@NotNull
 	@Size(min = 2, max = 30)
+	@Column(unique = true)
 	private String username;
 
 	@NotNull
@@ -30,8 +34,12 @@ public class User {
 	private String email;
 
 	@NotNull
-	@Size(min = 2, max = 30)
 	private String password;
+	
+	@Transient
+    private String passwordConfirm;
+	
+	private Date lastLogin;
 
 	@ManyToOne
 	@JoinColumn
@@ -39,13 +47,17 @@ public class User {
 	private Role role;
 
 	public User(String username, String password, String email, Role role) throws Exception {
-		if (validateUsername(username) && validatePassword(password) && validateEmail(email)) {
-			this.username = username;
-			this.password = password;
-			this.email = email;
-			this.role = role;
-		} else
-			throw new Exception("Invalid arguments provided !");
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.role = role;
+	}
+	
+	public User(String username, String password, String passwordConfirm, String email) throws Exception {
+		this.username = username;
+		this.password = password;
+		this.passwordConfirm = passwordConfirm;
+		this.email = email;
 	}
 
 	public User() {
@@ -63,18 +75,6 @@ public class User {
 		attributes.put("email", email.toString());
 
 		return attributes;
-	}
-
-	private boolean validateUsername(String username) {
-		return true; // TODO
-	}
-
-	private boolean validatePassword(String password) {
-		return true; // TODO
-	}
-
-	private boolean validateEmail(String email) {
-		return true; // TODO
 	}
 
 	public Long getId() {
@@ -108,6 +108,14 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public String getPasswordConfirm() {
+        return passwordConfirm;
+    }
+
+    public void setPasswordConfirm(String passwordConfirm) {
+        this.passwordConfirm = passwordConfirm;
+    }
 
 	public Role getRole() {
 		return role;

@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,7 +29,7 @@ public class Customer {
 	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
 	@JsonBackReference
 	private Set<Evaluation> evaluations;
-
+	
 	public Customer(User user) {
 		this();
 		this.user = user;

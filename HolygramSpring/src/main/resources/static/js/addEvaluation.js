@@ -35,7 +35,6 @@ function validate_input(input, condition) {
 
 function validate_evaluation() {
     let b = 1;
-    b &= validate_input(evaluation_form.service, evaluation_form.service.selectedIndex > 0);
     b &= validate_input(evaluation_thumbs, evaluation_form.evaluation.value != "");
     b &= validate_input(evaluation_form.comment, evaluation_form.comment.value != "");
     return b == 1;

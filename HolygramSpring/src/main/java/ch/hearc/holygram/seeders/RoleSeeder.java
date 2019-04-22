@@ -5,7 +5,6 @@ import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import ch.hearc.holygram.models.Privilege;
 import ch.hearc.holygram.models.Role;
 import ch.hearc.holygram.repositories.PrivilegeRepository;
@@ -51,11 +50,11 @@ public class RoleSeeder {
 		roleRepository.deleteAll();
 
 		// Insert data
-		Role customerRole = new Role("CUSTOMER");
+		Role customerRole = new Role("ROLE_CUSTOMER");
 		customerRole.setPrivileges(customerPrivileges);
 		roleRepository.save(customerRole);
 
-		Role exorcistRole = new Role("EXORCIST");
+		Role exorcistRole = new Role("ROLE_EXORCIST");
 		exorcistRole.setPrivileges(exorcistPrivileges);
 		roleRepository.save(exorcistRole);
 

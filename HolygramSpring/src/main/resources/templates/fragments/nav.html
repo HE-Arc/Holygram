@@ -1,25 +1,43 @@
-<nav class="d-block">
-	<h1 id="logo" class="display-2 text-center p-4"><a th:href="@{/}" class="no-decorations"><span style="width:100px; display:inline-block;"></span>Holygram<img th:src="@{/img/cross.png}" width="100px"></a></h1>
-	<ul class="nav nav-tabs justify-content-center">
-		<li class="nav-item"><a class="nav-link active" th:href="@{/}">Home</a>
-		</li>
-		<li class="nav-item"><a class="nav-link" th:href="@{/search}">Search
-				an exorcist</a></li>
-		<!-- TODO : Show when connected -->
-		<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
-			data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-			aria-expanded="false">USERNAME</a>
-			<div class="dropdown-menu">
-				<a class="dropdown-item" href="#">Profil</a> <a
-					class="dropdown-item" href="#">Disconect</a>
-			</div></li>
-		<!-- TODO : Show when disconected -->
-		<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
-			data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-			aria-expanded="false">Account</a>
-			<div class="dropdown-menu">
-				<a class="dropdown-item" href="#">Create</a> <a
-					class="dropdown-item" href="#">Log in</a>
-			</div></li>
-	</ul>
-</nav>
+<h1 id="logo" class="display-2 text-center p-4">
+    <a th:href="@{/}" class="no-decorations">
+        <span style="width:100px; display:inline-block;"></span>
+        Holygram
+        <img th:src="@{/img/cross.png}" width="100px">
+    </a>
+</h1>
+<ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link" th:classappend="${menu}=='home' ? 'active':''" th:href="@{/}">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" th:classappend="${menu}=='search' ? 'active':''" th:href="@{/search}">Search
+            an exorcist
+        </a>
+    </li>
+    <!-- TODO : Show when connected -->
+    <li if:if=${isConnected} class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+                data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">USERNAME
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Profil</a>
+            <a
+                    class="dropdown-item" href="#">Disconect
+            </a>
+        </div>
+    </li>
+    <!-- TODO : Show when disconected -->
+    <li th:if=${!isConnected} class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+                data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">Account
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Create</a>
+            <a
+                    class="dropdown-item" href="#">Log in
+            </a>
+        </div>
+    </li>
+</ul>

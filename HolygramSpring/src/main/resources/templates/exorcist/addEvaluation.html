@@ -1,37 +1,40 @@
-<form id="evaluation_form" class="display-block w-100" th:action="@{/evaluation/add/} + ${u.getId()}" method="post" onsubmit="return(validate_evaluation());">
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Evaluation / Service</label>
-        <div class="col-sm-3">
-            <ul id="evaluation_thumbs" class="nav nav-pills nav-fill form-control font-weight-bold border-0">
-                <li id="evaluation_thumbsUp" class="nav-item btn btn-sm btn-light">
-                    <i class="fas fa-thumbs-up"></i>
-                </li>
-                <li id="evaluation_thumbsDown" class="nav-item btn btn-sm btn-light">
-                    <i class="fas fa-thumbs-down"></i>
-                </li>
-            </ul>
-            <div class="invalid-feedback">Please evaluate the service</div>
+<h4 class="row border-bottom p-3">Rate</h4>
+<div class="row p-3">
+    <form id="evaluation_form" class="display-block w-100" th:action="@{/evaluation/add/} + ${u.getId()}" method="post" onsubmit="return(validate_evaluation());">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Evaluation</label>
+            <div class="col-sm-3">
+                <ul id="evaluation_thumbs" class="nav nav-pills nav-fill form-control font-weight-bold border-0">
+                    <li id="evaluation_thumbsUp" class="nav-item btn btn-sm btn-light cursor-pointer">
+                        <i class="fas fa-thumbs-up"></i>
+                    </li>
+                    <li id="evaluation_thumbsDown" class="nav-item btn btn-sm btn-light cursor-pointer">
+                        <i class="fas fa-thumbs-down"></i>
+                    </li>
+                </ul>
+                <div class="invalid-feedback">Please evaluate the service</div>
+            </div>
+            <input type="radio" name="evaluation" value="1" hidden>
+            <input type="radio" name="evaluation" value="-1" hidden>
+            <!--        <div class="col-sm-7">-->
+            <!--            <select name="service" class="form-control">-->
+            <!--                <option disabled selected>Please select...</option>-->
+            <!--                <option th:each="service : ${e.getServices()}" th:value="${service.getId()}" th:text="${service.getDemon().getReligion().getName()} + ', ' + ${service.getDemon().getName()} + ' : ' + ${service.getPrice()} + ' CHF'"></option>-->
+            <!--            </select>-->
+            <!--            <div class="invalid-feedback">Please select the service</div>-->
+            <!--        </div>-->
         </div>
-        <input type="radio" name="evaluation" value="1" hidden>
-        <input type="radio" name="evaluation" value="-1" hidden>
-        <div class="col-sm-7">
-            <select name="service" class="form-control">
-                <option disabled selected>Please select...</option>
-                <option th:each="service : ${e.getServices()}" th:value="${service.getId()}" th:text="${service.getDemon().getReligion().getName()} + ', ' + ${service.getDemon().getName()} + ' : ' + ${service.getPrice()} + ' CHF'"></option>
-            </select>
-            <div class="invalid-feedback">Please select the service</div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Comment</label>
+            <div class="col-sm-10">
+                <textarea name="comment" class="form-control w-100" rows="2"></textarea>
+                <div class="invalid-feedback">Please write a comment.</div>
+            </div>
         </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Comment</label>
-        <div class="col-sm-10">
-            <textarea name="comment" class="form-control w-100" rows="2"></textarea>
-            <div class="invalid-feedback">Please write a comment.</div>
+        <div class="form-group row">
+            <div class="col-sm-2 offset-sm-2">
+                <input type="submit" class="btn btn-primary" value="Evaluate">
+            </div>
         </div>
-    </div>
-    <div class="form-group row">
-        <div class="col-sm-2 offset-sm-2">
-            <input type="submit" class="btn btn-primary" value="Evaluate">
-        </div>
-    </div>
-</form>
+    </form>
+</div>

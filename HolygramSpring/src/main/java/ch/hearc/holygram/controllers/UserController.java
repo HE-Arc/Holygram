@@ -1,8 +1,7 @@
 package ch.hearc.holygram.controllers;
 
-import java.util.Map;
 
-import javax.validation.Valid;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,67 +12,99 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.holygram.models.Canton;
+import ch.hearc.holygram.models.Customer;
+import ch.hearc.holygram.models.Exorcist;
+import ch.hearc.holygram.models.Role;
 import ch.hearc.holygram.models.User;
 import ch.hearc.holygram.repositories.CantonRepository;
 import ch.hearc.holygram.repositories.UserRepository;
+import ch.hearc.holygram.repositories.CustomerRepository;
+import ch.hearc.holygram.repositories.ExorcistRepository;
+import ch.hearc.holygram.repositories.RoleRepository;
+import ch.hearc.holygram.security.UserValidator;
+import ch.hearc.holygram.services.SecurityServiceImpl;
+import ch.hearc.holygram.services.UserService;
 
 @Controller
 public class UserController {
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private SecurityServiceImpl securityService;
 
 	@Autowired
-	private UserRepository userRepository;
+	private ExorcistRepository exorcistRepository;
+
+	@Autowired
+	private CustomerRepository customerRepository;
 
 	@Autowired
 	private CantonRepository cantonRepository;
 
-	@GetMapping(value = "/users")
-	public String findAllUsers(Map<String, Object> model) {
-		System.out.println("/users GET");
-		model.put("users", userRepository.findAll());
-		model.put("user", new User());
+	@Autowired
+	private RoleRepository roleRepository;
 
-		return "produits";
+    @Autowired
+    private UserValidator userValidator;
+
+    @GetMapping("/signup")
+    public String signup(Model model) {
+
+    	Iterable<Canton> cantons = cantonRepository.findAll();
+        model.addAttribute("cantons", cantons);
+
+        model.addAttribute("user", new User());
+
+        return "signup";
 	}
 
-	@GetMapping(value = "/saisie_users")
-	public String saisieUsers(Map<String, Object> model) {
+    @PostMapping("/signup")
+    public String registration(@ModelAttribute("user") User user, HttpServletRequest request, BindingResult bindingResult) {
+		try {
+			//user = new User(request.getParameter("username"),request.getParameter("password"),request.getParameter("passwordConfirm"), request.getParameter("email"));
+			userValidator.validate(user, bindingResult);
 
-		model.put("user", new User());
+	        if (bindingResult.hasErrors()) {
+	            return "signup";
+	        }
 
-		return "saisie_users";
-	}
+	        String typeAccount = request.getParameter("type");
 
-	@PostMapping(value = "/users/registrationUser")
-	public String registrationClient(Map<String, Object> model) {
+	        if (typeAccount.equals("customer")) {
+	        	Customer customer = new Customer(user);
+	        	Role role = roleRepository.findByName("CUSTOMER");
+	        	user.setRole(role);
+	        	userService.save(user);
+	        	customerRepository.save(customer);
+	        } else {
+	        	Canton canton = cantonRepository.findByAcronym(request.getParameter("canton"));
+	        	Exorcist exorcist = new Exorcist(user, request.getParameter("description"), request.getParameter("phoneNumber"), canton);
+	        	Role role = roleRepository.findByName("EXORCIST");
+	        	user.setRole(role);
+	        	userService.save(user);
+	        	exorcistRepository.save(exorcist);
+	        }
 
-		return "registration/user";
-	}
 
-	@PostMapping(value = "/users/registrationExorcist")
-	public String registrationExorcist(Map<String, Object> model) {
-		Iterable<Canton> cantons = cantonRepository.findAll();
-		model.put("cantons", cantons);
-		return "registration/exorcist";
-	}
+	        securityService.autoLogin(user.getUsername(), user.getPasswordConfirm());
 
-	@PostMapping(value = "/users/registerUser")
-	public String registerUser(Map<String, Object> model) {
-
-		return "index";
-	}
-
-	@GetMapping(value = "/users/registration")
-	public String registrationUser(Map<String, Object> model) {
-
-		return "registration/index";
-	}
-
-	@PostMapping("/users")
-	public String saveUsers(@Valid @ModelAttribute User user, BindingResult errors, Model model) {
-
-		if (!errors.hasErrors()) {
-			userRepository.save(user);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		return ((errors.hasErrors()) ? "saisie_users" : "redirect:users");
-	}
+
+        return "redirect:/";
+    }
+
+    @GetMapping("/formExorcist")
+    public String formExorcist(Model model) {
+		Iterable<Canton> cantons = cantonRepository.findAll();
+        model.addAttribute("cantons", cantons);
+
+        System.out.println("");
+        System.out.println("pika");
+        System.out.println("");
+        return "fragments/signup :: exorcist";
+    }
 }
