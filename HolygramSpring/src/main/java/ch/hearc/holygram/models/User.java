@@ -12,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -112,9 +111,9 @@ public class User {
         return passwordConfirm;
     }
 
-    public void setPasswordConfirm(String passwordConfirm) {
-        this.passwordConfirm = passwordConfirm;
-    }
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm = passwordConfirm;
+	}
 
     public Role getRole() {
         return role;

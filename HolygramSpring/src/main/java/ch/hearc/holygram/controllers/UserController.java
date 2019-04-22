@@ -1,6 +1,5 @@
 package ch.hearc.holygram.controllers;
 
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,84 +25,87 @@ import ch.hearc.holygram.services.UserService;
 
 @Controller
 public class UserController {
-    @Autowired
-    private UserService userService;
+	@Autowired
+	private UserService userService;
 
-    @Autowired
-    private SecurityServiceImpl securityService;
+	@Autowired
+	private SecurityServiceImpl securityService;
 
 	@Autowired
 	private ExorcistRepository exorcistRepository;
 
 	@Autowired
 	private CustomerRepository customerRepository;
-	
+
 	@Autowired
 	private CantonRepository cantonRepository;
-	
+
 	@Autowired
 	private RoleRepository roleRepository;
 
-    @Autowired
-    private UserValidator userValidator;
+	@Autowired
+	private UserValidator userValidator;
 
-    @GetMapping("/signup")
-    public String signup(Model model) {
-    	
-    	Iterable<Canton> cantons = cantonRepository.findAll();
-        model.addAttribute("cantons", cantons);
+	@GetMapping("/signup")
+	public String signup(Model model) {
 
-        model.addAttribute("user", new User());
-        
-        return "signup";
+		Iterable<Canton> cantons = cantonRepository.findAll();
+		model.addAttribute("cantons", cantons);
+
+		model.addAttribute("user", new User());
+
+		return "signup";
 	}
 
-    @PostMapping("/signup")
-    public String registration(@ModelAttribute("user") User user, HttpServletRequest request, BindingResult bindingResult) {
-		try {			
-			//user = new User(request.getParameter("username"),request.getParameter("password"),request.getParameter("passwordConfirm"), request.getParameter("email"));
+	@PostMapping("/signup")
+	public String registration(@ModelAttribute("user") User user, HttpServletRequest request,
+			BindingResult bindingResult) {
+		try {
+			// user = new
+			// User(request.getParameter("username"),request.getParameter("password"),request.getParameter("passwordConfirm"),
+			// request.getParameter("email"));
 			userValidator.validate(user, bindingResult);
 
-	        if (bindingResult.hasErrors()) {
-	            return "signup";
-	        }
+			if (bindingResult.hasErrors()) {
+				return "signup";
+			}
 
-	        String typeAccount = request.getParameter("type");
-	        
-	        if (typeAccount.equals("customer")) {
-	        	Customer customer = new Customer(user);
-	        	Role role = roleRepository.findByName("CUSTOMER");
-	        	user.setRole(role);
-	        	userService.save(user);
-	        	customerRepository.save(customer);
-	        } else {
-	        	Canton canton = cantonRepository.findByAcronym(request.getParameter("canton"));
-	        	Exorcist exorcist = new Exorcist(user, request.getParameter("description"), request.getParameter("phoneNumber"), canton);
-	        	Role role = roleRepository.findByName("EXORCIST");
-	        	user.setRole(role);
-	        	userService.save(user);
-	        	exorcistRepository.save(exorcist);
-	        }
-	        
-	        
-	        securityService.autoLogin(user.getUsername(), user.getPasswordConfirm());
+			String typeAccount = request.getParameter("type");
+
+			if (typeAccount.equals("customer")) {
+				Customer customer = new Customer(user);
+				Role role = roleRepository.findByName("CUSTOMER");
+				user.setRole(role);
+				userService.save(user);
+				customerRepository.save(customer);
+			} else {
+				Canton canton = cantonRepository.findByAcronym(request.getParameter("canton"));
+				Exorcist exorcist = new Exorcist(user, request.getParameter("description"),
+						request.getParameter("phoneNumber"), canton);
+				Role role = roleRepository.findByName("EXORCIST");
+				user.setRole(role);
+				userService.save(user);
+				exorcistRepository.save(exorcist);
+			}
+
+			securityService.autoLogin(user.getUsername(), user.getPasswordConfirm());
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	
-        return "redirect:/";
-    }
-    
-    @GetMapping("/formExorcist")
-    public String formExorcist(Model model) {
+
+		return "redirect:/";
+	}
+
+	@GetMapping("/formExorcist")
+	public String formExorcist(Model model) {
 		Iterable<Canton> cantons = cantonRepository.findAll();
-        model.addAttribute("cantons", cantons);
-        
-        System.out.println("");
-        System.out.println("pika");
-        System.out.println("");
-        return "fragments/signup :: exorcist";
-    }
+		model.addAttribute("cantons", cantons);
+
+		System.out.println("");
+		System.out.println("pika");
+		System.out.println("");
+		return "fragments/signup :: exorcist";
+	}
 }

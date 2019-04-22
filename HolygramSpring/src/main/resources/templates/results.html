@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta th:replace="fragments/head.html"></meta>
+</head>
+<body>
+<nav class="d-block" th:with="menu=${'home'},isConnected=${true}" th:insert="fragments/nav.html"></nav>
+<div class="container p-4">
+    
+    <div id="search-result">
+	<div class="table-responsive">
+		<table class="table table-hover">
+		    <thead>
+				<tr>
+					<th>Username</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>Price</th>
+				</tr>
+		    </thead>
+		    <tbody id="table-data">
+		    	<tr th:each="result: ${results}">
+				    <td><a th:href="@{/exorcist/{id}(id=${result.user.id})}" th:text="${result.user.username}"></a></td>
+				    <td><a href="mailto:${result.user.email}" th:text="${result.user.email}"></a></td>
+				    <td th:text="${result.exorcist.phoneNumber}" />
+				    <td th:text="${result.price}" />
+				</tr>
+		    </tbody>
+		 </table>
+	</div>
+</div>
+    
+    
+</div>
+</body>
+</html>

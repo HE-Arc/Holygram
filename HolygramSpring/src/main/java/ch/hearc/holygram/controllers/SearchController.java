@@ -4,23 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import ch.hearc.holygram.SearchResultDataWrapper;
 import ch.hearc.holygram.models.Demon;
 import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.Service;
 import ch.hearc.holygram.repositories.DemonRepository;
-import ch.hearc.holygram.repositories.ExorcistRepository;
 import ch.hearc.holygram.repositories.ServiceRepository;
-import ch.hearc.holygram.services.SearchService;
 
 @Controller
 public class SearchController {
@@ -32,13 +27,7 @@ public class SearchController {
 	// https://spring.io/guides/tutorials/bookmarks/
 
 	@Autowired
-	SearchService searchService;
-
-	@Autowired
 	private DemonRepository dr;
-
-	@Autowired
-	private ExorcistRepository er;
 
 	@Autowired
 	private ServiceRepository sr;
@@ -53,20 +42,28 @@ public class SearchController {
 		return "search";
 	}
 
-	@RequestMapping(value = "/search/process", method = RequestMethod.POST, headers = "Accept=application/json", produces = "application/json")
-	public @ResponseBody List<Exorcist> process(HttpServletRequest request) {
+	@RequestMapping(value = "/search/process", method = RequestMethod.GET, headers = "Accept=application/json", produces = "application/json")
+	public String process(Map<String, Object> model, @RequestParam("input_demon") Long demon_id,
+			@RequestParam("input_renown") int renown) {
 
-		Long demon_id = Long.parseLong(request.getParameter("input_demon"));
-		Demon demon = dr.findById(demon_id).get();
+		List<SearchResultDataWrapper> datas = new ArrayList<SearchResultDataWrapper>();
 
-		List<Exorcist> exorcists = new ArrayList<Exorcist>();
-		List<Service> services = sr.findAllServiceByDemon(demon);
-		for (Service s : services) {
-			exorcists.add(s.getExorcist());
-			System.out.println("[search] service's id: " + s.getId());
+		Demon demon = dr.findById((long) 1).get();
+		for (Service s : sr.findAllServiceByDemon(demon)) {
+			Exorcist e = s.getExorcist();
+			int e_renown = e.getRenown();
+
+			// If this exorcist match minimal renown append it to the list
+			if (e_renown >= renown) {
+				SearchResultDataWrapper w = new SearchResultDataWrapper(e, e.getUser(), s.getPrice());
+				datas.add(w);
+			}
+
 		}
 
+		model.put("results", datas);
+
 		// return list of exorcists
-		return exorcists;
+		return "results";
 	}
 }
