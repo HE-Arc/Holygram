@@ -1,9 +1,11 @@
 package ch.hearc.holygram.controllers;
 
+import ch.hearc.holygram.security.HolygramUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MimeTypeUtils;
 import org.springframework.util.MultiValueMap;
@@ -45,7 +47,6 @@ public class ServiceController {
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
-
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = {
@@ -60,18 +61,21 @@ public class ServiceController {
 
 	@RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Service> remove(@PathVariable long id) {
-		/*
-		 * Waiting for authentication to implement the correct gather of the exorcist id
-		 */
-		long profileId = 2l;
 		try {
+			HolygramUserDetails p = (HolygramUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			long profileId = p.getUser().getId();
+
+			Service s = serviceRepository.findById(id).get();
+			if(s.getExorcist().getUser().getId() != profileId)
+				throw new Exception("the given service assigned for the currently logged in user");
 			serviceRepository.deleteById(id);
+
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Location", "/exorcist/" + profileId + "?edit");
+			return new ResponseEntity<Service>(headers, HttpStatus.FOUND);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("Location", "/exorcist/" + profileId + "?edit");
-		return new ResponseEntity<Service>(headers, HttpStatus.FOUND);
 	}
 
 	@RequestMapping(value = "add", method = RequestMethod.POST)
@@ -79,9 +83,12 @@ public class ServiceController {
 		/*
 		 * Waiting for authentication to implement the correct gather of the exorcist id
 		 */
-		long profileId = 2l;
 		try {
+			HolygramUserDetails p = (HolygramUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			long profileId = p.getUser().getId();
+
 			Service s = new Service();
+			userRepository.findAll();
 			User u = userRepository.findById(profileId).get();
 			Exorcist e = exorcistRepository.findByUser(u);
 			Demon d = demonRepository.findById(Long.valueOf(formData.getFirst("demon"))).get();
@@ -89,11 +96,12 @@ public class ServiceController {
 			s.setPrice(Float.valueOf(formData.getFirst("price")));
 			s.setDemon(d);
 			serviceRepository.save(s);
+
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Location", "/exorcist/" + profileId + "?edit");
+			return new ResponseEntity<Service>(headers, HttpStatus.FOUND);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("Location", "/exorcist/" + profileId + "?edit");
-		return new ResponseEntity<Service>(headers, HttpStatus.FOUND);
 	}
 }

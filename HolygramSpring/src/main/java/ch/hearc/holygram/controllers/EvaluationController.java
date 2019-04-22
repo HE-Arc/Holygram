@@ -1,9 +1,11 @@
 package ch.hearc.holygram.controllers;
 
+import ch.hearc.holygram.security.HolygramUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -55,15 +57,19 @@ public class EvaluationController {
     @PostMapping(value = "add/{exorcistId}")
     public ResponseEntity<Evaluation> update(@PathVariable long exorcistId,
                                              @RequestBody MultiValueMap<String, String> formData) {
-        // TODO : use the real customer id
-        long customerId = 1l;
         try {
-            User ue = userRepository.findById((long) exorcistId).get();
+            HolygramUserDetails p = (HolygramUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            long customerId = p.getUser().getId();
+            userRepository.findAll();
+            User ue = userRepository.findById(exorcistId).get();
             Exorcist e = exorcistRepository.findByUser(ue);
             Evaluation eval = new Evaluation();
             eval.setExorcist(e);
 
-            User uc = userRepository.findById((long) customerId).get();
+            userRepository.findAll();
+            User uc = userRepository.findById(customerId).get();
+            if(uc.getCustomer() == null)
+                throw new Exception("an exorcist can't evaluate an exorcist");
             Customer c = customerRepository.findByUser(uc);
             eval.setCustomer(c);
 

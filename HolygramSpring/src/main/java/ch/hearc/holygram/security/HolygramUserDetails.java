@@ -19,8 +19,7 @@ public class HolygramUserDetails implements UserDetails {
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		final List<GrantedAuthority> authorities = Collections.singletonList((GrantedAuthority) new SimpleGrantedAuthority(user.getRole().getName()));
-		
+		final List<GrantedAuthority> authorities = Collections.singletonList(new SimpleGrantedAuthority(user.getRole().getName()));
 		return authorities;
 	}
 
@@ -33,6 +32,8 @@ public class HolygramUserDetails implements UserDetails {
 	public String getUsername() {
 		return user.getUsername();
 	}
+
+	public User getUser() { return user; }
 
 	@Override
 	public boolean isAccountNonExpired() {

@@ -45,6 +45,5 @@ public class ServiceSeeder {
 			Service s = new Service(e, d, i);
 			serviceRepository.save(s);
 		}
-
 	}
 }

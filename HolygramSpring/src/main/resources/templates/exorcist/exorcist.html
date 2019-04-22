@@ -7,11 +7,11 @@
 
 </head>
 <body>
-<nav class="d-block" th:with="menu=${''},isConnected=${true}" th:insert="fragments/nav.html"></nav>
+<nav class="d-block" th:with="menu=${''}" th:insert="fragments/nav.html"></nav>
 <div class="container p-4">
     <h2 class="row border-bottom pb-3">
         <div class="col" th:text="${u.getUsername()}"></div>
-        <div class="col text-right">
+        <div class="col text-right" th:if="${ownprofile}">
             <a th:href="@{/exorcist/} + ${u.getId()} + @{?edit}" th:if="!${edit}">
                 <button class="btn btn-secondary">
                     <i class="fas fa-user-edit"></i>
@@ -112,7 +112,7 @@
         </div>
     </div>
     <div th:if="${!edit}" class="p-3" th:insert="exorcist/evaluations.html" th:with="e=${e}"></div>
-    <div th:if="${!edit}" class="p-3" th:insert="exorcist/addEvaluation.html" th:with="e=${e}"></div>
+    <div th:if="${!edit} AND ${!ownprofile}" class="p-3" th:insert="exorcist/addEvaluation.html" th:with="e=${e}"></div>
 </div>
 </body>
 </html>

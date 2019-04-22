@@ -24,7 +24,6 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
  */
 @Entity
 public class Exorcist {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -64,14 +63,6 @@ public class Exorcist {
 	}
 
 	public Exorcist() {
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public User getUser() {
@@ -122,11 +113,5 @@ public class Exorcist {
 
 	public void setServices(List<Service> services) {
 		this.services = services;
-	}
-
-	@Override
-	public int hashCode() {
-		// TODO Auto-generated method stub
-		return id.hashCode();
 	}
 }

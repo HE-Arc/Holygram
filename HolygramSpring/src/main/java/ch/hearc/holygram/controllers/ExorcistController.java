@@ -3,10 +3,12 @@ package ch.hearc.holygram.controllers;
 import java.util.Map;
 import java.util.Optional;
 
+import ch.hearc.holygram.security.HolygramUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -52,6 +54,7 @@ public class ExorcistController {
 	public String profile(Map<String, Object> model, @PathVariable int id,
 			@RequestParam(required = false) String edit) {
 
+		userRepository.findAll();
 		Optional<User> ouser = userRepository.findById((long) id);
 
 		if (!ouser.isPresent()) {
@@ -67,9 +70,21 @@ public class ExorcistController {
 			return "redirect:/";
 		}
 
-		boolean isEditing = edit != null;
+		boolean isOwnProfile = false;
+		boolean isEditing = false;
+		if(SecurityContextHolder.getContext().getAuthentication().getCredentials() == null)
+        {
+            HolygramUserDetails p = (HolygramUserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            Exorcist loggedExorcist = p.getUser().getExorcist();
+            if(loggedExorcist != null && loggedExorcist.getUser().getId() == e.getUser().getId())
+			{
+				isOwnProfile = true;
+				isEditing = edit != null;
+			}
+        }
 
 		model.put("edit", isEditing);
+		model.put("ownprofile", isOwnProfile);
 		model.put("e", e);
 		model.put("u", u);
 
@@ -82,21 +97,25 @@ public class ExorcistController {
 
 	@PostMapping()
 	public ResponseEntity<Exorcist> update(@RequestBody MultiValueMap<String, String> formData) {
-		// TODO : use the real profileId
-		long profileId = 2l;
 		try {
+			HolygramUserDetails p = (HolygramUserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			long profileId = p.getUser().getId();
+
+			userRepository.findAll();
 			User u = userRepository.findById(profileId).get();
 			Exorcist e = exorcistRepository.findByUser(u);
 			Canton c = cantonRepository.findById(Long.valueOf(formData.getFirst("canton"))).get();
 			e.setCanton(c);
 			e.setPhoneNumber(formData.getFirst("phonenumber"));
 			e.setDescription(formData.getFirst("description"));
+
 			exorcistRepository.save(e);
+
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Location", "/exorcist/" + profileId);
+			return new ResponseEntity<Exorcist>(headers, HttpStatus.FOUND);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("Location", "/exorcist/" + profileId);
-		return new ResponseEntity<Exorcist>(headers, HttpStatus.FOUND);
 	}
 }

@@ -55,9 +55,9 @@ public class UserSeeder {
 		User newExorcist = new User("exorcist", bCryptPasswordEncoder.encode("12345678"), "exorcist@email.com", RoleSeeder.exorcistRole);
 		userRepository.save(newExorcist);
 
-		Canton canton = cantonRepository.findById(10l).get();
+		Canton canton = cantonRepository.findById(12l).get();
 
-		Exorcist e = new Exorcist(newExorcist, lorem, "phone", canton);
+		Exorcist e = new Exorcist(newExorcist, lorem, "+41 32 XXX XX XX", canton);
 		exorcistRepository.save(e);
 	}
 

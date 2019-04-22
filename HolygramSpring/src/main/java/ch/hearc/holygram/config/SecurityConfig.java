@@ -12,19 +12,19 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @EnableGlobalMethodSecurity(
-prePostEnabled = true,
-securedEnabled = true,
-jsr250Enabled = true)
+        prePostEnabled = true,
+        securedEnabled = true,
+        jsr250Enabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-	@Autowired
-	private UserDetailsService userDetailsService;
-	
-	@Bean
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
-	
-	@Bean
+
+    @Bean
     public AuthenticationManager customAuthenticationManager() throws Exception {
         return authenticationManager();
     }
@@ -33,14 +33,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
     }
-	
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
-				.antMatchers("/resources/**", "/signup", "/formExorcist", "/").permitAll()
-				.antMatchers("/search").access("not( hasRole('EXORCIST') ) or not( isAuthenticated() )")
-			.and()
-			.formLogin()
-				.permitAll();
-	}
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers("/resources/**", "/signup", "/formExorcist", "/").permitAll()
+                .antMatchers("/search").access("not( hasRole('EXORCIST') ) or not( isAuthenticated() )")
+                .and()
+                .formLogin()
+                .permitAll();
+
+        // start h2 access debug
+        // https://stackoverflow.com/a/53066577/9263555
+        http.authorizeRequests()
+                .antMatchers("/").permitAll()
+                .antMatchers("/h2_console/**").permitAll();
+
+        http.csrf().disable();
+        http.headers().frameOptions().disable();
+        // end h2 debug
+
+        http.logout().logoutSuccessUrl("/").logoutUrl("/logout");
+    }
 }

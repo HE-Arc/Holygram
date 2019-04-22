@@ -10,33 +10,38 @@
         <a class="nav-link" th:classappend="${menu}=='home' ? 'active':''" th:href="@{/}">Home</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" th:classappend="${menu}=='search' ? 'active':''" th:href="@{/search}">Search
+        <a class="nav-link" th:if="${#authentication.getCredentials() == null} AND ${#authentication.getPrincipal().getUser().getCustomer() != null}" th:classappend="${menu}=='search' ? 'active':''" th:href="@{/search}">Search
             an exorcist
         </a>
     </li>
     <!-- TODO : Show when connected -->
-    <li if:if=${isConnected} class="nav-item dropdown">
+
+<!--    <span  th:text ="${#authentication.getPrincipal().getUser().getUsername()}"></span>-->
+    <li th:if="${#authentication.getCredentials() == null}" class="nav-item dropdown">
         <a class="nav-link dropdown-toggle"
-                data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                aria-expanded="false">USERNAME
+                data-toggle="dropdown" href="#" role="button"><span th:text ="${#authentication.getPrincipal().getUser().getUsername()}">
+        </span>
         </a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Profil</a>
-            <a
-                    class="dropdown-item" href="#">Disconect
+            <a class="dropdown-item" th:if="${#authentication.getPrincipal().getUser().getExorcist() != null}" th:href="@{/exorcist/} + ${#authentication.getPrincipal().getUser().getId()}">
+                Profile
+            </a>
+            <a class="dropdown-item" th:href="@{/logout}">
+                Disconect
             </a>
         </div>
     </li>
     <!-- TODO : Show when disconected -->
-    <li th:if=${!isConnected} class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle"
-                data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                aria-expanded="false">Account
+    <li th:if="${#authentication.getCredentials() != null}"  class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" th:classappend="${menu}=='signup' OR ${menu}=='login' ? 'active':''" data-toggle="dropdown" href="#" role="button">
+            Account
         </a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Create</a>
-            <a
-                    class="dropdown-item" href="#">Log in
+            <a class="dropdown-item" th:classappend="${menu}=='signup' ? 'active':''" th:href="@{/signup}">
+                Create
+            </a>
+            <a class="dropdown-item" th:classappend="${menu}=='login' ? 'active':''" th:href="@{/login}">
+                Log in
             </a>
         </div>
     </li>
