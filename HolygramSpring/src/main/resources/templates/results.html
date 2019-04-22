@@ -4,9 +4,8 @@
     <meta th:replace="fragments/head.html"></meta>
 </head>
 <body>
-<nav class="d-block" th:with="menu=${'home'},isConnected=${true}" th:insert="fragments/nav.html"></nav>
+<nav class="d-block" th:with="menu=${'search'}" th:insert="fragments/nav.html"></nav>
 <div class="container p-4">
-    
     <div id="search-result">
 	<div class="table-responsive">
 		<table class="table table-hover">
@@ -29,8 +28,6 @@
 		 </table>
 	</div>
 </div>
-    
-    
 </div>
 </body>
 </html>

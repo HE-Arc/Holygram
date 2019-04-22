@@ -14,9 +14,6 @@
             an exorcist
         </a>
     </li>
-    <!-- TODO : Show when connected -->
-
-<!--    <span  th:text ="${#authentication.getPrincipal().getUser().getUsername()}"></span>-->
     <li th:if="${#authentication.getCredentials() == null}" class="nav-item dropdown">
         <a class="nav-link dropdown-toggle"
                 data-toggle="dropdown" href="#" role="button"><span th:text ="${#authentication.getPrincipal().getUser().getUsername()}">
@@ -31,7 +28,6 @@
             </a>
         </div>
     </li>
-    <!-- TODO : Show when disconected -->
     <li th:if="${#authentication.getCredentials() != null}"  class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" th:classappend="${menu}=='signup' OR ${menu}=='login' ? 'active':''" data-toggle="dropdown" href="#" role="button">
             Account

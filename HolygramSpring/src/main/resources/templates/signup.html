@@ -6,11 +6,14 @@
     <script th:src="@{/js/signup.js}" defer></script>
 </head>
 <body>
-<nav class="d-block" th:with="menu=${'signup'},isConnected=${true}" th:insert="fragments/nav.html"></nav>
+<nav class="d-block" th:with="menu=${'signup'}" th:insert="fragments/nav.html"></nav>
 <div class="container p-4">
     <form autocomplete="off" method="POST" th:object="${user}" th:action="@{/signup}" id="registerForm">
         <h2>Create your account</h2>
 
+        <!--
+            Any account fields
+        -->
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Account type</label>
             <div class="col-sm-10">
@@ -31,8 +34,15 @@
 
         <div class="form-group row">
             <label class="col-sm-2 col-form-label" for="username">Username</label>
-            <div class="col-sm-10 form-group ${status.error ? 'has-error' : ''}">
+            <div class="col-sm-10 ${status.error ? 'has-error' : ''}">
                 <input type="text" name="username" id="username" class="form-control" placeholder="Username" autofocus="true">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="email">Email</label>
+            <div class="col-sm-10 ${status.error ? 'has-error' : ''}">
+                <input type="email" name="email" id="email" class="form-control" placeholder="yourfantasticemail@yourprovider.tld">
             </div>
         </div>
 
@@ -49,14 +59,9 @@
             </div>
         </div>
 
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label" for="email">Email</label>
-            <div class="col-sm-10 ${status.error ? 'has-error' : ''}">
-                <input type="email" name="email" id="email" class="form-control" placeholder="yourfantasticemail@yourprovider.tld">
-            </div>
-        </div>
-
-
+        <!--
+           Exorcist specific fields
+       -->
         <div class="form-group row" id="divCanton" hidden>
             <label class="col-sm-2 col-form-label" for="canton">Canton</label>
             <div class="col-sm-10 ${status.error ? 'has-error' : ''}">
@@ -81,7 +86,7 @@
             </div>
         </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        <button class="btn btn-primary btn-block" type="submit">Submit</button>
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     </form>
 </div>
