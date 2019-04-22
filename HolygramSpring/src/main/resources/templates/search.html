@@ -1,147 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-	<div th:replace="fragments/head.html"></div>
+	<meta th:replace="fragments/head.html"></meta>
 </head>
 <body>
 <nav class="d-block" th:with="menu=${'search'},isConnected=${true}" th:insert="fragments/nav.html"></nav>
 <div class="container p-4">
-<div style="padding: 30px">
-	<div class="card">
-		<div class="card-header">
-			<h2>Search by demon</h2>
-		</div>
-		<div class="card-body">
-			<div class="card-text">
-				<form method="POST" id="form-search">
-					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-					<div class="form-group row">
-						<label for="input_demon"
-							class="col-md-2 col-form-label col-form-label-lg">Demon</label>
-						<div class="col-md-10">
-							<select id="input_demon" name="input_demon"
-								class="form-control form-control-lg" required>
-								<option th:each="demon: ${demons}" th:value="${demon.id}"
-									th:text="${demon.name}" />
-							</select>
+	<div style="padding: 30px">
+		<div class="card">
+			<div class="card-header">
+				<h2>Search by demon</h2>
+			</div>
+			<div class="card-body">
+				<div class="card-text">
+					<form method="GET" id="form-search" action="/search/process">
+						<div class="form-group row">
+							<label for="input_demon"
+								class="col-md-2 col-form-label col-form-label-lg">Demon</label>
+							<div class="col-md-10">
+								<select id="input_demon" name="input_demon"
+									class="form-control form-control-lg" required>
+									<option th:each="demon: ${demons}" th:value="${demon.id}"
+										th:text="${demon.name}" />
+								</select>
+							</div>
 						</div>
-					</div>
-
-					<div class="form-group row">
-						<label for="input_renown"
-							class="col-md-2 col-form-label col-form-label-lg">Minimal
-							renown</label>
-						<div class="col-md-10">
-							<input type="range" class="form-control form-control-lg"
-								id="input_renown" name="input_renown" min="0" max="5" required>
+	
+						<div class="form-group row">
+							<label for="input_renown"
+								class="col-md-2 col-form-label col-form-label-lg">Minimal
+								renown</label>
+							<div class="col-md-10">
+								<input type="range" class="form-control form-control-lg"
+									id="input_renown" name="input_renown" min="0" max="5" required>
+							</div>
 						</div>
-					</div>
-				</form>
-				<blockquote class="blockquote mb-0">
-					<button class="btn btn-primary btn-lg" id="btn_submit" onclick="search()">
-						Search!</button>
-				</blockquote>
+						<blockquote class="blockquote mb-0">
+						<button type="submit" class="btn btn-primary btn-lg" id="btn_submit">
+							Search!</button>
+						</blockquote>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-<div id="search-result" style="display:None;">
-	<div class="table-responsive">
-		<table class="table table-hover">
-		    <thead>
-				<tr>
-					<th>Username</th>
-					<th>Email</th>
-					<th>Phone</th>
-					<th>Price</th>
-				</tr>
-		    </thead>
-		    <tbody id="table-data">
-		    </tbody>
-		 </table>
-	</div>
-</div>
-
-<div th:replace="fragments/afterBody.html"></div>
-
-<script>
-
-	function search()
-	{
-		var formElement = document.getElementById("form-search");
-		var results = searchExorcists(formElement);
-
-		var innerTable = document.getElementById("table-data");
-		for (index = 0; index < results.length; ++index) {
-			var html = [];
-			var data = results[i];
-			html.push(
-			  "<tr>",
-			  "<td>",
-			  data["username"],
-			  "</td>",
-			  "<td>",
-			  data["email"],
-			  "</td>",
-			  "<td>",
-			  data["exorcist"]["phone"],
-			  "</td>",
-			  "<td>",
-			  data["price"],
-			  "</td>",
-			  "</tr>",
-			);
-			innerTable.innerHtml += html.join("");
-		}
-
-		var table = document.getElementById("search-result");
-		table.style.display = "flex";
-	}
-
-	function searchExorcists(formElement)
-	{
-		var index = 0; // workaround
-		var csrftok = []; // workaround
-		var uri = '?';
-
-		for (const pair of new FormData(formElement)) {
-			if (index === 0)
-			{
-				csrftok.push({
-				    key:   pair[0],
-				    value: pair[1]
-				});
-			}
-			else
-			{
-				if(index > 1)
-					uri += '&'
-
-				uri += pair[0]
-				uri += '='
-				uri += pair[1]
-			}
-			index++;
-		}
-
-		var exorcists = {};
-
-		fetch("/search/process" + uri)
-	    .then(function (response) {
-	        return response.json();
-	    })
-	    .then(function (json) {
-		    for (let i = 0; i < json.length; i++) {
-		        let r = json[i];
-		        exorcists[r.id] = r;
-		    }
-		});
-
-		console.log(exorcists);
-		console.log(exorcists.undefined);
-
-		return exorcists;
-	}
-
-</script>

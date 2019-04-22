@@ -5,19 +5,12 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
+import ch.hearc.holygram.SearchResultDataWrapper;
 import ch.hearc.holygram.models.Demon;
 import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.Service;
@@ -50,26 +43,10 @@ public class SearchController {
 	}
 
 	@RequestMapping(value = "/search/process", method = RequestMethod.GET, headers = "Accept=application/json", produces = "application/json")
-	public ResponseEntity<List<JsonNode>> process(@RequestParam("input_demon") Long demon_id,
+	public String process(Map<String, Object> model, @RequestParam("input_demon") Long demon_id,
 			@RequestParam("input_renown") int renown) {
 
-		class Wrapper {
-			public String username;
-			public String phone;
-			public String email;
-			public Exorcist exorcist;
-
-			public Wrapper(Exorcist exorcist, String username, String phone, String email) {
-				this.exorcist = exorcist;
-				this.username = username;
-				this.phone = phone;
-				this.email = email;
-			}
-		}
-
-		ObjectMapper mapper = new ObjectMapper();
-
-		List<JsonNode> datas = new ArrayList<JsonNode>();
+		List<SearchResultDataWrapper> datas = new ArrayList<SearchResultDataWrapper>();
 
 		Demon demon = dr.findById((long) 1).get();
 		for (Service s : sr.findAllServiceByDemon(demon)) {
@@ -78,13 +55,15 @@ public class SearchController {
 
 			// If this exorcist match minimal renown append it to the list
 			if (e_renown >= renown) {
-				JsonNode node = mapper.valueToTree(new Wrapper(e, e.getUser().getUsername(), e.getPhoneNumber(), e.getUser().getEmail()));
-				datas.add(node);
+				SearchResultDataWrapper w = new SearchResultDataWrapper(e, e.getUser(), s.getPrice());
+				datas.add(w);
 			}
 
 		}
 
+		model.put("results", datas);
+
 		// return list of exorcists
-		return new ResponseEntity<List<JsonNode>>(datas, HttpStatus.OK);
+		return "results";
 	}
 }

@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class User {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -35,10 +35,10 @@ public class User {
 
 	@NotNull
 	private String password;
-	
+
 	@Transient
-    private String passwordConfirm;
-	
+	private String passwordConfirm;
+
 	private Date lastLogin;
 
 	@ManyToOne
@@ -52,7 +52,7 @@ public class User {
 		this.email = email;
 		this.role = role;
 	}
-	
+
 	public User(String username, String password, String passwordConfirm, String email) throws Exception {
 		this.username = username;
 		this.password = password;
@@ -108,14 +108,14 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	public String getPasswordConfirm() {
-        return passwordConfirm;
-    }
 
-    public void setPasswordConfirm(String passwordConfirm) {
-        this.passwordConfirm = passwordConfirm;
-    }
+	public String getPasswordConfirm() {
+		return passwordConfirm;
+	}
+
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm = passwordConfirm;
+	}
 
 	public Role getRole() {
 		return role;
