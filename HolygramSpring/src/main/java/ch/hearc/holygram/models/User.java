@@ -28,10 +28,10 @@ public class User {
     @NotNull
     private String password;
 
-    @OneToOne(optional = false, mappedBy = "user")
+    @OneToOne(mappedBy = "user")
     private Customer customer;
 
-    @OneToOne(optional = false, mappedBy = "user")
+    @OneToOne(mappedBy = "user")
     private Exorcist exorcist;
 
     @Transient

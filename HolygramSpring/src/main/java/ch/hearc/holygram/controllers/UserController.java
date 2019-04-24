@@ -1,6 +1,7 @@
 package ch.hearc.holygram.controllers;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -58,12 +59,9 @@ public class UserController {
 	}
 
 	@PostMapping("/signup")
-	public String registration(@ModelAttribute("user") User user, HttpServletRequest request,
+	public String registration(@Valid User user, HttpServletRequest request,
 			BindingResult bindingResult) {
 		try {
-			// user = new
-			// User(request.getParameter("username"),request.getParameter("password"),request.getParameter("passwordConfirm"),
-			// request.getParameter("email"));
 			userValidator.validate(user, bindingResult);
 
 			if (bindingResult.hasErrors()) {

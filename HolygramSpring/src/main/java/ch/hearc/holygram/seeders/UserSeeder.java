@@ -53,17 +53,21 @@ public class UserSeeder {
 
 	private void addExorcist() throws Exception {
 		User newExorcist = new User("exorcist", bCryptPasswordEncoder.encode("12345678"), "exorcist@email.com", RoleSeeder.exorcistRole);
-		userRepository.save(newExorcist);
+		newExorcist = userRepository.save(newExorcist);
 
+		
+		
 		Canton canton = cantonRepository.findById(12l).get();
 
-		Exorcist e = new Exorcist(newExorcist, lorem, "+41 32 XXX XX XX", canton);
+		Exorcist e = new Exorcist(newExorcist, lorem, "+41 32 320 12 42", canton);
 		exorcistRepository.save(e);
+		
+		Iterable<User> users = userRepository.findAll();
 	}
 
 	private void addCustomer() throws Exception {
 		User newCustomer = new User("customer", bCryptPasswordEncoder.encode("12345678"), "customer@email.com", RoleSeeder.customerRole);
-		userRepository.save(newCustomer);
+		newCustomer = userRepository.save(newCustomer);
 		
 		Customer c = new Customer(newCustomer);
 		customerRepository.save(c);

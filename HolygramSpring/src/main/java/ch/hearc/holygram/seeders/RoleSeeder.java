@@ -52,11 +52,11 @@ public class RoleSeeder {
 		// Insert data
 		Role customerRole = new Role("ROLE_CUSTOMER");
 		customerRole.setPrivileges(customerPrivileges);
-		roleRepository.save(customerRole);
+		customerRole = roleRepository.save(customerRole);
 
 		Role exorcistRole = new Role("ROLE_EXORCIST");
 		exorcistRole.setPrivileges(exorcistPrivileges);
-		roleRepository.save(exorcistRole);
+		exorcistRole = roleRepository.save(exorcistRole);
 
 		RoleSeeder.customerRole = customerRole;
 		RoleSeeder.exorcistRole = exorcistRole;
