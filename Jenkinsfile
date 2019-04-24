@@ -33,6 +33,7 @@ pipeline {
 				sh 'java -jar ./HolygramSpring/target/Thymeleaf-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &'
 				sh 'sleep 10'
 				sh 'chmod +x ./runTest.sh'
+				sh './runTest.sh'
 			}
 		}
 	}
