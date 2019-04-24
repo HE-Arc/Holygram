@@ -1,0 +1,8 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Basic,,,2019-04-24 19:52:59,2019-04-24 19:53:00,1.230s,FAILED
+,,,,,,
+Test Cases/Authentication,,,2019-04-24 19:52:59,2019-04-24 19:53:00,0.711s,FAILED
+"openBrowser("""")",,,2019-04-24 19:52:59,2019-04-24 19:53:00,0.348s,FAILED
+,,,,,,
+Test Cases/CreateAccount,,,2019-04-24 19:53:00,2019-04-24 19:53:00,0.143s,FAILED
+"openBrowser("""")",,,2019-04-24 19:53:00,2019-04-24 19:53:00,0.013s,FAILED

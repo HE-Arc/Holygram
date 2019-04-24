@@ -1,0 +1,10 @@
+INDEX VERSION 1.129+/home/raphael/Documents/hearc/3257.2-Java_Enterprise_Edition_JEE/Holygram/config/.metadata/.plugins/org.eclipse.jdt.core
+2118049409.index
+277072745.index
+2540607589.index
+4240829662.index
+956717627.index
+3198227552.index
+4141491779.index
+2781978954.index
+3765020915.index

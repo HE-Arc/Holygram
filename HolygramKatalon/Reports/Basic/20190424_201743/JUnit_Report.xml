@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Basic" time="7" tests="2" failures="0" errors="0">
+   <testsuite name="Basic" tests="2" failures="0" errors="0" time="7" timestamp="2019-04-24 20:17:47" hostname="raphael - raphael-laptop" id="Test Suites/Basic">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="/home/raphael/Documents/hearc/3257.2-Java_Enterprise_Edition_JEE/Holygram/HolygramKatalon/Reports/Basic/20190424_201743"/>
+         <property name="logFiles" value="/home/raphael/Documents/hearc/3257.2-Java_Enterprise_Edition_JEE/Holygram/HolygramKatalon/Reports/Basic/20190424_201743/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="raphael - raphael-laptop"/>
+         <property name="os" value="Linux 64bit"/>
+         <property name="katalonVersion" value="6.0.5.10"/>
+         <property name="browser" value="Chrome 74.0.3729.108"/>
+         <property name="hostAddress" value="127.0.1.1"/>
+         <property name="sessionId" value="d5d9b1539542fab9bf1a69e2d678091a"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Linux"/>
+      </properties>
+      <testcase name="Test Cases/Authentication" classname="Test Cases/Authentication" status="PASSED">
+         <system-out><![CDATA[2019-04-24 20:17:47 - [TEST_CASE][PASSED] - Test Cases/Authentication: Test Cases/Authentication
+
+2019-04-24 20:17:48 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-04-24 20:17:48 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver
+
+2019-04-24 20:17:49 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-04-24 20:17:51 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-04-24 20:17:51 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-04-24 20:17:51 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-04-24 20:17:51 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Account (11)")): Object: 'Object Repository/Page_Holygram/a_Account (11)' is clicked on
+
+2019-04-24 20:17:52 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account (11)' is clicked on
+
+2019-04-24 20:17:52 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Log in (9)")): Object: 'Object Repository/Page_Holygram/a_Log in (9)' is clicked on
+
+2019-04-24 20:17:52 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Log in (9)' is clicked on
+
+2019-04-24 20:17:52 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Please sign in/input_Username_username (2)"), "exorcist"): Text 'exorcist' is set on object 'Object Repository/Page_Please sign in/input_Username_username (2)'
+
+2019-04-24 20:17:52 - [MESSAGE][PASSED] - Text 'exorcist' is set on object 'Object Repository/Page_Please sign in/input_Username_username (2)'
+
+2019-04-24 20:17:52 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Please sign in/input_Password_password (2)"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password (2)'
+
+2019-04-24 20:17:53 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password (2)'
+
+2019-04-24 20:17:53 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Please sign in/button_Sign in")): Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-04-24 20:17:53 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-04-24 20:17:53 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-04-24 20:17:53 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/CreateAccount" classname="Test Cases/CreateAccount" status="PASSED">
+         <system-out><![CDATA[2019-04-24 20:17:53 - [TEST_CASE][PASSED] - Test Cases/CreateAccount: Test Cases/CreateAccount
+
+2019-04-24 20:17:54 - [TEST_STEP][PASSED] - return null: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-04-24 20:17:47 - [TEST_SUITE][PASSED] - Basic: Test Cases/CreateAccount]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

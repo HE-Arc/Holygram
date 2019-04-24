@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Basic" time="6" tests="1" failures="0" errors="1">
+   <testsuite name="Basic" tests="1" failures="0" errors="1" time="6" timestamp="2019-04-24 20:12:13" hostname="raphael - raphael-laptop" id="Test Suites/Basic">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="/home/raphael/Documents/hearc/3257.2-Java_Enterprise_Edition_JEE/Holygram/HolygramKatalon/Reports/Basic/20190424_201210"/>
+         <property name="logFiles" value="/home/raphael/Documents/hearc/3257.2-Java_Enterprise_Edition_JEE/Holygram/HolygramKatalon/Reports/Basic/20190424_201210/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="raphael - raphael-laptop"/>
+         <property name="os" value="Linux 64bit"/>
+         <property name="katalonVersion" value="6.0.5.10"/>
+         <property name="browser" value="Chrome 74.0.3729.108"/>
+         <property name="hostAddress" value="127.0.1.1"/>
+         <property name="sessionId" value="e3e9d24cad805e4e2be465f2011fb1dd"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Linux"/>
+      </properties>
+      <testcase name="Test Cases/Authentication" classname="Test Cases/Authentication" status="ERROR">
+         <error type="ERROR" message="Test Cases/Authentication FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: Keys for class: Script1556111820069
+	at Authentication.run(Authentication:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556129530996.run(TempTestSuite1556129530996.groovy:35)
+"/>
+         <system-out><![CDATA[2019-04-24 20:12:14 - [TEST_CASE][ERROR] - Test Cases/Authentication: Test Cases/Authentication FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: Keys for class: Script1556111820069
+	at Authentication.run(Authentication:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556129530996.run(TempTestSuite1556129530996.groovy:35)
+
+
+2019-04-24 20:12:14 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-04-24 20:12:15 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver
+
+2019-04-24 20:12:15 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-04-24 20:12:16 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-04-24 20:12:16 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-04-24 20:12:17 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-04-24 20:12:17 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Account (9)")): Object: 'Object Repository/Page_Holygram/a_Account (9)' is clicked on
+
+2019-04-24 20:12:17 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account (9)' is clicked on
+
+2019-04-24 20:12:17 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Log in (8)")): Object: 'Object Repository/Page_Holygram/a_Log in (8)' is clicked on
+
+2019-04-24 20:12:17 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Log in (8)' is clicked on
+
+2019-04-24 20:12:17 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Please sign in/input_Username_username (1)"), "exorcist"): Text 'exorcist' is set on object 'Object Repository/Page_Please sign in/input_Username_username (1)'
+
+2019-04-24 20:12:18 - [MESSAGE][PASSED] - Text 'exorcist' is set on object 'Object Repository/Page_Please sign in/input_Username_username (1)'
+
+2019-04-24 20:12:18 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Please sign in/input_Password_password (1)"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password (1)'
+
+2019-04-24 20:12:18 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password (1)'
+
+2019-04-24 20:12:18 - [TEST_STEP][ERROR] - sendKeys(findTestObject("Page_Please sign in/input_Password_password (1)"), Keys.chord(ENTER)): sendKeys(findTestObject("Page_Please sign in/input_Password_password (1)"), Keys.chord(ENTER)) FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: Keys for class: Script1556111820069
+	at Authentication.run(Authentication:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556129530996.run(TempTestSuite1556129530996.groovy:35)
+
+
+2019-04-24 20:12:18 - [MESSAGE][ERROR] - sendKeys(findTestObject("Page_Please sign in/input_Password_password (1)"), Keys.chord(ENTER)) FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: Keys for class: Script1556111820069
+	at Authentication.run(Authentication:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556129530996.run(TempTestSuite1556129530996.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-04-24 20:12:14 - [TEST_CASE][ERROR] - Test Cases/Authentication: Test Cases/Authentication FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: Keys for class: Script1556111820069
+	at Authentication.run(Authentication:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556129530996.run(TempTestSuite1556129530996.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/CreateAccount" classname="Test Cases/CreateAccount" status="PASSED">
+         <system-out><![CDATA[2019-04-24 20:12:18 - [TEST_CASE][PASSED] - Test Cases/CreateAccount: Test Cases/CreateAccount
+
+2019-04-24 20:12:18 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-04-24 20:12:18 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2019-04-24 20:12:18 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver
+
+2019-04-24 20:12:18 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-04-24 20:12:18 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-04-24 20:12:19 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-04-24 20:12:19 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Account (10)")): Object: 'Object Repository/Page_Holygram/a_Account (10)' is clicked on
+
+2019-04-24 20:12:19 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account (10)' is clicked on
+
+2019-04-24 20:12:19 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Create (1)")): Object: 'Object Repository/Page_Holygram/a_Create (1)' is clicked on
+
+2019-04-24 20:12:19 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Create (1)' is clicked on
+
+2019-04-24 20:12:19 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Holygram - Signin/input_Username_username (1)"), "customer2"): Text 'customer2' is set on object 'Object Repository/Page_Holygram - Signin/input_Username_username (1)'
+
+2019-04-24 20:12:19 - [MESSAGE][PASSED] - Text 'customer2' is set on object 'Object Repository/Page_Holygram - Signin/input_Username_username (1)'
+
+2019-04-24 20:12:19 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Holygram - Signin/input_Email_email (1)"), "customer@gmail.com"): Text 'customer@gmail.com' is set on object 'Object Repository/Page_Holygram - Signin/input_Email_email (1)'
+
+2019-04-24 20:12:20 - [MESSAGE][PASSED] - Text 'customer@gmail.com' is set on object 'Object Repository/Page_Holygram - Signin/input_Email_email (1)'
+
+2019-04-24 20:12:20 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Holygram - Signin/input_Password_password (1)"), "r9inNhf6FTla56shneBo8g=="): Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/input_Password_password (1)'
+
+2019-04-24 20:12:20 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/input_Password_password (1)'
+
+2019-04-24 20:12:20 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Holygram - Signin/input_Password_passwordConfirm (1)"), "r9inNhf6FTla56shneBo8g=="): Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/input_Password_passwordConfirm (1)'
+
+2019-04-24 20:12:20 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/input_Password_passwordConfirm (1)'
+
+2019-04-24 20:12:20 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram - Signin/button_Submit (1)")): Object: 'Object Repository/Page_Holygram - Signin/button_Submit (1)' is clicked on
+
+2019-04-24 20:12:20 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram - Signin/button_Submit (1)' is clicked on
+
+2019-04-24 20:12:20 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-04-24 20:12:20 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-04-24 20:12:13 - [TEST_SUITE][ERROR] - Basic: Test Cases/Authentication FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: Keys for class: Script1556111820069
+	at Authentication.run(Authentication:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556129530996.run(TempTestSuite1556129530996.groovy:35)]]></system-out>
+      <system-err><![CDATA[2019-04-24 20:12:13 - [TEST_SUITE][ERROR] - Basic: Test Cases/Authentication FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: Keys for class: Script1556111820069
+	at Authentication.run(Authentication:28)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556129530996.run(TempTestSuite1556129530996.groovy:35)]]></system-err>
+   </testsuite>
+</testsuites>

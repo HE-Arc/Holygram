@@ -1,0 +1,784 @@
+katalon.versionNumber=6.0.5
+katalon.buildNumber=10
+Could not find element with Id 'com.kms.katalon.composer.webservice.handledmenuitem.webServiceRequest'
+Could not find element with Id 'katalon.composer.objectrepository.handledmenuitem.spyweb'
+Could not find element with Id 'com.kms.katalon.composer.mobile.dynamicmenucontribution.ios'
+Could not find element with Id 'com.kms.katalon.composer.mobile.dynamicmenucontribution.ios'
+Warning: NLS unused message: Key in: com.kms.katalon.composer.project.constants.composerProjectMessages
+Warning: NLS unused message: Key in: com.kms.katalon.composer.testcase.constants.composerTestcaseMessages
+Warning: NLS missing message: BTN_ADDTESTSUITE in: com.kms.katalon.composer.testcase.constants.composerTestcaseMessages
+Warning: NLS unused message: PA_LBL_CREATED_DATE in: com.kms.katalon.composer.testsuite.constants.composerTestsuiteMessages
+Warning: NLS unused message: PA_LBL_LAST_UPDATED in: com.kms.katalon.composer.testsuite.constants.composerTestsuiteMessages
+Warning: NLS unused message: Key in: com.kms.katalon.composer.objectrepository.constant.composerObjectRepositoryMessages
+Warning: NLS unused message: ACTIVATED_PROP_NAME in: com.kms.katalon.constants.messages
+Warning: NLS unused message: ACTIVATE_INFO_INVALID in: com.kms.katalon.constants.messages
+Warning: NLS unused message: ACTIVATION_CODE_INVALID in: com.kms.katalon.constants.messages
+Warning: NLS unused message: ACTIVATION_COLLECT_FAIL_MESSAGE in: com.kms.katalon.constants.messages
+Warning: NLS unused message: DIA_TITLE_FUNCTIONS_INTRODUCTION in: com.kms.katalon.constants.messages
+Warning: NLS unused message: ERR_CONSOLE_MODE in: com.kms.katalon.constants.messages
+Warning: NLS unused message: REQUEST_CODE_PROP_NAME in: com.kms.katalon.constants.messages
+!SESSION 2019-04-24 19:49:48.916 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data config
+
+!ENTRY org.eclipse.jface 2 0 2019-04-24 19:50:09.914
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-04-24 19:50:09.914
+!MESSAGE A conflict occurred for CTRL+SHIFT+D:
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Display,Display,
+		Display result of evaluating selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4a778943,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(com.kms.katalon.composer.execution.command.debug,,
+		Debug,
+		Category(org.eclipse.e4.ui.model.application.MApplication,Application Category,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@59aa2fba,
+		[Parameter(com.kms.katalon.composer.execution.runMode,Run Mode,null,true)],,true),[org.eclipse.core.commands.Parameterization@de6e4672]),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow ,,,system)
+katalon.versionNumber=6.0.5
+katalon.buildNumber=10
+!SESSION 2019-04-24 19:51:48.812 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data config --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 19:51:51.420
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 19:52:11.479
+!MESSAGE The workspace will exit with unsaved changes in this session.
+katalon.versionNumber=6.0.5
+katalon.buildNumber=10
+!SESSION 2019-04-24 19:52:49.534 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data config --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 19:52:52.558
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 19:53:12.537
+!MESSAGE The workspace will exit with unsaved changes in this session.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+katalon.versionNumber=6.0.5
+katalon.buildNumber=10
+!SESSION 2019-04-24 19:54:08.622 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data config --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 19:54:10.951
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 19:54:30.827
+!MESSAGE The workspace will exit with unsaved changes in this session.
+java.lang.OutOfMemoryError: Java heap space
+	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:38)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:663)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:466)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:458)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:560)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:197)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:920)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:962)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:659)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:377)
+	at java.lang.Thread.run(Thread.java:748)
+-------------------- DEBUG --------------------
+file = file:/home/raphael/Documents/hearc/3257.2-Java_Enterprise_Edition_JEE/Holygram/config/.metadata/.plugins/org.eclipse.jdt.core/2781978954.index
+offset = 80
+size = 942814469
+--------------------   END   --------------------
+
+!ENTRY org.eclipse.jdt.core 4 4 2019-04-24 19:55:10.050
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:38)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:663)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:466)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:458)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:560)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:197)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:920)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:962)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:659)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:377)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Java indexing" java.lang.OutOfMemoryError: Java heap space
+	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:38)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:663)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:466)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:458)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:560)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:197)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:920)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:962)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:659)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:377)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-04-24 19:56:07.432
+!MESSAGE 
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at com.kms.katalon.composer.testcase.ast.editors.KeywordComboBoxCellEditorWithContentProposal.doGetValue(KeywordComboBoxCellEditorWithContentProposal.java:34)
+	at com.kms.katalon.composer.testcase.editors.TooltipComboBoxCellEditor.applyEditorValueAndDeactivate(TooltipComboBoxCellEditor.java:244)
+	at com.kms.katalon.composer.testcase.editors.TooltipComboBoxCellEditor.focusLost(TooltipComboBoxCellEditor.java:269)
+	at com.kms.katalon.composer.testcase.editors.ComboBoxCellEditorWithContentProposal.focusLost(ComboBoxCellEditorWithContentProposal.java:45)
+	at com.kms.katalon.composer.testcase.editors.TooltipComboBoxCellEditor$4.focusLost(TooltipComboBoxCellEditor.java:166)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:144)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1349)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1134)
+	at org.eclipse.swt.custom.CCombo.handleFocus(CCombo.java:922)
+	at org.eclipse.swt.custom.CCombo$2.handleEvent(CCombo.java:150)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1605)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1339)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1345)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:4069)
+	at org.eclipse.swt.widgets.Control.gtk_event_after(Control.java:3341)
+	at org.eclipse.swt.widgets.Tree.gtk_event_after(Tree.java:2053)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1986)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5827)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:3721)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5498)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9545)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1275)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2495)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4149)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.kms.katalon.core.application.Application.internalRunGUI(Application.java:119)
+	at com.kms.katalon.core.application.Application.runGUI(Application.java:109)
+	at com.kms.katalon.core.application.Application.start(Application.java:67)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-04-24 19:56:07.436
+!MESSAGE 
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at com.kms.katalon.composer.testcase.ast.editors.KeywordComboBoxCellEditorWithContentProposal.doGetValue(KeywordComboBoxCellEditorWithContentProposal.java:34)
+	at org.eclipse.jface.viewers.CellEditor.getValue(CellEditor.java:486)
+	at org.eclipse.jface.viewers.EditingSupport.saveCellEditorValue(EditingSupport.java:112)
+	at org.eclipse.jface.viewers.ColumnViewerEditor.saveEditorValue(ColumnViewerEditor.java:453)
+	at org.eclipse.jface.viewers.ColumnViewerEditor.applyEditorValue(ColumnViewerEditor.java:309)
+	at org.eclipse.jface.viewers.ColumnViewerEditor$1.applyEditorValue(ColumnViewerEditor.java:152)
+	at org.eclipse.jface.viewers.CellEditor$1.run(CellEditor.java:336)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.CellEditor.fireApplyEditorValue(CellEditor.java:333)
+	at com.kms.katalon.composer.testcase.editors.TooltipComboBoxCellEditor.applyEditorValueAndDeactivate(TooltipComboBoxCellEditor.java:262)
+	at com.kms.katalon.composer.testcase.editors.TooltipComboBoxCellEditor.focusLost(TooltipComboBoxCellEditor.java:269)
+	at com.kms.katalon.composer.testcase.editors.ComboBoxCellEditorWithContentProposal.focusLost(ComboBoxCellEditorWithContentProposal.java:45)
+	at com.kms.katalon.composer.testcase.editors.TooltipComboBoxCellEditor$4.focusLost(TooltipComboBoxCellEditor.java:166)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:144)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1349)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1134)
+	at org.eclipse.swt.custom.CCombo.handleFocus(CCombo.java:922)
+	at org.eclipse.swt.custom.CCombo$2.handleEvent(CCombo.java:150)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1605)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1339)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1345)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:4069)
+	at org.eclipse.swt.widgets.Control.gtk_event_after(Control.java:3341)
+	at org.eclipse.swt.widgets.Tree.gtk_event_after(Tree.java:2053)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1986)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5827)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:3721)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5498)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9545)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1275)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2495)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4149)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.kms.katalon.core.application.Application.internalRunGUI(Application.java:119)
+	at com.kms.katalon.core.application.Application.runGUI(Application.java:109)
+	at com.kms.katalon.core.application.Application.start(Application.java:67)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+Warning: NLS unused message: Key in: com.kms.katalon.composer.webui.constants.composerWebuiMessages
+Warning: NLS missing message: DIA_CONFIRM_INSTALL_WEBDRIVER in: com.kms.katalon.composer.webui.constants.composerWebuiMessages
+Warning: NLS missing message: DIA_CONFIRM_INSTALL_WEBDRIVER_TITLE in: com.kms.katalon.composer.webui.constants.composerWebuiMessages
+Warning: NLS unused message: HAND_INSTANT_BROWSERS_DIA_MESSAGE in: com.kms.katalon.composer.webui.recorder.constants.composerWebuiRecorderMessages
+Warning: NLS unused message: HAND_INSTANT_BROWSERS_DIA_TITLE in: com.kms.katalon.composer.webui.recorder.constants.composerWebuiRecorderMessages
+Warning: NLS unused message: HAND_INSTANT_BROWSERS_DIA_TOOGLE_MESSAGE in: com.kms.katalon.composer.webui.recorder.constants.composerWebuiRecorderMessages
+Warning: NLS unused message: INSTANT_BROWSER_PREFIX in: com.kms.katalon.composer.webui.recorder.constants.composerWebuiRecorderMessages
+Warning: NLS unused message: Key in: com.kms.katalon.composer.webui.recorder.constants.composerWebuiRecorderMessages
+Warning: NLS unused message: MENU_ITEM_INSTANT_BROWSERS in: com.kms.katalon.composer.webui.recorder.constants.composerWebuiRecorderMessages
+Warning: NLS unused message: PREF_LBL_INSTANT_BROWSER_DO_NOT_SHOW_WARNING_DIALOG in: com.kms.katalon.composer.webui.recorder.constants.composerWebuiRecorderMessages
+Warning: NLS unused message: PREF_LBL_INSTANT_BROWSER_PORT in: com.kms.katalon.composer.webui.recorder.constants.composerWebuiRecorderMessages
+org.eclipse.jetty.server.Server@4a667a4d - STARTED
+ += qtp1800633530{STARTED,8<=8<=200,i=2,q=0} - STARTED
+ |   +- 163 qtp1800633530-163 RUNNABLE @ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ |   +- 169 qtp1800633530-169 TIMED_WAITING @ sun.misc.Unsafe.park(Native Method) IDLE
+ |   +- 167 qtp1800633530-167-acceptor-0@1f5235e0-ServerConnector@6348df5f{HTTP/1.1,[http/1.1]}{0.0.0.0:50001} RUNNABLE @ sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method) prio=3
+ |   +- 165 qtp1800633530-165 RUNNABLE @ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ |   +- 164 qtp1800633530-164-acceptor-0@640a2271-ServerConnector@504a150c{HTTP/1.1,[http/1.1]}{0.0.0.0:50000} RUNNABLE @ sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method) prio=3
+ |   +- 162 qtp1800633530-162 RUNNABLE @ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ |   +- 166 qtp1800633530-166 RUNNABLE @ sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+ |   +- 168 qtp1800633530-168 TIMED_WAITING @ sun.misc.Unsafe.park(Native Method) IDLE
+ += ServerConnector@504a150c{HTTP/1.1,[http/1.1]}{0.0.0.0:50000} - STARTED
+ |   +~ org.eclipse.jetty.server.Server@4a667a4d - STARTED
+ |   +~ qtp1800633530{STARTED,8<=8<=200,i=2,q=0} - STARTED
+ |   += org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@61cf51f - STARTED
+ |   +- org.eclipse.jetty.io.ArrayByteBufferPool@74d49f33
+ |   += HttpConnectionFactory@6f2d55c9[HTTP/1.1] - STARTED
+ |   |   +- HttpConfiguration@12de7761{32768/8192,8192/8192,https://:0,[]}
+ |   += org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@7887c74e - STARTED
+ |   |   += org.eclipse.jetty.io.ManagedSelector@2ac289af id=0 keys=0 selected=0 id=0
+ |   |   |   +- sun.nio.ch.EPollSelectorImpl@553d9ed6 keys=0
+ |   |   += org.eclipse.jetty.io.ManagedSelector@5a6fdefa id=1 keys=0 selected=0 id=1
+ |   |       +- sun.nio.ch.EPollSelectorImpl@70ae4c9e keys=0
+ |   +- sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:50000]
+ |   +- qtp1800633530-164-acceptor-0@640a2271-ServerConnector@504a150c{HTTP/1.1,[http/1.1]}{0.0.0.0:50000}
+ += ServerConnector@6348df5f{HTTP/1.1,[http/1.1]}{0.0.0.0:50001} - STARTED
+ |   +~ org.eclipse.jetty.server.Server@4a667a4d - STARTED
+ |   +~ qtp1800633530{STARTED,8<=8<=200,i=2,q=0} - STARTED
+ |   += org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@2533d100 - STARTED
+ |   +- org.eclipse.jetty.io.ArrayByteBufferPool@588d8a0b
+ |   += HttpConnectionFactory@2cc2e78a[HTTP/1.1] - STARTED
+ |   |   +- HttpConfiguration@58cdd1de{32768/8192,8192/8192,https://:0,[]}
+ |   += org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6ef8f3e5 - STARTED
+ |   |   += org.eclipse.jetty.io.ManagedSelector@40b6a804 id=0 keys=0 selected=0 id=0
+ |   |   |   +- sun.nio.ch.EPollSelectorImpl@17c2baca keys=0
+ |   |   += org.eclipse.jetty.io.ManagedSelector@1f52b175 id=1 keys=0 selected=0 id=1
+ |   |       +- sun.nio.ch.EPollSelectorImpl@1b2e5182 keys=0
+ |   +- sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:50001]
+ |   +- qtp1800633530-167-acceptor-0@1f5235e0-ServerConnector@6348df5f{HTTP/1.1,[http/1.1]}{0.0.0.0:50001}
+ += o.e.j.s.ServletContextHandler@6a53e2ce{/,null,AVAILABLE} - STARTED
+ |   += org.eclipse.jetty.server.session.SessionHandler@41d8f2f2 - STARTED
+ |   |   += org.eclipse.jetty.server.session.HashSessionManager@10977013 - STARTED
+ |   |   |   += org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@44d17014 - STARTED
+ |   |   |   |   +- sun.misc.Unsafe.park(Native Method)
+ |   |   |   |   +- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ |   |   |   |   +- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ |   |   |   |   +- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ |   |   |   |   +- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ |   |   |   |   +- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ |   |   |   |   +- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ |   |   |   |   +- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ |   |   |   |   +- java.lang.Thread.run(Thread.java:748)
+ |   |   |   +~ org.eclipse.jetty.server.session.HashSessionIdManager@5270b968 - STARTED
+ |   |   += org.eclipse.jetty.servlet.ServletHandler@18e80269 - STARTED
+ |   |       += Jetty_WebSocketUpgradeFilter - STARTED
+ |   |       |   +- contextAttributeKey=org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter
+ |   |       |   +- pathmap=PathMappings[size=1]
+ |   |       |      +- MappedResource[pathSpec=UriTemplatePathSpec["/",pathDepth=1,group=EXACT],resource=org.eclipse.jetty.websocket.jsr356.server.JsrCreator[metadata=AnnotatedServerEndpointMetadata[endpoint=@javax.websocket.server.ServerEndpoint(encoders=[], decoders=[], configurator=class javax.websocket.server.ServerEndpointConfig$Configurator, subprotocols=[], value=/),config=AnnotatedServerEndpointConfig[endpointClass=class com.kms.katalon.composer.webui.recorder.websocket.RecorderAddonSocket,path=/,decoders=[],encoders=[],subprotocols=[],extensions=[]]]]]
+ |   |       +- [/*]/[]==1=>Jetty_WebSocketUpgradeFilter
+ |   |       += org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-412fc0a1@f214aba2==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false - STARTED
+ |   |       +- [/]=>org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-412fc0a1
+ |   += org.eclipse.jetty.websocket.jsr356.server.ServerContainer@2eab2546 - STARTED
+ |   |   += org.eclipse.jetty.websocket.client.WebSocketClient@37520652 - STARTED
+ |   |   += org.eclipse.jetty.websocket.server.WebSocketServerFactory@79531197 - STARTED
+ |   |       += org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@35f0b4e7 - STARTED
+ |   |       +- org.eclipse.jetty.io.MappedByteBufferPool@10c369ec
+ |   |
+ |   +> No ClassLoader
+ |   +> Handler attributes o.e.j.s.ServletContextHandler@6a53e2ce{/,null,AVAILABLE}
+ |   |   +- org.eclipse.jetty.server.Executor=qtp1800633530{STARTED,8<=8<=200,i=2,q=0}
+ |   |   +- org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter=WebSocketUpgradeFilter[factory=org.eclipse.jetty.websocket.server.WebSocketServerFactory@79531197,pathmap=PathMappings[size=1]]
+ |   |   +- javax.websocket.server.ServerContainer=org.eclipse.jetty.websocket.jsr356.server.ServerContainer@2eab2546
+ |   +> Context attributes o.e.j.s.ServletContextHandler@6a53e2ce{/,null,AVAILABLE}
+ |   |   +- org.eclipse.jetty.util.DecoratedObjectFactory=org.eclipse.jetty.util.DecoratedObjectFactory[decorators=1]
+ |   +> Initparams o.e.j.s.ServletContextHandler@6a53e2ce{/,null,AVAILABLE}
+ += org.eclipse.jetty.server.session.HashSessionIdManager@5270b968 - STARTED
+ |
+ +> org.eclipse.osgi.internal.loader.EquinoxClassLoader@3fefc8c[org.eclipse.jetty.server:9.3.9.v20160517(id=271)]
+     +- org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1@2c20ef05
+Warning: NLS unused message: HAND_INSTANT_BROWSERS_DIA_MESSAGE in: com.kms.katalon.objectspy.constants.objectspyMessages
+Warning: NLS unused message: HAND_INSTANT_BROWSERS_DIA_TITLE in: com.kms.katalon.objectspy.constants.objectspyMessages
+Warning: NLS unused message: INSTANT_BROWSER_PREFIX in: com.kms.katalon.objectspy.constants.objectspyMessages
+Warning: NLS unused message: MENU_ITEM_INSTANT_BROWSERS in: com.kms.katalon.objectspy.constants.objectspyMessages
+Warning: NLS unused message: PREF_LBL_INSTANT_BROWSER_PORT in: com.kms.katalon.objectspy.constants.objectspyMessages
+Warning: NLS unused message: PREF_LBL_INSTANT_BROWSER_PORT_DO_NOT_SHOW_WARNING_DIALOG in: com.kms.katalon.objectspy.constants.objectspyMessages
+Warning: NLS missing message: DIA_MSG_SELECT_ALL_BTN in: com.kms.katalon.objectspy.constants.objectspyMessages
+Warning: NLS missing message: DIA_MSG_DE_SELECT_ALL_BTN in: com.kms.katalon.objectspy.constants.objectspyMessages
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-04-24 19:56:51.954
+!MESSAGE 
+!STACK 0
+org.eclipse.core.commands.ExecutionException: While executing the operation, an exception occurred
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.executeOperation(TestCaseTreeTableInput.java:1131)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.executeOperation(TestCaseTreeTableInput.java:1139)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.executeOperation(TestCaseTreeTableInput.java:1143)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.addNewAstObjects(TestCaseTreeTableInput.java:257)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.addNewAstObject(TestCaseTreeTableInput.java:242)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.addNewBuiltInKeyword(TestCaseTreeTableInput.java:997)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.addNewBuiltInKeyword(TestCaseTreeTableInput.java:965)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.addNewAstObject(TestCaseTreeTableInput.java:859)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.addNewDefaultBuiltInKeyword(TestCaseTreeTableInput.java:953)
+	at com.kms.katalon.composer.webui.recorder.dialog.RecorderDialog.openToolItemForAddMenu(RecorderDialog.java:1135)
+	at com.kms.katalon.composer.webui.recorder.dialog.RecorderDialog.performToolItemSelected(RecorderDialog.java:939)
+	at com.kms.katalon.composer.webui.recorder.dialog.RecorderDialog$6.widgetSelected(RecorderDialog.java:756)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4561)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4151)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at com.kms.katalon.composer.webui.recorder.handler.RecordHandler.execute(RecordHandler.java:130)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:282)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:264)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:494)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:488)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:433)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:454)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem$3.handleEvent(AbstractContributionItem.java:482)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4561)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4151)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.kms.katalon.core.application.Application.internalRunGUI(Application.java:119)
+	at com.kms.katalon.core.application.Application.runGUI(Application.java:109)
+	at com.kms.katalon.core.application.Application.start(Application.java:67)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.jface.viewers.TreeViewerFocusCellManager.getInitialFocusCell(TreeViewerFocusCellManager.java:127)
+	at org.eclipse.jface.viewers.SWTFocusCellManager.handleFocusIn(SWTFocusCellManager.java:126)
+	at org.eclipse.jface.viewers.SWTFocusCellManager.lambda$1(SWTFocusCellManager.java:145)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1345)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:4069)
+	at org.eclipse.swt.widgets.Control.gtk_event_after(Control.java:3341)
+	at org.eclipse.swt.widgets.Tree.gtk_event_after(Tree.java:2053)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1986)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5827)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:3721)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5498)
+	at org.eclipse.swt.internal.gtk.OS._gtk_widget_grab_focus(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_widget_grab_focus(OS.java:14639)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:2636)
+	at org.eclipse.swt.widgets.Composite.forceFocus(Composite.java:595)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:2629)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:4619)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1543)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.setFocus(TestCaseTreeTableInput.java:441)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.setEdit(TestCaseTreeTableInput.java:434)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.setEdit(TestCaseTreeTableInput.java:427)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.processAfterEdits(TestCaseTreeTableInput.java:311)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.internalAddNewAstObjects(TestCaseTreeTableInput.java:276)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.access$2(TestCaseTreeTableInput.java:261)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput$AddAstObjectsOperation.doAddAstObjects(TestCaseTreeTableInput.java:1177)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput$AddAstObjectsOperation.execute(TestCaseTreeTableInput.java:1166)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:488)
+	... 65 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-04-24 19:56:58.793
+!MESSAGE 
+!STACK 0
+org.eclipse.core.commands.ExecutionException: While executing the operation, an exception occurred
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.executeOperation(TestCaseTreeTableInput.java:1131)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.executeOperation(TestCaseTreeTableInput.java:1139)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.executeOperation(TestCaseTreeTableInput.java:1143)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.addNewAstObjects(TestCaseTreeTableInput.java:257)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.addNewAstObject(TestCaseTreeTableInput.java:242)
+	at com.kms.katalon.composer.webui.recorder.dialog.RecordedStepsView.addSimpleKeyword(RecordedStepsView.java:374)
+	at com.kms.katalon.composer.webui.recorder.dialog.RecorderDialog.startBrowser(RecorderDialog.java:341)
+	at com.kms.katalon.composer.webui.recorder.dialog.RecorderDialog.startBrowser(RecorderDialog.java:315)
+	at com.kms.katalon.composer.webui.recorder.dialog.RecorderDialog.access$18(RecorderDialog.java:314)
+	at com.kms.katalon.composer.webui.recorder.dialog.RecorderDialog$14.itemSelected(RecorderDialog.java:1193)
+	at com.kms.katalon.composer.components.impl.control.DropdownItemSelectionListener.widgetSelected(DropdownItemSelectionListener.java:27)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4561)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4151)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at com.kms.katalon.composer.webui.recorder.handler.RecordHandler.execute(RecordHandler.java:130)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:282)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:264)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:494)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:488)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:433)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:454)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem$3.handleEvent(AbstractContributionItem.java:482)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4561)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4151)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.kms.katalon.core.application.Application.internalRunGUI(Application.java:119)
+	at com.kms.katalon.core.application.Application.runGUI(Application.java:109)
+	at com.kms.katalon.core.application.Application.start(Application.java:67)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.jface.viewers.TreeViewerFocusCellManager.getInitialFocusCell(TreeViewerFocusCellManager.java:127)
+	at org.eclipse.jface.viewers.SWTFocusCellManager.handleFocusIn(SWTFocusCellManager.java:126)
+	at org.eclipse.jface.viewers.SWTFocusCellManager.lambda$1(SWTFocusCellManager.java:145)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1345)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:4069)
+	at org.eclipse.swt.widgets.Control.gtk_event_after(Control.java:3341)
+	at org.eclipse.swt.widgets.Tree.gtk_event_after(Tree.java:2053)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1986)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5827)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:3721)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5498)
+	at org.eclipse.swt.internal.gtk.OS._gtk_widget_grab_focus(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_widget_grab_focus(OS.java:14639)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:2636)
+	at org.eclipse.swt.widgets.Composite.forceFocus(Composite.java:595)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:2629)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:4619)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1543)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.setFocus(TestCaseTreeTableInput.java:441)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.setEdit(TestCaseTreeTableInput.java:434)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.setEdit(TestCaseTreeTableInput.java:427)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.processAfterEdits(TestCaseTreeTableInput.java:311)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.internalAddNewAstObjects(TestCaseTreeTableInput.java:276)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput.access$2(TestCaseTreeTableInput.java:261)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput$AddAstObjectsOperation.doAddAstObjects(TestCaseTreeTableInput.java:1177)
+	at com.kms.katalon.composer.testcase.model.TestCaseTreeTableInput$AddAstObjectsOperation.execute(TestCaseTreeTableInput.java:1166)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:488)
+	... 64 more
+Apr 24, 2019 7:56:59 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Apr 24, 2019 7:57:01 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-04-24 19:57:06.917
+!MESSAGE 
+!STACK 0
+org.apache.http.NoHttpResponseException: localhost:28335 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:143)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:165)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:167)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:271)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at com.kms.katalon.objectspy.core.InspectSession.runSeleniumWebDriver(InspectSession.java:206)
+	at com.kms.katalon.objectspy.core.InspectSession.run(InspectSession.java:149)
+	at com.kms.katalon.composer.webui.recorder.core.RecordSession.run(RecordSession.java:82)
+	at java.lang.Thread.run(Thread.java:748)
+Apr 24, 2019 7:57:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Apr 24, 2019 7:57:39 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://localhost:20287: The target server failed to respond
+Apr 24, 2019 7:57:39 PM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {}->http://localhost:20287
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-04-24 19:57:39.690
+!MESSAGE 
+!STACK 0
+org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to localhost:20287 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'raphael-laptop', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-39-generic', java.version: '1.8.0_191'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at com.kms.katalon.selenium.driver.CFirefoxDriver.execute(CFirefoxDriver.java:28)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:657)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:496)
+	at com.kms.katalon.objectspy.core.InspectSession.dispose(InspectSession.java:351)
+	at com.kms.katalon.objectspy.core.InspectSession.runSeleniumWebDriver(InspectSession.java:233)
+	at com.kms.katalon.objectspy.core.InspectSession.run(InspectSession.java:149)
+	at com.kms.katalon.composer.webui.recorder.core.RecordSession.run(RecordSession.java:82)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:20287 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:138)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:86)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	... 9 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 22 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-04-24 19:59:20.378
+!MESSAGE 
+!STACK 0
+com.kms.katalon.composer.project.exception.MissingProjectSettingPageException: Project Settings page ID 'com.kms.katalon.composer.execution.settings.default' not found.
+	at com.kms.katalon.composer.project.handlers.SettingHandler.hideIOSPageOnNoneMacOS(SettingHandler.java:261)
+	at com.kms.katalon.composer.project.handlers.SettingHandler.openSettingsDialogToPage(SettingHandler.java:118)
+	at com.kms.katalon.composer.project.handlers.SettingHandler.execute(SettingHandler.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:282)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:264)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:494)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:488)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:433)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:454)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem$3.handleEvent(AbstractContributionItem.java:482)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4561)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4151)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.kms.katalon.core.application.Application.internalRunGUI(Application.java:119)
+	at com.kms.katalon.core.application.Application.runGUI(Application.java:109)
+	at com.kms.katalon.core.application.Application.start(Application.java:67)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+Warning: NLS unused message: LBL_DLG_AUTHENTICATE_EMAIL in: com.kms.katalon.composer.integration.analytics.constants.composerIntegrationAnalyticsMessages
+Warning: NLS unused message: MSG_INFO_DLG_AUTHENTICATE_ENTER_USERNAME_PASSWORD in: com.kms.katalon.composer.integration.analytics.constants.composerIntegrationAnalyticsMessages
+Warning: NLS missing message: LBL_DLG_AUTHENTICATE_USERNAME in: com.kms.katalon.composer.integration.analytics.constants.composerIntegrationAnalyticsMessages
+Warning: NLS missing message: MSG_INFO_DLG_AUTHENTICATE_ENTER_EMAIL_PASSWORD in: com.kms.katalon.composer.integration.analytics.constants.composerIntegrationAnalyticsMessages
+Warning: NLS unused message: Key in: com.kms.katalon.composer.report.constants.composerReportMessages
+katalon.versionNumber=6.0.5
+katalon.buildNumber=10
+!SESSION 2019-04-24 20:04:27.497 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data config --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 20:04:30.037
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 20:04:49.887
+!MESSAGE The workspace will exit with unsaved changes in this session.
+katalon.versionNumber=6.0.5
+katalon.buildNumber=10
+!SESSION 2019-04-24 20:12:03.540 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data config --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 20:12:07.267
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 20:12:26.888
+!MESSAGE The workspace will exit with unsaved changes in this session.
+katalon.versionNumber=6.0.5
+katalon.buildNumber=10
+!SESSION 2019-04-24 20:14:22.196 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data config --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 20:14:25.221
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 20:14:44.928
+!MESSAGE The workspace will exit with unsaved changes in this session.
+katalon.versionNumber=6.0.5
+katalon.buildNumber=10
+!SESSION 2019-04-24 20:17:33.539 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data config --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 20:17:38.158
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 20:17:59.241
+!MESSAGE The workspace will exit with unsaved changes in this session.
+katalon.versionNumber=6.0.5
+katalon.buildNumber=10
+!SESSION 2019-04-24 20:19:40.869 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data config --args -runMode=console -projectPath=HolygramKatalon -retry=0 -testSuitePath=Test Suites/Basic -executionProfile=default -browserType=Chrome (headless) -Djava.awt.headless
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 20:19:43.646
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-24 20:20:03.228
+!MESSAGE The workspace will exit with unsaved changes in this session.

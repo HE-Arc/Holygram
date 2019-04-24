@@ -17,15 +17,15 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/')
 
-WebUI.click(findTestObject('Object Repository/Page_Holygram/a_Account (1)'))
+WebUI.click(findTestObject('Page_Holygram/a_Account (11)'))
 
-WebUI.click(findTestObject('Object Repository/Page_Holygram/a_Log in'))
+WebUI.click(findTestObject('Page_Holygram/a_Log in (9)'))
 
-WebUI.setText(findTestObject('Object Repository/Page_Please sign in/input_Username_username'), 'exorcist')
+WebUI.setText(findTestObject('Object Repository/Page_Please sign in/input_Username_username (2)'), 'exorcist')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Please sign in/input_Password_password'), 'RigbBhfdqOBGNlJIWM1ClA==')
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Please sign in/input_Password_password (2)'), 'RigbBhfdqOBGNlJIWM1ClA==')
 
-WebUI.sendKeys(findTestObject('Object Repository/Page_Please sign in/input_Password_password'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('Object Repository/Page_Please sign in/button_Sign in'))
 
 WebUI.closeBrowser()
 

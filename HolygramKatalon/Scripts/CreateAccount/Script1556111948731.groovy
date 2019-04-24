@@ -17,19 +17,19 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/')
 
-WebUI.click(findTestObject('Page_Holygram/a_Account'))
+WebUI.click(findTestObject('Page_Holygram/a_Account (12)'))
 
-WebUI.click(findTestObject('Page_Holygram/a_Create'))
+WebUI.click(findTestObject('Page_Holygram/a_Create (2)'))
 
-WebUI.setText(findTestObject('Object Repository/Page_Holygram - Signin/input_Username_username'), 'customer1')
+WebUI.setText(findTestObject('Page_Holygram - Signin/input_Username_username (2)'), 'customer2')
 
-WebUI.setText(findTestObject('Object Repository/Page_Holygram - Signin/input_Email_email'), 'customer@customer.com')
+WebUI.setText(findTestObject('Page_Holygram - Signin/input_Email_email (2)'), 'customer2@gmail.com')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Holygram - Signin/input_Password_password'), 'RigbBhfdqODKcAsiUrg+1Q==')
+WebUI.setEncryptedText(findTestObject('Page_Holygram - Signin/input_Password_password (2)'), 'r9inNhf6FTla56shneBo8g==')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Holygram - Signin/input_Password_passwordConfirm'), 'RigbBhfdqODKcAsiUrg+1Q==')
+WebUI.click(findTestObject('Page_Holygram - Signin/div_Password_col-sm-10'))
 
-WebUI.click(findTestObject('Object Repository/Page_Holygram - Signin/button_Submit'))
+WebUI.setEncryptedText(findTestObject('Page_Holygram - Signin/input_Password_passwordConfirm (2)'), 'r9inNhf6FTla56shneBo8g==')
 
-WebUI.closeBrowser()
+WebUI.click(findTestObject('Page_Holygram - Signin/button_Submit (2)'))
 

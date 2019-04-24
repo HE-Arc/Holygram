@@ -1,0 +1,8 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Basic,,,2019-04-24 19:54:16,2019-04-24 19:54:18,1.205s,FAILED
+,,,,,,
+Test Cases/Authentication,,,2019-04-24 19:54:17,2019-04-24 19:54:17,0.684s,FAILED
+"openBrowser(""http://localhost:8080/"")",,,2019-04-24 19:54:17,2019-04-24 19:54:17,0.331s,FAILED
+,,,,,,
+Test Cases/CreateAccount,,,2019-04-24 19:54:17,2019-04-24 19:54:18,0.174s,FAILED
+"openBrowser(""http://localhost:8080/"")",,,2019-04-24 19:54:18,2019-04-24 19:54:18,0.016s,FAILED
