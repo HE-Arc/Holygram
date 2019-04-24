@@ -26,15 +26,49 @@
 							</div>
 						</div>
 	
+						<!-- ADVANCED -->
 						<div class="form-group row">
-							<label for="input_renown"
-								class="col-md-2 col-form-label col-form-label-lg">Minimal
-								renown</label>
+							<label for="input_advanced"
+								class="col-md-2 col-form-label col-form-label-lg">Advanced
+								search</label>
 							<div class="col-md-10">
-								<input type="range" class="form-control form-control-lg"
-									id="input_renown" name="input_renown" min="0" max="5" required>
+								<input type="checkbox" class="form-control form-control-lg"
+									id="input_advanced" name="input_advanced" onclick="toggle('advanced_search')">
 							</div>
 						</div>
+						<div id="advanced_search" style="display: none;">
+							<div class="form-group row">
+								<label for="input_canton"
+									class="col-md-2 col-form-label col-form-label-lg">Cantons</label>
+								<div class="col-md-10">
+									<select class="custom-select" id="input_canton" name="input_canton" disabled>
+					                    <option th:each="canton: ${cantons}" th:value="${canton.id}" th:text="${canton.name}"/>
+					                </select>
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label for="input_renown"
+									class="col-md-2 col-form-label col-form-label-lg">Minimal
+									renown</label>
+								<div class="col-md-10">
+									<input type="range" class="form-control form-control-lg"
+										id="input_renown" name="input_renown" min="0" value="0" max="5" disabled>
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label for="input_price"
+									class="col-md-2 col-form-label col-form-label-lg">Max price</label>
+								<div class="col-md-9">
+									<input type="number" class="form-control form-control-lg"
+										id="input_price" name="input_price" min="0" value="0" disabled>
+								</div>
+								<div class="col-md-1 col-form-label">CHF</div>
+							</div>
+						</div>
+	
+						
 						<blockquote class="blockquote mb-0">
 						<button type="submit" class="btn btn-primary btn-lg" id="btn_submit">
 							Search!</button>
@@ -45,3 +79,28 @@
 		</div>
 	</div>
 </div>
+<script>
+	function toggle(name) {
+		var advanced_search = document.getElementById(name);
+		var renown_search = document.getElementById("input_renown");
+		var canton_search = document.getElementById("input_canton");
+		var price_search = document.getElementById("input_price");
+		if (advanced_search.style.display === "none") {
+			advanced_search.style.display = "block";
+			renown_search.disabled = false;
+			canton_search.disabled = false;
+			price_search.disabled = false;
+			renown_search.required = true;
+			canton_search.required = true;
+			price_search.required = true;
+		} else {
+			advanced_search.style.display = "none";
+			renown_search.disabled = true;
+			canton_search.disabled = true;
+			price_search.disabled = true;
+			renown_search.required = false;
+			canton_search.required = false;
+			price_search.required = false;
+		}
+	}
+</script>

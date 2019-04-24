@@ -20,8 +20,8 @@ import ch.hearc.holygram.repositories.UserRepository;
 public class UserSeeder {
 
 	@Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-	
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+
 	@Autowired
 	private UserRepository userRepository;
 
@@ -52,23 +52,21 @@ public class UserSeeder {
 	}
 
 	private void addExorcist() throws Exception {
-		User newExorcist = new User("exorcist", bCryptPasswordEncoder.encode("12345678"), "exorcist@email.com", RoleSeeder.exorcistRole);
+		User newExorcist = new User("exorcist", bCryptPasswordEncoder.encode("12345678"), "exorcist@email.com",
+				RoleSeeder.exorcistRole);
 		newExorcist = userRepository.save(newExorcist);
 
-		
-		
 		Canton canton = cantonRepository.findById(12l).get();
 
 		Exorcist e = new Exorcist(newExorcist, lorem, "+41 32 320 12 42", canton);
 		exorcistRepository.save(e);
-		
-		Iterable<User> users = userRepository.findAll();
 	}
 
 	private void addCustomer() throws Exception {
-		User newCustomer = new User("customer", bCryptPasswordEncoder.encode("12345678"), "customer@email.com", RoleSeeder.customerRole);
+		User newCustomer = new User("customer", bCryptPasswordEncoder.encode("12345678"), "customer@email.com",
+				RoleSeeder.customerRole);
 		newCustomer = userRepository.save(newCustomer);
-		
+
 		Customer c = new Customer(newCustomer);
 		customerRepository.save(c);
 	}
