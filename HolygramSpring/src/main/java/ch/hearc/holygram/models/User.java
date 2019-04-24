@@ -144,4 +144,12 @@ public class User {
 	public void setLastLogin(Date lastLogin) {
 		this.lastLogin = lastLogin;
 	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public void setExorcist(Exorcist exorcist) {
+		this.exorcist = exorcist;
+	}
 }
