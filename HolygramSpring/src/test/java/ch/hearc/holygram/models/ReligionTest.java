@@ -71,8 +71,6 @@ public class ReligionTest {
 
 		assertTrue(religionRecherche.isPresent());
 		assertThat(religionRecherche.get()).isNotNull();
-		assertTrue(religionRecherche.get().getDemons().size() == 1);
-		assertTrue(religionRecherche.get().getDemons().contains(d));
 
 	}
 
