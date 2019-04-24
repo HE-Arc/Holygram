@@ -11,6 +11,8 @@ fetch('/religion')
     addListeners();
 });
 
+let csrf = document.getElementById("csrf");
+
 let submitExorcist = document.getElementById("submitExorcist");
 let canton_select = document.getElementById("canton_select");
 let phonenumber_input = document.getElementById("phonenumber_input");
@@ -32,6 +34,7 @@ submitExorcist.addEventListener("click", function () {
             form.appendChild(hiddenField);
         }
     }
+    form.appendChild(csrf);
 
     document.body.appendChild(form);
     form.submit();

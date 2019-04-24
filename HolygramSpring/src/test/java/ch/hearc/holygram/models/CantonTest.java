@@ -56,6 +56,4 @@ public class CantonTest {
 		assertTrue(cantonRecherche.get().getId().equals(c.getId()));
 		assertThat(cantonRecherche.get()).isNotNull();
 	}
-	
-
 }

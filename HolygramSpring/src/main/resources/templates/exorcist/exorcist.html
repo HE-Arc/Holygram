@@ -9,6 +9,11 @@
 <body>
 <nav class="d-block" th:with="menu=${''}" th:insert="fragments/nav.html"></nav>
 <div class="container p-4">
+<input
+	id="csrf"
+  type="hidden"
+  th:name="${_csrf.parameterName}"
+  th:value="${_csrf.token}" />
     <h2 class="row border-bottom pb-3">
         <div class="col" th:text="${u.getUsername()}"></div>
         <div class="col text-right" th:if="${ownprofile}">
