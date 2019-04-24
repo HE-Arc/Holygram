@@ -91,7 +91,7 @@
                     </td>
                 </tr>
                 <tr id="original-new-service" th:if=${edit}>
-                    <form method="post" th:action="@{/service/add}">
+                    <form method="post" th:action="@{/service/add}" onsubmit="return (validate_addService());">
                         <td>
                             <select id="addService_religion" class="form-control religion-select">
                                 <option disabled selected>Please select...</option>
@@ -114,6 +114,9 @@
                         </td>
                     </form>
                 </tr>
+                <tr id="error" class="text-danger" id="error_message">
+                	Invalid service !
+               	</tr>
             </table>
         </div>
         <div class="col">
