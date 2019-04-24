@@ -12,19 +12,24 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/')
 
-WebUI.click(findTestObject('Page_Holygram/a_USERNAME'))
-
-WebUI.click(findTestObject('Page_Holygram/a_Profil'))
-
 WebUI.click(findTestObject('Page_Holygram/a_Account'))
 
 WebUI.click(findTestObject('Page_Holygram/a_Create'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Holygram - Signin/input_Username_username'), 'customer1')
+
+WebUI.setText(findTestObject('Object Repository/Page_Holygram - Signin/input_Email_email'), 'customer@customer.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Holygram - Signin/input_Password_password'), 'RigbBhfdqODKcAsiUrg+1Q==')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Holygram - Signin/input_Password_passwordConfirm'), 'RigbBhfdqODKcAsiUrg+1Q==')
+
+WebUI.click(findTestObject('Object Repository/Page_Holygram - Signin/button_Submit'))
 
 WebUI.closeBrowser()
 

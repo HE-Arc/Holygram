@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Authentication</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fe861ac3-abfa-48df-93e6-63ff86b59d12</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>137421ad-2309-496e-965e-78c81e79a53c</id>
+      <masked>false</masked>
+      <name>variable</name>
+   </variable>
+</TestCaseEntity>
