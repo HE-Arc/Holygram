@@ -46,7 +46,7 @@ public class CantonTest {
 		c.setAcronym(acronym);
 		c.setName(name);
 
-		Optional<Canton> cantonRecherche = cr.findById(c.getId());
+		Optional<Canton> cantonRecherche = cr.findById(0l);
 
 		assertFalse(cantonRecherche.isPresent());
 	}
