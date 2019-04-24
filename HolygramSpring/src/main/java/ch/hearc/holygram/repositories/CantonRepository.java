@@ -3,8 +3,6 @@ package ch.hearc.holygram.repositories;
 import org.springframework.data.repository.CrudRepository;
 
 import ch.hearc.holygram.models.Canton;
-import ch.hearc.holygram.models.Customer;
-import ch.hearc.holygram.models.User;
 
 /**
  * Documentation :

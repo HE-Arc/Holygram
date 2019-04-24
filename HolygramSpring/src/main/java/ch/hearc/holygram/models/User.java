@@ -136,4 +136,12 @@ public class User {
         // TODO Auto-generated method stub
         return id.hashCode();
     }
+
+	public Date getLastLogin() {
+		return lastLogin;
+	}
+
+	public void setLastLogin(Date lastLogin) {
+		this.lastLogin = lastLogin;
+	}
 }
