@@ -44,6 +44,6 @@ public class BaseSeeder {
 		demonsSeeder.run();
 		userSeeder.run();
 		evaluationSeeder.run();
-		//serviceSeeder.run();
+		serviceSeeder.run();
 	}
 }
