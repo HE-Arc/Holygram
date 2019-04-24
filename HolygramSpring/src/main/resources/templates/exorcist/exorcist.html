@@ -4,6 +4,7 @@
     <div th:replace="fragments/head.html"></div>
     <script th:if="${edit}" th:src="@{/js/profile.js}" defer></script>
     <script th:src="@{/js/addEvaluation.js}" defer></script>
+    <script th:src="@{/js/addService.js}" defer></script>
 
 </head>
 <body>
@@ -92,19 +93,19 @@
                 <tr id="original-new-service" th:if=${edit}>
                     <form method="post" th:action="@{/service/add}">
                         <td>
-                            <select class="form-control religion-select">
+                            <select id="addService_religion" class="form-control religion-select">
                                 <option disabled selected>Please select...</option>
                                 <option th:each="religion: ${religions}" th:value="${religion.getId()}" th:text="${religion.getName()}"></option>
                             </select>
                         </td>
                         <td>
-                            <select class="form-control demon-select" name="demon">
+                            <select id="addService_demon" class="form-control demon-select" name="demon">
                                 <option disabled>Please select...</option>
                                 </option>
                             </select>
                         </td>
                         <td>
-                            <input class="form-control" name="price" type="text">
+                            <input id="addService_price" class="form-control" name="price" type="text">
                         </td>
                         <td th:if="${edit}">
                             <button class="btn btn-sm btn-success">
