@@ -1,5 +1,6 @@
 package ch.hearc.holygram.models;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -29,7 +30,7 @@ public class Religion {
 
 	@OneToMany(mappedBy = "religion", cascade = CascadeType.ALL)
 	@JsonManagedReference
-	private Set<Demon> demons;
+	private Set<Demon> demons = new HashSet<Demon>();
 
 	public Religion(String name) {
 		this.name = name;
