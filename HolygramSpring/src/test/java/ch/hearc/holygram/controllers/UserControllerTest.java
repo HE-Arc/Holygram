@@ -1,16 +1,17 @@
 package ch.hearc.holygram.controllers;
 
-import static org.junit.Assert.fail;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-@WebMvcTest
+@RunWith(SpringRunner.class)
+@WebMvcTest(UserController.class)
 public class UserControllerTest {
 
 	@Test
 	public void test() {
-		
+
 	}
 
 }
