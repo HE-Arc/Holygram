@@ -2,6 +2,7 @@ package ch.hearc.holygram.models;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.util.Assert;
@@ -12,13 +13,12 @@ import ch.hearc.holygram.seeders.CantonSeeder;
 @DataJpaTest
 public class CantonTest {
 
-	@MockBean
+	@Autowired
 	private CantonRepository cr;
 
+	
 	@Before
 	public void setUp() {
-		CantonSeeder cs = new CantonSeeder();
-		cs.run();
 	}
 
 	@Test
