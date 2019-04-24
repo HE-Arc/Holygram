@@ -8,9 +8,9 @@ let error_message = document.getElementById("error_message");
 function validate_addService()
 {
 	let b = false;
-	b = b || addService_religion.selectedIndex != 0;
-	b = b || addService_demon.value != "";
-	b = b || addService_price.value != "";
-	error_message.hidden = b;
-	return b;
+	b = b || addService_religion.selectedIndex == 0;
+	b = b || addService_demon.value == "";
+	b = b || addService_price.value == "";
+	error_message.hidden = !b;
+	return !b;
 }
