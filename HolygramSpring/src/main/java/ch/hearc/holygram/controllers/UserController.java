@@ -76,15 +76,23 @@ public class UserController {
 				user = userService.save(user);
 				
 				Customer customer = new Customer(user);
-				customerRepository.save(customer);
+				customer = customerRepository.save(customer);
+
+				user.setCustomer(customer);
 			} else {
-				Canton canton = cantonRepository.findByAcronym(request.getParameter("canton"));
-				Exorcist exorcist = new Exorcist(user, request.getParameter("description"),
-						request.getParameter("phoneNumber"), canton);
-				Role role = roleRepository.findByName("ROLE_CUSTOMER");
+				Role role = roleRepository.findByName("ROLE_EXORCIST");
 				user.setRole(role);
 				userService.save(user);
+				
+				Canton canton = cantonRepository.findByAcronym(request.getParameter("canton"));
+				
+				Exorcist exorcist = new Exorcist(user, request.getParameter("description"),
+						request.getParameter("phoneNumber"), canton);
+				
+				
 				exorcistRepository.save(exorcist);
+				
+				user.setExorcist(exorcist);
 			}
 
 			securityService.autoLogin(user.getUsername(), user.getPasswordConfirm());
