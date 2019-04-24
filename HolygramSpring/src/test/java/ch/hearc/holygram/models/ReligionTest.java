@@ -81,7 +81,7 @@ public class ReligionTest {
 		final String religion = "Christianism";
 
 		Religion r = new Religion(religion);
-		Optional<Religion> religionRecherche = rr.findById(r.getId());
+		Optional<Religion> religionRecherche = rr.findById(0l);
 
 		assertFalse(religionRecherche.isPresent());
 	}

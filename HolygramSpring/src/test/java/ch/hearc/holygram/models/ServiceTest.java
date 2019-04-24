@@ -63,7 +63,7 @@ public class ServiceTest {
 		Assert.isTrue(s.getExorcist() == e, "Service's exorcist is invalid");
 		Assert.isTrue(s.getPrice() == price, "Service's price is invalid");
 	}
-	
+
 	@Test
 	public void tryGetService_WhenNotPersisted_ThenIsOk() {
 		final String demon = "Ghost";
@@ -94,14 +94,9 @@ public class ServiceTest {
 			e1.printStackTrace();
 		}
 		Exorcist e = new Exorcist(u, description, phone, c);
-
 		Service s = new Service(e, d, price);
 
-		Assert.isTrue(s.getDemon() == d, "Service's demon is invalid");
-		Assert.isTrue(s.getExorcist() == e, "Service's exorcist is invalid");
-		Assert.isTrue(s.getPrice() == price, "Service's price is invalid");
-		
-		Optional<Service> serviceRecherche = sr.findById(r.getId());
+		Optional<Service> serviceRecherche = sr.findById(0l);
 
 		assertFalse(serviceRecherche.isPresent());
 	}
