@@ -33,20 +33,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/resources/**", "/signup", "/formExorcist", "/").permitAll()
+                .antMatchers("/resources/**", "/signup", "/formExorcist", "/", "/h2_console/**").permitAll()
                 .antMatchers("/search").access("not( hasRole('EXORCIST') ) or not( isAuthenticated() )")
                 .and()
                 .formLogin()
                 .permitAll();
-
-        // start h2 access debug
-        // https://stackoverflow.com/a/53066577/9263555
-        http.authorizeRequests()
-                .antMatchers("/").permitAll()
-                .antMatchers("/h2_console/**").permitAll();
-
-        http.csrf().disable();
-        http.headers().frameOptions().disable();
         // end h2 debug
 
         http.logout().logoutSuccessUrl("/").logoutUrl("/logout");

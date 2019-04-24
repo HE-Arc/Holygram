@@ -59,7 +59,7 @@ public class UserController {
 	}
 
 	@PostMapping("/signup")
-	public String registration(@Valid User user, HttpServletRequest request,
+	public String registration(@ModelAttribute("user") User user, HttpServletRequest request,
 			BindingResult bindingResult) {
 		try {
 			userValidator.validate(user, bindingResult);
@@ -68,19 +68,20 @@ public class UserController {
 				return "signup";
 			}
 
-			String typeAccount = request.getParameter("type");
+			String typeAccount = request.getParameter("customRadio");
 
 			if (typeAccount.equals("customer")) {
-				Customer customer = new Customer(user);
-				Role role = roleRepository.findByName("CUSTOMER");
+				Role role = roleRepository.findByName("ROLE_CUSTOMER");
 				user.setRole(role);
-				userService.save(user);
+				user = userService.save(user);
+				
+				Customer customer = new Customer(user);
 				customerRepository.save(customer);
 			} else {
 				Canton canton = cantonRepository.findByAcronym(request.getParameter("canton"));
 				Exorcist exorcist = new Exorcist(user, request.getParameter("description"),
 						request.getParameter("phoneNumber"), canton);
-				Role role = roleRepository.findByName("EXORCIST");
+				Role role = roleRepository.findByName("ROLE_CUSTOMER");
 				user.setRole(role);
 				userService.save(user);
 				exorcistRepository.save(exorcist);
