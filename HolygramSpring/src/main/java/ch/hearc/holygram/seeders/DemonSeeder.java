@@ -45,5 +45,7 @@ public class DemonSeeder {
 		for (int i = 0; i < 8; ++i) {
 			demonRepository.save(new Demon(demons.get(i), religions.get(i)));
 		}
+		demons.add("Satan");
+		demonRepository.save(new Demon("Satan", religions.get(0)));
 	}
 }
