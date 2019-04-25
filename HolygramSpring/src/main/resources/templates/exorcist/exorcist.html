@@ -40,7 +40,7 @@
                     <table class="table">
                         <tr>
                             <td><b>Email</b></td>
-                            <td th:if="!${edit}" th:text="${u.getEmail()}">Email available</td>
+                            <td th:if="!${edit}" th:text="${u.getEmail()}">No email available</td>
                             <td th:if="${edit}"><input class="form-control" th:value="${u.getEmail()}" disabled></td>
                         </tr>
                         <tr>
@@ -60,6 +60,11 @@
                             <td th:if="${edit}">
                                 <input id="phonenumber_input" class="form-control" th:value="${e.getPhoneNumber()}" type="text">
                             </td>
+                        </tr>
+                        <tr>
+                            <td><b>Renown</b></td>
+                            <td th:if="!${edit}" th:text="${e.getRenown() + ' out of 5'}">No renown available</td>
+                            <td th:if="${edit}"><input class="form-control" th:value="${e.getRenown()}" disabled></td>
                         </tr>
                     </table>
                 </div>

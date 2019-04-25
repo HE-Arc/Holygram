@@ -119,7 +119,8 @@ public class Exorcist {
 		// Get renown
 		List<Evaluation> e_evaluations = this.getEvaluations();
 		long e_evaluations_positives = e_evaluations.parallelStream().filter(x -> x.isPositive()).count();
-		return (int) (e_evaluations_positives / e_evaluations.size() * 1.0f);
+		float renown = e_evaluations_positives / (e_evaluations.size() * 1.0f);
+		return (int) (renown * 5);
 	}
 
 	@Override
