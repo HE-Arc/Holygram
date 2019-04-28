@@ -9,6 +9,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import ch.hearc.holygram.security.HolygramUserDetails;
 import ch.hearc.holygram.security.UserDetailsServiceImpl;
 
 @Service
@@ -33,11 +34,14 @@ public class SecurityServiceImpl implements SecurityService{
 
     @Override
     public void autoLogin(String username, String password) {
-        UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+        HolygramUserDetails userDetails = userDetailsService.loadUserByUsername(username);
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(userDetails, password, userDetails.getAuthorities());
 
         authenticationManager.authenticate(usernamePasswordAuthenticationToken);
 
+        // Avoid to send clear password
+        userDetails.getUser().setPasswordConfirm("");
+        
         if (usernamePasswordAuthenticationToken.isAuthenticated()) {
             SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
             logger.debug(String.format("Auto login %s successfully!", username));

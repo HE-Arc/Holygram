@@ -23,6 +23,7 @@ public class User {
 
     @NotNull
     @Size(min = 2, max = 30)
+    @Column(unique = true)
     private String email;
 
     @NotNull

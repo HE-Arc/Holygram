@@ -21,4 +21,6 @@ public interface UserRepository extends CrudRepository<User, Long> {
     @Modifying
     @Transactional
     public void updateLastLogin(@Param("lastLogin") Date lastLogin);
+
+	Optional<User> findByEmail(String email);
 }
