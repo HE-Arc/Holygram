@@ -62,8 +62,11 @@ public class UserController {
 	public String registration(@ModelAttribute("user") User user, HttpServletRequest request,
 			BindingResult bindingResult) {
 		try {
+			
+			// Valid the futur user
 			userValidator.validate(user, bindingResult);
 
+			// Interrupt the sign up
 			if (bindingResult.hasErrors()) {
 				return "signup";
 			}
@@ -71,30 +74,39 @@ public class UserController {
 			String typeAccount = request.getParameter("customRadio");
 
 			if (typeAccount.equals("customer")) {
+				
+				// Create the user
 				Role role = roleRepository.findByName("ROLE_CUSTOMER");
 				user.setRole(role);
 				user = userService.save(user);
 				
+				// Create the customer
 				Customer customer = new Customer(user);
 				customer = customerRepository.save(customer);
 
+				// Set the liaison in the current user object
+				// Hibernate hasn't already create the link user's side
 				user.setCustomer(customer);
 			} else {
+				// Create the user
 				Role role = roleRepository.findByName("ROLE_EXORCIST");
 				user.setRole(role);
 				userService.save(user);
 				
+				// Create the exorcist
 				Canton canton = cantonRepository.findByAcronym(request.getParameter("canton"));
 				
 				Exorcist exorcist = new Exorcist(user, request.getParameter("description"),
 						request.getParameter("phoneNumber"), canton);
 				
-				
 				exorcistRepository.save(exorcist);
 				
+				// Set the liaison in the current user object
+				// Hibernate hasn't already create the link user's side
 				user.setExorcist(exorcist);
 			}
 
+			// Authentication
 			securityService.autoLogin(user.getUsername(), user.getPasswordConfirm());
 
 		} catch (Exception e) {

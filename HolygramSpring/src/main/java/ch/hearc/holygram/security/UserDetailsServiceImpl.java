@@ -20,6 +20,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		if (user == null)
 			throw new UsernameNotFoundException(username);
 
+		// Use custom UserDetails to conserve the link between user and account
 		return new HolygramUserDetails(user);
 	}
 }
