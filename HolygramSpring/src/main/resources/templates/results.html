@@ -17,6 +17,7 @@
                     <th>Username</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>Reown</th>
                     <th>Price</th>
                 </tr>
                 </thead>
@@ -29,6 +30,7 @@
                         <a href="mailto:${result.user.email}" th:text="${result.user.email}"></a>
                     </td>
                     <td th:text="${result.exorcist.phoneNumber}"/>
+                    <td th:text="${result.getExorcist().getRenown()}"/>
                     <td th:text="${result.price}"/>
                 </tr>
                 </tbody>

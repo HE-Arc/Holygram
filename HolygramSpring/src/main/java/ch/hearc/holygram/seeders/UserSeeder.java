@@ -36,6 +36,9 @@ public class UserSeeder {
 	@Autowired
 	private ServiceRepository serviceRepository;
 
+	@Autowired
+	private EvaluationRepository evaluationRepository;
+
 
 	private static final String lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu nisi quis ante interdum vestibulum. Cras semper lacus non urna ultricies, eu semper dui rutrum. Etiam id odio at dui bibendum varius nec vitae justo. Sed varius luctus tristique. Morbi lobortis, massa vel scelerisque lacinia, lorem mi imperdiet diam, ac posuere nunc ipsum sit amet mi. Nullam in bibendum nunc, vitae aliquet turpis. Etiam in mattis dolor.\n";
 
@@ -48,12 +51,13 @@ public class UserSeeder {
 			customerRepository.deleteAll();
 			exorcistRepository.deleteAll();
 			serviceRepository.deleteAll();
+			evaluationRepository.deleteAll();
 
 			addCustomer();
 
 			for(int i = 0; i < 200; i++)
 			{
-				addExorcist(i, random.nextInt(10));
+				addExorcist(i, random.nextInt(10), random.nextInt(10));
 			}
 
 		} catch (Exception e) {
@@ -61,7 +65,7 @@ public class UserSeeder {
 		}
 	}
 
-	private void addExorcist(int id, int nbServices) throws Exception {
+	private void addExorcist(int id, int nbServices, int nbEvaluations) throws Exception {
 
 		List<Canton> cantons = (List<Canton>)cantonRepository.findAll();
 		List<Demon> demons = (List<Demon>)demonRepository.findAll();
@@ -78,6 +82,15 @@ public class UserSeeder {
 			float price = random.nextFloat() * 100;
 			Service s = new Service(e, d, price);
 			serviceRepository.save(s);
+		}
+
+		for (int i = 0; i < nbEvaluations; i++) {
+			Evaluation evaluation = new Evaluation();
+			evaluation.setText("Very good service, so cheap and so fast, incredible. I still can't believe my eyes how he masters his wand");
+			evaluation.setPositive(random.nextBoolean());
+			evaluation.setCustomer(customerRepository.findById(1l).get());
+			evaluation.setExorcist(e);
+			evaluationRepository.save(evaluation);
 		}
 	}
 

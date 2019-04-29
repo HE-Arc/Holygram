@@ -23,15 +23,6 @@ public class EvaluationSeeder {
 	private ExorcistRepository exorcistRepository;
 
 	public void run() {
-		evaluationRepository.deleteAll();
 
-		Evaluation evaluation = new Evaluation();
-		evaluation.setText(
-				"Very good service, so cheap and so fast, incredible. I still can't believe my eyes how he masters his wand");
-		evaluation.setPositive(true);
-		evaluation.setCustomer(customerRepository.findById(1l).get());
-		evaluation.setExorcist(exorcistRepository.findById(1l).get() );
-
-		evaluationRepository.save(evaluation);
 	}
 }

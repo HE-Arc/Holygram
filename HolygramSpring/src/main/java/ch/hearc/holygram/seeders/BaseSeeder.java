@@ -15,9 +15,6 @@ public class BaseSeeder {
 	private CantonSeeder cantonSeeder;
 
 	@Autowired
-	private EvaluationSeeder evaluationSeeder;
-
-	@Autowired
 	private ReligionSeeder religionSeeder;
 
 	@Autowired
@@ -40,6 +37,5 @@ public class BaseSeeder {
 		religionSeeder.run();
 		demonsSeeder.run();
 		userSeeder.run();
-//		evaluationSeeder.run();
 	}
 }
