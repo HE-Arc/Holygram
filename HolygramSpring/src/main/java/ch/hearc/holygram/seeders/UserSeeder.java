@@ -70,7 +70,7 @@ public class UserSeeder {
 				RoleSeeder.exorcistRole);
 
 		userRepository.save(u);
-		Exorcist e = new Exorcist(u, lorem, "+41 32 123 12 42", cantons.get(random.nextInt(cantons.size())));
+		Exorcist e = new Exorcist(u, lorem, "+41 32 123 12 " + id, cantons.get(random.nextInt(cantons.size())));
 		exorcistRepository.save(e);
 
 		for (int i = 0; i < nbServices; i++) {

@@ -38,7 +38,7 @@ public class SearchController {
     @Autowired
     private CantonRepository cr;
 
-    private static final int PAGE_SIZE = 5;
+    private static final int PAGE_SIZE = 15;
 
     @RequestMapping(value = "/search", method = {RequestMethod.POST, RequestMethod.GET})
     public String search(Map<String, Object> model) {
@@ -99,8 +99,8 @@ public class SearchController {
 
         String currentUrl = "/search/process?input_demon=" + demon_id;
         currentUrl += renown.isPresent() ? "&input_renown=" + renown.get() : "";
-        currentUrl += canton_id.isPresent() ? "&input_canton=" + canton_id : "";
-        currentUrl += price.isPresent() ? "&input_price=" + price : "";
+        currentUrl += canton_id.isPresent() ? "&input_canton=" + canton_id.get() : "";
+        currentUrl += price.isPresent() ? "&input_price=" + price.get() : "";
 
         model.put("currentUrl", currentUrl);
         model.put("results", pageData);
