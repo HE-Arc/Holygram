@@ -30,9 +30,6 @@ public class BaseSeeder {
 	private RoleSeeder roleSeeder;
 
 	@Autowired
-	private ServiceSeeder serviceSeeder;
-
-	@Autowired
 	private PrivilegeSeeder privilegeSeeder;
 
 	@PostConstruct
@@ -43,7 +40,6 @@ public class BaseSeeder {
 		religionSeeder.run();
 		demonsSeeder.run();
 		userSeeder.run();
-		evaluationSeeder.run();
-		serviceSeeder.run();
+//		evaluationSeeder.run();
 	}
 }

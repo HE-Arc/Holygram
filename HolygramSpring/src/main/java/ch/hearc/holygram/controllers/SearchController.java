@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import ch.hearc.holygram.SearchResultDataWrapper;
+import ch.hearc.holygram.data.SearchResultDataWrapper;
 import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Demon;
 import ch.hearc.holygram.models.Exorcist;
@@ -23,73 +23,91 @@ import ch.hearc.holygram.repositories.ServiceRepository;
 @Controller
 public class SearchController {
 
-	// https://github.com/caveofprogramming/springboot/blob/master/spring-boot-tutorial-search/src/main/java/com/caveofprogramming/controllers/SearchController.java
-	// https://github.com/caveofprogramming/springboot/blob/master/spring-boot-tutorial-search/src/main/java/com/caveofprogramming/model/dto/SearchResult.java
-	// https://github.com/caveofprogramming/springboot/blob/master/spring-boot-tutorial-search/src/main/java/com/caveofprogramming/service/SearchService.java
+    // https://github.com/caveofprogramming/springboot/blob/master/spring-boot-tutorial-search/src/main/java/com/caveofprogramming/controllers/SearchController.java
+    // https://github.com/caveofprogramming/springboot/blob/master/spring-boot-tutorial-search/src/main/java/com/caveofprogramming/model/dto/SearchResult.java
+    // https://github.com/caveofprogramming/springboot/blob/master/spring-boot-tutorial-search/src/main/java/com/caveofprogramming/service/SearchService.java
 
-	// https://spring.io/guides/tutorials/bookmarks/
+    // https://spring.io/guides/tutorials/bookmarks/
 
-	@Autowired
-	private DemonRepository dr;
+    @Autowired
+    private DemonRepository dr;
 
-	@Autowired
-	private ServiceRepository sr;
+    @Autowired
+    private ServiceRepository sr;
 
-	@Autowired
-	private CantonRepository cr;
+    @Autowired
+    private CantonRepository cr;
 
-	@RequestMapping(value = "/search", method = { RequestMethod.POST, RequestMethod.GET })
-	public String search(Map<String, Object> model) {
+    private static final int PAGE_SIZE = 5;
 
-		model.put("demons", dr.findAll());
+    @RequestMapping(value = "/search", method = {RequestMethod.POST, RequestMethod.GET})
+    public String search(Map<String, Object> model) {
+        model.put("demons", dr.findAll());
+        model.put("cantons", cr.findAll());
+        return "search";
+    }
 
-		model.put("cantons", cr.findAll());
+    @RequestMapping(value = "/search/process", method = RequestMethod.GET, headers = "Accept=application/json", produces = "application/json")
+    public String process(Map<String, Object> model, @RequestParam("input_demon") Long demon_id,
+                          @RequestParam("input_renown") Optional<Integer> renown,
+                          @RequestParam("input_canton") Optional<Long> canton_id,
+                          @RequestParam("input_price") Optional<Integer> price, @RequestParam("page") Optional<Integer> page) {
 
-		return "search";
-	}
+        List<SearchResultDataWrapper> datas = new ArrayList<SearchResultDataWrapper>();
 
-	@RequestMapping(value = "/search/process", method = RequestMethod.GET, headers = "Accept=application/json", produces = "application/json")
-	public String process(Map<String, Object> model, @RequestParam("input_demon") Long demon_id,
-			@RequestParam("input_advanced") Optional<String> a, @RequestParam("input_renown") Optional<Integer> renown,
-			@RequestParam("input_canton") Optional<Long> canton_id,
-			@RequestParam("input_price") Optional<Integer> price) {
+        // Data
+        Demon demon = dr.findById(demon_id).get();
 
-		List<SearchResultDataWrapper> datas = new ArrayList<SearchResultDataWrapper>();
+        for (Service s : sr.findAllServiceByDemon(demon)) {
+            Exorcist e = s.getExorcist();
+            if (canton_id.isPresent() && e.getCanton().getId() != canton_id.get())
+                continue;
+            if (price.isPresent() && s.getPrice() > price.get())
+                continue;
+            if (renown.isPresent() && e.getRenown() < renown.get())
+                continue;
 
-		// Data
-		Demon demon = dr.findById(demon_id).get();
-		Canton canton = null;
-		boolean advanced = false;
+            // Exorcist is corresponding
+            SearchResultDataWrapper w = new SearchResultDataWrapper(e, e.getUser(), s.getPrice());
+            datas.add(w);
+        }
 
-		// Check if search is advanced
-		if(a.isPresent())
-		{
-			System.out.println("FROMAGE");
-			advanced = a.get().equalsIgnoreCase("on");
-			canton = cr.findById(canton_id.get()).get();
-		}
+        // Pagination
+        int currentPage;
+        int lastPage = (int)Math.ceil((double)datas.size() / (double)PAGE_SIZE);
 
-		for (Service s : sr.findAllServiceByDemon(demon)) {
-			Exorcist e = s.getExorcist();
+        if(page.isPresent())
+        {
+            int p = page.get();
+            if (p > lastPage)
+                currentPage = lastPage;
+            else if(p < 1)
+                currentPage = 1;
+            else
+                currentPage = p;
+        }
+        else
+        {
+            currentPage = 1;
+        }
 
-			if (advanced) {
-				if (e.getCanton() != canton)
-					continue;
-				if (s.getPrice() > price.get())
-					continue;
-				if (e.getRenown() < renown.get())
-					continue;
-			}		
+        List<SearchResultDataWrapper> pageData = new ArrayList<SearchResultDataWrapper>();
+        for(int i = (currentPage - 1) * PAGE_SIZE; i < currentPage * PAGE_SIZE && i < datas.size(); i++)
+        {
+            pageData.add(datas.get(i));
+        }
 
-			// Exorcist is corresponding
-			SearchResultDataWrapper w = new SearchResultDataWrapper(e, e.getUser(), s.getPrice());
-			datas.add(w);
+        String currentUrl = "/search/process?input_demon=" + demon_id;
+        currentUrl += renown.isPresent() ? "&input_renown=" + renown.get() : "";
+        currentUrl += canton_id.isPresent() ? "&input_canton=" + canton_id : "";
+        currentUrl += price.isPresent() ? "&input_price=" + price : "";
 
-		}
+        model.put("currentUrl", currentUrl);
+        model.put("results", pageData);
+        model.put("currentPage", currentPage);
+        model.put("lastPage", lastPage);
 
-		model.put("results", datas);
-
-		// return list of exorcists
-		return "results";
-	}
+        // return list of exorcists
+        return "results";
+    }
 }

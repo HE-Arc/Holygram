@@ -1,4 +1,4 @@
-package ch.hearc.holygram;
+package ch.hearc.holygram.data;
 
 import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.User;

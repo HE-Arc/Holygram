@@ -1,17 +1,13 @@
 package ch.hearc.holygram.seeders;
 
+import ch.hearc.holygram.models.*;
+import ch.hearc.holygram.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import ch.hearc.holygram.models.Canton;
-import ch.hearc.holygram.models.Customer;
-import ch.hearc.holygram.models.Exorcist;
-import ch.hearc.holygram.models.User;
-import ch.hearc.holygram.repositories.CantonRepository;
-import ch.hearc.holygram.repositories.CustomerRepository;
-import ch.hearc.holygram.repositories.ExorcistRepository;
-import ch.hearc.holygram.repositories.UserRepository;
+import java.util.List;
+import java.util.Random;
 
 @Component
 /**
@@ -34,7 +30,16 @@ public class UserSeeder {
 	@Autowired
 	private CantonRepository cantonRepository;
 
+	@Autowired
+	private DemonRepository demonRepository;
+
+	@Autowired
+	private ServiceRepository serviceRepository;
+
+
 	private static final String lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu nisi quis ante interdum vestibulum. Cras semper lacus non urna ultricies, eu semper dui rutrum. Etiam id odio at dui bibendum varius nec vitae justo. Sed varius luctus tristique. Morbi lobortis, massa vel scelerisque lacinia, lorem mi imperdiet diam, ac posuere nunc ipsum sit amet mi. Nullam in bibendum nunc, vitae aliquet turpis. Etiam in mattis dolor.\n";
+
+	private static Random random = new Random(0);
 
 	public void run() {
 
@@ -42,24 +47,38 @@ public class UserSeeder {
 			userRepository.deleteAll();
 			customerRepository.deleteAll();
 			exorcistRepository.deleteAll();
+			serviceRepository.deleteAll();
 
 			addCustomer();
-			addExorcist();
+
+			for(int i = 0; i < 200; i++)
+			{
+				addExorcist(i, random.nextInt(10));
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	private void addExorcist() throws Exception {
-		User newExorcist = new User("exorcist", bCryptPasswordEncoder.encode("12345678"), "exorcist@email.com",
+	private void addExorcist(int id, int nbServices) throws Exception {
+
+		List<Canton> cantons = (List<Canton>)cantonRepository.findAll();
+		List<Demon> demons = (List<Demon>)demonRepository.findAll();
+
+		User u = new User("exorcist" + id, bCryptPasswordEncoder.encode("12345678"), "exorcist" + id + "@email.com",
 				RoleSeeder.exorcistRole);
-		newExorcist = userRepository.save(newExorcist);
 
-		Canton canton = cantonRepository.findById(12l).get();
-
-		Exorcist e = new Exorcist(newExorcist, lorem, "+41 32 320 12 42", canton);
+		userRepository.save(u);
+		Exorcist e = new Exorcist(u, lorem, "+41 32 123 12 42", cantons.get(random.nextInt(cantons.size())));
 		exorcistRepository.save(e);
+
+		for (int i = 0; i < nbServices; i++) {
+			Demon d = demons.get(random.nextInt(demons.size()));
+			float price = random.nextFloat() * 100;
+			Service s = new Service(e, d, price);
+			serviceRepository.save(s);
+		}
 	}
 
 	private void addCustomer() throws Exception {

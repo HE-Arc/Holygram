@@ -1,106 +1,104 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-	<meta th:replace="fragments/head.html"></meta>
+    <meta th:replace="fragments/head.html"></meta>
 </head>
 <body>
 <nav class="d-block" th:with="menu=${'search'},isConnected=${true}" th:insert="fragments/nav.html"></nav>
 <div class="container p-4">
-	<div style="padding: 30px">
-		<div class="card">
-			<div class="card-header">
-				<h2>Search by demon</h2>
-			</div>
-			<div class="card-body">
-				<div class="card-text">
-					<form method="GET" id="form-search" action="/search/process">
-						<div class="form-group row">
-							<label for="input_demon"
-								class="col-md-2 col-form-label col-form-label-lg">Demon</label>
-							<div class="col-md-10">
-								<select id="input_demon" name="input_demon"
-									class="form-control form-control-lg" required>
-									<option th:each="demon: ${demons}" th:value="${demon.id}"
-										th:text="${demon.name}" />
-								</select>
-							</div>
-						</div>
-	
-						<!-- ADVANCED -->
-						<div class="form-group row">
-							<label for="input_advanced"
-								class="col-md-2 col-form-label col-form-label-lg">Advanced
-								search</label>
-							<div class="col-md-10">
-								<input type="checkbox" class="form-control form-control-lg"
-									id="input_advanced" name="input_advanced" onclick="toggle('advanced_search')">
-							</div>
-						</div>
-						<div id="advanced_search" style="display: none;">
-							<div class="form-group row">
-								<label for="input_canton"
-									class="col-md-2 col-form-label col-form-label-lg">Cantons</label>
-								<div class="col-md-10">
-									<select class="custom-select" id="input_canton" name="input_canton" disabled>
-					                    <option th:each="canton: ${cantons}" th:value="${canton.id}" th:text="${canton.name}"/>
-					                </select>
-								</div>
-							</div>
-							
-							<div class="form-group row">
-								<label for="input_renown"
-									class="col-md-2 col-form-label col-form-label-lg">Minimal
-									renown</label>
-								<div class="col-md-10">
-									<input type="range" class="form-control form-control-lg"
-										id="input_renown" name="input_renown" min="0" value="0" max="5" disabled>
-								</div>
-							</div>
-							
-							<div class="form-group row">
-								<label for="input_price"
-									class="col-md-2 col-form-label col-form-label-lg">Max price</label>
-								<div class="col-md-9">
-									<input type="number" class="form-control form-control-lg"
-										id="input_price" name="input_price" min="0" value="0" disabled>
-								</div>
-								<div class="col-md-1 col-form-label">CHF</div>
-							</div>
-						</div>
-	
-						
-						<blockquote class="blockquote mb-0">
-						<button type="submit" class="btn btn-primary btn-lg" id="btn_submit">
-							Search!</button>
-						</blockquote>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div style="padding: 30px">
+        <div class="card">
+            <div class="card-header">
+                <h2>Search by demon</h2>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <form method="GET" id="form-search" action="/search/process">
+                        <div class="form-group row">
+                            <label for="input_demon"
+                                    class="col-md-2 col-form-label">Demon
+                            </label>
+                            <div class="col-md-10">
+                                <select id="input_demon" name="input_demon"
+                                        class="form-control" required>
+                                    <option th:each="demon: ${demons}" th:value="${demon.id}"
+                                            th:text="${demon.name}"/>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- ADVANCED -->
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">
+                                Advanced search
+                            </label>
+                        </div>
+                        <div id="advanced_search">
+                            <div class="form-group row">
+                                <label for="input_canton"
+                                        class="col-md-2 col-form-label">
+                                    Cantons
+                                </label>
+                                <div class="input-group col-md-10">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="checkbox" onclick="document.getElementById('input_canton').disabled ^= true">
+                                        </div>
+                                    </div>
+                                    <select class="custom-select" id="input_canton" name="input_canton" disabled>
+                                        <option th:each="canton: ${cantons}" th:value="${canton.id}" th:text="${canton.name}"/>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="input_canton"
+                                        class="col-md-2 col-form-label">
+                                    Minimal renown
+                                </label>
+                                <div class="input-group col-md-10">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="checkbox" onclick="document.getElementById('input_renown').disabled ^= true">
+                                        </div>
+                                    </div>
+                                    <input type="range" class="custom-range form-control"  id="input_renown" name="input_renown" min="0" value="0" max="5" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="input_canton"
+                                        class="col-md-2 col-form-label">
+                                    Max price
+                                </label>
+                                <div class="input-group col-md-10">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="checkbox" onclick="document.getElementById('input_price').disabled ^= true">
+                                        </div>
+                                    </div>
+                                    <input type="number" class="form-control" id="input_price" name="input_price" min="0" value="0" disabled>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            CHF
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <blockquote class="blockquote mb-0">
+                            <button type="submit" class="btn btn-primary btn" id="btn_submit">
+                                Search!
+                            </button>
+                        </blockquote>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
-	function toggle(name) {
-		var advanced_search = document.getElementById(name);
-		var renown_search = document.getElementById("input_renown");
-		var canton_search = document.getElementById("input_canton");
-		var price_search = document.getElementById("input_price");
-		if (advanced_search.style.display === "none") {
-			advanced_search.style.display = "block";
-			renown_search.disabled = false;
-			canton_search.disabled = false;
-			price_search.disabled = false;
-			renown_search.required = true;
-			canton_search.required = true;
-			price_search.required = true;
-		} else {
-			advanced_search.style.display = "none";
-			renown_search.disabled = true;
-			canton_search.disabled = true;
-			price_search.disabled = true;
-			renown_search.required = false;
-			canton_search.required = false;
-			price_search.required = false;
-		}
-	}
+    document.getElementById("form-search").reset();
 </script>
