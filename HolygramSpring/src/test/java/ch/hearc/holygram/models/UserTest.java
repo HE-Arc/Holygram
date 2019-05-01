@@ -40,9 +40,9 @@ public class UserTest {
 		entityManager.persist(u);
 		entityManager.flush();
 
-		Assert.isTrue(u.getUsername() == username, "User's username is invalid");
-		Assert.isTrue(u.getPassword() == password, "Role's password is invalid");
-		Assert.isTrue(u.getEmail() == email, "Role's email is invalid");
+		assertTrue(u.getUsername() == username);
+		assertTrue(u.getPassword() == password);
+		assertTrue(u.getEmail() == email);
 	}
 
 	@Test

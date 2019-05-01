@@ -45,14 +45,14 @@ public class User {
     @JsonBackReference
     private Role role;
 
-    public User(String username, String password, String email, Role role) throws Exception {
+    public User(String username, String password, String email, Role role) {
         this.username = username;
         this.password = password;
         this.email = email;
         this.role = role;
     }
 
-    public User(String username, String password, String passwordConfirm, String email) throws Exception {
+    public User(String username, String password, String passwordConfirm, String email) {
         this.username = username;
         this.password = password;
         this.passwordConfirm = passwordConfirm;
@@ -67,11 +67,11 @@ public class User {
      * Entity) for each Model should be used
      */
     public Map<String, String> getAttributes() {
-        Map<String, String> attributes = new HashMap<String, String>();
+        Map<String, String> attributes = new HashMap<>();
 
         attributes.put("id", id.toString());
-        attributes.put("username", username.toString());
-        attributes.put("email", email.toString());
+        attributes.put("username", username);
+        attributes.put("email", email);
 
         return attributes;
     }
@@ -134,7 +134,6 @@ public class User {
 
     @Override
     public int hashCode() {
-        // TODO Auto-generated method stub
         return id.hashCode();
     }
 

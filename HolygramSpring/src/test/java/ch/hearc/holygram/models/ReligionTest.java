@@ -32,7 +32,7 @@ public class ReligionTest {
 
 		Religion r = new Religion(religion);
 
-		Assert.isTrue(r.getName() == religion, "Religion's name is invalid");
+		assertThat(r.getName() == religion);
 	}
 
 	@Test

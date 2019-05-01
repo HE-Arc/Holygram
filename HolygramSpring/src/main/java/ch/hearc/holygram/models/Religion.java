@@ -30,7 +30,7 @@ public class Religion {
 
 	@OneToMany(mappedBy = "religion", cascade = CascadeType.ALL)
 	@JsonManagedReference
-	private Set<Demon> demons = new HashSet<Demon>();
+	private Set<Demon> demons = new HashSet<>();
 
 	public Religion(String name) {
 		this.name = name;

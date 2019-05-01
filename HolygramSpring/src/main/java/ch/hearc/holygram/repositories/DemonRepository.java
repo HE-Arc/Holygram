@@ -9,6 +9,4 @@ import ch.hearc.holygram.models.Demon;
  * https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
  */
 public interface DemonRepository extends CrudRepository<Demon, Long> {
-	// List<Demon> findByNameIgnoreCase(String demonName);
-	// List<Demon> findByReligion(Religion religion);
 }

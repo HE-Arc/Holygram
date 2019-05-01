@@ -33,8 +33,8 @@ public class CantonTest {
 
 		Canton c = new Canton(acronym, name);
 
-		Assert.isTrue(c.getAcronym() == acronym, "Canton's acronym is invalid");
-		Assert.isTrue(c.getName() == name, "Canton's name is invalid");
+		assertTrue(c.getAcronym() == acronym);
+		assertTrue(c.getName() == name);
 	}
 
 	@Test

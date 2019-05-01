@@ -38,9 +38,13 @@ public class UserSeeder {
 
 	@Autowired
 	private EvaluationRepository evaluationRepository;
+	
+
+	@Autowired
+	private RoleSeeder roleSeeder;
 
 
-	private static final String lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu nisi quis ante interdum vestibulum. Cras semper lacus non urna ultricies, eu semper dui rutrum. Etiam id odio at dui bibendum varius nec vitae justo. Sed varius luctus tristique. Morbi lobortis, massa vel scelerisque lacinia, lorem mi imperdiet diam, ac posuere nunc ipsum sit amet mi. Nullam in bibendum nunc, vitae aliquet turpis. Etiam in mattis dolor.\n";
+	private static final String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu nisi quis ante interdum vestibulum. Cras semper lacus non urna ultricies, eu semper dui rutrum. Etiam id odio at dui bibendum varius nec vitae justo. Sed varius luctus tristique. Morbi lobortis, massa vel scelerisque lacinia, lorem mi imperdiet diam, ac posuere nunc ipsum sit amet mi. Nullam in bibendum nunc, vitae aliquet turpis. Etiam in mattis dolor.\n";
 
 	private static Random random = new Random(0);
 
@@ -61,20 +65,19 @@ public class UserSeeder {
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
 		}
 	}
 
-	private void addExorcist(int id, int nbServices, int nbEvaluations) throws Exception {
+	private void addExorcist(int id, int nbServices, int nbEvaluations) {
 
 		List<Canton> cantons = (List<Canton>)cantonRepository.findAll();
 		List<Demon> demons = (List<Demon>)demonRepository.findAll();
 
 		User u = new User("exorcist" + id, bCryptPasswordEncoder.encode("12345678"), "exorcist" + id + "@email.com",
-				RoleSeeder.exorcistRole);
+				roleSeeder.getExorcistRole());
 
 		userRepository.save(u);
-		Exorcist e = new Exorcist(u, lorem, "+41 32 123 12 " + id, cantons.get(random.nextInt(cantons.size())));
+		Exorcist e = new Exorcist(u, description, "+41 32 123 12 " + id, cantons.get(random.nextInt(cantons.size())));
 		exorcistRepository.save(e);
 
 		for (int i = 0; i < nbServices; i++) {
@@ -94,9 +97,9 @@ public class UserSeeder {
 		}
 	}
 
-	private void addCustomer() throws Exception {
+	private void addCustomer() {
 		User newCustomer = new User("customer", bCryptPasswordEncoder.encode("12345678"), "customer@email.com",
-				RoleSeeder.customerRole);
+				roleSeeder.getCustomerRole());
 		newCustomer = userRepository.save(newCustomer);
 
 		Customer c = new Customer(newCustomer);

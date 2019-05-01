@@ -22,43 +22,50 @@ public class RoleSeeder {
 	@Autowired
 	private PrivilegeRepository privilegeRepository;
 
-	public static Role customerRole;
-	public static Role exorcistRole;
+	private Role customerRole;
+	private Role exorcistRole;
 
 	public void run() {
 		// Prepare Privileges
-		Privilege profil_edit = privilegeRepository.findByName("PROFIL_EDIT");
+		Privilege profilEdit = privilegeRepository.findByName("PROFIL_EDIT");
 		Privilege comment = privilegeRepository.findByName("COMMENT");
-		Privilege show_details = privilegeRepository.findByName("SHOW_DETAILS");
+		Privilege showDetails = privilegeRepository.findByName("SHOW_DETAILS");
 		Privilege note = privilegeRepository.findByName("NOTE");
-		Privilege account_delete = privilegeRepository.findByName("ACCOUNT_DELETE");
-		Privilege account_edit = privilegeRepository.findByName("ACCOUNT_EDIT");
+		Privilege accountDelete = privilegeRepository.findByName("ACCOUNT_DELETE");
+		Privilege accountEdit = privilegeRepository.findByName("ACCOUNT_EDIT");
 
-		Set<Privilege> customerPrivileges = new HashSet<Privilege>();
+		Set<Privilege> customerPrivileges = new HashSet<>();
 		customerPrivileges.add(comment);
-		customerPrivileges.add(show_details);
+		customerPrivileges.add(showDetails);
 		customerPrivileges.add(note);
-		customerPrivileges.add(account_delete);
-		customerPrivileges.add(account_edit);
+		customerPrivileges.add(accountDelete);
+		customerPrivileges.add(accountEdit);
 
-		Set<Privilege> exorcistPrivileges = new HashSet<Privilege>();
-		exorcistPrivileges.add(profil_edit);
-		exorcistPrivileges.add(account_delete);
-		exorcistPrivileges.add(account_edit);
+		Set<Privilege> exorcistPrivileges = new HashSet<>();
+		exorcistPrivileges.add(profilEdit);
+		exorcistPrivileges.add(accountDelete);
+		exorcistPrivileges.add(accountEdit);
 
 		// Drop data
 		roleRepository.deleteAll();
 
 		// Insert data
-		Role customerRole = new Role("ROLE_CUSTOMER");
+		customerRole = new Role("ROLE_CUSTOMER");
 		customerRole.setPrivileges(customerPrivileges);
 		customerRole = roleRepository.save(customerRole);
 
-		Role exorcistRole = new Role("ROLE_EXORCIST");
+		exorcistRole = new Role("ROLE_EXORCIST");
 		exorcistRole.setPrivileges(exorcistPrivileges);
 		exorcistRole = roleRepository.save(exorcistRole);
-
-		RoleSeeder.customerRole = customerRole;
-		RoleSeeder.exorcistRole = exorcistRole;
+	}
+	
+	public Role getCustomerRole()
+	{
+		return customerRole;
+	}
+	
+	public Role getExorcistRole()
+	{
+		return exorcistRole;
 	}
 }

@@ -1,5 +1,6 @@
 package ch.hearc.holygram.security;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -9,7 +10,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import ch.hearc.holygram.models.User;
 
-public class HolygramUserDetails implements UserDetails {
+public class HolygramUserDetails implements UserDetails, Serializable {
 	private static final long serialVersionUID = 1L;
 	private User user;
 
@@ -19,8 +20,7 @@ public class HolygramUserDetails implements UserDetails {
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		final List<GrantedAuthority> authorities = Collections.singletonList(new SimpleGrantedAuthority(user.getRole().getName()));
-		return authorities;
+		return Collections.singletonList(new SimpleGrantedAuthority(user.getRole().getName()));
 	}
 
 	@Override

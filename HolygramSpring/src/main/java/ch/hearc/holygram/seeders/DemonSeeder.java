@@ -31,7 +31,7 @@ public class DemonSeeder {
 		// Get religions
 		List<Religion> religions = (List<Religion>) religionRepository.findAll();
 
-		List<String> demons = new ArrayList<String>();
+		List<String> demons = new ArrayList<>();
 		demons.add("Ghost");
 		demons.add("Djinn");
 		demons.add("Vampir");

@@ -69,7 +69,7 @@ public class EvaluationController {
             userRepository.findAll();
             User uc = userRepository.findById(customerId).get();
             if(uc.getCustomer() == null)
-                throw new Exception("an exorcist can't evaluate an exorcist");
+                throw new Exception();
             Customer c = customerRepository.findByUser(uc);
             eval.setCustomer(c);
 
@@ -78,7 +78,6 @@ public class EvaluationController {
 
             evaluationRepository.save(eval);
         } catch (Exception e) {
-            System.out.println(e);
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         HttpHeaders headers = new HttpHeaders();

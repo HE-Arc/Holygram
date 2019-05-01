@@ -58,7 +58,6 @@ public class ExorcistController {
 		Optional<User> ouser = userRepository.findById((long) id);
 
 		if (!ouser.isPresent()) {
-			System.out.println("invalid user");
 			return "redirect:/";
 		}
 
@@ -66,7 +65,6 @@ public class ExorcistController {
 
 		Exorcist e = exorcistRepository.findByUser(u);
 		if (e == null) {
-			System.out.println("not an exorcist");
 			return "redirect:/";
 		}
 
@@ -113,7 +111,7 @@ public class ExorcistController {
 
 			HttpHeaders headers = new HttpHeaders();
 			headers.add("Location", "/exorcist/" + profileId);
-			return new ResponseEntity<Exorcist>(headers, HttpStatus.FOUND);
+			return new ResponseEntity<>(headers, HttpStatus.FOUND);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}

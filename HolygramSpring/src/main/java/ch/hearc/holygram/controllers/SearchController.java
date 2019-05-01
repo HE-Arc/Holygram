@@ -7,12 +7,12 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import ch.hearc.holygram.data.SearchResultDataWrapper;
-import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Demon;
 import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.Service;
@@ -40,31 +40,31 @@ public class SearchController {
 
     private static final int PAGE_SIZE = 15;
 
-    @RequestMapping(value = "/search", method = {RequestMethod.POST, RequestMethod.GET})
+    @GetMapping(value = "/search")
     public String search(Map<String, Object> model) {
         model.put("demons", dr.findAll());
         model.put("cantons", cr.findAll());
         return "search";
     }
 
-    @RequestMapping(value = "/search/process", method = RequestMethod.GET, headers = "Accept=application/json", produces = "application/json")
-    public String process(Map<String, Object> model, @RequestParam("input_demon") Long demon_id,
+    @GetMapping(value = "/search/process", headers = "Accept=application/json", produces = "application/json")
+    public String process(Map<String, Object> model, @RequestParam("input_demon") Long demonId,
                           @RequestParam("input_renown") Optional<Integer> renown,
-                          @RequestParam("input_canton") Optional<Long> canton_id,
+                          @RequestParam("input_canton") Optional<Long> cantonId,
                           @RequestParam("input_price") Optional<Integer> price, @RequestParam("page") Optional<Integer> page) {
 
         List<SearchResultDataWrapper> datas = new ArrayList<SearchResultDataWrapper>();
 
         // Data
-        Demon demon = dr.findById(demon_id).get();
+        Demon demon = dr.findById(demonId).get();
 
         for (Service s : sr.findAllServiceByDemon(demon)) {
             Exorcist e = s.getExorcist();
-            if (canton_id.isPresent() && e.getCanton().getId() != canton_id.get())
-                continue;
-            if (price.isPresent() && s.getPrice() > price.get())
-                continue;
-            if (renown.isPresent() && e.getRenown() < renown.get())
+            boolean b = cantonId.isPresent() && e.getCanton().getId() != cantonId.get();
+            b |= price.isPresent() && s.getPrice() > price.get();
+            b |= renown.isPresent() && e.getRenown() < renown.get();
+            
+            if (b)
                 continue;
 
             // Exorcist is corresponding
@@ -91,15 +91,15 @@ public class SearchController {
             currentPage = 1;
         }
 
-        List<SearchResultDataWrapper> pageData = new ArrayList<SearchResultDataWrapper>();
+        List<SearchResultDataWrapper> pageData = new ArrayList<>();
         for(int i = (currentPage - 1) * PAGE_SIZE; i < currentPage * PAGE_SIZE && i < datas.size(); i++)
         {
             pageData.add(datas.get(i));
         }
 
-        String currentUrl = "/search/process?input_demon=" + demon_id;
+        String currentUrl = "/search/process?input_demon=" + demonId;
         currentUrl += renown.isPresent() ? "&input_renown=" + renown.get() : "";
-        currentUrl += canton_id.isPresent() ? "&input_canton=" + canton_id.get() : "";
+        currentUrl += cantonId.isPresent() ? "&input_canton=" + cantonId.get() : "";
         currentUrl += price.isPresent() ? "&input_price=" + price.get() : "";
 
         model.put("currentUrl", currentUrl);

@@ -36,7 +36,7 @@ public class Customer {
 	}
 
 	public Customer() {
-		this.evaluations = new HashSet<Evaluation>();
+		this.evaluations = new HashSet<>();
 	}
 
 	public Long getId() {
@@ -65,7 +65,6 @@ public class Customer {
 
 	@Override
 	public int hashCode() {
-		// TODO Auto-generated method stub
 		return id.hashCode();
 	}
 }

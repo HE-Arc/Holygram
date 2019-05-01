@@ -110,8 +110,6 @@ public class UserController {
 			securityService.autoLogin(user.getUsername(), user.getPasswordConfirm());
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 
 		return "redirect:/";
@@ -121,10 +119,7 @@ public class UserController {
 	public String formExorcist(Model model) {
 		Iterable<Canton> cantons = cantonRepository.findAll();
 		model.addAttribute("cantons", cantons);
-
-		System.out.println("");
-		System.out.println("pika");
-		System.out.println("");
+		
 		return "fragments/signup :: exorcist";
 	}
 }

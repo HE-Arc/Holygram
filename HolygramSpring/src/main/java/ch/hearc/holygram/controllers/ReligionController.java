@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MimeTypeUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,7 +20,7 @@ public class ReligionController {
 	@Autowired
 	ReligionRepository religionRepository;
 
-	@RequestMapping(value = "", method = RequestMethod.GET, produces = {
+	@GetMapping(value = "", produces = {
 			MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
 	public ResponseEntity<Iterable<Religion>> findAll() {
 		try {
@@ -30,7 +31,7 @@ public class ReligionController {
 
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = {
+	@GetMapping(value = "/{id}", produces = {
 			MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
 	public ResponseEntity<Religion> findAll(@PathVariable long id) {
 		try {

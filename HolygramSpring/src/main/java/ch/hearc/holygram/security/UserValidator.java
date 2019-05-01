@@ -22,14 +22,16 @@ public class UserValidator implements Validator {
     @Override
     public void validate(Object o, Errors errors) {
         User user = (User) o;
+        
+        final String u = "username";
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, u, "NotEmpty");
         if (user.getUsername().length() < 6 || user.getUsername().length() > 32) {
-            errors.rejectValue("username", "Size.user.username");
+            errors.rejectValue(u, "Size.user.username");
         }
         
         if (userService.findByUsername(user.getUsername()) != null) {
-            errors.rejectValue("username", "Duplicate.user.username");
+            errors.rejectValue(u, "Duplicate.user.username");
         }
         
         if (userService.findByEmail(user.getEmail()) != null) {

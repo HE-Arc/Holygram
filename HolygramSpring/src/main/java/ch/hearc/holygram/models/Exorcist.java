@@ -58,8 +58,8 @@ public class Exorcist {
 		this.description = description;
 		this.phoneNumber = phoneNumber;
 		this.canton = canton;
-		this.evaluations = new ArrayList<Evaluation>();
-		this.services = new ArrayList<Service>();
+		this.evaluations = new ArrayList<>();
+		this.services = new ArrayList<>();
 	}
 
 	public Exorcist() {
@@ -117,15 +117,14 @@ public class Exorcist {
 
 	public int getRenown() {
 		// Get renown
-		List<Evaluation> e_evaluations = this.getEvaluations();
-		long e_evaluations_positives = e_evaluations.parallelStream().filter(x -> x.isPositive()).count();
-		float renown = e_evaluations_positives / (e_evaluations.size() * 1.0f);
+		List<Evaluation> eEvaluations = this.getEvaluations();
+		long eEvaluationsPositives = eEvaluations.parallelStream().filter(x -> x.isPositive()).count();
+		float renown = eEvaluationsPositives / (eEvaluations.size() * 1.0f);
 		return (int) (renown * 5);
 	}
 
 	@Override
 	public int hashCode() {
-		// TODO Auto-generated method stub
 		return id.hashCode();
 	}
 }

@@ -59,9 +59,9 @@ public class ServiceTest {
 
 		Service s = new Service(e, d, price);
 
-		Assert.isTrue(s.getDemon() == d, "Service's demon is invalid");
-		Assert.isTrue(s.getExorcist() == e, "Service's exorcist is invalid");
-		Assert.isTrue(s.getPrice() == price, "Service's price is invalid");
+		assertTrue(s.getDemon() == d);
+		assertTrue(s.getExorcist() == e);
+		assertTrue(s.getPrice() == price);
 	}
 
 	@Test

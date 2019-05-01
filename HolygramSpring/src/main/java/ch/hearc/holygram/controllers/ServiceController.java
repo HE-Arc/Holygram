@@ -9,7 +9,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MimeTypeUtils;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -39,7 +41,7 @@ public class ServiceController {
 	@Autowired
 	ExorcistRepository exorcistRepository;
 
-	@RequestMapping(value = "", method = RequestMethod.GET, produces = {
+	@GetMapping(value = "", produces = {
 			MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
 	public ResponseEntity<Iterable<Service>> findAll() {
 		try {
@@ -49,7 +51,7 @@ public class ServiceController {
 		}
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = {
+	@GetMapping(value = "/{id}", produces = {
 			MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
 	public ResponseEntity<Service> find(@PathVariable long id) {
 		try {
@@ -59,7 +61,7 @@ public class ServiceController {
 		}
 	}
 
-	@RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+	@GetMapping(value = "delete/{id}")
 	public ResponseEntity<Service> remove(@PathVariable long id) {
 		try {
 			HolygramUserDetails p = (HolygramUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -72,13 +74,13 @@ public class ServiceController {
 
 			HttpHeaders headers = new HttpHeaders();
 			headers.add("Location", "/exorcist/" + profileId + "?edit");
-			return new ResponseEntity<Service>(headers, HttpStatus.FOUND);
+			return new ResponseEntity<>(headers, HttpStatus.FOUND);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 	}
 
-	@RequestMapping(value = "add", method = RequestMethod.POST)
+	@PostMapping(value = "add")
 	public ResponseEntity<Service> add(@RequestBody MultiValueMap<String, String> formData) {
 		/*
 		 * Waiting for authentication to implement the correct gather of the exorcist id
@@ -99,7 +101,7 @@ public class ServiceController {
 
 			HttpHeaders headers = new HttpHeaders();
 			headers.add("Location", "/exorcist/" + profileId + "?edit");
-			return new ResponseEntity<Service>(headers, HttpStatus.FOUND);
+			return new ResponseEntity<>(headers, HttpStatus.FOUND);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
