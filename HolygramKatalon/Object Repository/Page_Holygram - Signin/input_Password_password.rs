@@ -3,7 +3,7 @@
    <description></description>
    <name>input_Password_password</name>
    <tag></tag>
-   <elementGuidId>3c3a42b8-2120-4ed8-b932-804be4e2044d</elementGuidId>
+   <elementGuidId>de0b3032-fc3a-46a8-9691-18def09c6aff</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -65,42 +65,49 @@
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
+      <type>Main</type>
       <value>//input[@id='password']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
+      <type>Main</type>
       <value>//form[@id='registerForm']/div[4]/div/div/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::input[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::input[2]</value>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Must contains between 6 and 32 characters'])[1]/following::input[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Must contains between 8 and 32 characters'])[1]/preceding::input[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Canton'])[1]/preceding::input[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Phone'])[1]/preceding::input[2]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
+      <type>Main</type>
       <value>//div[4]/div/div/input</value>
    </webElementXpaths>
 </WebElementEntity>

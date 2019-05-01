@@ -1,0 +1,8 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Basic,,,,2019-05-01 14:03:35,2019-05-01 14:03:36,0.986s,FAILED
+,,,,,,,
+Test Cases/AuthentificationCustomer,,,,2019-05-01 14:03:35,2019-05-01 14:03:36,0.554s,FAILED
+"openBrowser("""")",,,,2019-05-01 14:03:36,2019-05-01 14:03:36,0.233s,FAILED
+,,,,,,,
+Test Cases/AuthentificationExorcist,,,,2019-05-01 14:03:36,2019-05-01 14:03:36,0.219s,FAILED
+"openBrowser("""")",,,,2019-05-01 14:03:36,2019-05-01 14:03:36,0.011s,FAILED

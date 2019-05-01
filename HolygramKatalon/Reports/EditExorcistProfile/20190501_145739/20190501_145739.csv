@@ -1,0 +1,33 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+EditExorcistProfile,Chrome 73.0.3683.103,,,2019-05-01 14:57:41,2019-05-01 14:57:51,9.787s,FAILED
+,,,,,,,
+Test Cases/LoginExorcist,Chrome 73.0.3683.103,,,2019-05-01 14:57:41,2019-05-01 14:57:47,6.067s,PASSED
+"openBrowser("""")",Chrome 73.0.3683.103,,,2019-05-01 14:57:42,2019-05-01 14:57:46,4.193s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 73.0.3683.103,,,2019-05-01 14:57:46,2019-05-01 14:57:46,0.483s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Account""))",Chrome 73.0.3683.103,,,2019-05-01 14:57:46,2019-05-01 14:57:47,0.146s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Log in""))",Chrome 73.0.3683.103,,,2019-05-01 14:57:47,2019-05-01 14:57:47,0.292s,PASSED
+"setText(findTestObject(""Page_Please sign in/input_Username_username""), ""exorcist0"")",Chrome 73.0.3683.103,,,2019-05-01 14:57:47,2019-05-01 14:57:47,0.163s,PASSED
+"setEncryptedText(findTestObject(""Page_Please sign in/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 73.0.3683.103,,,2019-05-01 14:57:47,2019-05-01 14:57:47,0.172s,PASSED
+"click(findTestObject(""Page_Please sign in/button_Sign in""))",Chrome 73.0.3683.103,,,2019-05-01 14:57:47,2019-05-01 14:57:47,0.288s,PASSED
+,,,,,,,
+Test Cases/EditExorcistProfile,Chrome 73.0.3683.103,,,2019-05-01 14:57:47,2019-05-01 14:57:48,0.770s,PASSED
+"click(findTestObject(""Object Repository/a_exorcist0""))",Chrome 73.0.3683.103,,,2019-05-01 14:57:48,2019-05-01 14:57:48,0.072s,PASSED
+"click(findTestObject(""Object Repository/a_Profile""))",Chrome 73.0.3683.103,,,2019-05-01 14:57:48,2019-05-01 14:57:48,0.287s,PASSED
+"click(findTestObject(""Object Repository/button_exorcist0_btn btn-secondary""))",Chrome 73.0.3683.103,,,2019-05-01 14:57:48,2019-05-01 14:57:48,0.187s,PASSED
+,,,,,,,
+Test Cases/EditExorcistProfileAddRemoveService,Chrome 73.0.3683.103,,,2019-05-01 14:57:48,2019-05-01 14:57:50,2.054s,PASSED
+"selectOptionByValue(findTestObject(""Object Repository/selectReligion""), ""1"", true)",Chrome 73.0.3683.103,,,2019-05-01 14:57:48,2019-05-01 14:57:49,0.485s,PASSED
+"selectOptionByValue(findTestObject(""Object Repository/select_GhostSatan""), ""9"", true)",Chrome 73.0.3683.103,,,2019-05-01 14:57:49,2019-05-01 14:57:49,0.223s,PASSED
+"setText(findTestObject(""Object Repository/input_Price_price""), ""1234"")",Chrome 73.0.3683.103,,,2019-05-01 14:57:49,2019-05-01 14:57:49,0.143s,PASSED
+"click(findTestObject(""Object Repository/button_Price_btn btn-sm btn-success""))",Chrome 73.0.3683.103,,,2019-05-01 14:57:49,2019-05-01 14:57:49,0.213s,PASSED
+"click(findTestObject(""Object Repository/button_Satan_btn btn-sm btn-danger""))",Chrome 73.0.3683.103,,,2019-05-01 14:57:49,2019-05-01 14:57:50,0.192s,PASSED
+closeBrowser(),Chrome 73.0.3683.103,,,2019-05-01 14:57:50,2019-05-01 14:57:50,0.608s,PASSED
+,,,,,,,
+Test Cases/EditExorcistProfileChangeInfos,Chrome 73.0.3683.103,,,2019-05-01 14:57:50,2019-05-01 14:57:51,0.259s,FAILED
+"selectOptionByValue(findTestObject(""Object Repository/selectCanton""), ""13"", true)",Chrome 73.0.3683.103,,,2019-05-01 14:57:51,2019-05-01 14:57:51,0.019s,FAILED
+,,,,,,,
+Test Cases/EditExorcistProfileSave,Chrome 73.0.3683.103,,,2019-05-01 14:57:51,2019-05-01 14:57:51,0.214s,FAILED
+"click(findTestObject(""Object Repository/button_exorcist0_submitExorcist""))",Chrome 73.0.3683.103,,,2019-05-01 14:57:51,2019-05-01 14:57:51,0.007s,FAILED
+,,,,,,,
+Test Cases/LogoffExorcist,Chrome 73.0.3683.103,,,2019-05-01 14:57:51,2019-05-01 14:57:51,0.181s,FAILED
+"click(findTestObject(""Object Repository/Page_Holygram/a_customer""))",Chrome 73.0.3683.103,,,2019-05-01 14:57:51,2019-05-01 14:57:51,0.006s,FAILED

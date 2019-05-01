@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Search" time="10" tests="3" failures="1" errors="0">
+   <testsuite name="Search" tests="3" failures="1" errors="0" time="10" timestamp="2019-05-01 14:38:43" hostname="Raphael - 157.26.66.100" id="Test Suites/Search">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Search\\20190501_143841"/>
+         <property name="logFiles" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Search\\20190501_143841\\execution0.log"/>
+         <property name="attachments" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Search\\20190501_143841\\1556714333152.png"/>
+         <property name="hostName" value="Raphael - 157.26.66.100"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.1.2.2"/>
+         <property name="browser" value="Chrome 73.0.3683.103"/>
+         <property name="hostAddress" value="157.26.66.100"/>
+         <property name="sessionId" value="e160f74f1f22b1bde877c194e2b0b004"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/LoginCustomer" classname="Test Cases/LoginCustomer" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:38:43 - [TEST_CASE][PASSED] - Test Cases/LoginCustomer: Test Cases/LoginCustomer
+
+2019-05-01 14:38:44 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-01 14:38:44 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver
+
+2019-05-01 14:38:44 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-05-01 14:38:48 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-01 14:38:48 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:38:48 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:38:48 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Account")): Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:38:49 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:38:49 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Log in")): Object: 'Object Repository/Page_Holygram/a_Log in' is clicked on
+
+2019-05-01 14:38:49 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Log in' is clicked on
+
+2019-05-01 14:38:49 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Please sign in/input_Username_username"), "customer"): Text 'customer' is set on object 'Object Repository/Page_Please sign in/input_Username_username'
+
+2019-05-01 14:38:49 - [MESSAGE][PASSED] - Text 'customer' is set on object 'Object Repository/Page_Please sign in/input_Username_username'
+
+2019-05-01 14:38:49 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Please sign in/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password'
+
+2019-05-01 14:38:49 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password'
+
+2019-05-01 14:38:49 - [TEST_STEP][PASSED] - click(findTestObject("Page_Please sign in/button_Sign in")): Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-05-01 14:38:50 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SearchSimple" classname="Test Cases/SearchSimple" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:38:50 - [TEST_CASE][PASSED] - Test Cases/SearchSimple: Test Cases/SearchSimple
+
+2019-05-01 14:38:50 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Search            an exorcist")): Object: 'Object Repository/Page_Holygram/a_Search            an exorcist' is clicked on
+
+2019-05-01 14:38:50 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Search            an exorcist' is clicked on
+
+2019-05-01 14:38:50 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_Holygram/selectDemon"), "4", true): All options with value '4' are selected in object 'Object Repository/Page_Holygram/selectDemon'  using regular expression
+
+2019-05-01 14:38:50 - [MESSAGE][PASSED] - All options with value '4' are selected in object 'Object Repository/Page_Holygram/selectDemon'  using regular expression
+
+2019-05-01 14:38:50 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/button_Search")): Object: 'Object Repository/Page_Holygram/button_Search' is clicked on
+
+2019-05-01 14:38:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/button_Search' is clicked on
+
+2019-05-01 14:38:51 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_exorcist3")): Object: 'Object Repository/Page_Holygram/a_exorcist3' is clicked on
+
+2019-05-01 14:38:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_exorcist3' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SearchAdvance" classname="Test Cases/SearchAdvance" status="FAILED">
+         <failure type="FAILED" message="Test Cases/SearchAdvance FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text '100' of object 'Object Repository/Page_Holygram/input_Max price_input_price'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at SearchAdvance.run(SearchAdvance:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556714321595.run(TempTestSuite1556714321595.groovy:35)
+Caused by: org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: headless chrome=73.0.3683.103)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'RAPHAEL-PC', ip: '157.26.66.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.68 (47787ec04b6e3..., userDataDir: G:\temp\scoped_dir16060_9779}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54802}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(direct), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: e160f74f1f22b1bde877c194e2b0b004
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.doCall(SetTextKeyword.groovy:53)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.call(SetTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at Script1556714000713.run(Script1556714000713.groovy:30)
+	... 13 more
+"/>
+         <system-out><![CDATA[2019-05-01 14:38:51 - [TEST_CASE][FAILED] - Test Cases/SearchAdvance: Test Cases/SearchAdvance FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text '100' of object 'Object Repository/Page_Holygram/input_Max price_input_price'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at SearchAdvance.run(SearchAdvance:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556714321595.run(TempTestSuite1556714321595.groovy:35)
+Caused by: org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: headless chrome=73.0.3683.103)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'RAPHAEL-PC', ip: '157.26.66.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.68 (47787ec04b6e3..., userDataDir: G:\temp\scoped_dir16060_9779}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54802}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(direct), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: e160f74f1f22b1bde877c194e2b0b004
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.doCall(SetTextKeyword.groovy:53)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.call(SetTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at Script1556714000713.run(Script1556714000713.groovy:30)
+	... 13 more
+
+
+2019-05-01 14:38:51 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Search            an exorcist")): Object: 'Object Repository/Page_Holygram/a_Search            an exorcist' is clicked on
+
+2019-05-01 14:38:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Search            an exorcist' is clicked on
+
+2019-05-01 14:38:51 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_Holygram/selectDemon"), "8", true): All options with value '8' are selected in object 'Object Repository/Page_Holygram/selectDemon'  using regular expression
+
+2019-05-01 14:38:52 - [MESSAGE][PASSED] - All options with value '8' are selected in object 'Object Repository/Page_Holygram/selectDemon'  using regular expression
+
+2019-05-01 14:38:52 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/input")): Object: 'Object Repository/Page_Holygram/input' is clicked on
+
+2019-05-01 14:38:52 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/input' is clicked on
+
+2019-05-01 14:38:52 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_Holygram/selectCanton"), "17", true): All options with value '17' are selected in object 'Object Repository/Page_Holygram/selectCanton'  using regular expression
+
+2019-05-01 14:38:52 - [MESSAGE][PASSED] - All options with value '17' are selected in object 'Object Repository/Page_Holygram/selectCanton'  using regular expression
+
+2019-05-01 14:38:52 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/input")): Object: 'Object Repository/Page_Holygram/input' is clicked on
+
+2019-05-01 14:38:52 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/input' is clicked on
+
+2019-05-01 14:38:52 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/input")): Object: 'Object Repository/Page_Holygram/input' is clicked on
+
+2019-05-01 14:38:53 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/input' is clicked on
+
+2019-05-01 14:38:53 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/div_Max price")): Object: 'Object Repository/Page_Holygram/div_Max price' is clicked on
+
+2019-05-01 14:38:53 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/div_Max price' is clicked on
+
+2019-05-01 14:38:53 - [TEST_STEP][FAILED] - setText(findTestObject("Object Repository/Page_Holygram/input_Max price_input_price"), "100"): Unable to set text '100' of object 'Object Repository/Page_Holygram/input_Max price_input_price' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to set text '100' of object 'Object Repository/Page_Holygram/input_Max price_input_price'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at SearchAdvance.run(SearchAdvance:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556714321595.run(TempTestSuite1556714321595.groovy:35)
+Caused by: org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: headless chrome=73.0.3683.103)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'RAPHAEL-PC', ip: '157.26.66.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.68 (47787ec04b6e3..., userDataDir: G:\temp\scoped_dir16060_9779}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54802}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(direct), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: e160f74f1f22b1bde877c194e2b0b004
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.doCall(SetTextKeyword.groovy:53)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.call(SetTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at Script1556714000713.run(Script1556714000713.groovy:30)
+	... 13 more
+)
+
+2019-05-01 14:38:53 - [MESSAGE][FAILED] - Unable to set text '100' of object 'Object Repository/Page_Holygram/input_Max price_input_price' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to set text '100' of object 'Object Repository/Page_Holygram/input_Max price_input_price'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at SearchAdvance.run(SearchAdvance:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556714321595.run(TempTestSuite1556714321595.groovy:35)
+Caused by: org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: headless chrome=73.0.3683.103)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'RAPHAEL-PC', ip: '157.26.66.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.68 (47787ec04b6e3..., userDataDir: G:\temp\scoped_dir16060_9779}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54802}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(direct), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: e160f74f1f22b1bde877c194e2b0b004
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.doCall(SetTextKeyword.groovy:53)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.call(SetTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at Script1556714000713.run(Script1556714000713.groovy:30)
+	... 13 more
+)
+[[ATTACHMENT|C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Search\\20190501_143841\\1556714333152.png]]]]></system-out>
+         <system-err><![CDATA[2019-05-01 14:38:51 - [TEST_CASE][FAILED] - Test Cases/SearchAdvance: Test Cases/SearchAdvance FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text '100' of object 'Object Repository/Page_Holygram/input_Max price_input_price'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at SearchAdvance.run(SearchAdvance:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556714321595.run(TempTestSuite1556714321595.groovy:35)
+Caused by: org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: headless chrome=73.0.3683.103)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'RAPHAEL-PC', ip: '157.26.66.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.68 (47787ec04b6e3..., userDataDir: G:\temp\scoped_dir16060_9779}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54802}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(direct), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: e160f74f1f22b1bde877c194e2b0b004
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.doCall(SetTextKeyword.groovy:53)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.call(SetTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at Script1556714000713.run(Script1556714000713.groovy:30)
+	... 13 more]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/LogoffCustomer" classname="Test Cases/LogoffCustomer" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:38:53 - [TEST_CASE][PASSED] - Test Cases/LogoffCustomer: Test Cases/LogoffCustomer
+
+2019-05-01 14:38:53 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_customer")): Object: 'Object Repository/Page_Holygram/a_customer' is clicked on
+
+2019-05-01 14:38:53 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_customer' is clicked on
+
+2019-05-01 14:38:53 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Disconnect")): Object: 'Object Repository/Page_Holygram/a_Disconnect' is clicked on
+
+2019-05-01 14:38:53 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Disconnect' is clicked on
+
+2019-05-01 14:38:53 - [TEST_STEP][PASSED] - click(findTestObject("Page_Confirm Log Out/button_Log Out")): Object: 'Object Repository/Page_Confirm Log Out/button_Log Out' is clicked on
+
+2019-05-01 14:38:53 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Confirm Log Out/button_Log Out' is clicked on
+
+2019-05-01 14:38:53 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-01 14:38:54 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-05-01 14:38:43 - [TEST_SUITE][FAILED] - Search: Test Cases/SearchAdvance FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text '100' of object 'Object Repository/Page_Holygram/input_Max price_input_price'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at SearchAdvance.run(SearchAdvance:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556714321595.run(TempTestSuite1556714321595.groovy:35)
+Caused by: org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: headless chrome=73.0.3683.103)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'RAPHAEL-PC', ip: '157.26.66.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.68 (47787ec04b6e3..., userDataDir: G:\temp\scoped_dir16060_9779}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54802}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(direct), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: e160f74f1f22b1bde877c194e2b0b004
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.doCall(SetTextKeyword.groovy:53)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.call(SetTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at Script1556714000713.run(Script1556714000713.groovy:30)
+	... 13 more]]></system-out>
+      <system-err><![CDATA[2019-05-01 14:38:43 - [TEST_SUITE][FAILED] - Search: Test Cases/SearchAdvance FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text '100' of object 'Object Repository/Page_Holygram/input_Max price_input_price'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at SearchAdvance.run(SearchAdvance:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556714321595.run(TempTestSuite1556714321595.groovy:35)
+Caused by: org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: headless chrome=73.0.3683.103)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'RAPHAEL-PC', ip: '157.26.66.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.68 (47787ec04b6e3..., userDataDir: G:\temp\scoped_dir16060_9779}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54802}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(direct), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: e160f74f1f22b1bde877c194e2b0b004
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.doCall(SetTextKeyword.groovy:53)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword$_setText_closure1.call(SetTextKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:66)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$2.call(Unknown Source)
+	at Script1556714000713.run(Script1556714000713.groovy:30)
+	... 13 more]]></system-err>
+   </testsuite>
+</testsuites>

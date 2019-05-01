@@ -3,7 +3,7 @@
    <description></description>
    <name>input_Username_username</name>
    <tag></tag>
-   <elementGuidId>a9c135c6-05f4-46c1-ba92-effc7a73d861</elementGuidId>
+   <elementGuidId>be4c45ab-65e8-44c2-9c86-7b13ba7e5c5e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -72,42 +72,49 @@
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
+      <type>Main</type>
       <value>//input[@id='username']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
+      <type>Main</type>
       <value>//form[@id='registerForm']/div[2]/div/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Username'])[1]/following::input[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Exorcist'])[1]/following::input[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/preceding::input[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/preceding::input[2]</value>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Must contains between 6 and 32 characters'])[1]/preceding::input[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//form/div[2]/div/input</value>
+      <type>Main</type>
+      <value>//div[2]/div/input</value>
    </webElementXpaths>
 </WebElementEntity>

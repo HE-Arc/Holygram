@@ -3,7 +3,7 @@
    <description></description>
    <name>a_Search            an exorcist</name>
    <tag></tag>
-   <elementGuidId>a1dd5cd4-bf78-4899-b3ae-37591cb05378</elementGuidId>
+   <elementGuidId>130a6932-c3d5-4a46-986d-95f513be38bc</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -54,6 +54,7 @@
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:link</name>
+      <type>Main</type>
       <value>//a[contains(text(),'Search
             an exorcist')]</value>
    </webElementXpaths>
@@ -61,30 +62,35 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::a[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='customer'])[1]/preceding::a[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Disconnect'])[1]/preceding::a[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:href</name>
+      <type>Main</type>
       <value>//a[contains(@href, '/search')]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
+      <type>Main</type>
       <value>//li[2]/a</value>
    </webElementXpaths>
 </WebElementEntity>

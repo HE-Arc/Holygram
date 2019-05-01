@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="EditExorcistProfile" time="11" tests="6" failures="0" errors="0">
+   <testsuite name="EditExorcistProfile" tests="6" failures="0" errors="0" time="11" timestamp="2019-05-01 14:58:56" hostname="Raphael - 157.26.66.100" id="Test Suites/EditExorcistProfile">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\EditExorcistProfile\\20190501_145853"/>
+         <property name="logFiles" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\EditExorcistProfile\\20190501_145853\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Raphael - 157.26.66.100"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.1.2.2"/>
+         <property name="browser" value="Chrome 73.0.3683.103"/>
+         <property name="hostAddress" value="157.26.66.100"/>
+         <property name="sessionId" value="107f6f820ca3104fe7b8e4966d1b9404"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/LoginExorcist" classname="Test Cases/LoginExorcist" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:58:56 - [TEST_CASE][PASSED] - Test Cases/LoginExorcist: Test Cases/LoginExorcist
+
+2019-05-01 14:58:56 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-01 14:58:56 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver
+
+2019-05-01 14:58:56 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-05-01 14:59:00 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-01 14:59:00 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:59:01 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:59:01 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Account")): Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:59:01 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:59:01 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Log in")): Object: 'Object Repository/Page_Holygram/a_Log in' is clicked on
+
+2019-05-01 14:59:01 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Log in' is clicked on
+
+2019-05-01 14:59:01 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Please sign in/input_Username_username"), "exorcist0"): Text 'exorcist0' is set on object 'Object Repository/Page_Please sign in/input_Username_username'
+
+2019-05-01 14:59:02 - [MESSAGE][PASSED] - Text 'exorcist0' is set on object 'Object Repository/Page_Please sign in/input_Username_username'
+
+2019-05-01 14:59:02 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Please sign in/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password'
+
+2019-05-01 14:59:02 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password'
+
+2019-05-01 14:59:02 - [TEST_STEP][PASSED] - click(findTestObject("Page_Please sign in/button_Sign in")): Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-05-01 14:59:02 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/EditExorcistProfile" classname="Test Cases/EditExorcistProfile" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:59:02 - [TEST_CASE][PASSED] - Test Cases/EditExorcistProfile: Test Cases/EditExorcistProfile
+
+2019-05-01 14:59:02 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/a_exorcist0")): Object: 'Object Repository/a_exorcist0' is clicked on
+
+2019-05-01 14:59:02 - [MESSAGE][PASSED] - Object: 'Object Repository/a_exorcist0' is clicked on
+
+2019-05-01 14:59:02 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/a_Profile")): Object: 'Object Repository/a_Profile' is clicked on
+
+2019-05-01 14:59:03 - [MESSAGE][PASSED] - Object: 'Object Repository/a_Profile' is clicked on
+
+2019-05-01 14:59:03 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/button_exorcist0_btn btn-secondary")): Object: 'Object Repository/button_exorcist0_btn btn-secondary' is clicked on
+
+2019-05-01 14:59:03 - [MESSAGE][PASSED] - Object: 'Object Repository/button_exorcist0_btn btn-secondary' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/EditExorcistProfileAddRemoveService" classname="Test Cases/EditExorcistProfileAddRemoveService" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:59:03 - [TEST_CASE][PASSED] - Test Cases/EditExorcistProfileAddRemoveService: Test Cases/EditExorcistProfileAddRemoveService
+
+2019-05-01 14:59:03 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/selectReligion"), "1", true): All options with value '1' are selected in object 'Object Repository/selectReligion'  using regular expression
+
+2019-05-01 14:59:04 - [MESSAGE][PASSED] - All options with value '1' are selected in object 'Object Repository/selectReligion'  using regular expression
+
+2019-05-01 14:59:04 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/select_GhostSatan"), "9", true): All options with value '9' are selected in object 'Object Repository/select_GhostSatan'  using regular expression
+
+2019-05-01 14:59:04 - [MESSAGE][PASSED] - All options with value '9' are selected in object 'Object Repository/select_GhostSatan'  using regular expression
+
+2019-05-01 14:59:04 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/input_Price_price"), "1234"): Text '1234' is set on object 'Object Repository/input_Price_price'
+
+2019-05-01 14:59:04 - [MESSAGE][PASSED] - Text '1234' is set on object 'Object Repository/input_Price_price'
+
+2019-05-01 14:59:04 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/button_Price_btn btn-sm btn-success")): Object: 'Object Repository/button_Price_btn btn-sm btn-success' is clicked on
+
+2019-05-01 14:59:04 - [MESSAGE][PASSED] - Object: 'Object Repository/button_Price_btn btn-sm btn-success' is clicked on
+
+2019-05-01 14:59:04 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/button_Satan_btn btn-sm btn-danger")): Object: 'Object Repository/button_Satan_btn btn-sm btn-danger' is clicked on
+
+2019-05-01 14:59:04 - [MESSAGE][PASSED] - Object: 'Object Repository/button_Satan_btn btn-sm btn-danger' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/EditExorcistProfileChangeInfos" classname="Test Cases/EditExorcistProfileChangeInfos" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:59:04 - [TEST_CASE][PASSED] - Test Cases/EditExorcistProfileChangeInfos: Test Cases/EditExorcistProfileChangeInfos
+
+2019-05-01 14:59:04 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/selectCanton"), "13", true): All options with value '13' are selected in object 'Object Repository/selectCanton'  using regular expression
+
+2019-05-01 14:59:05 - [MESSAGE][PASSED] - All options with value '13' are selected in object 'Object Repository/selectCanton'  using regular expression
+
+2019-05-01 14:59:05 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/div_Information                                                                                                                                Email")): Object: 'Object Repository/div_Information                                                                                                                                Email' is clicked on
+
+2019-05-01 14:59:05 - [MESSAGE][PASSED] - Object: 'Object Repository/div_Information                                                                                                                                Email' is clicked on
+
+2019-05-01 14:59:05 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/input_Phone number_phonenumber_input"), "+41 32 123 45 67"): Text '+41 32 123 45 67' is set on object 'Object Repository/input_Phone number_phonenumber_input'
+
+2019-05-01 14:59:05 - [MESSAGE][PASSED] - Text '+41 32 123 45 67' is set on object 'Object Repository/input_Phone number_phonenumber_input'
+
+2019-05-01 14:59:05 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/div_Information                                                                                                                                Email")): Object: 'Object Repository/div_Information                                                                                                                                Email' is clicked on
+
+2019-05-01 14:59:05 - [MESSAGE][PASSED] - Object: 'Object Repository/div_Information                                                                                                                                Email' is clicked on
+
+2019-05-01 14:59:05 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/textarea_Bonjour voici ma nouvelle description faite avec le test Katalon"), "Bonjour voici ma nouvelle description faite avec le test Katalon"): Text 'Bonjour voici ma nouvelle description faite avec le test Katalon' is set on object 'Object Repository/textarea_Bonjour voici ma nouvelle description faite avec le test Katalon'
+
+2019-05-01 14:59:06 - [MESSAGE][PASSED] - Text 'Bonjour voici ma nouvelle description faite avec le test Katalon' is set on object 'Object Repository/textarea_Bonjour voici ma nouvelle description faite avec le test Katalon']]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/EditExorcistProfileSave" classname="Test Cases/EditExorcistProfileSave" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:59:06 - [TEST_CASE][PASSED] - Test Cases/EditExorcistProfileSave: Test Cases/EditExorcistProfileSave
+
+2019-05-01 14:59:06 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/button_exorcist0_submitExorcist")): Object: 'Object Repository/button_exorcist0_submitExorcist' is clicked on
+
+2019-05-01 14:59:06 - [MESSAGE][PASSED] - Object: 'Object Repository/button_exorcist0_submitExorcist' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/LogoffExorcist" classname="Test Cases/LogoffExorcist" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:59:06 - [TEST_CASE][PASSED] - Test Cases/LogoffExorcist: Test Cases/LogoffExorcist
+
+2019-05-01 14:59:06 - [TEST_STEP][PASSED] - click(findTestObject("a_exorcist0")): Object: 'Object Repository/a_exorcist0' is clicked on
+
+2019-05-01 14:59:06 - [MESSAGE][PASSED] - Object: 'Object Repository/a_exorcist0' is clicked on
+
+2019-05-01 14:59:06 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Disconnect")): Object: 'Object Repository/Page_Holygram/a_Disconnect' is clicked on
+
+2019-05-01 14:59:06 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Disconnect' is clicked on
+
+2019-05-01 14:59:06 - [TEST_STEP][PASSED] - click(findTestObject("Page_Confirm Log Out/button_Log Out")): Object: 'Object Repository/Page_Confirm Log Out/button_Log Out' is clicked on
+
+2019-05-01 14:59:07 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Confirm Log Out/button_Log Out' is clicked on
+
+2019-05-01 14:59:07 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-01 14:59:07 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-05-01 14:58:56 - [TEST_SUITE][PASSED] - EditExorcistProfile: Test Cases/LogoffExorcist]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

@@ -3,7 +3,7 @@
    <description></description>
    <name>a_Log in</name>
    <tag></tag>
-   <elementGuidId>6559fd4f-1374-4ded-bc76-b144c45c6ef1</elementGuidId>
+   <elementGuidId>c64d5a63-6d1b-40ad-aed3-01a8c263f1e9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -53,36 +53,35 @@
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:link</name>
+      <type>Main</type>
       <value>//a[contains(text(),'Log in')]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Create'])[1]/following::a[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::a[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'logo', '&quot;', ')')])[1]/preceding::a[1]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath:href</name>
+      <type>Main</type>
       <value>//a[contains(@href, '/login')]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
+      <type>Main</type>
       <value>//a[2]</value>
    </webElementXpaths>
 </WebElementEntity>

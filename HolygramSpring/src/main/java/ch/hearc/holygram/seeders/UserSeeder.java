@@ -55,7 +55,7 @@ public class UserSeeder {
 
 			addCustomer();
 
-			for(int i = 0; i < 200; i++)
+			for(int i = 0; i < 5; i++)
 			{
 				addExorcist(i, random.nextInt(10), random.nextInt(10));
 			}

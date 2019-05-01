@@ -3,7 +3,7 @@
    <description></description>
    <name>button_Sign in</name>
    <tag></tag>
-   <elementGuidId>68efa258-9197-45c5-ba64-b48507aaa6d4</elementGuidId>
+   <elementGuidId>5683acf7-9b71-47e8-a444-9e8eaac9cf88</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -51,24 +51,28 @@
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
+      <type>Main</type>
       <value>//button[@type='submit']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Username'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
+      <type>Main</type>
       <value>//button</value>
    </webElementXpaths>
 </WebElementEntity>

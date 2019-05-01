@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Search" time="7" tests="2" failures="0" errors="0">
+   <testsuite name="Search" tests="2" failures="0" errors="0" time="7" timestamp="2019-05-01 14:27:05" hostname="Raphael - 157.26.66.100" id="Test Suites/Search">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Search\\20190501_142703"/>
+         <property name="logFiles" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Search\\20190501_142703\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Raphael - 157.26.66.100"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.1.2.2"/>
+         <property name="browser" value="Chrome 73.0.3683.103"/>
+         <property name="hostAddress" value="157.26.66.100"/>
+         <property name="sessionId" value="bc80e92c13b0038a9e690a807732110b"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/LoginCustomer" classname="Test Cases/LoginCustomer" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:27:05 - [TEST_CASE][PASSED] - Test Cases/LoginCustomer: Test Cases/LoginCustomer
+
+2019-05-01 14:27:05 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-01 14:27:06 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver
+
+2019-05-01 14:27:06 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-05-01 14:27:09 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-01 14:27:09 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:27:10 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:27:10 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Account")): Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:27:10 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:27:10 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Log in")): Object: 'Object Repository/Page_Holygram/a_Log in' is clicked on
+
+2019-05-01 14:27:11 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Log in' is clicked on
+
+2019-05-01 14:27:11 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Please sign in/input_Username_username"), "customer"): Text 'customer' is set on object 'Object Repository/Page_Please sign in/input_Username_username'
+
+2019-05-01 14:27:11 - [MESSAGE][PASSED] - Text 'customer' is set on object 'Object Repository/Page_Please sign in/input_Username_username'
+
+2019-05-01 14:27:11 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Please sign in/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password'
+
+2019-05-01 14:27:11 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password'
+
+2019-05-01 14:27:11 - [TEST_STEP][PASSED] - click(findTestObject("Page_Please sign in/button_Sign in")): Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-05-01 14:27:11 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/LogoffCustomer" classname="Test Cases/LogoffCustomer" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:27:11 - [TEST_CASE][PASSED] - Test Cases/LogoffCustomer: Test Cases/LogoffCustomer
+
+2019-05-01 14:27:11 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_customer")): Object: 'Object Repository/Page_Holygram/a_customer' is clicked on
+
+2019-05-01 14:27:11 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_customer' is clicked on
+
+2019-05-01 14:27:11 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Disconnect")): Object: 'Object Repository/Page_Holygram/a_Disconnect' is clicked on
+
+2019-05-01 14:27:12 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Disconnect' is clicked on
+
+2019-05-01 14:27:12 - [TEST_STEP][PASSED] - click(findTestObject("Page_Confirm Log Out/button_Log Out")): Object: 'Object Repository/Page_Confirm Log Out/button_Log Out' is clicked on
+
+2019-05-01 14:27:12 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Confirm Log Out/button_Log Out' is clicked on
+
+2019-05-01 14:27:12 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-01 14:27:12 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-05-01 14:27:05 - [TEST_SUITE][PASSED] - Search: Test Cases/LogoffCustomer]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Basic" time="49" tests="2" failures="1" errors="0">
+   <testsuite name="Basic" tests="2" failures="1" errors="0" time="49" timestamp="2019-05-01 14:16:40" hostname="Raphael - 157.26.66.100" id="Test Suites/Basic">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Basic\\20190501_141638"/>
+         <property name="logFiles" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Basic\\20190501_141638\\execution0.log"/>
+         <property name="attachments" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Basic\\20190501_141638\\1556713049326.png"/>
+         <property name="hostName" value="Raphael - 157.26.66.100"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.1.2.2"/>
+         <property name="browser" value="Chrome 73.0.3683.103"/>
+         <property name="hostAddress" value="157.26.66.100"/>
+         <property name="sessionId" value="010e43a599e845837dc68c7ad096b62f"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/AuthentificationCustomer" classname="Test Cases/AuthentificationCustomer" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:16:40 - [TEST_CASE][PASSED] - Test Cases/AuthentificationCustomer: Test Cases/AuthentificationCustomer
+
+2019-05-01 14:16:40 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-01 14:16:41 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver
+
+2019-05-01 14:16:41 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-05-01 14:16:44 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-01 14:16:44 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:16:45 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:16:45 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Account")): Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:16:45 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:16:45 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Log in")): Object: 'Object Repository/Page_Holygram/a_Log in' is clicked on
+
+2019-05-01 14:16:46 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Log in' is clicked on
+
+2019-05-01 14:16:46 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Please sign in/input_Username_username"), "exorcist0"): Text 'exorcist0' is set on object 'Object Repository/Page_Please sign in/input_Username_username'
+
+2019-05-01 14:16:46 - [MESSAGE][PASSED] - Text 'exorcist0' is set on object 'Object Repository/Page_Please sign in/input_Username_username'
+
+2019-05-01 14:16:46 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Please sign in/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password'
+
+2019-05-01 14:16:46 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password'
+
+2019-05-01 14:16:46 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Please sign in/button_Sign in")): Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-05-01 14:16:46 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-05-01 14:16:46 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_exorcist0")): Object: 'Object Repository/Page_Holygram/a_exorcist0' is clicked on
+
+2019-05-01 14:16:46 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_exorcist0' is clicked on
+
+2019-05-01 14:16:46 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Disconnect")): Object: 'Object Repository/Page_Holygram/a_Disconnect' is clicked on
+
+2019-05-01 14:16:46 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Disconnect' is clicked on
+
+2019-05-01 14:16:46 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Confirm Log Out/button_Log Out")): Object: 'Object Repository/Page_Confirm Log Out/button_Log Out' is clicked on
+
+2019-05-01 14:16:46 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Confirm Log Out/button_Log Out' is clicked on
+
+2019-05-01 14:16:46 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-01 14:16:47 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/AuthentificationExorcist" classname="Test Cases/AuthentificationExorcist" status="PASSED">
+         <system-out><![CDATA[2019-05-01 14:16:47 - [TEST_CASE][PASSED] - Test Cases/AuthentificationExorcist: Test Cases/AuthentificationExorcist
+
+2019-05-01 14:16:47 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-01 14:16:47 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver
+
+2019-05-01 14:16:50 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-01 14:16:50 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:16:51 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:16:51 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Account")): Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:16:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:16:51 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Log in")): Object: 'Object Repository/Page_Holygram/a_Log in' is clicked on
+
+2019-05-01 14:16:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Log in' is clicked on
+
+2019-05-01 14:16:51 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Please sign in/input_Username_username"), "customer"): Text 'customer' is set on object 'Object Repository/Page_Please sign in/input_Username_username'
+
+2019-05-01 14:16:51 - [MESSAGE][PASSED] - Text 'customer' is set on object 'Object Repository/Page_Please sign in/input_Username_username'
+
+2019-05-01 14:16:51 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Please sign in/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password'
+
+2019-05-01 14:16:51 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password'
+
+2019-05-01 14:16:51 - [TEST_STEP][PASSED] - click(findTestObject("Page_Please sign in/button_Sign in")): Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-05-01 14:16:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-05-01 14:16:51 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_customer")): Object: 'Object Repository/Page_Holygram/a_customer' is clicked on
+
+2019-05-01 14:16:52 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_customer' is clicked on
+
+2019-05-01 14:16:52 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Disconnect")): Object: 'Object Repository/Page_Holygram/a_Disconnect' is clicked on
+
+2019-05-01 14:16:52 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Disconnect' is clicked on
+
+2019-05-01 14:16:52 - [TEST_STEP][PASSED] - click(findTestObject("Page_Confirm Log Out/button_Log Out")): Object: 'Object Repository/Page_Confirm Log Out/button_Log Out' is clicked on
+
+2019-05-01 14:16:52 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Confirm Log Out/button_Log Out' is clicked on
+
+2019-05-01 14:16:52 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-01 14:16:52 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RegistrationExorcist" classname="Test Cases/RegistrationExorcist" status="FAILED">
+         <failure type="FAILED" message="Test Cases/RegistrationExorcist FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to select option by value 'NE' of object 'Object Repository/Page_Holygram - Signin/cantonSelect'  using regular expression
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at RegistrationExorcist.run(RegistrationExorcist:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556712998258.run(TempTestSuite1556712998258.groovy:35)
+Caused by: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Holygram - Signin/cantonSelect' located by 'By.xpath: ' not found
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1097)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.doCall(SelectOptionByValueKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.call(SelectOptionByValueKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at Script1556712763871.run(Script1556712763871.groovy:34)
+	... 13 more
+"/>
+         <system-out><![CDATA[2019-05-01 14:16:52 - [TEST_CASE][FAILED] - Test Cases/RegistrationExorcist: Test Cases/RegistrationExorcist FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to select option by value 'NE' of object 'Object Repository/Page_Holygram - Signin/cantonSelect'  using regular expression
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at RegistrationExorcist.run(RegistrationExorcist:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556712998258.run(TempTestSuite1556712998258.groovy:35)
+Caused by: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Holygram - Signin/cantonSelect' located by 'By.xpath: ' not found
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1097)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.doCall(SelectOptionByValueKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.call(SelectOptionByValueKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at Script1556712763871.run(Script1556712763871.groovy:34)
+	... 13 more
+
+
+2019-05-01 14:16:53 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-01 14:16:53 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver
+
+2019-05-01 14:16:55 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-01 14:16:55 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:16:56 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 14:16:56 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Account")): Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:16:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account' is clicked on
+
+2019-05-01 14:16:56 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram/a_Create")): Object: 'Object Repository/Page_Holygram/a_Create' is clicked on
+
+2019-05-01 14:16:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Create' is clicked on
+
+2019-05-01 14:16:56 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Holygram - Signin/label_Exorcist")): Object: 'Object Repository/Page_Holygram - Signin/label_Exorcist' is clicked on
+
+2019-05-01 14:16:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram - Signin/label_Exorcist' is clicked on
+
+2019-05-01 14:16:56 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Holygram - Signin/input_Username_username"), "super-exorcist"): Text 'super-exorcist' is set on object 'Object Repository/Page_Holygram - Signin/input_Username_username'
+
+2019-05-01 14:16:56 - [MESSAGE][PASSED] - Text 'super-exorcist' is set on object 'Object Repository/Page_Holygram - Signin/input_Username_username'
+
+2019-05-01 14:16:56 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Holygram - Signin/input_Email_email"), "super-exorcist@mail.com"): Text 'super-exorcist@mail.com' is set on object 'Object Repository/Page_Holygram - Signin/input_Email_email'
+
+2019-05-01 14:16:57 - [MESSAGE][PASSED] - Text 'super-exorcist@mail.com' is set on object 'Object Repository/Page_Holygram - Signin/input_Email_email'
+
+2019-05-01 14:16:57 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Holygram - Signin/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/input_Password_password'
+
+2019-05-01 14:16:57 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/input_Password_password'
+
+2019-05-01 14:16:57 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Holygram - Signin/password2"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/password2'
+
+2019-05-01 14:16:57 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/password2'
+
+2019-05-01 14:16:57 - [TEST_STEP][FAILED] - selectOptionByValue(findTestObject("Object Repository/Page_Holygram - Signin/cantonSelect"), "NE", true): Unable to select option by value 'NE' of object 'Object Repository/Page_Holygram - Signin/cantonSelect'  using regular expression (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to select option by value 'NE' of object 'Object Repository/Page_Holygram - Signin/cantonSelect'  using regular expression
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at RegistrationExorcist.run(RegistrationExorcist:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556712998258.run(TempTestSuite1556712998258.groovy:35)
+Caused by: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Holygram - Signin/cantonSelect' located by 'By.xpath: ' not found
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1097)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.doCall(SelectOptionByValueKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.call(SelectOptionByValueKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at Script1556712763871.run(Script1556712763871.groovy:34)
+	... 13 more
+)
+
+2019-05-01 14:17:29 - [MESSAGE][INFO] - Unable to find the element located by 'By.xpath: '. Please recheck the objects properties to make sure the desired element is located. 
+
+2019-05-01 14:17:29 - [MESSAGE][FAILED] - Unable to select option by value 'NE' of object 'Object Repository/Page_Holygram - Signin/cantonSelect'  using regular expression (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to select option by value 'NE' of object 'Object Repository/Page_Holygram - Signin/cantonSelect'  using regular expression
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at RegistrationExorcist.run(RegistrationExorcist:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556712998258.run(TempTestSuite1556712998258.groovy:35)
+Caused by: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Holygram - Signin/cantonSelect' located by 'By.xpath: ' not found
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1097)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.doCall(SelectOptionByValueKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.call(SelectOptionByValueKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at Script1556712763871.run(Script1556712763871.groovy:34)
+	... 13 more
+)
+[[ATTACHMENT|C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Basic\\20190501_141638\\1556713049326.png]]]]></system-out>
+         <system-err><![CDATA[2019-05-01 14:16:52 - [TEST_CASE][FAILED] - Test Cases/RegistrationExorcist: Test Cases/RegistrationExorcist FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to select option by value 'NE' of object 'Object Repository/Page_Holygram - Signin/cantonSelect'  using regular expression
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at RegistrationExorcist.run(RegistrationExorcist:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556712998258.run(TempTestSuite1556712998258.groovy:35)
+Caused by: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Holygram - Signin/cantonSelect' located by 'By.xpath: ' not found
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1097)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.doCall(SelectOptionByValueKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.call(SelectOptionByValueKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at Script1556712763871.run(Script1556712763871.groovy:34)
+	... 13 more]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-05-01 14:16:40 - [TEST_SUITE][FAILED] - Basic: Test Cases/RegistrationExorcist FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to select option by value 'NE' of object 'Object Repository/Page_Holygram - Signin/cantonSelect'  using regular expression
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at RegistrationExorcist.run(RegistrationExorcist:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556712998258.run(TempTestSuite1556712998258.groovy:35)
+Caused by: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Holygram - Signin/cantonSelect' located by 'By.xpath: ' not found
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1097)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.doCall(SelectOptionByValueKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.call(SelectOptionByValueKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at Script1556712763871.run(Script1556712763871.groovy:34)
+	... 13 more]]></system-out>
+      <system-err><![CDATA[2019-05-01 14:16:40 - [TEST_SUITE][FAILED] - Basic: Test Cases/RegistrationExorcist FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to select option by value 'NE' of object 'Object Repository/Page_Holygram - Signin/cantonSelect'  using regular expression
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at RegistrationExorcist.run(RegistrationExorcist:34)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556712998258.run(TempTestSuite1556712998258.groovy:35)
+Caused by: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Holygram - Signin/cantonSelect' located by 'By.xpath: ' not found
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1097)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.doCall(SelectOptionByValueKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.call(SelectOptionByValueKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)
+	at com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)
+	at Script1556712763871.run(Script1556712763871.groovy:34)
+	... 13 more]]></system-err>
+   </testsuite>
+</testsuites>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Basic" time="12" tests="2" failures="0" errors="0">
+   <testsuite name="Basic" tests="2" failures="0" errors="0" time="12" timestamp="2019-05-01 13:55:46" hostname="Raphael - 157.26.66.100" id="Test Suites/Basic">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Basic\\20190501_135544"/>
+         <property name="logFiles" value="C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Reports\\Basic\\20190501_135544\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Raphael - 157.26.66.100"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.1.2.2"/>
+         <property name="browser" value="Chrome 73.0.3683.103"/>
+         <property name="hostAddress" value="157.26.66.100"/>
+         <property name="sessionId" value="f8cb6944c24e353570a0c6713dbb4176"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/Authentication" classname="Test Cases/Authentication" status="PASSED">
+         <system-out><![CDATA[2019-05-01 13:55:46 - [TEST_CASE][PASSED] - Test Cases/Authentication: Test Cases/Authentication
+
+2019-05-01 13:55:47 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-01 13:55:47 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-01 13:55:47 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-05-01 13:55:51 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-01 13:55:51 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 13:55:51 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 13:55:51 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Account (11)")): Object: 'Object Repository/Page_Holygram/a_Account (11)' is clicked on
+
+2019-05-01 13:55:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account (11)' is clicked on
+
+2019-05-01 13:55:51 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Log in (9)")): Object: 'Object Repository/Page_Holygram/a_Log in (9)' is clicked on
+
+2019-05-01 13:55:52 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Log in (9)' is clicked on
+
+2019-05-01 13:55:52 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Please sign in/input_Username_username (2)"), "exorcist"): Text 'exorcist' is set on object 'Object Repository/Page_Please sign in/input_Username_username (2)'
+
+2019-05-01 13:55:52 - [MESSAGE][PASSED] - Text 'exorcist' is set on object 'Object Repository/Page_Please sign in/input_Username_username (2)'
+
+2019-05-01 13:55:52 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Please sign in/input_Password_password (2)"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password (2)'
+
+2019-05-01 13:55:52 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Please sign in/input_Password_password (2)'
+
+2019-05-01 13:55:52 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Please sign in/button_Sign in")): Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-05-01 13:55:52 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Please sign in/button_Sign in' is clicked on
+
+2019-05-01 13:55:52 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-01 13:55:53 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/CreateAccount" classname="Test Cases/CreateAccount" status="PASSED">
+         <system-out><![CDATA[2019-05-01 13:55:53 - [TEST_CASE][PASSED] - Test Cases/CreateAccount: Test Cases/CreateAccount
+
+2019-05-01 13:55:53 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-01 13:55:53 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-01 13:55:55 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-01 13:55:55 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 13:55:56 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-05-01 13:55:56 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Account (12)")): Object: 'Object Repository/Page_Holygram/a_Account (12)' is clicked on
+
+2019-05-01 13:55:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Account (12)' is clicked on
+
+2019-05-01 13:55:56 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram/a_Create (2)")): Object: 'Object Repository/Page_Holygram/a_Create (2)' is clicked on
+
+2019-05-01 13:55:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram/a_Create (2)' is clicked on
+
+2019-05-01 13:55:56 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Holygram - Signin/input_Username_username (2)"), "customer2"): Text 'customer2' is set on object 'Object Repository/Page_Holygram - Signin/input_Username_username (2)'
+
+2019-05-01 13:55:57 - [MESSAGE][PASSED] - Text 'customer2' is set on object 'Object Repository/Page_Holygram - Signin/input_Username_username (2)'
+
+2019-05-01 13:55:57 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Holygram - Signin/input_Email_email (2)"), "customer2@gmail.com"): Text 'customer2@gmail.com' is set on object 'Object Repository/Page_Holygram - Signin/input_Email_email (2)'
+
+2019-05-01 13:55:57 - [MESSAGE][PASSED] - Text 'customer2@gmail.com' is set on object 'Object Repository/Page_Holygram - Signin/input_Email_email (2)'
+
+2019-05-01 13:55:57 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Holygram - Signin/input_Password_password (2)"), "r9inNhf6FTla56shneBo8g=="): Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/input_Password_password (2)'
+
+2019-05-01 13:55:57 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/input_Password_password (2)'
+
+2019-05-01 13:55:57 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram - Signin/div_Password_col-sm-10")): Object: 'Object Repository/Page_Holygram - Signin/div_Password_col-sm-10' is clicked on
+
+2019-05-01 13:55:57 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram - Signin/div_Password_col-sm-10' is clicked on
+
+2019-05-01 13:55:57 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Holygram - Signin/input_Password_passwordConfirm (2)"), "r9inNhf6FTla56shneBo8g=="): Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/input_Password_passwordConfirm (2)'
+
+2019-05-01 13:55:57 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Holygram - Signin/input_Password_passwordConfirm (2)'
+
+2019-05-01 13:55:57 - [TEST_STEP][PASSED] - click(findTestObject("Page_Holygram - Signin/button_Submit (2)")): Object: 'Object Repository/Page_Holygram - Signin/button_Submit (2)' is clicked on
+
+2019-05-01 13:55:57 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Holygram - Signin/button_Submit (2)' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-05-01 13:55:46 - [TEST_SUITE][PASSED] - Basic: Test Cases/CreateAccount]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

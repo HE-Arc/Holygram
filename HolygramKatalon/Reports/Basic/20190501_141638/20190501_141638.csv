@@ -1,0 +1,40 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Basic,Chrome 73.0.3683.103,,,2019-05-01 14:16:40,2019-05-01 14:17:30,49.896s,FAILED
+,,,,,,,
+Test Cases/AuthentificationCustomer,Chrome 73.0.3683.103,,,2019-05-01 14:16:40,2019-05-01 14:16:47,6.994s,PASSED
+"openBrowser("""")",Chrome 73.0.3683.103,,,2019-05-01 14:16:40,2019-05-01 14:16:44,4.074s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 73.0.3683.103,,,2019-05-01 14:16:44,2019-05-01 14:16:45,0.752s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Account""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:45,2019-05-01 14:16:45,0.130s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Log in""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:45,2019-05-01 14:16:46,0.307s,PASSED
+"setText(findTestObject(""Object Repository/Page_Please sign in/input_Username_username""), ""exorcist0"")",Chrome 73.0.3683.103,,,2019-05-01 14:16:46,2019-05-01 14:16:46,0.140s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Please sign in/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 73.0.3683.103,,,2019-05-01 14:16:46,2019-05-01 14:16:46,0.165s,PASSED
+"click(findTestObject(""Object Repository/Page_Please sign in/button_Sign in""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:46,2019-05-01 14:16:46,0.234s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_exorcist0""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:46,2019-05-01 14:16:46,0.079s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Disconnect""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:46,2019-05-01 14:16:46,0.101s,PASSED
+"click(findTestObject(""Object Repository/Page_Confirm Log Out/button_Log Out""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:46,2019-05-01 14:16:46,0.149s,PASSED
+closeBrowser(),Chrome 73.0.3683.103,,,2019-05-01 14:16:46,2019-05-01 14:16:47,0.570s,PASSED
+,,,,,,,
+Test Cases/AuthentificationExorcist,Chrome 73.0.3683.103,,,2019-05-01 14:16:47,2019-05-01 14:16:52,5.361s,PASSED
+"openBrowser("""")",Chrome 73.0.3683.103,,,2019-05-01 14:16:47,2019-05-01 14:16:50,2.380s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 73.0.3683.103,,,2019-05-01 14:16:50,2019-05-01 14:16:51,0.882s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Account""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:51,2019-05-01 14:16:51,0.097s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Log in""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:51,2019-05-01 14:16:51,0.300s,PASSED
+"setText(findTestObject(""Page_Please sign in/input_Username_username""), ""customer"")",Chrome 73.0.3683.103,,,2019-05-01 14:16:51,2019-05-01 14:16:51,0.117s,PASSED
+"setEncryptedText(findTestObject(""Page_Please sign in/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 73.0.3683.103,,,2019-05-01 14:16:51,2019-05-01 14:16:51,0.117s,PASSED
+"click(findTestObject(""Page_Please sign in/button_Sign in""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:51,2019-05-01 14:16:51,0.310s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_customer""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:51,2019-05-01 14:16:52,0.087s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Disconnect""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:52,2019-05-01 14:16:52,0.139s,PASSED
+"click(findTestObject(""Page_Confirm Log Out/button_Log Out""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:52,2019-05-01 14:16:52,0.143s,PASSED
+closeBrowser(),Chrome 73.0.3683.103,,,2019-05-01 14:16:52,2019-05-01 14:16:52,0.562s,PASSED
+,,,,,,,
+Test Cases/RegistrationExorcist,Chrome 73.0.3683.103,,,2019-05-01 14:16:52,2019-05-01 14:17:29,36.748s,FAILED
+"openBrowser("""")",Chrome 73.0.3683.103,,,2019-05-01 14:16:53,2019-05-01 14:16:55,2.319s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 73.0.3683.103,,,2019-05-01 14:16:55,2019-05-01 14:16:56,0.797s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Account""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:56,2019-05-01 14:16:56,0.100s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Create""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:56,2019-05-01 14:16:56,0.182s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram - Signin/label_Exorcist""))",Chrome 73.0.3683.103,,,2019-05-01 14:16:56,2019-05-01 14:16:56,0.120s,PASSED
+"setText(findTestObject(""Object Repository/Page_Holygram - Signin/input_Username_username""), ""super-exorcist"")",Chrome 73.0.3683.103,,,2019-05-01 14:16:56,2019-05-01 14:16:56,0.161s,PASSED
+"setText(findTestObject(""Object Repository/Page_Holygram - Signin/input_Email_email""), ""super-exorcist@mail.com"")",Chrome 73.0.3683.103,,,2019-05-01 14:16:56,2019-05-01 14:16:57,0.221s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Holygram - Signin/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 73.0.3683.103,,,2019-05-01 14:16:57,2019-05-01 14:16:57,0.217s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Holygram - Signin/password2""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 73.0.3683.103,,,2019-05-01 14:16:57,2019-05-01 14:16:57,0.127s,PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_Holygram - Signin/cantonSelect""), ""NE"", true)",Chrome 73.0.3683.103,,,2019-05-01 14:16:57,2019-05-01 14:17:29,32.249s,FAILED

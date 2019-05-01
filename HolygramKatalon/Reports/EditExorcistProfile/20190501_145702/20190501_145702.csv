@@ -1,0 +1,20 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+EditExorcistProfile,,,,2019-05-01 14:57:04,2019-05-01 14:57:06,1.800s,FAILED
+,,,,,,,
+Test Cases/LoginExorcist,,,,2019-05-01 14:57:04,2019-05-01 14:57:05,0.564s,FAILED
+"openBrowser("""")",,,,2019-05-01 14:57:05,2019-05-01 14:57:05,0.225s,FAILED
+,,,,,,,
+Test Cases/EditExorcistProfile,,,,2019-05-01 14:57:05,2019-05-01 14:57:05,0.231s,FAILED
+"click(findTestObject(""Object Repository/a_exorcist0""))",,,,2019-05-01 14:57:05,2019-05-01 14:57:05,0.050s,FAILED
+,,,,,,,
+Test Cases/EditExorcistProfileAddRemoveService,,,,2019-05-01 14:57:05,2019-05-01 14:57:05,0.197s,FAILED
+"selectOptionByValue(findTestObject(""Object Repository/selectReligion""), ""1"", true)",,,,2019-05-01 14:57:05,2019-05-01 14:57:05,0.015s,FAILED
+,,,,,,,
+Test Cases/EditExorcistProfileChangeInfos,,,,2019-05-01 14:57:05,2019-05-01 14:57:05,0.194s,FAILED
+"selectOptionByValue(findTestObject(""Object Repository/selectCanton""), ""13"", true)",,,,2019-05-01 14:57:05,2019-05-01 14:57:05,0.018s,FAILED
+,,,,,,,
+Test Cases/EditExorcistProfileSave,,,,2019-05-01 14:57:05,2019-05-01 14:57:06,0.171s,FAILED
+"click(findTestObject(""Object Repository/button_exorcist0_submitExorcist""))",,,,2019-05-01 14:57:06,2019-05-01 14:57:06,0.007s,FAILED
+,,,,,,,
+Test Cases/LogoffExorcist,,,,2019-05-01 14:57:06,2019-05-01 14:57:06,0.195s,FAILED
+"click(findTestObject(""Object Repository/Page_Holygram/a_customer""))",,,,2019-05-01 14:57:06,2019-05-01 14:57:06,0.008s,FAILED

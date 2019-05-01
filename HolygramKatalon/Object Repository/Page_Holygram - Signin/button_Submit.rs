@@ -3,7 +3,7 @@
    <description></description>
    <name>button_Submit</name>
    <tag></tag>
-   <elementGuidId>90ad7813-bbd1-4c81-9752-0005466e75b5</elementGuidId>
+   <elementGuidId>4357e80b-a714-4100-a752-9e30791e7adb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -51,30 +51,35 @@
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
+      <type>Main</type>
       <value>//button[@type='submit']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
+      <type>Main</type>
       <value>//form[@id='registerForm']/button</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Description'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Format: 012 345 67 89'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
+      <type>Main</type>
       <value>//button</value>
    </webElementXpaths>
 </WebElementEntity>

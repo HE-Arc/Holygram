@@ -1,0 +1,23 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Search,Chrome 73.0.3683.103,,,2019-05-01 14:32:36,2019-05-01 14:32:45,8.806s,PASSED
+,,,,,,,
+Test Cases/LoginCustomer,Chrome 73.0.3683.103,,,2019-05-01 14:32:36,2019-05-01 14:32:42,6.038s,PASSED
+"openBrowser("""")",Chrome 73.0.3683.103,,,2019-05-01 14:32:36,2019-05-01 14:32:40,4.051s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 73.0.3683.103,,,2019-05-01 14:32:40,2019-05-01 14:32:41,0.710s,PASSED
+"click(findTestObject(""Page_Holygram/a_Account""))",Chrome 73.0.3683.103,,,2019-05-01 14:32:41,2019-05-01 14:32:41,0.130s,PASSED
+"click(findTestObject(""Page_Holygram/a_Log in""))",Chrome 73.0.3683.103,,,2019-05-01 14:32:41,2019-05-01 14:32:42,0.273s,PASSED
+"setText(findTestObject(""Page_Please sign in/input_Username_username""), ""customer"")",Chrome 73.0.3683.103,,,2019-05-01 14:32:42,2019-05-01 14:32:42,0.136s,PASSED
+"setEncryptedText(findTestObject(""Page_Please sign in/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 73.0.3683.103,,,2019-05-01 14:32:42,2019-05-01 14:32:42,0.172s,PASSED
+"click(findTestObject(""Page_Please sign in/button_Sign in""))",Chrome 73.0.3683.103,,,2019-05-01 14:32:42,2019-05-01 14:32:42,0.245s,PASSED
+,,,,,,,
+Test Cases/SimpleSearch,Chrome 73.0.3683.103,,,2019-05-01 14:32:42,2019-05-01 14:32:43,1.181s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Search            an exorcist""))",Chrome 73.0.3683.103,,,2019-05-01 14:32:42,2019-05-01 14:32:42,0.185s,PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_Holygram/selectDemon""), ""4"", true)",Chrome 73.0.3683.103,,,2019-05-01 14:32:42,2019-05-01 14:32:43,0.346s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/button_Search""))",Chrome 73.0.3683.103,,,2019-05-01 14:32:43,2019-05-01 14:32:43,0.280s,PASSED
+"click(findTestObject(""Object Repository/Page_Holygram/a_exorcist3""))",Chrome 73.0.3683.103,,,2019-05-01 14:32:43,2019-05-01 14:32:43,0.203s,PASSED
+,,,,,,,
+Test Cases/LogoffCustomer,Chrome 73.0.3683.103,,,2019-05-01 14:32:43,2019-05-01 14:32:45,1.323s,PASSED
+"click(findTestObject(""Page_Holygram/a_customer""))",Chrome 73.0.3683.103,,,2019-05-01 14:32:44,2019-05-01 14:32:44,0.098s,PASSED
+"click(findTestObject(""Page_Holygram/a_Disconnect""))",Chrome 73.0.3683.103,,,2019-05-01 14:32:44,2019-05-01 14:32:44,0.186s,PASSED
+"click(findTestObject(""Page_Confirm Log Out/button_Log Out""))",Chrome 73.0.3683.103,,,2019-05-01 14:32:44,2019-05-01 14:32:44,0.249s,PASSED
+closeBrowser(),Chrome 73.0.3683.103,,,2019-05-01 14:32:44,2019-05-01 14:32:45,0.577s,PASSED

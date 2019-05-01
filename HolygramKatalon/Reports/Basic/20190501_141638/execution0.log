@@ -1,0 +1,1657 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-05-01T14:16:40</date>
+  <millis>1556713000356</millis>
+  <sequence>0</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startSuite</method>
+  <thread>1</thread>
+  <message>Start Test Suite : Test Suites/Basic</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="name">Basic</property>
+  <property name="description"></property>
+  <property name="id">Test Suites/Basic</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:40</date>
+  <millis>1556713000367</millis>
+  <sequence>1</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>hostName = Raphael - 157.26.66.100</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="hostName">Raphael - 157.26.66.100</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:40</date>
+  <millis>1556713000368</millis>
+  <sequence>2</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>os = Windows 10 64bit</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="os">Windows 10 64bit</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:40</date>
+  <millis>1556713000368</millis>
+  <sequence>3</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>hostAddress = 157.26.66.100</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="hostAddress">157.26.66.100</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:40</date>
+  <millis>1556713000369</millis>
+  <sequence>4</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>katalonVersion = 6.1.2.2</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="katalonVersion">6.1.2.2</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:40</date>
+  <millis>1556713000527</millis>
+  <sequence>5</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startTest</method>
+  <thread>1</thread>
+  <message>Start Test Case : Test Cases/AuthentificationCustomer</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="name">Test Cases/AuthentificationCustomer</property>
+  <property name="description"></property>
+  <property name="id">Test Cases/AuthentificationCustomer</property>
+  <property name="source">C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Test Cases\\AuthentificationCustomer.tc</property>
+  <property name="tag"></property>
+  <property name="isOptional">false</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:40</date>
+  <millis>1556713000816</millis>
+  <sequence>7</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : openBrowser(\&amp;quot;\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">16</property>
+  <property name="stepIndex">1</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:41</date>
+  <millis>1556713001014</millis>
+  <sequence>9</sequence>
+  <level>INFO</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Starting &amp;apos;Chrome (headless)&amp;apos; driver</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:41</date>
+  <millis>1556713001037</millis>
+  <sequence>10</sequence>
+  <level>INFO</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Action delay is set to 0 seconds</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:44</date>
+  <millis>1556713004829</millis>
+  <sequence>12</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>sessionId = 6d76484a85dbca64bf7813e487fbe056</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="sessionId">6d76484a85dbca64bf7813e487fbe056</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:44</date>
+  <millis>1556713004881</millis>
+  <sequence>13</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>browser = Chrome 73.0.3683.103</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="browser">Chrome 73.0.3683.103</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:44</date>
+  <millis>1556713004882</millis>
+  <sequence>14</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>platform = Windows 10</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="platform">Windows 10</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:44</date>
+  <millis>1556713004887</millis>
+  <sequence>15</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>seleniumVersion = 3.7.1</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="seleniumVersion">3.7.1</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:44</date>
+  <millis>1556713004888</millis>
+  <sequence>16</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>proxyInformation = ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="proxyInformation">ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:44</date>
+  <millis>1556713004889</millis>
+  <sequence>17</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Browser is opened with url: &amp;apos;&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:44</date>
+  <millis>1556713004890</millis>
+  <sequence>18</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : openBrowser(\&amp;quot;\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:44</date>
+  <millis>1556713004890</millis>
+  <sequence>19</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : navigateToUrl(\&amp;quot;http://localhost:8080/\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">18</property>
+  <property name="stepIndex">2</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:45</date>
+  <millis>1556713005641</millis>
+  <sequence>22</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Navigate to &amp;apos;http://localhost:8080/&amp;apos; successfully</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:45</date>
+  <millis>1556713005642</millis>
+  <sequence>23</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : navigateToUrl(\&amp;quot;http://localhost:8080/\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:45</date>
+  <millis>1556713005643</millis>
+  <sequence>24</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Account\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">20</property>
+  <property name="stepIndex">3</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:45</date>
+  <millis>1556713005772</millis>
+  <sequence>31</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram/a_Account&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:45</date>
+  <millis>1556713005773</millis>
+  <sequence>32</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Account\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:45</date>
+  <millis>1556713005773</millis>
+  <sequence>33</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Log in\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">22</property>
+  <property name="stepIndex">4</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006079</millis>
+  <sequence>40</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram/a_Log in&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006080</millis>
+  <sequence>41</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Log in\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006081</millis>
+  <sequence>42</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : setText(findTestObject(\&amp;quot;Object Repository/Page_Please sign in/input_Username_username\&amp;quot;), \&amp;quot;exorcist0\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">24</property>
+  <property name="stepIndex">5</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006220</millis>
+  <sequence>51</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Text &amp;apos;exorcist0&amp;apos; is set on object &amp;apos;Object Repository/Page_Please sign in/input_Username_username&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006221</millis>
+  <sequence>52</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : setText(findTestObject(\&amp;quot;Object Repository/Page_Please sign in/input_Username_username\&amp;quot;), \&amp;quot;exorcist0\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006221</millis>
+  <sequence>53</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : setEncryptedText(findTestObject(\&amp;quot;Object Repository/Page_Please sign in/input_Password_password\&amp;quot;), \&amp;quot;RigbBhfdqOBGNlJIWM1ClA==\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">26</property>
+  <property name="stepIndex">6</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006385</millis>
+  <sequence>62</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Text ****** has been set on object &amp;apos;Object Repository/Page_Please sign in/input_Password_password&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006386</millis>
+  <sequence>63</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : setEncryptedText(findTestObject(\&amp;quot;Object Repository/Page_Please sign in/input_Password_password\&amp;quot;), \&amp;quot;RigbBhfdqOBGNlJIWM1ClA==\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006386</millis>
+  <sequence>64</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Please sign in/button_Sign in\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">28</property>
+  <property name="stepIndex">7</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006619</millis>
+  <sequence>71</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Please sign in/button_Sign in&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006620</millis>
+  <sequence>72</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Please sign in/button_Sign in\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006620</millis>
+  <sequence>73</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_exorcist0\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">30</property>
+  <property name="stepIndex">8</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006699</millis>
+  <sequence>80</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram/a_exorcist0&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006699</millis>
+  <sequence>81</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_exorcist0\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006700</millis>
+  <sequence>82</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Disconnect\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">32</property>
+  <property name="stepIndex">9</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006800</millis>
+  <sequence>89</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram/a_Disconnect&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006801</millis>
+  <sequence>90</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Disconnect\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006801</millis>
+  <sequence>91</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Confirm Log Out/button_Log Out\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">34</property>
+  <property name="stepIndex">10</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006950</millis>
+  <sequence>98</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Confirm Log Out/button_Log Out&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006950</millis>
+  <sequence>99</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Confirm Log Out/button_Log Out\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:46</date>
+  <millis>1556713006950</millis>
+  <sequence>100</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : closeBrowser()</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">36</property>
+  <property name="stepIndex">11</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:47</date>
+  <millis>1556713007520</millis>
+  <sequence>102</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Browser is closed</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:47</date>
+  <millis>1556713007520</millis>
+  <sequence>103</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : closeBrowser()</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:47</date>
+  <millis>1556713007520</millis>
+  <sequence>104</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Test Cases/AuthentificationCustomer</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:47</date>
+  <millis>1556713007521</millis>
+  <sequence>105</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endTest</method>
+  <thread>1</thread>
+  <message>End Test Case : Test Cases/AuthentificationCustomer</message>
+  <nestedLevel>0</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:47</date>
+  <millis>1556713007530</millis>
+  <sequence>106</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startTest</method>
+  <thread>1</thread>
+  <message>Start Test Case : Test Cases/AuthentificationExorcist</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="name">Test Cases/AuthentificationExorcist</property>
+  <property name="description"></property>
+  <property name="id">Test Cases/AuthentificationExorcist</property>
+  <property name="source">C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Test Cases\\AuthentificationExorcist.tc</property>
+  <property name="tag"></property>
+  <property name="isOptional">false</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:47</date>
+  <millis>1556713007751</millis>
+  <sequence>108</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : openBrowser(\&amp;quot;\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">16</property>
+  <property name="stepIndex">1</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:47</date>
+  <millis>1556713007755</millis>
+  <sequence>110</sequence>
+  <level>INFO</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Starting &amp;apos;Chrome (headless)&amp;apos; driver</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:50</date>
+  <millis>1556713010062</millis>
+  <sequence>112</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>sessionId = dae1c7e8916a337999c8308088829fe2</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="sessionId">dae1c7e8916a337999c8308088829fe2</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:50</date>
+  <millis>1556713010126</millis>
+  <sequence>113</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>browser = Chrome 73.0.3683.103</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="browser">Chrome 73.0.3683.103</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:50</date>
+  <millis>1556713010127</millis>
+  <sequence>114</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>platform = Windows 10</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="platform">Windows 10</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:50</date>
+  <millis>1556713010128</millis>
+  <sequence>115</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>seleniumVersion = 3.7.1</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="seleniumVersion">3.7.1</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:50</date>
+  <millis>1556713010130</millis>
+  <sequence>116</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>proxyInformation = ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="proxyInformation">ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:50</date>
+  <millis>1556713010130</millis>
+  <sequence>117</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Browser is opened with url: &amp;apos;&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:50</date>
+  <millis>1556713010131</millis>
+  <sequence>118</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : openBrowser(\&amp;quot;\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:50</date>
+  <millis>1556713010132</millis>
+  <sequence>119</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : navigateToUrl(\&amp;quot;http://localhost:8080/\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">18</property>
+  <property name="stepIndex">2</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011013</millis>
+  <sequence>122</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Navigate to &amp;apos;http://localhost:8080/&amp;apos; successfully</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011014</millis>
+  <sequence>123</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : navigateToUrl(\&amp;quot;http://localhost:8080/\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011014</millis>
+  <sequence>124</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Account\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">20</property>
+  <property name="stepIndex">3</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011110</millis>
+  <sequence>131</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram/a_Account&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011111</millis>
+  <sequence>132</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Account\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011112</millis>
+  <sequence>133</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Log in\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">22</property>
+  <property name="stepIndex">4</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011411</millis>
+  <sequence>140</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram/a_Log in&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011412</millis>
+  <sequence>141</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Log in\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011412</millis>
+  <sequence>142</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : setText(findTestObject(\&amp;quot;Page_Please sign in/input_Username_username\&amp;quot;), \&amp;quot;customer\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">24</property>
+  <property name="stepIndex">5</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011529</millis>
+  <sequence>151</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Text &amp;apos;customer&amp;apos; is set on object &amp;apos;Object Repository/Page_Please sign in/input_Username_username&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011529</millis>
+  <sequence>152</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : setText(findTestObject(\&amp;quot;Page_Please sign in/input_Username_username\&amp;quot;), \&amp;quot;customer\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011530</millis>
+  <sequence>153</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : setEncryptedText(findTestObject(\&amp;quot;Page_Please sign in/input_Password_password\&amp;quot;), \&amp;quot;RigbBhfdqOBGNlJIWM1ClA==\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">26</property>
+  <property name="stepIndex">6</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011646</millis>
+  <sequence>162</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Text ****** has been set on object &amp;apos;Object Repository/Page_Please sign in/input_Password_password&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011647</millis>
+  <sequence>163</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : setEncryptedText(findTestObject(\&amp;quot;Page_Please sign in/input_Password_password\&amp;quot;), \&amp;quot;RigbBhfdqOBGNlJIWM1ClA==\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011647</millis>
+  <sequence>164</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Page_Please sign in/button_Sign in\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">28</property>
+  <property name="stepIndex">7</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011956</millis>
+  <sequence>171</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Please sign in/button_Sign in&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011957</millis>
+  <sequence>172</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Page_Please sign in/button_Sign in\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:51</date>
+  <millis>1556713011957</millis>
+  <sequence>173</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_customer\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">30</property>
+  <property name="stepIndex">8</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012044</millis>
+  <sequence>180</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram/a_customer&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012044</millis>
+  <sequence>181</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_customer\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012045</millis>
+  <sequence>182</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Disconnect\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">32</property>
+  <property name="stepIndex">9</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012184</millis>
+  <sequence>189</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram/a_Disconnect&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012184</millis>
+  <sequence>190</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Disconnect\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012184</millis>
+  <sequence>191</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Page_Confirm Log Out/button_Log Out\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">34</property>
+  <property name="stepIndex">10</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012327</millis>
+  <sequence>198</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Confirm Log Out/button_Log Out&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012327</millis>
+  <sequence>199</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Page_Confirm Log Out/button_Log Out\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012328</millis>
+  <sequence>200</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : closeBrowser()</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">36</property>
+  <property name="stepIndex">11</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012890</millis>
+  <sequence>202</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Browser is closed</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012890</millis>
+  <sequence>203</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : closeBrowser()</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012890</millis>
+  <sequence>204</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Test Cases/AuthentificationExorcist</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012891</millis>
+  <sequence>205</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endTest</method>
+  <thread>1</thread>
+  <message>End Test Case : Test Cases/AuthentificationExorcist</message>
+  <nestedLevel>0</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:52</date>
+  <millis>1556713012897</millis>
+  <sequence>206</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startTest</method>
+  <thread>1</thread>
+  <message>Start Test Case : Test Cases/RegistrationExorcist</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="name">Test Cases/RegistrationExorcist</property>
+  <property name="description"></property>
+  <property name="id">Test Cases/RegistrationExorcist</property>
+  <property name="source">C:\\dev\\he-arc\\3257.2-Java_Enterprise_Edition_JEE\\Holygram\\HolygramKatalon\\Test Cases\\RegistrationExorcist.tc</property>
+  <property name="tag"></property>
+  <property name="isOptional">false</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:53</date>
+  <millis>1556713013147</millis>
+  <sequence>208</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : openBrowser(\&amp;quot;\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">16</property>
+  <property name="stepIndex">1</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:53</date>
+  <millis>1556713013153</millis>
+  <sequence>210</sequence>
+  <level>INFO</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Starting &amp;apos;Chrome (headless)&amp;apos; driver</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:55</date>
+  <millis>1556713015405</millis>
+  <sequence>212</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>sessionId = 010e43a599e845837dc68c7ad096b62f</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="sessionId">010e43a599e845837dc68c7ad096b62f</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:55</date>
+  <millis>1556713015463</millis>
+  <sequence>213</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>browser = Chrome 73.0.3683.103</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="browser">Chrome 73.0.3683.103</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:55</date>
+  <millis>1556713015464</millis>
+  <sequence>214</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>platform = Windows 10</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="platform">Windows 10</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:55</date>
+  <millis>1556713015464</millis>
+  <sequence>215</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>seleniumVersion = 3.7.1</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="seleniumVersion">3.7.1</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:55</date>
+  <millis>1556713015465</millis>
+  <sequence>216</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>proxyInformation = ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="proxyInformation">ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:55</date>
+  <millis>1556713015465</millis>
+  <sequence>217</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Browser is opened with url: &amp;apos;&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:55</date>
+  <millis>1556713015466</millis>
+  <sequence>218</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : openBrowser(\&amp;quot;\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:55</date>
+  <millis>1556713015466</millis>
+  <sequence>219</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : navigateToUrl(\&amp;quot;http://localhost:8080/\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">18</property>
+  <property name="stepIndex">2</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016262</millis>
+  <sequence>222</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Navigate to &amp;apos;http://localhost:8080/&amp;apos; successfully</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016263</millis>
+  <sequence>223</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : navigateToUrl(\&amp;quot;http://localhost:8080/\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016263</millis>
+  <sequence>224</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Account\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">20</property>
+  <property name="stepIndex">3</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016363</millis>
+  <sequence>231</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram/a_Account&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016363</millis>
+  <sequence>232</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Account\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016363</millis>
+  <sequence>233</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Create\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">22</property>
+  <property name="stepIndex">4</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016544</millis>
+  <sequence>240</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram/a_Create&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016545</millis>
+  <sequence>241</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram/a_Create\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016546</millis>
+  <sequence>242</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/label_Exorcist\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">24</property>
+  <property name="stepIndex">5</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016665</millis>
+  <sequence>249</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Object: &amp;apos;Object Repository/Page_Holygram - Signin/label_Exorcist&amp;apos; is clicked on</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016666</millis>
+  <sequence>250</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : click(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/label_Exorcist\&amp;quot;))</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016666</millis>
+  <sequence>251</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : setText(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/input_Username_username\&amp;quot;), \&amp;quot;super-exorcist\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">26</property>
+  <property name="stepIndex">6</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016826</millis>
+  <sequence>260</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Text &amp;apos;super-exorcist&amp;apos; is set on object &amp;apos;Object Repository/Page_Holygram - Signin/input_Username_username&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016827</millis>
+  <sequence>261</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : setText(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/input_Username_username\&amp;quot;), \&amp;quot;super-exorcist\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:56</date>
+  <millis>1556713016828</millis>
+  <sequence>262</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : setText(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/input_Email_email\&amp;quot;), \&amp;quot;super-exorcist@mail.com\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">28</property>
+  <property name="stepIndex">7</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:57</date>
+  <millis>1556713017048</millis>
+  <sequence>271</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Text &amp;apos;super-exorcist@mail.com&amp;apos; is set on object &amp;apos;Object Repository/Page_Holygram - Signin/input_Email_email&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:57</date>
+  <millis>1556713017049</millis>
+  <sequence>272</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : setText(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/input_Email_email\&amp;quot;), \&amp;quot;super-exorcist@mail.com\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:57</date>
+  <millis>1556713017049</millis>
+  <sequence>273</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : setEncryptedText(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/input_Password_password\&amp;quot;), \&amp;quot;RigbBhfdqOBGNlJIWM1ClA==\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">30</property>
+  <property name="stepIndex">8</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:57</date>
+  <millis>1556713017265</millis>
+  <sequence>282</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Text ****** has been set on object &amp;apos;Object Repository/Page_Holygram - Signin/input_Password_password&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:57</date>
+  <millis>1556713017266</millis>
+  <sequence>283</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : setEncryptedText(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/input_Password_password\&amp;quot;), \&amp;quot;RigbBhfdqOBGNlJIWM1ClA==\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:57</date>
+  <millis>1556713017267</millis>
+  <sequence>284</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : setEncryptedText(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/password2\&amp;quot;), \&amp;quot;RigbBhfdqOBGNlJIWM1ClA==\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">32</property>
+  <property name="stepIndex">9</property>
+</record>
+<record>
+  <date>2019-05-01T14:16:57</date>
+  <millis>1556713017393</millis>
+  <sequence>293</sequence>
+  <level>PASSED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Text ****** has been set on object &amp;apos;Object Repository/Page_Holygram - Signin/password2&amp;apos;</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:57</date>
+  <millis>1556713017394</millis>
+  <sequence>294</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : setEncryptedText(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/password2\&amp;quot;), \&amp;quot;RigbBhfdqOBGNlJIWM1ClA==\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:16:57</date>
+  <millis>1556713017394</millis>
+  <sequence>295</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : selectOptionByValue(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/cantonSelect\&amp;quot;), \&amp;quot;NE\&amp;quot;, true)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">34</property>
+  <property name="stepIndex">10</property>
+</record>
+<record>
+  <date>2019-05-01T14:17:29</date>
+  <millis>1556713049324</millis>
+  <sequence>301</sequence>
+  <level>INFO</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Unable to find the element located by &amp;apos;By.xpath: &amp;apos;. Please recheck the objects properties to make sure the desired element is located. </message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:17:29</date>
+  <millis>1556713049642</millis>
+  <sequence>304</sequence>
+  <level>FAILED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Unable to select option by value &amp;apos;NE&amp;apos; of object &amp;apos;Object Repository/Page_Holygram - Signin/cantonSelect&amp;apos;  using regular expression (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to select option by value &amp;apos;NE&amp;apos; of object &amp;apos;Object Repository/Page_Holygram - Signin/cantonSelect&amp;apos;  using regular expression\r\n\tat com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)\r\n\tat com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)\r\n\tat com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)\r\n\tat com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)\r\n\tat com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)\r\n\tat RegistrationExorcist.run(RegistrationExorcist:34)\r\n\tat com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)\r\n\tat com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)\r\n\tat com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)\r\n\tat com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)\r\n\tat TempTestSuite1556712998258.run(TempTestSuite1556712998258.groovy:35)\r\nCaused by: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: &amp;apos;Object Repository/Page_Holygram - Signin/cantonSelect&amp;apos; located by &amp;apos;By.xpath: &amp;apos; not found\r\n\tat com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1097)\r\n\tat com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)\r\n\tat com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.doCall(SelectOptionByValueKeyword.groovy:86)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.call(SelectOptionByValueKeyword.groovy)\r\n\tat com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)\r\n\tat com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)\r\n\tat com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)\r\n\tat com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)\r\n\tat Script1556712763871.run(Script1556712763871.groovy:34)\r\n\t... 13 more\r\n)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="attachment">1556713049326.png</property>
+</record>
+<record>
+  <date>2019-05-01T14:17:29</date>
+  <millis>1556713049643</millis>
+  <sequence>305</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : selectOptionByValue(findTestObject(\&amp;quot;Object Repository/Page_Holygram - Signin/cantonSelect\&amp;quot;), \&amp;quot;NE\&amp;quot;, true)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:17:29</date>
+  <millis>1556713049644</millis>
+  <sequence>308</sequence>
+  <logger>com.kms.katalon.core.logging.XmlKeywordLogger</logger>
+  <level>FAILED</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Test Cases/RegistrationExorcist FAILED.\nReason:\ncom.kms.katalon.core.exception.StepFailedException: Unable to select option by value &amp;apos;NE&amp;apos; of object &amp;apos;Object Repository/Page_Holygram - Signin/cantonSelect&amp;apos;  using regular expression\r\n\tat com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)\r\n\tat com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)\r\n\tat com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)\r\n\tat com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)\r\n\tat com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)\r\n\tat RegistrationExorcist.run(RegistrationExorcist:34)\r\n\tat com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)\r\n\tat com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:336)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:327)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:306)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:298)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:232)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)\r\n\tat com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)\r\n\tat com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)\r\n\tat TempTestSuite1556712998258.run(TempTestSuite1556712998258.groovy:35)\r\nCaused by: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: &amp;apos;Object Repository/Page_Holygram - Signin/cantonSelect&amp;apos; located by &amp;apos;By.xpath: &amp;apos; not found\r\n\tat com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1097)\r\n\tat com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)\r\n\tat com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.doCall(SelectOptionByValueKeyword.groovy:86)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword$_selectOptionByValue_closure1.call(SelectOptionByValueKeyword.groovy)\r\n\tat com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.selectOptionByValue(SelectOptionByValueKeyword.groovy:99)\r\n\tat com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword.execute(SelectOptionByValueKeyword.groovy:71)\r\n\tat com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)\r\n\tat com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.selectOptionByValue(WebUiBuiltInKeywords.groovy:1138)\r\n\tat com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5.call(Unknown Source)\r\n\tat Script1556712763871.run(Script1556712763871.groovy:34)\r\n\t... 13 more\r\n</message>
+  <exception>
+    <message>com.kms.katalon.core.exception.StepFailedException: Unable to select option by value 'NE' of object 'Object Repository/Page_Holygram - Signin/cantonSelect'  using regular expression</message>
+    <frame>
+      <class>com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain</class>
+      <method>stepFailed</method>
+      <line>64</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain</class>
+      <method>runKeyword</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword</class>
+      <method>selectOptionByValue</method>
+      <line>99</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.webui.keyword.builtin.SelectOptionByValueKeyword</class>
+      <method>execute</method>
+      <line>71</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.keyword.internal.KeywordExecutor</class>
+      <method>executeKeywordForPlatform</method>
+      <line>56</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords</class>
+      <method>selectOptionByValue</method>
+      <line>1138</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$selectOptionByValue$5</class>
+      <method>call</method>
+    </frame>
+    <frame>
+      <class>RegistrationExorcist</class>
+      <method>run</method>
+      <line>34</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.ScriptEngine</class>
+      <method>run</method>
+      <line>194</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.ScriptEngine</class>
+      <method>runScriptAsRawText</method>
+      <line>119</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseExecutor</class>
+      <method>runScript</method>
+      <line>336</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseExecutor</class>
+      <method>doExecute</method>
+      <line>327</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseExecutor</class>
+      <method>processExecutionPhase</method>
+      <line>306</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseExecutor</class>
+      <method>accessMainPhase</method>
+      <line>298</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseExecutor</class>
+      <method>execute</method>
+      <line>232</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestSuiteExecutor</class>
+      <method>accessTestCaseMainPhase</method>
+      <line>129</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestSuiteExecutor</class>
+      <method>accessTestSuiteMainPhase</method>
+      <line>112</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestSuiteExecutor</class>
+      <method>execute</method>
+      <line>81</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseMain</class>
+      <method>startTestSuite</method>
+      <line>157</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseMain$startTestSuite$0</class>
+      <method>call</method>
+    </frame>
+    <frame>
+      <class>TempTestSuite1556712998258</class>
+      <method>run</method>
+      <line>35</line>
+    </frame>
+  </exception>
+  <nestedLevel>0</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:17:29</date>
+  <millis>1556713049645</millis>
+  <sequence>309</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endTest</method>
+  <thread>1</thread>
+  <message>End Test Case : Test Cases/RegistrationExorcist</message>
+  <nestedLevel>0</nestedLevel>
+</record>
+<record>
+  <date>2019-05-01T14:17:30</date>
+  <millis>1556713050252</millis>
+  <sequence>310</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endSuite</method>
+  <thread>1</thread>
+  <message>End Test Suite : Test Suites/Basic</message>
+  <nestedLevel>0</nestedLevel>
+</record>
+</log>

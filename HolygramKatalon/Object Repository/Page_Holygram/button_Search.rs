@@ -3,7 +3,7 @@
    <description></description>
    <name>button_Search</name>
    <tag></tag>
-   <elementGuidId>fb2856b2-c603-4986-b79e-a9e430b3ab51</elementGuidId>
+   <elementGuidId>e5cecd5f-574e-4f86-ace3-bc170c619862</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btn btn-primary btn-lg</value>
+      <value>btn btn-primary btn</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -46,7 +46,8 @@
       <name>text</name>
       <type>Main</type>
       <value>
-							Search!</value>
+                                Search!
+                            </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -59,36 +60,42 @@
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
+      <type>Main</type>
       <value>//button[@id='btn_submit']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
+      <type>Main</type>
       <value>//form[@id='form-search']/blockquote/button</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='CHF'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Max price'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'btn_submit', '&quot;', ')')])[1]/preceding::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
+      <type>Main</type>
       <value>//button</value>
    </webElementXpaths>
 </WebElementEntity>

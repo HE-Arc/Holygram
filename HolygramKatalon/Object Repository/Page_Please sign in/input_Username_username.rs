@@ -3,7 +3,7 @@
    <description></description>
    <name>input_Username_username</name>
    <tag></tag>
-   <elementGuidId>cb784b0b-9e21-4469-8f10-9c731cf9a8ea</elementGuidId>
+   <elementGuidId>fe836f84-b3a8-4d29-865a-c3fdb5a613b6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -65,42 +65,42 @@
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
+      <type>Main</type>
       <value>//input[@id='username']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Username'])[1]/following::input[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Please sign in'])[2]/following::input[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/preceding::input[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
+      <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign in'])[1]/preceding::input[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
+      <type>Main</type>
       <value>//input</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign in'])[1]/preceding::input[2]</value>
    </webElementXpaths>
 </WebElementEntity>

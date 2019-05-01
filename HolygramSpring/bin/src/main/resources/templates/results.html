@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta th:replace="fragments/head.html"></meta>
+</head>
+<body>
+<nav class="d-block" th:with="menu=${'search'}" th:insert="fragments/nav.html"></nav>
+<div class="container p-4">
+    <div th:if="${results.size() > 0}" id="search-result">
+        <p>
+            <a th:href="@{/search}"><i class="fas fa-long-arrow-alt-left"></i> Change your filters.</a>
+        </p>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Reown</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody id="table-data">
+                <tr th:each="result: ${results}">
+                    <td>
+                        <a th:href="@{/exorcist/{id}(id=${result.user.id})}" th:text="${result.user.username}"></a>
+                    </td>
+                    <td>
+                        <a href="mailto:${result.user.email}" th:text="${result.user.email}"></a>
+                    </td>
+                    <td th:text="${result.exorcist.phoneNumber}"/>
+                    <td th:text="${result.getExorcist().getRenown()}"/>
+                    <td th:text="${result.price}"/>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul class="pagination justify-content-center">
+            <li class="page-item" th:if="${currentPage - 1 >= 1}">
+                <a class="page-link" th:href="${currentUrl} + '&page=' + ${currentPage - 1}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item" th:each="number: ${#numbers.sequence(1, lastPage)}" th:classappend="${currentPage == number} ? active : ''">
+                <a class="page-link" th:href="${currentUrl} + '&page=' + ${number}" th:text="${number}"></a>
+            </li>
+            <li class="page-item" th:if="${currentPage + 1 <= lastPage}">
+                <a class="page-link" th:href="${currentUrl} + '&page=' + ${currentPage + 1}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div th:if="${results.size() <= 0}">
+        <p>
+            No exorcist fit the current request !
+        </p>
+        <p>
+            <a th:href="@{/search}">Try another search :D</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

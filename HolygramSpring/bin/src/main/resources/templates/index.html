@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:replace="fragments/head.html"></div>
+</head>
+<body>
+<nav class="d-block" th:with="menu=${'home'},isConnected=${true}" th:insert="fragments/nav.html"></nav>
+<div class="container p-4">
+    <p>The main goal of Holygram is to provide a service to connect
+        exorcist with their client in the most simple way.
+    </p>
+
+    <blockquote class="blockquote">
+        <p class="mb-0">Since I use Holygram my company tripled size.</p>
+        <footer class="blockquote-footer"> Tom Jefferson</footer>
+    </blockquote>
+
+    <blockquote class="blockquote">
+        <p class="mb-0">Blabalbsalbal</p>
+        <footer class="blockquote-footer">famous people</footer>
+    </blockquote>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Search,,,,2019-05-01 14:35:56,2019-05-01 14:35:58,1.724s,FAILED
+,,,,,,,
+Test Cases/LoginCustomer,,,,2019-05-01 14:35:56,2019-05-01 14:35:57,0.683s,FAILED
+"openBrowser("""")",,,,2019-05-01 14:35:57,2019-05-01 14:35:57,0.270s,FAILED
+,,,,,,,
+Test Cases/SearchSimple,,,,2019-05-01 14:35:57,2019-05-01 14:35:57,0.307s,FAILED
+"click(findTestObject(""Object Repository/Page_Holygram/a_Search            an exorcist""))",,,,2019-05-01 14:35:57,2019-05-01 14:35:57,0.049s,FAILED
+,,,,,,,
+Test Cases/SearchAdvance,,,,2019-05-01 14:35:57,2019-05-01 14:35:58,0.253s,FAILED
+"selectOptionByValue(findTestObject(""Object Repository/Page_Holygram/selectDemon""), ""8"", true)",,,,2019-05-01 14:35:58,2019-05-01 14:35:58,0.015s,FAILED
+,,,,,,,
+Test Cases/LogoffCustomer,,,,2019-05-01 14:35:58,2019-05-01 14:35:58,0.234s,FAILED
+"click(findTestObject(""Page_Holygram/a_customer""))",,,,2019-05-01 14:35:58,2019-05-01 14:35:58,0.007s,FAILED

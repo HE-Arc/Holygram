@@ -1,0 +1,15 @@
+<h4 class="row border-bottom p-3">Ratings</h4>
+<div th:if="${!e.getEvaluations().isEmpty()}" th:each="evaluation: ${e.getEvaluations()}">
+    <div class="row" th:classappend="${evaluation.isPositive()} ? border-success : border-danger" style="border-left:10px solid;">
+        <div class="col-2 p-3" th:text="${#dates.format(evaluation.getDatetime(), 'dd MMMM yyyy')}">
+        </div>
+        <div class="col-10 p-3">
+            <div class="row" th:text="${evaluation.getText()}">
+            </div>
+            <small class="row float-right pr-3" th:text="'- ' + ${evaluation.getCustomer().getUser().getUsername()}"></small>
+        </div>
+    </div>
+</div>
+<div th:if="${e.getEvaluations().isEmpty()}">
+    No evaluations for this Exorcist...
+</div>
