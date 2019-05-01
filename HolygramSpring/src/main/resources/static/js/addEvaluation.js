@@ -3,7 +3,7 @@ let evaluation_thumbsUp = document.getElementById("evaluation_thumbsUp");
 let evaluation_thumbsDown = document.getElementById("evaluation_thumbsDown");
 let evaluation_thumbs = document.getElementById("evaluation_thumbs");
 
-evaluation_form.reset(); // to ensure the form is reset onload (backward navigation cause problem with the custom radio buttons)
+//evaluation_form.reset(); // to ensure the form is reset onload (backward navigation cause problem with the custom radio buttons)
 
 evaluation_thumbsUp.addEventListener("click", function () {
     evaluation_form.evaluation.value = "1";
