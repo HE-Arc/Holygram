@@ -13,10 +13,10 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-@Entity
 /**
  * Class representing a swiss canton
  */
+@Entity
 public class Canton {
 
 	@Id

@@ -14,10 +14,10 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-@Entity
 /**
  * Class representing a religion
  */
+@Entity
 public class Religion {
 
 	@Id

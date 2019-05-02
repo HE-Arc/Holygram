@@ -10,6 +10,9 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+/**
+ * Represente a user
+ */
 @Entity
 public class User {
     @Id

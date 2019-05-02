@@ -15,6 +15,9 @@ import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+/**
+ * Represente a customer
+ */
 @Entity
 public class Customer {
 	@Id

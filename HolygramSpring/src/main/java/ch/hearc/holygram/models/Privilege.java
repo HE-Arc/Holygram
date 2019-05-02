@@ -13,10 +13,10 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-@Entity
 /**
  * Class role's privilege
  */
+@Entity
 public class Privilege {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

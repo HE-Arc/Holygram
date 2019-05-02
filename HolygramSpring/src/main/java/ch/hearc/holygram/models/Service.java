@@ -10,10 +10,10 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-@Entity
 /**
  * Class representing a service provided by an exorcist
  */
+@Entity
 public class Service {
 
 	@Id

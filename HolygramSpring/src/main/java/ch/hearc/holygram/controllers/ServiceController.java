@@ -25,6 +25,9 @@ import ch.hearc.holygram.repositories.ExorcistRepository;
 import ch.hearc.holygram.repositories.ServiceRepository;
 import ch.hearc.holygram.repositories.UserRepository;
 
+/**
+ * Controler to handle the thing related to the services
+ */
 @Controller
 @RequestMapping("service")
 public class ServiceController {

@@ -26,6 +26,9 @@ import ch.hearc.holygram.repositories.ReligionRepository;
 import ch.hearc.holygram.repositories.ServiceRepository;
 import ch.hearc.holygram.repositories.UserRepository;
 
+/**
+ * Every routes for handling the evaluations
+ */
 @Controller
 @RequestMapping("evaluation")
 public class EvaluationController {

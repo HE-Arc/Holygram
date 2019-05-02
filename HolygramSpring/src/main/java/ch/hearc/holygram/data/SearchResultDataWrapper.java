@@ -3,6 +3,9 @@ package ch.hearc.holygram.data;
 import ch.hearc.holygram.models.Exorcist;
 import ch.hearc.holygram.models.User;
 
+/**
+ * Mini data classes to store the search results
+ */
 public class SearchResultDataWrapper {
 	private Exorcist exorcist;
 	private User user;

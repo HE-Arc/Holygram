@@ -24,6 +24,9 @@ import ch.hearc.holygram.security.UserValidator;
 import ch.hearc.holygram.services.SecurityServiceImpl;
 import ch.hearc.holygram.services.UserService;
 
+/**
+ * Controller for the user routes, (registration/login)
+ */
 @Controller
 public class UserController {
 	@Autowired
