@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import ch.hearc.holygram.forms.UserForm;
 import ch.hearc.holygram.models.Canton;
 import ch.hearc.holygram.models.Customer;
 import ch.hearc.holygram.models.Exorcist;
@@ -20,6 +21,7 @@ import ch.hearc.holygram.repositories.CantonRepository;
 import ch.hearc.holygram.repositories.CustomerRepository;
 import ch.hearc.holygram.repositories.ExorcistRepository;
 import ch.hearc.holygram.repositories.RoleRepository;
+import ch.hearc.holygram.security.ExorcistValidator;
 import ch.hearc.holygram.security.UserValidator;
 import ch.hearc.holygram.services.SecurityServiceImpl;
 import ch.hearc.holygram.services.UserService;
@@ -46,6 +48,9 @@ public class UserController {
 
 	@Autowired
 	private UserValidator userValidator;
+	
+	@Autowired
+	private ExorcistValidator exorcistValidator;
 
 	@GetMapping("/signup")
 	public String signup(Model model) {
@@ -53,29 +58,35 @@ public class UserController {
 		Iterable<Canton> cantons = cantonRepository.findAll();
 		model.addAttribute("cantons", cantons);
 
-		model.addAttribute("user", new User());
+		model.addAttribute("userForm", new UserForm());
 
 		return "signup";
 	}
 
 	@PostMapping("/signup")
-	public String registration(@ModelAttribute("user") User user, HttpServletRequest request,
+	public String registration(Model model, UserForm userForm, HttpServletRequest request,
 			BindingResult bindingResult) {
 		try {
 			
 			// Valid the futur user
-			userValidator.validate(user, bindingResult);
+			userValidator.validate(userForm, bindingResult);
 
 			// Interrupt the sign up
 			if (bindingResult.hasErrors()) {
+				Iterable<Canton> cantons = cantonRepository.findAll();
+				model.addAttribute("cantons", cantons);
+				
 				return "signup";
 			}
+			
+			// Create the user
+			User user = new User(userForm.getUsername(), userForm.getPassword(), userForm.getPasswordConfirm(), userForm.getEmail());
 
 			String typeAccount = request.getParameter("customRadio");
 
 			if (typeAccount.equals("customer")) {
 				
-				// Create the user
+				// Set role
 				Role role = roleRepository.findByName("ROLE_CUSTOMER");
 				user.setRole(role);
 				user = userService.save(user);
@@ -88,7 +99,18 @@ public class UserController {
 				// Hibernate hasn't already create the link user's side
 				user.setCustomer(customer);
 			} else {
-				// Create the user
+				
+				// Valid the futur exorcist
+				exorcistValidator.validate(userForm, bindingResult);
+
+				// Interrupt the sign up
+				if (bindingResult.hasErrors()) {
+					Iterable<Canton> cantons = cantonRepository.findAll();
+					model.addAttribute("cantons", cantons);
+					
+					return "signup";
+				}
+				// Set role
 				Role role = roleRepository.findByName("ROLE_EXORCIST");
 				user.setRole(role);
 				userService.save(user);

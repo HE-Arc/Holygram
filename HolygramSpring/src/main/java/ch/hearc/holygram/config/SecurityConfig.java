@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/resources/**", "/signup", "/formExorcist", "/", "/h2_console/**").permitAll()
-                .antMatchers("/search").access("not( hasRole('EXORCIST') ) or not( isAuthenticated() )")
+                .antMatchers("/search").access("hasRole('CUSTOMER')")
                 .and()
                 .formLogin()
                 .permitAll();
