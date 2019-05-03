@@ -8,7 +8,6 @@ import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import ch.hearc.holygram.models.Religion;
 import ch.hearc.holygram.repositories.ReligionRepository;
@@ -20,8 +19,7 @@ public class ReligionController {
 	@Autowired
 	ReligionRepository religionRepository;
 
-	@GetMapping(value = "", produces = {
-			MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
+	@GetMapping(value = "", produces = { MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
 	public ResponseEntity<Iterable<Religion>> findAll() {
 		try {
 			return new ResponseEntity<>(religionRepository.findAll(), HttpStatus.OK);

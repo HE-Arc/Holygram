@@ -1,6 +1,5 @@
 package ch.hearc.holygram.controllers;
 
-import ch.hearc.holygram.security.HolygramUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import ch.hearc.holygram.models.Demon;
 import ch.hearc.holygram.models.Exorcist;
@@ -24,6 +22,7 @@ import ch.hearc.holygram.repositories.DemonRepository;
 import ch.hearc.holygram.repositories.ExorcistRepository;
 import ch.hearc.holygram.repositories.ServiceRepository;
 import ch.hearc.holygram.repositories.UserRepository;
+import ch.hearc.holygram.security.HolygramUserDetails;
 
 /**
  * Controler to handle the thing related to the services
@@ -44,8 +43,7 @@ public class ServiceController {
 	@Autowired
 	ExorcistRepository exorcistRepository;
 
-	@GetMapping(value = "", produces = {
-			MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
+	@GetMapping(value = "", produces = { MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
 	public ResponseEntity<Iterable<Service>> findAll() {
 		try {
 			return new ResponseEntity<>(serviceRepository.findAll(), HttpStatus.OK);
@@ -67,11 +65,12 @@ public class ServiceController {
 	@GetMapping(value = "delete/{id}")
 	public ResponseEntity<Service> remove(@PathVariable long id) {
 		try {
-			HolygramUserDetails p = (HolygramUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			HolygramUserDetails p = (HolygramUserDetails) SecurityContextHolder.getContext().getAuthentication()
+					.getPrincipal();
 			long profileId = p.getUser().getId();
 
 			Service s = serviceRepository.findById(id).get();
-			if(s.getExorcist().getUser().getId() != profileId)
+			if (s.getExorcist().getUser().getId() != profileId)
 				throw new Exception("the given service assigned for the currently logged in user");
 			serviceRepository.deleteById(id);
 
@@ -89,7 +88,8 @@ public class ServiceController {
 		 * Waiting for authentication to implement the correct gather of the exorcist id
 		 */
 		try {
-			HolygramUserDetails p = (HolygramUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			HolygramUserDetails p = (HolygramUserDetails) SecurityContextHolder.getContext().getAuthentication()
+					.getPrincipal();
 			long profileId = p.getUser().getId();
 
 			Service s = new Service();

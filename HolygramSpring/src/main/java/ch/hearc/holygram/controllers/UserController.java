@@ -1,14 +1,12 @@
 package ch.hearc.holygram.controllers;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.holygram.forms.UserForm;
@@ -51,7 +49,7 @@ public class UserController {
 
 	@Autowired
 	private UserValidator userValidator;
-	
+
 	@Autowired
 	private ExorcistValidator exorcistValidator;
 
@@ -70,7 +68,7 @@ public class UserController {
 	public String registration(Model model, UserForm userForm, HttpServletRequest request,
 			BindingResult bindingResult) {
 		try {
-			
+
 			// Valid the futur user
 			userValidator.validate(userForm, bindingResult);
 
@@ -78,22 +76,23 @@ public class UserController {
 			if (bindingResult.hasErrors()) {
 				Iterable<Canton> cantons = cantonRepository.findAll();
 				model.addAttribute("cantons", cantons);
-				
+
 				return "signup";
 			}
-			
+
 			// Create the user
-			User user = new User(userForm.getUsername(), userForm.getPassword(), userForm.getPasswordConfirm(), userForm.getEmail());
+			User user = new User(userForm.getUsername(), userForm.getPassword(), userForm.getPasswordConfirm(),
+					userForm.getEmail());
 
 			String typeAccount = request.getParameter("customRadio");
 
 			if (typeAccount.equals("customer")) {
-				
+
 				// Set role
 				Role role = roleRepository.findByName("ROLE_CUSTOMER");
 				user.setRole(role);
 				user = userService.save(user);
-				
+
 				// Create the customer
 				Customer customer = new Customer(user);
 				customer = customerRepository.save(customer);
@@ -102,7 +101,7 @@ public class UserController {
 				// Hibernate hasn't already create the link user's side
 				user.setCustomer(customer);
 			} else {
-				
+
 				// Valid the futur exorcist
 				exorcistValidator.validate(userForm, bindingResult);
 
@@ -110,22 +109,22 @@ public class UserController {
 				if (bindingResult.hasErrors()) {
 					Iterable<Canton> cantons = cantonRepository.findAll();
 					model.addAttribute("cantons", cantons);
-					
+
 					return "signup";
 				}
 				// Set role
 				Role role = roleRepository.findByName("ROLE_EXORCIST");
 				user.setRole(role);
 				userService.save(user);
-				
+
 				// Create the exorcist
 				Canton canton = cantonRepository.findByAcronym(request.getParameter("canton"));
-				
+
 				Exorcist exorcist = new Exorcist(user, request.getParameter("description"),
 						request.getParameter("phoneNumber"), canton);
-				
+
 				exorcistRepository.save(exorcist);
-				
+
 				// Set the liaison in the current user object
 				// Hibernate hasn't already create the link user's side
 				user.setExorcist(exorcist);
@@ -144,7 +143,7 @@ public class UserController {
 	public String formExorcist(Model model) {
 		Iterable<Canton> cantons = cantonRepository.findAll();
 		model.addAttribute("cantons", cantons);
-		
+
 		return "fragments/signup :: exorcist";
 	}
 }

@@ -44,7 +44,7 @@ public class UserSeeder {
 	private RoleSeeder roleSeeder;
 
 
-	private static final String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu nisi quis ante interdum vestibulum. Cras semper lacus non urna ultricies, eu semper dui rutrum. Etiam id odio at dui bibendum varius nec vitae justo. Sed varius luctus tristique. Morbi lobortis, massa vel scelerisque lacinia, lorem mi imperdiet diam, ac posuere nunc ipsum sit amet mi. Nullam in bibendum nunc, vitae aliquet turpis. Etiam in mattis dolor.\n";
+	private static final String DESCRIPTION = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu nisi quis ante interdum vestibulum. Cras semper lacus non urna ultricies, eu semper dui rutrum. Etiam id odio at dui bibendum varius nec vitae justo. Sed varius luctus tristique. Morbi lobortis, massa vel scelerisque lacinia, lorem mi imperdiet diam, ac posuere nunc ipsum sit amet mi. Nullam in bibendum nunc, vitae aliquet turpis. Etiam in mattis dolor.\n";
 
 	private static Random random = new Random(0);
 
@@ -77,7 +77,7 @@ public class UserSeeder {
 				roleSeeder.getExorcistRole());
 
 		userRepository.save(u);
-		Exorcist e = new Exorcist(u, description, "+41 32 123 12 " + id, cantons.get(random.nextInt(cantons.size())));
+		Exorcist e = new Exorcist(u, DESCRIPTION, "+41 32 123 12 " + id, cantons.get(random.nextInt(cantons.size())));
 		exorcistRepository.save(e);
 
 		for (int i = 0; i < nbServices; i++) {
