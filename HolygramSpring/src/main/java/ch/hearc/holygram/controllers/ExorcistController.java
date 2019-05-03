@@ -28,6 +28,9 @@ import ch.hearc.holygram.repositories.ReligionRepository;
 import ch.hearc.holygram.repositories.ServiceRepository;
 import ch.hearc.holygram.repositories.UserRepository;
 
+/**
+ * Controller for the exorcists, display profile and modifications
+ */
 @Controller
 @RequestMapping("exorcist")
 public class ExorcistController {

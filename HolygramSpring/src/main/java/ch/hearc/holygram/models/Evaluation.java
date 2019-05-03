@@ -12,6 +12,9 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+/**
+ * Evaluation class (a evaluation is a positive or negative from a customer to exorcist)
+ */
 @Entity
 public class Evaluation {
 	@Id

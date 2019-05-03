@@ -10,10 +10,10 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-@Entity
 /**
  * Class representing a demon
  */
+@Entity
 public class Demon {
 
 	@Id
