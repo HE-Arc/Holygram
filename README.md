@@ -1,4 +1,4 @@
-![Holygram](HolygramSpring\src\main\resources\static\img\cross.png)
+![Holygram](HolygramSpring/src/main/resources/static/img/cross.png)
 
 # Run Maven
 ```
